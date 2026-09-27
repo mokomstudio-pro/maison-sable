@@ -59,4 +59,4 @@
 | Google Business Profile, Bing Places, Apple Business Connect | **aucun, et il ne faut pas en créer** : une fiche locale pour une entreprise fictive serait trompeuse et contraire aux règles de ces services |
 | Réseaux sociaux | aucun |
 | Wikidata | non (entité non notable, fictive) |
-| Éditeur réel du site | Mokom Studio : `[À COMPLÉTER : URL du site Mokom Studio]` |
+| Éditeur réel du site | Mokom Studio : https://www.mokomstudio.fr (donnée par Morgane, 2026-09-27) |

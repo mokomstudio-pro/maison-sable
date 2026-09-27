@@ -91,3 +91,9 @@
 **Questions ouvertes**
 - Prix au kilo : obligation à vérifier à l'étape conformité.
 - Décision B (`noindex` global) et URL de Mokom Studio : toujours en attente.
+
+## 2026-09-27 — Décisions de Morgane
+
+- **Décision B validée** : le site publié sur GitHub Pages est entièrement en `noindex`. Le travail SEO reste fait dans le code (voir CLAUDE.md et `05-architecture.md`).
+- **Site de Mokom Studio** : https://www.mokomstudio.fr (page Étude de cas, éditeur réel dans la fiche d'entité).
+- Questions ouvertes restantes : gamme et prix (validation implicite, rien de signalé), origine des ingrédients, emballage, date limite de Noël, prix au kilo.

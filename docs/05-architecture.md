@@ -15,7 +15,7 @@ Avec 11 produits, une collection « Cartes cadeaux » (1 produit) ou « Boîtes 
 
 Un produit peut apparaître dans les deux collections, mais il n'a **qu'une adresse** (`/products/<handle>`) et **une collection principale**, qui détermine le fil d'Ariane. La colonne `collection_principale` du catalogue a été mise à jour dans ce sens (`biscuits` ou `coffrets-cadeaux`).
 
-### B. ⚠️ Site entier en `noindex` une fois en ligne (à valider)
+### B. Site entier en `noindex` une fois en ligne (validé par Morgane le 2026-09-27)
 Maison Sable n'existe pas. Si Google indexait une « biscuiterie à Hossegor » avec des prix et un bouton « Commander », de vraies personnes pourraient la chercher, tenter de commander ou venir à l'atelier. **Recommandation** :
 - la version publiée sur GitHub Pages porte `<meta name="robots" content="noindex">` sur toutes les pages ;
 - tout le travail de référencement est **quand même fait et visible dans le code** (titles, canonicals, données structurées, plan du site, maillage). C'est ce que le portfolio démontre. Une ligne dans `CLAUDE.md` permettra de lever le `noindex` si Morgane en décide autrement ;
@@ -137,4 +137,4 @@ Chaque page reçoit au moins 2 liens depuis des pages proches, avec un texte de 
 - [x] Règle d'indexation des filtres, du tri et de la recherche écrite (mise en œuvre à l'étape développement).
 - [x] URLs identiques à Shopify.
 - [ ] Parcours à valider avec l'étape **UX**.
-- [ ] Décision B (`noindex` global) **à valider par Morgane**.
+- [x] Décision B (`noindex` global) validée par Morgane le 2026-09-27.

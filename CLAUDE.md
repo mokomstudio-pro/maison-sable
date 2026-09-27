@@ -23,7 +23,7 @@ Ce projet suit la méthode Mokom (plugin `mokom`). L'état d'avancement est dans
 - **Marque fictive** : l'exception à « jamais de fait inventé » est autorisée ici pour les contenus de marque (produits, prix, histoire, avis), à condition de les consigner dans `docs/fiche-entite.md` comme `[FICTIF]` et d'afficher sur le site la mention « Projet fictif — étude de cas Mokom Studio ». Les faits sur le monde réel (Hossegor, Landes, réglementation) restent exacts.
 - **Pas de vrai Shopify** : pages statiques qui reproduisent les gabarits Shopify (accueil, collection, fiche produit, panier, tunnel simulé). Garder des structures de données et de pages transposables en thème Liquid. Les étapes « checkout » et « analytics » de la chaîne sont réalisées en version maquette (aucun paiement, aucun traceur réel, pas de Merchant Center).
 - GitHub Pages sert le site depuis un sous-dossier : utiliser des chemins relatifs ou tenir compte du préfixe `/maison-sable/`.
-- **Indexation (en attente de validation)** : la version publiée sur GitHub Pages est entièrement en `noindex` (une fausse biscuiterie ne doit pas apparaître dans Google). Tout le SEO est quand même réalisé dans le code. Pour lever le `noindex`, modifier cette ligne et la décision B de `docs/05-architecture.md`.
+- **Indexation (validé par Morgane le 2026-09-27)** : la version publiée sur GitHub Pages est entièrement en `noindex` (une fausse biscuiterie ne doit pas apparaître dans Google). Tout le SEO est quand même réalisé dans le code. Pour lever le `noindex`, modifier cette ligne et la décision B de `docs/05-architecture.md`.
 - Le plugin `claude-seo-ai` reste **actif** : aucun geste Shopify/WordPress n'est bloqué sur un site statique.
 
 ## Règles non négociables
