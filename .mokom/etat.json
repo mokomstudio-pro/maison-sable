@@ -1,0 +1,188 @@
+{
+  "projet": "Maison Sable",
+  "type": "ecommerce",
+  "plateforme": "html-statique (maquette Shopify, GitHub Pages)",
+  "cree_le": "2026-09-27",
+  "etape_courante": "catalogue",
+  "dernier_audit_complet": null,
+  "dernier_audit_partiel": null,
+  "chaines": {
+    "vitrine": [
+      {
+        "etape": "discovery",
+        "skill": "mokom-discovery",
+        "livrable": "docs/01-brief.md + PRODUCT.md + CLAUDE.md"
+      },
+      {
+        "etape": "recherche",
+        "skill": "mokom-seo",
+        "livrable": "docs/02-recherche.md"
+      },
+      {
+        "etape": "seo",
+        "skill": "mokom-seo",
+        "livrable": "docs/03-seo.md"
+      },
+      {
+        "etape": "geo",
+        "skill": "mokom-geo",
+        "livrable": "docs/04-geo.md + docs/fiche-entite.md"
+      },
+      {
+        "etape": "architecture",
+        "skill": "mokom-seo",
+        "livrable": "docs/05-architecture.md"
+      },
+      {
+        "etape": "ux",
+        "skill": "mokom-ux",
+        "livrable": "docs/06-ux.md"
+      },
+      {
+        "etape": "ui",
+        "skill": "mokom-ui",
+        "livrable": "docs/07-direction-artistique.md (+ contrat de direction impeccable)"
+      },
+      {
+        "etape": "copywriting",
+        "skill": "mokom-copywriting",
+        "livrable": "docs/08-contenus/"
+      },
+      {
+        "etape": "cro",
+        "skill": "mokom-cro",
+        "livrable": "docs/09-cro-mesure.md"
+      },
+      {
+        "etape": "conformite",
+        "skill": "mokom-cro",
+        "livrable": "mentions légales, confidentialité, cookies (references/conformite-vitrine.md)"
+      },
+      {
+        "etape": "developpement",
+        "skill": "mokom-ui",
+        "livrable": "code du site + DESIGN.md final"
+      },
+      {
+        "etape": "performance",
+        "skill": "mokom-performance",
+        "livrable": "docs/audits/performance.md"
+      },
+      {
+        "etape": "seo-technique",
+        "skill": "mokom-seo",
+        "livrable": "robots, sitemap, canonicals, JSON-LD en place"
+      },
+      {
+        "etape": "accessibilite",
+        "skill": "mokom-ux",
+        "livrable": "corrections WCAG 2.2 AA"
+      },
+      {
+        "etape": "audit",
+        "skill": "mokom-final-audit",
+        "livrable": "docs/audits/AAAA-MM-JJ-audit-final.md"
+      }
+    ],
+    "ecommerce": [
+      {
+        "etape": "discovery",
+        "skill": "mokom-discovery",
+        "livrable": "docs/01-brief.md + PRODUCT.md + CLAUDE.md"
+      },
+      {
+        "etape": "catalogue",
+        "skill": "mokom-ecommerce",
+        "livrable": "docs/catalogue/modele-donnees.md"
+      },
+      {
+        "etape": "recherche",
+        "skill": "mokom-seo",
+        "livrable": "docs/02-recherche.md"
+      },
+      {
+        "etape": "architecture",
+        "skill": "mokom-ecommerce",
+        "livrable": "docs/05-architecture.md"
+      },
+      {
+        "etape": "seo-geo",
+        "skill": "mokom-seo",
+        "livrable": "docs/03-seo.md + docs/04-geo.md + docs/fiche-entite.md (avec mokom-geo)"
+      },
+      {
+        "etape": "ux",
+        "skill": "mokom-ux",
+        "livrable": "docs/06-ux.md"
+      },
+      {
+        "etape": "ui",
+        "skill": "mokom-ui",
+        "livrable": "docs/07-direction-artistique.md (+ contrat de direction impeccable)"
+      },
+      {
+        "etape": "merchandising",
+        "skill": "mokom-ecommerce",
+        "livrable": "docs/catalogue/merchandising.md"
+      },
+      {
+        "etape": "fiche-produit",
+        "skill": "mokom-ecommerce",
+        "livrable": "gabarit fiche produit + contenus produits (avec mokom-copywriting)"
+      },
+      {
+        "etape": "copywriting",
+        "skill": "mokom-copywriting",
+        "livrable": "docs/08-contenus/ (accueil, collections, pages)"
+      },
+      {
+        "etape": "cro",
+        "skill": "mokom-cro",
+        "livrable": "docs/09-cro-mesure.md"
+      },
+      {
+        "etape": "checkout",
+        "skill": "mokom-ecommerce",
+        "livrable": "panier + tunnel de commande configurés"
+      },
+      {
+        "etape": "conformite",
+        "skill": "mokom-ecommerce",
+        "livrable": "pages légales + mentions (references/conformite-france.md)"
+      },
+      {
+        "etape": "developpement",
+        "skill": "mokom-shopify ou mokom-woocommerce",
+        "livrable": "thème / site + DESIGN.md final"
+      },
+      {
+        "etape": "performance",
+        "skill": "mokom-performance",
+        "livrable": "docs/audits/performance.md"
+      },
+      {
+        "etape": "seo-technique",
+        "skill": "mokom-seo",
+        "livrable": "robots, sitemap, canonicals, facettes, JSON-LD en place"
+      },
+      {
+        "etape": "accessibilite",
+        "skill": "mokom-ux",
+        "livrable": "corrections WCAG 2.2 AA"
+      },
+      {
+        "etape": "analytics",
+        "skill": "mokom-cro",
+        "livrable": "plan de marquage e-commerce testé + Google Merchant Center"
+      },
+      {
+        "etape": "audit",
+        "skill": "mokom-final-audit",
+        "livrable": "docs/audits/AAAA-MM-JJ-audit-final.md"
+      }
+    ]
+  },
+  "statut": {
+    "discovery": "fait 2026-09-27"
+  }
+}
