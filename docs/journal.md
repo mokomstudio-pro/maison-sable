@@ -31,3 +31,15 @@
 - Gamme et prix à valider par Morgane.
 - Déclaration nutritionnelle (exemption artisanale ou non) → à trancher à l'étape conformité.
 - Recherche interne simulée ou non → à trancher à l'étape UX.
+
+## 2026-09-27 — Recherche d'intentions
+
+**Décisions**
+- Priorité 1 : « coffret biscuits artisanaux » (cadeau). Ensuite l'ancrage local (Hossegor, souvenir des Landes), puis les recettes sur les fiches produit.
+- Une seule collection cadeaux (pas de pages « Coffrets » et « Idées cadeaux » en doublon). Noël est traité comme une saison de cette collection, pas comme une page à part.
+- Positionnement confirmé : aucune « biscuiterie de bord de mer » ne s'impose. Le souvenir illustré d'Hossegor est déjà occupé par une madeleine (Lamothe), pas par un sablé.
+- Seuil de livraison offerte d'environ 45 € cohérent avec le marché (à trancher à l'étape checkout).
+- Aucun volume chiffré : priorités qualitatives, volumes à vérifier.
+
+**Questions ouvertes**
+- Renommer « Galette Marée épaisse » en « Palet Marée » (une galette est fine par définition) → à valider par Morgane.
