@@ -61,3 +61,18 @@
 
 **Questions ouvertes**
 - Décision B : site publié entièrement en `noindex` (proposé, à valider par Morgane).
+
+## 2026-09-27 — SEO et GEO
+
+**Décisions**
+- Carte requêtes → pages : la collection Coffrets & cadeaux porte la requête n°1. Aucune requête n'est ciblée par deux pages.
+- Titles, descriptions et H1 des 20 pages dans `docs/seo/metas.csv`, contrôlés par `node scripts/verifier-metas.mjs` (tous conformes).
+- Fiche d'entité créée (`docs/fiche-entite.md`) : définition unique de la marque, pas d'adresse précise, téléphone dans la plage ARCEP réservée aux fictions (05 36 49…), e-mail en `.example`, aucun SIREN, aucune fiche Google Business Profile.
+- `Organization` plutôt que `LocalBusiness` (aucune adresse réelle à déclarer). Pas d'avis dans les données structurées.
+- 24 questions cibles, chacune rattachée à une seule page. Pas de sources tierces à solliciter (entreprise fictive). Pas de `llms.txt`.
+- Limite de GitHub Pages : le `robots.txt` d'un site de projet n'est pas modifiable. Le `noindex` se fait page par page.
+
+**Questions ouvertes**
+- Décision B (`noindex` global) toujours à valider.
+- Origine des ingrédients phares, emballage, date limite de Noël → étapes fiche produit et checkout.
+- URL du site Mokom Studio (page Étude de cas).
