@@ -1,8 +1,8 @@
 handle;option_nom;option_valeur;sku;prix;prix_barre;poids_net_g;poids_expedition_g;nb_biscuits;stock;gtin
 sable-dune;Poids;150 g;MS-DUNE-150;6.90;;150;190;12;40;
 sable-dune;Poids;300 g;MS-DUNE-300;12.50;;300;360;24;25;
-galette-maree;Poids;150 g;MS-MAREE-150;7.50;;150;190;8;35;
-galette-maree;Poids;300 g;MS-MAREE-300;13.50;;300;360;16;20;
+palet-maree;Poids;150 g;MS-MAREE-150;7.50;;150;190;8;35;
+palet-maree;Poids;300 g;MS-MAREE-300;13.50;;300;360;16;20;
 sable-pignada;Poids;150 g;MS-PIGNADA-150;8.50;;150;190;12;30;
 sable-pignada;Poids;300 g;MS-PIGNADA-300;15.50;;300;360;24;15;
 croquant-lagune;Poids;120 g;MS-LAGUNE-120;8.90;;120;160;10;30;

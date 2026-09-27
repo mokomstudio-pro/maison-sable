@@ -4,7 +4,7 @@
 import { readFileSync } from "node:fs";
 
 const DICO = {
-  type: ["Sablé", "Galette", "Croquant", "Boîte assortie", "Coffret", "Carte cadeau"],
+  type: ["Sablé", "Palet", "Croquant", "Boîte assortie", "Coffret", "Carte cadeau"],
   format: ["Sachet", "Boîte", "Coffret", "Carte cadeau"],
   saveur: ["Beurre & fleur de sel", "Caramel", "Chocolat", "Agrumes & herbes", "Amandes & pignons", "Coco & vanille", "Assortiment"],
   texture: ["Fondant", "Croquant", "Épais", "Mixte"],

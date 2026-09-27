@@ -58,9 +58,9 @@ Deux requêtes dont Google affiche les mêmes types de résultats sont traitées
 ## 5. Vocabulaire réel à reprendre dans les textes
 « pur beurre », « artisanal », « fait main », « coffret découverte », « assortiment », « à offrir », « livraison partout en France », « fleur de sel », « caramel beurre salé », « fondant et croustillant », « boîte réutilisable », « souvenir », « spécialité », « sans additifs » (seulement si c'est vrai).
 
-## 6. ⚠️ Point à corriger dans le catalogue
+## 6. ✅ Point corrigé dans le catalogue
 Dans l'usage courant, une **galette** (bretonne) est un biscuit **fin et croquant**, alors qu'un biscuit épais et friable s'appelle un **palet**. Le nom « Galette Marée **épaisse** » contredit ce que les gens attendent en lisant « galette ».
-→ **Recommandation** : renommer la recette « **Palet Marée au caramel beurre salé** » (type `Palet`). C'est aussi la formulation que les gens recherchent. Modification à valider par Morgane avant l'étape suivante. Elle touche `produits.csv`, `variantes.csv` (SKU `MS-MAREE-*` inchangés) et le dictionnaire.
+→ **Validé par Morgane le 2026-09-27** : renommer la recette « **Palet Marée au caramel beurre salé** » (type `Palet`). C'est aussi la formulation que les gens recherchent. Modification faite dans `produits.csv`, `variantes.csv` (SKU `MS-MAREE-*` inchangés) et le dictionnaire.
 
 ## 7. Questions que les gens se posent (pour la FAQ et les fiches)
 - Combien de temps se conservent les sablés, et comment les garder croustillants ?

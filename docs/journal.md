@@ -42,4 +42,10 @@
 - Aucun volume chiffré : priorités qualitatives, volumes à vérifier.
 
 **Questions ouvertes**
-- Renommer « Galette Marée épaisse » en « Palet Marée » (une galette est fine par définition) → à valider par Morgane.
+- ~~Renommer « Galette Marée épaisse » en « Palet Marée »~~ → validé, fait (voir ci-dessous).
+
+## 2026-09-27 — Catalogue : renommage validé
+
+- « Galette Marée épaisse au caramel beurre salé » devient « **Palet Marée au caramel beurre salé** » (type `Palet`). Validé par Morgane.
+- Adresse de la page : `palet-maree` (au lieu de `galette-maree`). Aucune redirection n'est nécessaire puisque le site n'est pas en ligne. SKU `MS-MAREE-*` inchangés.
+- Mis à jour : produits.csv, variantes.csv, dictionnaire (script + modele-donnees.md), brief, PRODUCT.md, 02-recherche.md.

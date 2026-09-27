@@ -18,7 +18,7 @@ Format : séparateur `;`, valeurs multiples séparées par `|`, prix au format `
 | Produit | Format | Variantes (prix) | Collection principale |
 |---|---|---|---|
 | Sablé Dune au beurre et fleur de sel | Sachet | 150 g (6,90 €) · 300 g (12,50 €) | biscuits |
-| Galette Marée épaisse au caramel beurre salé | Sachet | 150 g (7,50 €) · 300 g (13,50 €) | biscuits |
+| Palet Marée au caramel beurre salé | Sachet | 150 g (7,50 €) · 300 g (13,50 €) | biscuits |
 | Sablé Pignada aux pignons de pin et miel | Sachet | 150 g (8,50 €) · 300 g (15,50 €) | biscuits |
 | Croquant Lagune aux amandes et zestes d'orange | Sachet | 120 g (8,90 €) | biscuits |
 | Sablé Écume au citron et thym | Sachet | 150 g (7,20 €) · 300 g (12,90 €) | biscuits |
@@ -47,7 +47,7 @@ Les noms rappellent la côte landaise (dune, marée, lagune, écume, pignada = l
 
 | Attribut | Valeurs autorisées (liste fermée) | Unité | Obligatoire | Filtrable | Affiché sur la fiche |
 |---|---|---|---|---|---|
-| `type` | Sablé · Galette · Croquant · Boîte assortie · Coffret · Carte cadeau | — | oui | non | non (sert au titre) |
+| `type` | Sablé · Palet · Croquant · Boîte assortie · Coffret · Carte cadeau | — | oui | non | non (sert au titre) |
 | `format` | Sachet · Boîte · Coffret · Carte cadeau | — | oui | **oui** | oui |
 | `saveur` | Beurre & fleur de sel · Caramel · Chocolat · Agrumes & herbes · Amandes & pignons · Coco & vanille · Assortiment | — | oui (alimentaire) | **oui** | oui |
 | `texture` | Fondant · Croquant · Épais · Mixte | — | oui (alimentaire) | non (à revoir en UX) | oui |

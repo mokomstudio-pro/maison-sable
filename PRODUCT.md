@@ -3,7 +3,7 @@
 > Marque **fictive** créée pour le portfolio de Mokom Studio. Tout contenu de marque (produits, prix, histoire, avis) est inventé et doit être signalé comme tel sur le site. Détails : `docs/01-brief.md`.
 
 ## Product
-Maison Sable, biscuiterie artisanale d'Hossegor (Landes) `[FICTIF]` : sablés, galettes et biscuits secs vendus en sachets, boîtes et coffrets cadeaux, en ligne et en retrait à l'atelier.
+Maison Sable, biscuiterie artisanale d'Hossegor (Landes) `[FICTIF]` : sablés, palets et biscuits secs vendus en sachets, boîtes et coffrets cadeaux, en ligne et en retrait à l'atelier.
 
 ## Platform
 Maquette de boutique en ligne qui reproduit une boutique Shopify (accueil, collections, fiche produit, panier, tunnel de commande simulé).

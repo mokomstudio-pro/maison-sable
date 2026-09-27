@@ -5,7 +5,7 @@
 > ⚠️ **Marque fictive.** Maison Sable n'existe pas : c'est une étude de cas créée par Mokom Studio pour son portfolio. Les produits, prix, textes, avis et l'histoire de la marque sont **inventés** et doivent être présentés comme tels sur le site (mention « Projet fictif — étude de cas Mokom Studio »). Hossegor, en revanche, est un lieu réel : la géographie et les références locales doivent rester exactes.
 
 ## 1. Le business en 5 lignes
-- Activité / offre principale : biscuiterie artisanale (sablés, galettes, biscuits secs) vendue en ligne à l'unité, en sachets, en boîtes et en coffrets cadeaux. `[FICTIF]`
+- Activité / offre principale : biscuiterie artisanale (sablés, palets, biscuits secs) vendue en ligne à l'unité, en sachets, en boîtes et en coffrets cadeaux. `[FICTIF]`
 - Prix ou panier moyen : sachets ≈ 6–9 €, boîtes ≈ 14–22 €, coffrets ≈ 29–45 € ; panier moyen visé ≈ 35 €. `[FICTIF — HYPOTHÈSE]`
 - Zone servie : livraison France métropolitaine + retrait à l'atelier-boutique à Hossegor (Landes). `[FICTIF — HYPOTHÈSE]`
 - Saisonnalité : pic d'été (vacanciers, surf, côte landaise) et pic de fin d'année (cadeaux de Noël, cadeaux d'entreprise). `[HYPOTHÈSE]`
