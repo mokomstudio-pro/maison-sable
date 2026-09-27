@@ -11,7 +11,7 @@ const DICO = {
   occasions: ["Goûter", "Cadeau", "Souvenir", "Pique-nique"],
   // Les 14 allergènes majeurs (règlement UE 1169/2011, annexe II)
   allergenes: ["Gluten", "Crustacés", "Œufs", "Poissons", "Arachides", "Soja", "Lait", "Fruits à coque", "Céleri", "Moutarde", "Sésame", "Sulfites", "Lupin", "Mollusques"],
-  collection_principale: ["biscuits", "boites-et-coffrets", "cartes-cadeaux"],
+  collection_principale: ["biscuits", "coffrets-cadeaux"],
   option_nom: ["Poids", "Taille", "Montant"],
 };
 DICO.traces = DICO.allergenes;

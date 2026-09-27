@@ -49,3 +49,15 @@
 - « Galette Marée épaisse au caramel beurre salé » devient « **Palet Marée au caramel beurre salé** » (type `Palet`). Validé par Morgane.
 - Adresse de la page : `palet-maree` (au lieu de `galette-maree`). Aucune redirection n'est nécessaire puisque le site n'est pas en ligne. SKU `MS-MAREE-*` inchangés.
 - Mis à jour : produits.csv, variantes.csv, dictionnaire (script + modele-donnees.md), brief, PRODUCT.md, 02-recherche.md.
+
+## 2026-09-27 — Architecture
+
+**Décisions**
+- Deux collections : **Biscuits** (7 recettes) et **Coffrets & cadeaux** (6 produits, collection automatique selon l'occasion « Cadeau »). Les collections « Boîtes et coffrets » et « Cartes cadeaux » sont abandonnées, car trop maigres. Catalogue mis à jour (`collection_principale`).
+- Adresses identiques à Shopify (`/collections/`, `/products/`, `/pages/`, `/blogs/`, `/policies/`). Toute page importante est à 2 clics maximum.
+- Pages éditoriales : L'atelier à Hossegor, FAQ, 1 article « Sablé, galette ou palet ? », Contact, À propos de ce projet (étude de cas).
+- Filtres limités (saveur et prix ; format et prix) ; filtres, tri, recherche, panier et `/collections/all` exclus de l'index.
+- Pas d'avis dans les données structurées, puisqu'ils sont fictifs.
+
+**Questions ouvertes**
+- Décision B : site publié entièrement en `noindex` (proposé, à valider par Morgane).

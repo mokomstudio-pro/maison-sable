@@ -24,12 +24,12 @@ Format : séparateur `;`, valeurs multiples séparées par `|`, prix au format `
 | Sablé Écume au citron et thym | Sachet | 150 g (7,20 €) · 300 g (12,90 €) | biscuits |
 | Biscuit Vague au chocolat noir et fleur de sel | Sachet | 150 g (7,90 €) · 300 g (14,50 €) | biscuits |
 | Sablé Lagon à la noix de coco et vanille | Sachet | 150 g (7,50 €) | biscuits |
-| Boîte Grande Plage, assortiment de 4 recettes | Boîte | 250 g (15,90 €) · 500 g (26,90 €) | boites-et-coffrets |
-| Coffret Été Indien, boîte assortie et deux sachets | Coffret | unique (34,00 €) | boites-et-coffrets |
-| Coffret Découverte, 6 mini-sachets | Coffret | unique (24,90 €) | boites-et-coffrets |
-| Carte cadeau Maison Sable | Carte cadeau | 20 € · 40 € · 60 € | cartes-cadeaux |
+| Boîte Grande Plage, assortiment de 4 recettes | Boîte | 250 g (15,90 €) · 500 g (26,90 €) | coffrets-cadeaux |
+| Coffret Été Indien, boîte assortie et deux sachets | Coffret | unique (34,00 €) | coffrets-cadeaux |
+| Coffret Découverte, 6 mini-sachets | Coffret | unique (24,90 €) | coffrets-cadeaux |
+| Carte cadeau Maison Sable | Carte cadeau | 20 € · 40 € · 60 € | coffrets-cadeaux |
 
-Les noms rappellent la côte landaise (dune, marée, lagune, écume, pignada = la forêt de pins en gascon). Les collections ne sont qu'une ébauche : elles seront validées à l'étape « architecture », en fonction de ce que les gens recherchent réellement.
+Les noms rappellent la côte landaise (dune, marée, lagune, écume, pignada = la forêt de pins en gascon). Collections validées à l'étape « architecture » (`docs/05-architecture.md`) : **Biscuits** (7 produits) et **Coffrets & cadeaux** (6 produits, collection automatique selon l'occasion « Cadeau »).
 
 ## 3. Règle produit / variante
 - **Variante** = même recette, même fiche, seul le **poids** (sachets), la **taille** (boîte) ou le **montant** (carte cadeau) change. Un seul type d'option par produit : c'est simple à comprendre et ça reste compatible avec Shopify (3 options maximum).
@@ -57,7 +57,7 @@ Les noms rappellent la côte landaise (dune, marée, lagune, écume, pignada = l
 | `traces` | mêmes 14 valeurs | — | non | non | oui (« Peut contenir… ») |
 | `conservation_jours` | nombre entier | jours | oui (alimentaire) | non | oui (« à consommer de préférence dans les N jours ») |
 | `conservation_conseil` | texte court | — | oui (alimentaire) | non | oui |
-| `collection_principale` | biscuits · boites-et-coffrets · cartes-cadeaux (provisoire) | — | oui | — | fil d'Ariane |
+| `collection_principale` | biscuits · coffrets-cadeaux (validé à l'étape architecture) | — | oui | — | fil d'Ariane |
 | `produits_lies` | handles existants | — | non | — | bloc « Vous aimerez aussi » |
 
 Champs de variante : `sku` (format `MS-<RECETTE>-<POIDS>`), `prix`, `prix_barre`, `poids_net_g`, `poids_expedition_g` (emballage compris, pour calculer les frais de port), `nb_biscuits` (environ), `stock`, `gtin`.
