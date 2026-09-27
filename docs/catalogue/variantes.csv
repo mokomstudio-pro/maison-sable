@@ -1,0 +1,20 @@
+handle;option_nom;option_valeur;sku;prix;prix_barre;poids_net_g;poids_expedition_g;nb_biscuits;stock;gtin
+sable-dune;Poids;150 g;MS-DUNE-150;6.90;;150;190;12;40;
+sable-dune;Poids;300 g;MS-DUNE-300;12.50;;300;360;24;25;
+galette-maree;Poids;150 g;MS-MAREE-150;7.50;;150;190;8;35;
+galette-maree;Poids;300 g;MS-MAREE-300;13.50;;300;360;16;20;
+sable-pignada;Poids;150 g;MS-PIGNADA-150;8.50;;150;190;12;30;
+sable-pignada;Poids;300 g;MS-PIGNADA-300;15.50;;300;360;24;15;
+croquant-lagune;Poids;120 g;MS-LAGUNE-120;8.90;;120;160;10;30;
+sable-ecume;Poids;150 g;MS-ECUME-150;7.20;;150;190;12;35;
+sable-ecume;Poids;300 g;MS-ECUME-300;12.90;;300;360;24;20;
+biscuit-vague;Poids;150 g;MS-VAGUE-150;7.90;;150;190;12;40;
+biscuit-vague;Poids;300 g;MS-VAGUE-300;14.50;;300;360;24;25;
+sable-lagon;Poids;150 g;MS-LAGON-150;7.50;;150;190;12;30;
+boite-grande-plage;Taille;250 g;MS-BGP-250;15.90;;250;420;20;25;
+boite-grande-plage;Taille;500 g;MS-BGP-500;26.90;;500;760;40;15;
+coffret-ete-indien;Taille;Unique;MS-COF-ETE;34.00;;520;900;42;12;
+coffret-decouverte;Taille;Unique;MS-COF-DEC;24.90;;300;520;24;20;
+carte-cadeau;Montant;20 €;MS-CC-20;20.00;;;;;;
+carte-cadeau;Montant;40 €;MS-CC-40;40.00;;;;;;
+carte-cadeau;Montant;60 €;MS-CC-60;60.00;;;;;;

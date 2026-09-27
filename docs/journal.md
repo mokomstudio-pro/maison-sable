@@ -17,3 +17,17 @@
 - Référence d'excellence hors secteur pour la direction artistique.
 - Tutoiement ou vouvoiement.
 - Source des images (génération IA ou banques libres de droits).
+
+## 2026-09-27 — Catalogue
+
+**Décisions**
+- 11 produits `[FICTIF]` : 7 recettes en sachets, 1 boîte assortie, 2 coffrets, 1 carte cadeau. 19 variantes au total (poids, taille ou montant ; un seul type d'option par produit).
+- Source unique : `docs/catalogue/produits.csv` + `variantes.csv`, contrôlée par `node scripts/verifier-catalogue.mjs`.
+- Allergènes : liste fermée des 14 allergènes majeurs (UE 1169/2011), affichés avant l'achat. Pas de filtre « sans fruits à coque », car toutes les recettes portent une mention de traces.
+- Message cadeau géré comme un champ du panier, pas comme une variante.
+- Pas de prix barré ni de GTIN.
+
+**Questions ouvertes**
+- Gamme et prix à valider par Morgane.
+- Déclaration nutritionnelle (exemption artisanale ou non) → à trancher à l'étape conformité.
+- Recherche interne simulée ou non → à trancher à l'étape UX.
