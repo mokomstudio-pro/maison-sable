@@ -3,7 +3,7 @@
   "type": "ecommerce",
   "plateforme": "html-statique (maquette Shopify, GitHub Pages)",
   "cree_le": "2026-09-27",
-  "etape_courante": "ux",
+  "etape_courante": "ui",
   "dernier_audit_complet": null,
   "dernier_audit_partiel": null,
   "chaines": {
@@ -187,6 +187,7 @@
     "catalogue": "fait 2026-09-27",
     "recherche": "fait 2026-09-27",
     "architecture": "fait 2026-09-27",
-    "seo-geo": "fait 2026-09-27"
+    "seo-geo": "fait 2026-09-27",
+    "ux": "fait 2026-09-27"
   }
 }

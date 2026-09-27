@@ -76,3 +76,18 @@
 - Décision B (`noindex` global) toujours à valider.
 - Origine des ingrédients phares, emballage, date limite de Noël → étapes fiche produit et checkout.
 - URL du site Mokom Studio (page Étude de cas).
+
+## 2026-09-27 — UX
+
+**Décisions**
+- 4 parcours, dont celui du **prospect de Mokom Studio**, qui est le vrai public de la maquette.
+- Le bandeau d'annonce devient la mention « Boutique fictive, étude de cas Mokom Studio : aucune commande n'est expédiée ». La réassurance livraison passe près des boutons d'achat et dans le panier (architecture mise à jour).
+- Tunnel de commande simulé sur une seule page : **aucun champ de carte bancaire**, données jamais envoyées, bouton « Remplir avec un exemple ».
+- Ajout rapide depuis les cartes (1 interaction, 2 pour un produit à deux poids). Barre d'achat fixe sur mobile. Tiroir panier avec barre de progression vers la livraison offerte.
+- Allergènes toujours visibles (pas d'accordéon fermé). Réponses de la FAQ visibles. Message cadeau limité aux coffrets, à la boîte et à la carte cadeau.
+- Recherche interne : index intégré, synonymes, page en `noindex`, fonctionne sans JavaScript.
+- Grille de 2 colonnes sur mobile et de 3 sur ordinateur (à confirmer en UI).
+
+**Questions ouvertes**
+- Prix au kilo : obligation à vérifier à l'étape conformité.
+- Décision B (`noindex` global) et URL de Mokom Studio : toujours en attente.

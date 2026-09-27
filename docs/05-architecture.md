@@ -65,7 +65,7 @@ Accueil  /
 
 ## 4. Navigation
 
-**Bandeau d'annonce** (fin, une ligne) : message de réassurance sur la livraison. Le montant exact sera fixé à l'étape checkout (piste : livraison offerte dès 45 €).
+**Bandeau d'annonce** (fin, une ligne) : **mention « Boutique fictive, étude de cas Mokom Studio »** (décision de l'étape UX). La réassurance sur la livraison est placée près des boutons d'achat et dans le panier.
 
 **En-tête** : logo · **Biscuits** · **Coffrets & cadeaux** · **L'atelier** · **FAQ** · icône Recherche · icône Panier (avec le nombre d'articles). Pas d'espace client dans la maquette : il n'y aurait rien derrière.
 Sur mobile : un menu en tiroir qui reprend les mêmes entrées dans le même ordre. Le panier reste visible en permanence.
