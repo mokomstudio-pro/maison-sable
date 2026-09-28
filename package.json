@@ -1,0 +1,11 @@
+{
+  "name": "maison-sable",
+  "private": true,
+  "type": "module",
+  "description": "Maquette de boutique fictive Maison Sable (étude de cas Mokom Studio), site statique façon Shopify.",
+  "scripts": {
+    "build": "node src/build.mjs",
+    "serve": "node src/serve.mjs",
+    "check": "node scripts/verifier-catalogue.mjs && node scripts/verifier-metas.mjs"
+  }
+}
