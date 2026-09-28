@@ -2,7 +2,7 @@
 import { url, absolue } from "../config.mjs";
 import { produit, merch, livraison, economie } from "../lib/data.mjs";
 import { page, filAriane, jsonLdAriane, tx } from "../lib/layout.mjs";
-import { carteProduit, donneesVariante, imageProduit } from "../lib/composants.mjs";
+import { carteProduit, donneesVariante, imageProduit, srcsetProduit } from "../lib/composants.mjs";
 import { esc, prix, prixKilo, typo } from "../lib/html.mjs";
 import { blocNoel } from "./communs.mjs";
 
@@ -77,9 +77,11 @@ export default function fiche(handle) {
 <div class="fiche" data-fiche data-variantes-json='${esc(JSON.stringify(dataVariantes))}' data-handle="${handle}">
   <div class="fiche-galerie" aria-label="Illustrations du produit" role="region">
     <div class="galerie-piste" data-galerie tabindex="0">
-      ${(estCarte ? [1] : estLot ? [1] : [1, 2]).map((n, i) => `<figure class="galerie-vue"><img src="${imageProduit(handle, n)}" alt="${esc(x.alts[i] || p.titre)}" width="800" height="1000" ${i === 0 ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async"></figure>`).join("")}
+      ${estCarte
+        ? `<figure class="galerie-vue galerie-vue-dessin"><img src="${imageProduit(handle)}" alt="${esc(x.alts[0] || p.titre)}" width="800" height="1000" fetchpriority="high"></figure>`
+        : p.photos.map((ph, i) => `<figure class="galerie-vue"><img src="${imageProduit(handle, i + 1)}" srcset="${srcsetProduit(handle, i + 1)}" sizes="(min-width: 900px) 55vw, 100vw" alt="${esc(ph.alt)}" width="800" height="1000" ${i === 0 ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async"><figcaption>Photo d'illustration · ${esc(ph.auteur)}, Unsplash</figcaption></figure>`).join("")}
     </div>
-    ${estCarte || estLot ? "" : `<div class="galerie-commandes js-seul"><button class="bouton-icone" type="button" data-galerie-prec aria-label="Illustration précédente"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15 5 8 12l7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button><span data-galerie-pos>1 / 2</span><button class="bouton-icone" type="button" data-galerie-suiv aria-label="Illustration suivante"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>`}
+    ${p.photos.length < 2 ? "" : `<div class="galerie-commandes js-seul"><button class="bouton-icone" type="button" data-galerie-prec aria-label="Illustration précédente"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15 5 8 12l7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button><span data-galerie-pos>1 / ${p.photos.length}</span><button class="bouton-icone" type="button" data-galerie-suiv aria-label="Illustration suivante"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>`}
   </div>
   <div class="fiche-achat">
     ${filAriane(ariane)}
@@ -135,7 +137,7 @@ ${lies.length ? `<section class="section suggestions" aria-labelledby="t-lies"><
       deliveryTime: { "@type": "ShippingDeliveryTime", handlingTime: { "@type": "QuantitativeValue", minValue: 1, maxValue: 2, unitCode: "DAY" }, transitTime: { "@type": "QuantitativeValue", minValue: m.transit_jours_ouvres.min, maxValue: m.transit_jours_ouvres.max, unitCode: "DAY" } },
     })) }),
   });
-  const base = { name: p.titre, description: x.presentation.replace(/\*\*/g, ""), image: absolue(`/images/produits/${handle}-1.svg`), brand: { "@type": "Brand", name: "Maison Sable" }, category: COLLECTION[coll] };
+  const base = { name: p.titre, description: x.presentation.replace(/\*\*/g, ""), image: absolue(estCarte ? `/images/produits/${handle}-1.svg` : `/images/photos/${handle}-1-800.webp`), brand: { "@type": "Brand", name: "Maison Sable" }, category: COLLECTION[coll] };
   const ld = p.variantes.length > 1 && !estCarte
     ? { "@type": "ProductGroup", productGroupID: handle, ...base, variesBy: "https://schema.org/weight",
         hasVariant: p.variantes.map((v) => ({ "@type": "Product", name: `${p.titre} ${v.option_valeur}`, sku: v.sku, inProductGroupWithID: handle, weight: { "@type": "QuantitativeValue", value: v.poids_net_g, unitCode: "GRM" }, offers: offre(v) })) }

@@ -1,8 +1,8 @@
 // Illustrations « lithographie sur fer-blanc » : aplats d'encres pastel, contour encre légèrement
 // décalé (défaut de repérage d'imprimerie), aucune photo. Dessinées pour Mokom Studio, marque fictive.
 export const C = {
-  sable: "#E9E0D4", papier: "#F7F2EA", encre: "#2E2A3F", corail: "#F0A184", lagune: "#A9D4D0",
-  laguneP: "#2F676A", beurre: "#F6D98E", rose: "#F3C9BD", sauge: "#A9C7AE", pin: "#3D6652",
+  sable: "#F3E4CC", papier: "#FBF4E8", encre: "#3A2218", corail: "#A5531D", lagune: "#E8B15A",
+  laguneP: "#8A4A1C", beurre: "#F6DDB0", rose: "#F6DDB0", sauge: "#C98A4B", pin: "#7A3E1D",
   dore: "#E7B865", doreF: "#C98F45", caramel: "#D98E55", choco: "#6E4B48", chocoF: "#523838", coco: "#FBF7EF",
 };
 const svg = (w, h, corps, titre = "") =>

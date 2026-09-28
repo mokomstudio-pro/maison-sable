@@ -1,5 +1,15 @@
 # Direction artistique — Maison Sable
 
+> ## ⚠️ Révision du 2026-09-28 : version gourmande (demande de Morgane)
+> Morgane trouvait le design « pas assez gourmand » et voulait de vraies photos. Décisions :
+> - **Photos réelles** (Unsplash, licence libre, créditées) sur les fiches, les cartes, l'accueil et l'atelier, signalées « photo d'illustration » : `docs/catalogue/photos.json`, téléchargées par `scripts/photos.mjs`. Les aplats dessinés sont abandonnés (seuls restent la carte cadeau et le schéma sablé / galette / palet).
+> - **Palette A « Caramel et beurre »**, choisie sur la planche `.impeccable/mocks/planche-palettes-photos.html` : fond biscuit `#F3E4CC`, carte crème `#FBF4E8`, texte chocolat `#3A2218` (11,8:1), bouton caramel `#A5531D` avec texte blanc (5,45:1), plateau cannelle `#7A3E1D` avec texte crème (7,6:1), miel `#E8B15A` (bandeau, pastilles), liens `#8A4A1C`, pied de page chocolat.
+> - **Typographies conservées** (Big Shoulders Display, Big Shoulders Inline, Figtree) : Morgane les adore.
+> - **Idée de la boîte conservée**, en photo : cadre de boîte en fer autour de la photo d'accueil, bandeau en relief, plateau cannelle qui porte les coffrets, filets de sertissage à la place des frises dessinées.
+> - **Ouverture visible dès l'arrivée** : un couvercle en métal cannelle se soulève (1 s, une fois, CSS) et découvre la photo ; le titre et le bouton restent lisibles pendant l'animation ; désactivée si « réduire les animations ».
+> Les sections 3, 5 et 7 ci-dessous décrivent la version précédente (pastel, aplats) et sont remplacées par ce bloc ; `DESIGN.md` est réécrit à partir du site construit.
+
+
 > Étape « UI » · 2026-09-28 · Piste choisie par Morgane sur la page de décision : **« La boîte en fer lithographiée »**.
 > Planche de travail : `.impeccable/mocks/planche-direction.html` (version pastel validée).
 > Contrat de direction technique : `.impeccable/surfaces/index-html.md` (relu par l'outil de conception à chaque étape de construction). `DESIGN.md` sera écrit **à la fin du développement**, à partir du site réellement construit.

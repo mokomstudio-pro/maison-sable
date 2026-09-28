@@ -65,7 +65,7 @@ ${robots}
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#E9E0D4">
+<meta name="theme-color" content="#F3E4CC">
 <link rel="icon" href="${url("/images/favicon.svg")}" type="image/svg+xml">
 <link rel="preload" href="${url("/assets/fonts/big-shoulders-display-800.woff2")}" as="font" type="font/woff2" crossorigin>
 ${precharger.join("\n")}

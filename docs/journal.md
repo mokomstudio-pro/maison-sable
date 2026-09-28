@@ -212,3 +212,15 @@
 - Mesure formelle de performance (étape performance), SEO technique (étape seo-technique), accessibilité au clavier (étape accessibilité), panier et commande non relus par la revue de design (à couvrir par l'audit).
 - Compte GitHub pour `SITE_URL` et identité de Mokom Studio pour les mentions légales.
 - `DESIGN.md` et `.impeccable/design.json` écrits à partir du site construit. Écarts relevés, à traiter aux étapes suivantes : les signes ⚠ et ✓ sont tapés au lieu d'être dessinés en icônes ; deux rouges d'erreur (#A3402A et #8E3321) ; tiroirs et panneaux de 280 à 400 ms (au-dessus de la plage 150–250 ms) ; logo composé dans la fonte Inline et non dessiné ; 3 fichiers de police au lieu des 4 prévus (volontaire, Figtree variable).
+
+## 2026-09-28 — Version gourmande (retours de Morgane)
+
+**Retours** : l'animation du couvercle n'était pas visible ; le design n'était pas assez gourmand ; Morgane veut de vraies photos et d'autres couleurs que les aplats pastel ; elle adore les typographies.
+
+**Décisions**
+- Photos : banques libres de droits (choix de Morgane). Pexels bloquait les accès automatiques ; 17 photos Unsplash sous licence libre (aucune « Unsplash+ »), sélectionnées sur une planche contact, auteurs relevés (`docs/catalogue/photos.json`), téléchargées en WebP recadré par `scripts/photos.mjs`, créditées dans les mentions légales et en légende « Photo d'illustration » sur les fiches.
+- Idée de la boîte conservée, en photo (choix de Morgane). Palette A « Caramel et beurre » choisie parmi 3 sur une planche avec de vraies photos (`.impeccable/mocks/planche-palettes-photos.html`). Contrastes vérifiés.
+- Nouvelle ouverture : couvercle en métal cannelle qui se soulève à l'arrivée (1 s, CSS, une seule fois), titre et bouton lisibles pendant l'animation, désactivée si « réduire les animations ». Validée par Morgane sur la planche.
+- Aplats et frises dessinés remplacés par des photos et des filets de sertissage ; seuls restent dessinés la carte cadeau et le schéma sablé / galette / palet. Image de partage refaite avec la photo d'accueil.
+- Détecteur de design : plus de remarque, hors images de survol (voulues). Mesure du texte passée en `em`, car les chiffres de Figtree sont larges et faussaient la largeur en `ch`.
+- Poids : photo d'accueil 84 Ko sur mobile (152 Ko pour la version ordinateur 1600 px, à la limite du budget de l'image principale).

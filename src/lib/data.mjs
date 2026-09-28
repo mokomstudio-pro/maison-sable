@@ -12,6 +12,7 @@ const liste = (s) => (s ? s.split("|") : []);
 export const livraison = JSON.parse(lire("docs/catalogue/livraison.json"));
 export const merch = JSON.parse(lire("docs/catalogue/merchandising.json"));
 export const nutrition = JSON.parse(lire("docs/catalogue/nutrition.json"));
+export const photos = JSON.parse(lire("docs/catalogue/photos.json"));
 export const metas = Object.fromEntries(csv("docs/seo/metas.csv").map((m) => [m.url, m]));
 
 // Textes rédigés des fiches (docs/08-contenus/fiches-produits.md)
@@ -66,6 +67,7 @@ export const produits = csv("docs/catalogue/produits.csv").map((p) => {
     cadeau: liste(p.occasions).includes("Cadeau") && p.format !== "Sachet",
     textes: textes[p.handle],
     nutrition: nutrition[p.handle] || null,
+    photos: photos.produits[p.handle] || [],
     meta: metas["/products/" + p.handle],
   };
 });

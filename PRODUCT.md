@@ -29,7 +29,7 @@ Consultation surtout sur mobile (vacances, réseaux sociaux), pics en été et a
 ## Capabilities and Constraints
 - Catalogue de 8 à 12 produits, variantes simples (format).
 - Aucun paiement réel ; panier et tunnel simulés.
-- Aucune photo, logo ni charte existants : tout est à créer.
+- Pas de photos réelles de la marque (fictive) : photos d'illustration libres de droits (Unsplash), créditées et signalées comme telles.
 - Structures fidèles à Shopify pour une transposition future en thème Liquid.
 
 ## Brand Commitments

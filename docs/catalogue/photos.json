@@ -1,0 +1,44 @@
+{
+  "_note": "Photos d'illustration (Unsplash, licence Unsplash : usage libre, attribution non obligatoire mais créditée). Les biscuits photographiés ne sont pas ceux de Maison Sable (marque fictive). Choisies le 2026-09-28 après la demande de Morgane (« vraies photos, plus gourmand »). Téléchargées en WebP par scripts/photos.mjs.",
+  "produits": {
+    "sable-dune": [
+      { "id": "1600625649542-f668edc636dc", "alt": "Pile de sablés dorés au beurre sur une assiette blanche", "auteur": "amirali mirhashemian", "page": "https://unsplash.com/fr/photos/biscuits-bruns-sur-assiette-en-ceramique-blanche-8rgwgZ76oFc" },
+      { "id": "1621353354739-1420ff28ead9", "alt": "Sablés au beurre empilés, vus de près sur une table claire", "auteur": "Aditya Kulkarni", "page": "https://unsplash.com/fr/photos/biscuits-bruns-sur-table-blanche-DpL-I3hyjO4" }
+    ],
+    "palet-maree": [
+      { "id": "1588070141852-b6bed371e15f", "alt": "Pile de biscuits épais et dorés, bords croustillants", "auteur": "Jeff Siepman", "page": "https://unsplash.com/fr/photos/biscuits-bruns-sur-table-blanche-eXqfxc8flyU" },
+      { "id": "1611835116900-9771618852d2", "alt": "Pile de biscuits ronds au caramel sur une assiette blanche", "auteur": "Grooveland Designs", "page": "https://unsplash.com/fr/photos/biscuits-ronds-bruns-sur-assiette-en-ceramique-blanche-GGPNRGEVFOc" }
+    ],
+    "sable-pignada": [
+      { "id": "1630782622114-613e6e9c5dc6", "alt": "Sablés dorés saupoudrés de sucre, à côté d'une tasse de thé", "auteur": "Adam Bartoszewicz", "page": "https://unsplash.com/fr/photos/biscuits-bruns-sur-assiette-en-ceramique-blanche-IKAv1jMk8EA" }
+    ],
+    "croquant-lagune": [
+      { "id": "1777665998483-54f328e79eeb", "alt": "Croquants aux fruits secs fraîchement tranchés sur une plaque", "auteur": "Donghun Shin", "page": "https://unsplash.com/fr/photos/plateau-de-biscuits-biscotti-fraichement-cuits-avec-des-noix-ut7xuKjjQNI" },
+      { "id": "1761706988941-6390cea4a36e", "alt": "Biscuits aux amandes effilées dans un plat en verre", "auteur": "A L", "page": "https://unsplash.com/fr/photos/biscuits-aux-amandes-dans-un-bol-en-verre-et-une-plaque-de-cuisson-M8oe-2EtPgA" }
+    ],
+    "sable-ecume": [
+      { "id": "1744160252920-967ab9b733ce", "alt": "Biscuits au citron disposés sur une surface claire, avec des tranches d'agrume", "auteur": "Maria Klichik", "page": "https://unsplash.com/fr/photos/les-biscuits-au-citron-sont-astucieusement-disposes-sur-une-surface-blanche-DgoIL3GhDlY" }
+    ],
+    "biscuit-vague": [
+      { "id": "1635585817892-99fdf85c8d33", "alt": "Pile de biscuits au chocolat noir sur un papier sombre", "auteur": "Markus Spiske", "page": "https://unsplash.com/fr/photos/une-pile-de-biscuits-posee-sur-un-morceau-de-papier-5yMCGkFehNk" },
+      { "id": "1767339300106-7e77d5660c08", "alt": "Biscuits au chocolat parsemés de sel sur une grille de refroidissement", "auteur": "Stanley Kustamin", "page": "https://unsplash.com/fr/photos/des-cookies-aux-pepites-de-chocolat-avec-du-sel-de-mer-sur-une-grille-de-refroidissement-C57Rf-Rpenk" }
+    ],
+    "sable-lagon": [
+      { "id": "1586195831749-9fc3b289b4e4", "alt": "Noix de coco râpée tombant sur une petite pile de biscuits", "auteur": "American Heritage Chocolate", "page": "https://unsplash.com/fr/photos/biscuits-bruns-sur-assiette-en-ceramique-blanche-wW1ArQLnmgI" }
+    ],
+    "boite-grande-plage": [
+      { "id": "1733486251575-e7505d267229", "alt": "Boîte en métal remplie de biscuits assortis, à côté d'un bocal de biscuits", "auteur": "Lee Milo", "page": "https://unsplash.com/fr/photos/une-boite-de-biscuits-a-cote-dun-contenant-de-biscuits-mgrwQQMbWAk" }
+    ],
+    "coffret-ete-indien": [
+      { "id": "1772651392135-b891a5e4f8a3", "alt": "Coffret cadeau rempli de biscuits gourmands assortis", "auteur": "César Cabrera", "page": "https://unsplash.com/fr/photos/assortiment-de-biscuits-gastronomiques-dans-une-boite-cadeau-xEH_fJlVs2Y" }
+    ],
+    "coffret-decouverte": [
+      { "id": "1622467827417-bbe2237067a9", "alt": "Boîte en carton kraft ouverte, garnie de biscuits variés", "auteur": "Conor Brown", "page": "https://unsplash.com/fr/photos/pain-brun-et-violet-dans-une-boite-en-carton-brun-H1uISjlRXJE" }
+    ]
+  },
+  "scenes": {
+    "accueil": { "id": "1726733995322-13779de0111f", "alt": "Pile de biscuits gourmands sur une planche en bois, dans une lumière chaude", "auteur": "Erwan NONON", "page": "https://unsplash.com/fr/photos/une-pile-de-biscuits-posee-sur-une-table-en-bois-HpAePNFM0RU" },
+    "atelier": { "id": "1765451490511-3421410e1391", "alt": "Mains découpant une pâte à biscuits avec des emporte-pièces et un rouleau", "auteur": "Raymond Petrik", "page": "https://unsplash.com/fr/photos/des-mains-coupant-la-pate-avec-des-emporte-biscuits-et-un-rouleau-a-patisserie-e8tHzGulnTM" },
+    "atelier-petrir": { "id": "1543157840-e6aaa4dccac5", "alt": "Mains pétrissant une pâte sur un plan de travail fariné", "auteur": "Julian Hochgesang", "page": "https://unsplash.com/fr/photos/personne-moulant-la-pate-Ms9Zb6umsKU" }
+  }
+}

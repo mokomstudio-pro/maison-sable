@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Trois palettes gourmandes · Maison Sable</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&family=Big+Shoulders+Inline+Display:wght@700&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --f-titre: "Big Shoulders Display", sans-serif; --f-relief: "Big Shoulders Inline Display", sans-serif; --f-texte: "Figtree", system-ui, sans-serif; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 400 1rem/1.5 var(--f-texte); background: #E7E2DA; color: #222; }
+  .avert { margin: 0; background: #222; color: #fff; text-align: center; padding: .6rem 1rem; font-size: .9rem; }
+  header.planche { max-width: 1400px; margin: 0 auto; padding: 2rem 1rem 1rem; }
+  header.planche h1 { font: 800 clamp(2rem, 4vw, 3rem)/1 var(--f-titre); margin: 0 0 .5rem; }
+  header.planche p { max-width: 75ch; margin: 0 0 .6rem; }
+  .rejouer { font: 700 1rem var(--f-texte); padding: .6rem 1.1rem; border: 2px solid #222; background: #fff; border-radius: 6px; cursor: pointer; }
+  .pistes { max-width: 1400px; margin: 0 auto; padding: 1rem; display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); }
+  .piste { background: var(--fond); color: var(--texte); border-radius: 14px; overflow: hidden; box-shadow: 0 10px 30px -18px #0008; }
+  .piste-tete { padding: 1rem 1.2rem .4rem; }
+  .piste-tete h2 { font: 800 1.9rem/1 var(--f-titre); margin: 0; }
+  .piste-tete p { margin: .3rem 0 0; font-size: .92rem; }
+  .puces { display: flex; gap: .35rem; padding: .6rem 1.2rem 1rem; flex-wrap: wrap; }
+  .puce { width: 2.2rem; height: 2.2rem; border-radius: 50%; box-shadow: inset 0 0 0 1px #0003; }
+  .mini-entete { display: flex; justify-content: space-between; align-items: center; padding: .5rem 1.2rem; border-block: 2px solid var(--texte); }
+  .mini-logo { font: 700 1.05rem/1 var(--f-relief); letter-spacing: .06em; text-transform: uppercase; background: var(--plateau); color: var(--plateau-texte); padding: .3rem .6rem; border-radius: 3px; }
+  .mini-nav { font-size: .8rem; font-weight: 600; display: flex; gap: .7rem; }
+  /* Couvercle : cadre de boîte en fer, photo dedans */
+  .boite { margin: 1rem 1.2rem 0; position: relative; border-radius: 14px; overflow: hidden; outline: 2px solid var(--texte); outline-offset: -9px; aspect-ratio: 4 / 3; }
+  .boite > img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .bandeau { position: absolute; top: 18px; left: 50%; transform: translateX(-50%); background: var(--accent); color: var(--bandeau-texte); font: 700 1.05rem/1 var(--f-relief); letter-spacing: .08em; text-transform: uppercase; padding: .35rem .9rem .25rem; border-radius: 3px; white-space: nowrap; z-index: 2; }
+  .etiquette { position: absolute; left: 7%; bottom: 7%; right: 22%; background: var(--carte); color: var(--texte); padding: .9rem 1rem; border-radius: 4px; z-index: 2; }
+  .etiquette h3 { font: 800 clamp(1.6rem, 2.4vw, 2.1rem)/1 var(--f-titre); margin: 0 0 .5rem; }
+  .bouton { display: inline-block; background: var(--action); color: var(--action-texte); font-weight: 700; padding: .55rem 1rem; border-radius: 6px; box-shadow: 0 2px 0 var(--action-bord); font-size: .95rem; }
+  /* Le couvercle en métal qui se soulève à l'arrivée */
+  .couvercle-metal { position: absolute; inset: 0; z-index: 3; background: var(--plateau); display: grid; place-items: center; transform-origin: 50% 0; animation: soulever 1s cubic-bezier(.65,0,.35,1) .5s both; }
+  .couvercle-metal::before { content: ""; position: absolute; inset: 12px; border: 2px solid var(--plateau-texte); border-radius: 10px; opacity: .55; }
+  .couvercle-metal span { font: 700 clamp(1.4rem, 3vw, 2.2rem)/1 var(--f-relief); letter-spacing: .1em; color: var(--plateau-texte); text-transform: uppercase; text-align: center; }
+  @keyframes soulever { 0% { transform: none; } 35% { transform: translateY(-4%) rotate(-1.5deg); } 100% { transform: translateY(-105%) rotate(-4deg); } }
+  @media (prefers-reduced-motion: reduce) { .couvercle-metal { display: none; } }
+  .produits { display: grid; grid-template-columns: repeat(3, 1fr); gap: .7rem; padding: 1rem 1.2rem 1.3rem; background: var(--plateau); margin-top: 1rem; }
+  .produits h4 { grid-column: 1 / -1; margin: 0; color: var(--plateau-texte); font: 800 1.5rem/1 var(--f-titre); }
+  .carte { background: var(--carte); border-radius: 10px; overflow: hidden; color: var(--texte); }
+  .carte img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; }
+  .carte div { padding: .45rem .55rem .6rem; }
+  .carte b { display: block; font: 800 1.1rem/1 var(--f-titre); }
+  .carte small { display: block; font-size: .78rem; }
+  .carte .prix { font-weight: 700; font-size: .85rem; font-variant-numeric: tabular-nums; }
+  .reassurance { margin: 0; padding: .7rem 1.2rem 1rem; font-size: .85rem; font-weight: 600; text-align: center; }
+  .credits { max-width: 1400px; margin: 0 auto; padding: 1rem 1rem 3rem; font-size: .8rem; color: #555; }
+</style>
+</head>
+<body>
+<p class="avert"><strong>Document de travail.</strong> Trois palettes gourmandes avec de vraies photos (Unsplash, licence libre), les typographies que tu aimes, et la nouvelle ouverture du couvercle.</p>
+<header class="planche">
+  <h1>Maison Sable, version gourmande : trois palettes</h1>
+  <p>Même idée de boîte à biscuits, mais en vraies photos. À l'arrivée, le couvercle en métal se soulève et découvre la photo : c'est visible tout de suite, dans le premier écran. Choisis l'ambiance qui te donne le plus envie de croquer.</p>
+  <button class="rejouer" type="button" onclick="document.querySelectorAll('.couvercle-metal').forEach(c=>{c.style.animation='none';c.offsetHeight;c.style.animation=''})">Rejouer l'ouverture</button>
+</header>
+
+<div class="pistes">
+  <!-- A -->
+  <section class="piste" style="--fond:#F3E4CC;--carte:#FBF4E8;--texte:#3A2218;--action:#A5531D;--action-texte:#FFFFFF;--action-bord:#6E3510;--plateau:#7A3E1D;--plateau-texte:#FBF4E8;--accent:#E8B15A;--bandeau-texte:#3A2218">
+    <div class="piste-tete"><h2>A · Caramel et beurre</h2><p>Lumineux et doré, comme un atelier au soleil : fond biscuit, texte chocolat, bouton caramel, plateau cannelle.</p></div>
+    <div class="puces"><span class="puce" style="background:#F3E4CC"></span><span class="puce" style="background:#FBF4E8"></span><span class="puce" style="background:#3A2218"></span><span class="puce" style="background:#A5531D"></span><span class="puce" style="background:#7A3E1D"></span><span class="puce" style="background:#E8B15A"></span></div>
+    <div class="mini-entete"><span class="mini-logo">Maison Sable</span><span class="mini-nav"><span>Biscuits</span><span>Coffrets</span><span>L'atelier</span></span></div>
+    <div class="boite"><img src="https://images.unsplash.com/photo-1726733995322-13779de0111f?w=900&q=70&auto=format" alt="Pile de biscuits sur une planche en bois, lumière chaude">
+      <span class="bandeau">Maison Sable · Hossegor</span>
+      <div class="etiquette"><h3>Biscuits artisanaux de bord de mer, faits à Hossegor</h3><span class="bouton">Offrir un coffret</span></div>
+      <div class="couvercle-metal" aria-hidden="true"><span>Maison Sable<br>Hossegor</span></div></div>
+    <div class="produits"><h4>Sept recettes pur beurre</h4>
+      <div class="carte"><img src="https://images.unsplash.com/photo-1600625649542-f668edc636dc?w=400&q=70&auto=format" alt=""><div><b>Sablé Dune</b><small>Beurre &amp; fleur de sel</small><span class="prix">dès 6,90&nbsp;€</span></div></div>
+      <div class="carte"><img src="https://images.unsplash.com/photo-1588070141852-b6bed371e15f?w=400&q=70&auto=format" alt=""><div><b>Palet Marée</b><small>Caramel</small><span class="prix">dès 7,50&nbsp;€</span></div></div>
+      <div class="carte"><img src="https://images.unsplash.com/photo-1635585817892-99fdf85c8d33?w=400&q=70&auto=format" alt=""><div><b>Biscuit Vague</b><small>Chocolat</small><span class="prix">dès 7,90&nbsp;€</span></div></div>
+    </div>
+    <p class="reassurance">Expédié sous 1 à 2 jours · Livraison dès 4,50&nbsp;€, offerte dès 45&nbsp;€</p>
+  </section>
+
+  <!-- B -->
+  <section class="piste" style="--fond:#2B1A14;--carte:#3C261D;--texte:#F6E9D6;--action:#E9A15B;--action-texte:#2B1A14;--action-bord:#A96A2E;--plateau:#4A2E22;--plateau-texte:#F6E9D6;--accent:#E9A15B;--bandeau-texte:#2B1A14">
+    <div class="piste-tete"><h2>B · Chocolat profond</h2><p>Chic et contrasté : fond chocolat noir, texte crème, bouton caramel doré. Les photos ressortent comme en vitrine.</p></div>
+    <div class="puces"><span class="puce" style="background:#2B1A14"></span><span class="puce" style="background:#3C261D"></span><span class="puce" style="background:#F6E9D6"></span><span class="puce" style="background:#E9A15B"></span><span class="puce" style="background:#4A2E22"></span><span class="puce" style="background:#C9774A"></span></div>
+    <div class="mini-entete"><span class="mini-logo">Maison Sable</span><span class="mini-nav"><span>Biscuits</span><span>Coffrets</span><span>L'atelier</span></span></div>
+    <div class="boite"><img src="https://images.unsplash.com/photo-1726733995322-13779de0111f?w=900&q=70&auto=format" alt="Pile de biscuits sur une planche en bois, lumière chaude">
+      <span class="bandeau">Maison Sable · Hossegor</span>
+      <div class="etiquette"><h3>Biscuits artisanaux de bord de mer, faits à Hossegor</h3><span class="bouton">Offrir un coffret</span></div>
+      <div class="couvercle-metal" aria-hidden="true"><span>Maison Sable<br>Hossegor</span></div></div>
+    <div class="produits"><h4>Sept recettes pur beurre</h4>
+      <div class="carte"><img src="https://images.unsplash.com/photo-1600625649542-f668edc636dc?w=400&q=70&auto=format" alt=""><div><b>Sablé Dune</b><small>Beurre &amp; fleur de sel</small><span class="prix">dès 6,90&nbsp;€</span></div></div>
+      <div class="carte"><img src="https://images.unsplash.com/photo-1588070141852-b6bed371e15f?w=400&q=70&auto=format" alt=""><div><b>Palet Marée</b><small>Caramel</small><span class="prix">dès 7,50&nbsp;€</span></div></div>
+      <div class="carte"><img src="https://images.unsplash.com/photo-1635585817892-99fdf85c8d33?w=400&q=70&auto=format" alt=""><div><b>Biscuit Vague</b><small>Chocolat</small><span class="prix">dès 7,90&nbsp;€</span></div></div>
+    </div>
+    <p class="reassurance">Expédié sous 1 à 2 jours · Livraison dès 4,50&nbsp;€, offerte dès 45&nbsp;€</p>
+  </section>
+
+  <!-- C -->
+  <section class="piste" style="--fond:#F2E6D3;--carte:#FCF7EE;--texte:#1E2E38;--action:#B5472F;--action-texte:#FFFFFF;--action-bord:#7C2C1B;--plateau:#1F5E6B;--plateau-texte:#FCF7EE;--accent:#E9B872;--bandeau-texte:#1E2E38">
+    <div class="piste-tete"><h2>C · Bord de mer gourmand</h2><p>Le goûter face à l'océan : fond sable chaud, texte bleu nuit, bouton framboise, plateau bleu océan.</p></div>
+    <div class="puces"><span class="puce" style="background:#F2E6D3"></span><span class="puce" style="background:#FCF7EE"></span><span class="puce" style="background:#1E2E38"></span><span class="puce" style="background:#B5472F"></span><span class="puce" style="background:#1F5E6B"></span><span class="puce" style="background:#E9B872"></span></div>
+    <div class="mini-entete"><span class="mini-logo">Maison Sable</span><span class="mini-nav"><span>Biscuits</span><span>Coffrets</span><span>L'atelier</span></span></div>
+    <div class="boite"><img src="https://images.unsplash.com/photo-1726733995322-13779de0111f?w=900&q=70&auto=format" alt="Pile de biscuits sur une planche en bois, lumière chaude">
+      <span class="bandeau">Maison Sable · Hossegor</span>
+      <div class="etiquette"><h3>Biscuits artisanaux de bord de mer, faits à Hossegor</h3><span class="bouton">Offrir un coffret</span></div>
+      <div class="couvercle-metal" aria-hidden="true"><span>Maison Sable<br>Hossegor</span></div></div>
+    <div class="produits"><h4>Sept recettes pur beurre</h4>
+      <div class="carte"><img src="https://images.unsplash.com/photo-1600625649542-f668edc636dc?w=400&q=70&auto=format" alt=""><div><b>Sablé Dune</b><small>Beurre &amp; fleur de sel</small><span class="prix">dès 6,90&nbsp;€</span></div></div>
+      <div class="carte"><img src="https://images.unsplash.com/photo-1588070141852-b6bed371e15f?w=400&q=70&auto=format" alt=""><div><b>Palet Marée</b><small>Caramel</small><span class="prix">dès 7,50&nbsp;€</span></div></div>
+      <div class="carte"><img src="https://images.unsplash.com/photo-1635585817892-99fdf85c8d33?w=400&q=70&auto=format" alt=""><div><b>Biscuit Vague</b><small>Chocolat</small><span class="prix">dès 7,90&nbsp;€</span></div></div>
+    </div>
+    <p class="reassurance">Expédié sous 1 à 2 jours · Livraison dès 4,50&nbsp;€, offerte dès 45&nbsp;€</p>
+  </section>
+</div>
+<p class="credits">Photos : Unsplash, licence Unsplash (usage libre, attribution non obligatoire mais créditée sur le site). Les biscuits photographiés ne sont pas ceux de Maison Sable (marque fictive) : ce seront des « photos d'illustration ».</p>
+</body>
+</html>

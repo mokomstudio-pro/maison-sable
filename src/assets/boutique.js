@@ -161,11 +161,7 @@ $$("dialog.tiroir").forEach((d) => {
 
 // ---------- Accueil : le couvercle se soulève au premier défilement ----------
 {
-  const boite = $(".boite-accueil");
-  if (boite && !reduit) {
-    const ouvrir = () => { boite.classList.add("ouverte"); removeEventListener("scroll", ouvrir); };
-    if (scrollY > 40) ouvrir(); else { addEventListener("scroll", ouvrir, { passive: true, once: true }); setTimeout(ouvrir, 1500); }
-  } else boite?.classList.add("ouverte");
+  // Le couvercle en métal se soulève à l'arrivée (animation CSS .couvercle-metal, désactivée si « réduire les animations »)
 }
 
 // ---------- Saison de Noël ----------

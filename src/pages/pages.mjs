@@ -1,6 +1,6 @@
 // Pages éditoriales, légales et utilitaires (textes : docs/08-contenus/)
 import { url, absolue, MOKOM_URL } from "../config.mjs";
-import { metas, produit, merch } from "../lib/data.mjs";
+import { metas, produit, merch, photos } from "../lib/data.mjs";
 import { page, filAriane, jsonLdAriane, frise, tx, lienMokom } from "../lib/layout.mjs";
 import { grille, carteProduit } from "../lib/composants.mjs";
 import { esc } from "../lib/html.mjs";
@@ -22,7 +22,7 @@ export function atelier() {
   <h2>${tx("Une biscuiterie entre le lac marin et l'océan")}</h2>
   <p>${tx("Hossegor se trouve sur la côte sud des Landes, entre un lac marin et l'océan Atlantique, au bord d'une forêt de pins. Les recettes de Maison Sable en portent les noms : la Dune, la Marée, la Lagune, l'Écume, la Vague, et la Pignada, la forêt de pins en gascon.")}</p>
 </div>
-<figure class="illustration-large"><img src="${url("/images/atelier.svg")}" alt="Illustration : l'atelier Maison Sable, une maison basse aux volets ouverts sous les pins, entre le lac et la dune" width="1200" height="800" loading="lazy" decoding="async"></figure>
+<figure class="illustration-large"><img src="${url("/images/photos/atelier-petrir-1200.webp")}" srcset="${url("/images/photos/atelier-petrir-800.webp")} 800w, ${url("/images/photos/atelier-petrir-1200.webp")} 1200w" sizes="(min-width: 1320px) 1240px, 94vw" alt="${esc(photos.scenes["atelier-petrir"].alt)}" width="1200" height="800" loading="lazy" decoding="async"><figcaption>Photo d'illustration · ${esc(photos.scenes["atelier-petrir"].auteur)}, Unsplash</figcaption></figure>
 <div class="texte">
   <h2>Des biscuits faits à la main, en petites séries</h2>
   <p>${tx("L'atelier Maison Sable travaille en petites fournées, recette par recette :")}</p>
@@ -178,7 +178,9 @@ export const mentions = () => legal("/policies/legal-notice", "Mentions légales
   <h2>Hébergeur</h2><p>${tx("GitHub, Inc. (service GitHub Pages), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis · github.com")}</p>
   <h2>Propriété intellectuelle</h2><p>${tx("Les textes, illustrations, le logo « Maison Sable » et la mise en page sont des créations de Mokom Studio. Toute reproduction sans autorisation est interdite. Hossegor et les lieux cités existent ; la marque, ses produits, ses personnages et ses avis sont inventés.")}</p>
   <h2>Données personnelles et cookies</h2><p>${tx("Voir la [politique de confidentialité](/policies/privacy-policy) : le site ne collecte aucune donnée et ne dépose aucun cookie.")}</p>
-  <h2>Accessibilité</h2><p>${tx("Le site vise la conformité aux WCAG 2.2, niveau AA. État de conformité : publié après l'audit final.")}</p>`);
+  <h2>Accessibilité</h2><p>${tx("Le site vise la conformité aux WCAG 2.2, niveau AA. État de conformité : publié après l'audit final.")}</p>
+  <h2>Crédits photos</h2><p>${tx("Photos d'illustration issues d'Unsplash (licence Unsplash). Les biscuits photographiés ne sont pas ceux de Maison Sable, marque fictive.")}</p>
+  <ul class="credits">${[...Object.entries(photos.produits).flatMap(([h, l]) => l.map((ph) => [produit(h).titre.split(",")[0], ph])), ...Object.values(photos.scenes).map((ph) => ["Accueil et atelier", ph])].map(([ou, ph]) => `<li>${esc(ou)} : <a href="${ph.page}">${esc(ph.auteur)}</a></li>`).join("")}</ul>`);
 
 export const cgv = () => legal("/policies/terms-of-service", "Conditions générales de vente", "", "Conditions générales de vente d'exemple de Maison Sable, boutique fictive : prix, livraison, rétractation, garanties.", `
   <p class="encadre">${tx("Exemple fictif, sans valeur contractuelle. Maison Sable n'existe pas : ces conditions montrent ce qu'une vraie boutique de biscuits devrait prévoir.")}</p>

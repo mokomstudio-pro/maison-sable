@@ -1,6 +1,6 @@
 // Accueil (docs/08-contenus/accueil.md, zoning 06-ux.md, contrat de direction : le couvercle)
 import { url, absolue } from "../config.mjs";
-import { metas, merch, produit } from "../lib/data.mjs";
+import { metas, merch, produit, photos } from "../lib/data.mjs";
 import { page, frise, tx } from "../lib/layout.mjs";
 import { grille } from "../lib/composants.mjs";
 
@@ -10,13 +10,12 @@ export default function accueil() {
   const recettes = merch.accueil.plateau_recettes.map(produit);
   const corps = `
 <section class="boite-accueil" aria-labelledby="titre-accueil">
-  <div class="couvercle-cadre">
-  <img class="pin-debord" src="${url("/images/pin-debord.svg")}" alt="" width="640" height="220" aria-hidden="true">
   <div class="couvercle" data-couvercle>
     <picture>
-      <source media="(min-width: 760px)" srcset="${url("/images/couvercle-large.svg")}" width="1600" height="900">
-      <img class="couvercle-scene" src="${url("/images/couvercle-haut.svg")}" width="900" height="1300" alt="Illustration lithographiée d'Hossegor : dune, ganivelles, lac marin et pins sous un soleil bas" fetchpriority="high">
+      <source media="(min-width: 760px)" srcset="${url("/images/photos/accueil-large-960.webp")} 960w, ${url("/images/photos/accueil-large-1600.webp")} 1600w" sizes="(min-width: 1320px) 1240px, 94vw" width="1600" height="900">
+      <img class="couvercle-scene" src="${url("/images/photos/accueil-haut-800.webp")}" srcset="${url("/images/photos/accueil-haut-480.webp")} 480w, ${url("/images/photos/accueil-haut-800.webp")} 800w" sizes="94vw" width="800" height="1000" alt="${photos.scenes.accueil.alt}" fetchpriority="high">
     </picture>
+    <div class="couvercle-metal" aria-hidden="true"><span>Maison Sable<br>Hossegor</span></div>
     <p class="bandeau-relief" aria-hidden="true">Maison Sable · Hossegor</p>
     <div class="etiquette-couvercle">
       <h1 id="titre-accueil">${tx(m.h1)}</h1>
@@ -27,7 +26,6 @@ export default function accueil() {
         <a class="lien-fort" href="${url("/collections/biscuits")}">Découvrir nos biscuits</a>
       </div>
     </div>
-  </div>
   </div>
   <div class="plateau" aria-labelledby="titre-coffrets">
     <div class="plateau-int">
@@ -55,7 +53,7 @@ ${frise("ganivelles")}
 </section>
 
 <section class="histoire" aria-labelledby="titre-atelier">
-  <img src="${url("/images/atelier.svg")}" alt="Illustration : l'atelier Maison Sable, une maison basse aux volets ouverts sous les pins" width="1200" height="800" loading="lazy" decoding="async">
+  <img src="${url("/images/photos/atelier-1200.webp")}" srcset="${url("/images/photos/atelier-800.webp")} 800w, ${url("/images/photos/atelier-1200.webp")} 1200w" sizes="(min-width: 900px) 55vw, 100vw" alt="${photos.scenes.atelier.alt}" width="1200" height="800" loading="lazy" decoding="async">
   <div class="histoire-texte">
     <h2 id="titre-atelier">${tx("Un atelier entre le lac et l'océan")}</h2>
     <p>${tx("Maison Sable est née en 2019 à Hossegor, entre le lac marin et l'océan. Jeanne, pâtissière de formation, y façonne les biscuits à la main avec deux autres personnes, en petites séries. Chaque recette porte le nom d'un paysage de la côte.")}</p>
@@ -81,7 +79,7 @@ ${frise("ganivelles")}
 
   return page({
     chemin: "/", titre: m.title, description: m.meta_description, h1Logo: true, corps, classe: "page-accueil",
-    precharger: [`<link rel="preload" as="image" href="${url("/images/couvercle-haut.svg")}" media="(max-width: 759px)">`, `<link rel="preload" as="image" href="${url("/images/couvercle-large.svg")}" media="(min-width: 760px)">`],
+    precharger: [`<link rel="preload" as="image" imagesrcset="${url("/images/photos/accueil-haut-480.webp")} 480w, ${url("/images/photos/accueil-haut-800.webp")} 800w" imagesizes="94vw" media="(max-width: 759px)">`, `<link rel="preload" as="image" imagesrcset="${url("/images/photos/accueil-large-960.webp")} 960w, ${url("/images/photos/accueil-large-1600.webp")} 1600w" imagesizes="(min-width: 1320px) 1240px, 94vw" media="(min-width: 760px)">`],
     jsonLd: [
       { "@type": "Organization", "@id": absolue("/#organisation"), name: "Maison Sable", url: absolue("/"), logo: absolue("/images/favicon.svg"),
         description: "Maison Sable est une biscuiterie artisanale de bord de mer installée à Hossegor, dans les Landes, qui fabrique en petites séries des sablés, des palets et des coffrets de biscuits pur beurre. Marque fictive : étude de cas Mokom Studio.",

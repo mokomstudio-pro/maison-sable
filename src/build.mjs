@@ -4,7 +4,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { absolue, NOINDEX } from "./config.mjs";
 import { produits, merch, livraison } from "./lib/data.mjs";
-import { illustrationProduit, sceneCouvercle, illustrationAtelier, illustrationCoupeTrois, imagePartage, frises, pinDebord, C } from "./lib/illustrations.mjs";
+import { illustrationProduit, illustrationCoupeTrois, imagePartage, C } from "./lib/illustrations.mjs";
 import { donneesVariante, imageProduit } from "./lib/composants.mjs";
 import accueil from "./pages/accueil.mjs";
 import collection, { toutes } from "./pages/collection.mjs";
@@ -50,19 +50,11 @@ for (const [chemin, rendu] of pages) pageHtml(chemin, rendu());
 
 // Ressources
 cpSync(join(racine, "src/assets"), join(dist, "assets"), { recursive: true });
-for (const p of produits) {
-  for (const n of [1, 2]) {
-    const s = illustrationProduit(p.handle, n);
-    if (s) ecrire(`images/produits/${p.handle}-${n}.svg`, s);
-  }
-}
-ecrire("images/couvercle-large.svg", sceneCouvercle("large"));
-ecrire("images/couvercle-haut.svg", sceneCouvercle("haut"));
-ecrire("images/atelier.svg", illustrationAtelier());
+// Photos d'illustration (scripts/photos.mjs) ; seule la carte cadeau garde un visuel dessiné
+cpSync(join(racine, "src/images/photos"), join(dist, "images/photos"), { recursive: true });
+ecrire("images/produits/carte-cadeau-1.svg", illustrationProduit("carte-cadeau", 1));
 ecrire("images/coupe-sable-galette-palet.svg", illustrationCoupeTrois());
 ecrire("images/partage.svg", imagePartage());
-ecrire("images/pin-debord.svg", pinDebord());
-for (const [nom, s] of Object.entries(frises)) ecrire(`images/frise-${nom}.svg`, s);
 ecrire("images/favicon.svg", `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="${C.lagune}"/><circle cx="40" cy="26" r="12" fill="${C.corail}"/><path d="M0 44c16-8 34-8 64-2v22H0Z" fill="${C.sable}"/><path d="M16 50h32" stroke="${C.encre}" stroke-width="4" stroke-linecap="round"/></svg>`);
 const og = join(racine, "src/images/partage.png");
 if (existsSync(og)) cpSync(og, join(dist, "images/partage.png"));

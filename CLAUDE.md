@@ -37,6 +37,9 @@ Ce projet suit la méthode Mokom (plugin `mokom`). L'état d'avancement est dans
 - Accueil ≤ 1,5 Mo transférés · JavaScript propre ≤ 150 Ko · 3 fichiers de police WOFF2 (69 Ko) · aucun script tiers.
 - LCP ≤ 2,5 s · INP ≤ 200 ms · CLS ≤ 0,1.
 
+## Photos
+- Photos d'illustration Unsplash (licence Unsplash), listées avec leur auteur dans `docs/catalogue/photos.json` et créditées dans les mentions légales ; légende « Photo d'illustration » sur les fiches. Ajouter une photo : l'inscrire dans `photos.json`, puis `node scripts/photos.mjs`.
+
 ## Règles non négociables
 - Jamais de fait inventé sur le monde réel : `[À COMPLÉTER]` à la place. Contenus de marque inventés : toujours marqués `[FICTIF]`.
 - Un seul `h1` par page ; `title` et meta description uniques ; URLs courtes en minuscules avec tirets.
