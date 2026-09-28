@@ -115,7 +115,7 @@
 
 ### Article « Sablé, galette ou palet ? »
 - URL : `/blogs/journal/sable-galette-palet-difference` · Intention : information
-- Plan : réponse d'abord (40 à 60 mots) → tableau comparatif (épaisseur, levure, texture, origine) → H2 « D'où vient la galette de Pont-Aven ? » (faits sourcés) → H2 « Et chez Maison Sable ? » (Palet Marée, Sablé Dune) → sources citées
+- Plan : réponse d'abord (40 à 60 mots) → tableau comparatif (épaisseur, texture, origine) → H2 « D'où vient la galette de Pont-Aven ? » (faits sourcés) → H2 « Et chez Maison Sable ? » (Palet Marée, Sablé Dune) → sources citées
 - Contenus obligatoires : **date de publication et de mise à jour visibles**, auteur (« L'atelier Maison Sable » `[FICTIF]`), sources externes (liens)
 - Données structurées : `Article` + `BreadcrumbList`
 

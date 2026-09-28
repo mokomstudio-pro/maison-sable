@@ -280,4 +280,4 @@ La personne reçoit un e-mail avec un code et votre message. Elle saisit ce code
 ## Éléments à compléter
 - Durée de validité de la carte cadeau → étape conformité.
 - Déclaration nutritionnelle (valeurs d'exemple ou mention d'exemption) → étape conformité.
-- Vouvoiement ou tutoiement : non tranché (vouvoiement appliqué).
+- ~~Vouvoiement ou tutoiement~~ → vouvoiement validé par Morgane (2026-09-28).

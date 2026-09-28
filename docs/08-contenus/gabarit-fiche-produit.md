@@ -7,7 +7,7 @@
 ## 1. Voix de la marque (pour toutes les fiches)
 - **Trois adjectifs** : chaleureuse, sensorielle, précise.
 - **On ne dit jamais** : « fait avec amour » ou « avec passion », « le meilleur » ou « n°1 », « comme autrefois » ou « la recette de grand-mère » (le code terroir écarté), « healthy » ou « sain », « irrésistible ».
-- **Vouvoiement** chaleureux `[HYPOTHÈSE, non tranché par Morgane]`.
+- **Vouvoiement** chaleureux (validé par Morgane le 2026-09-28).
 - Le sujet est toujours nommé (« Le Palet Marée… »), jamais « il » ou « ce biscuit » en début de passage (règle GEO).
 - Chiffres exacts tirés du catalogue : pourcentages, poids, nombre de biscuits (« environ »), durée de conservation.
 - Typographie française appliquée **automatiquement au rendu** : espace insécable avant `: ; ! ?` et à l'intérieur des « », espace fine entre un nombre et « € », « g », « % ».

@@ -30,7 +30,7 @@
 ## 5. Marque
 - Charte existante : **non** — tout est à créer (logo typographique, palette, typographies).
 - Ambiance demandée : **palette douce et gourmande** (sable, crème, beurre, caramel, touches océan ou rose poudré) — à trancher à l'étape UI.
-- Ton : **chaleureux**, complice, sensoriel, simple ; vouvoiement ou tutoiement à trancher à l'étape copywriting `[HYPOTHÈSE : vouvoiement chaleureux]`.
+- Ton : **chaleureux**, complice, sensoriel, simple ; **vouvoiement** (validé par Morgane le 2026-09-28).
 - Mots interdits / promesses interdites : pas de fausses allégations santé (« sain », « healthy », « sans sucre » sans fondement), pas de « bio » ni « label » inventé présenté comme réel, pas de faux chiffres présentés comme vrais.
 
 ## 6. Preuves disponibles

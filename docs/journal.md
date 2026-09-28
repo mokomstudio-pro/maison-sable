@@ -142,3 +142,17 @@
 **Questions ouvertes**
 - Validité de la carte cadeau et déclaration nutritionnelle → étape conformité.
 - Vouvoiement ou tutoiement : à confirmer par Morgane.
+
+## 2026-09-28 — Textes des pages (copywriting)
+
+**Décisions**
+- Vouvoiement validé par Morgane.
+- Textes écrits dans `docs/08-contenus/` : accueil, collections (Biscuits, Coffrets & cadeaux), atelier, FAQ (5 groupes, dont « Maison Sable existe-t-elle vraiment ? »), article « Sablé, galette ou palet ? », contact, étude de cas, éléments communs (bandeau, en-tête, pied de page, panier, recherche, 404, journal).
+- Article : faits historiques vérifiés aux sources (Isidore Penven, Pont-Aven, fin du XIXᵉ siècle ; épaisseurs de 5 mm et de 1 à 1,5 cm ; au moins 20 % de beurre). L'affirmation sur la levure, non confirmée, a été retirée (description Google corrigée).
+- Avis de l'accueil : 3 avis fictifs, signalés comme tels au-dessus, prénoms seuls, sans étoiles ni données structurées.
+- Cohérence corrigée : l'équipe compte 3 personnes, Jeanne comprise. La date sur l'étiquette est une date « à consommer de préférence avant ».
+- Réponses directes de 40 à 60 mots vérifiées ; aucune formule interdite ; « En savoir plus » remplacé par « Découvrir le projet ».
+
+**Questions ouvertes**
+- Méthode de fabrication `[FICTIF]` de la page atelier, description de Mokom Studio, mention de la plage des Estagnots → à valider par Morgane.
+- Délai d'acheminement, emballage, date limite de Noël → étape checkout. Validité de la carte cadeau, mentions de l'étiquette → étape conformité. Résultats mesurés → après l'audit.
