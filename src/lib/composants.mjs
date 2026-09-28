@@ -22,12 +22,12 @@ export function boutonAjout(p, liste) {
   if (p.epuise) return `<button class="bouton bouton-petit" type="button" disabled>Épuisé</button>`;
   if (p.variantes.length === 1) {
     const d = donneesVariante(p, p.variantes[0]);
-    return `<button class="bouton bouton-petit js-seul" type="button" data-ajout='${esc(JSON.stringify(d))}' data-liste="${liste}">Ajouter<span class="visuellement-cache"> ${esc(d.nom)} au panier</span></button>`;
+    return `<button class="bouton bouton-petit js-seul" type="button" data-ajout="${esc(JSON.stringify(d))}" data-liste="${liste}">Ajouter<span class="visuellement-cache"> ${esc(d.nom)} au panier</span></button>`;
   }
   const choix = p.variantes
     .map((v) => {
       const d = donneesVariante(p, v);
-      return `<button class="choix-rapide" type="button" data-ajout='${esc(JSON.stringify(d))}' data-liste="${liste}">${esc(v.option_valeur)} · ${prix(v.prix)}</button>`;
+      return `<button class="choix-rapide" type="button" data-ajout="${esc(JSON.stringify(d))}" data-liste="${liste}">${esc(v.option_valeur)} · ${prix(v.prix)}</button>`;
     })
     .join("");
   return `<div class="ajout-rapide js-seul" data-ajout-rapide>
@@ -52,13 +52,13 @@ export function carteProduit(p, { liste, niveauTitre = 3, chargement = "lazy" } 
   ${boutonAjout(p, liste)}
 </article>`;
   return `<article class="carte" data-produit="${p.handle}" data-saveur="${esc(p.saveur)}" data-format="${esc(p.format)}" data-prix="${p.prixMin}">
-  <a class="alveole" href="${url("/products/" + p.handle)}" tabindex="-1" aria-hidden="true" data-selection='${esc(JSON.stringify({ liste, handle: p.handle }))}'>
+  <a class="alveole" href="${url("/products/" + p.handle)}" tabindex="-1" aria-hidden="true" data-selection="${esc(JSON.stringify({ liste, handle: p.handle }))}">
     ${pastilles ? `<span class="pastilles">${pastilles}</span>` : ""}
     <img src="${imageProduit(p.handle)}"${srcsetProduit(p.handle) ? ` srcset="${srcsetProduit(p.handle)}" sizes="(min-width: 1024px) 380px, 46vw"` : ""} alt="" width="800" height="1000" loading="${chargement}" decoding="async">
     ${p.photos.length > 1 ? `<img class="alveole-survol" src="${imageProduit(p.handle, 2)}" srcset="${srcsetProduit(p.handle, 2)}" sizes="(min-width: 1024px) 380px, 46vw" alt="" width="800" height="1000" loading="lazy" decoding="async">` : ""}
   </a>
   <div class="etiquette-produit">
-    <${h} class="etiq-nom"><a href="${url("/products/" + p.handle)}" data-selection='${esc(JSON.stringify({ liste, handle: p.handle }))}'>${esc(p.titre.split(",")[0].replace(/ (au|aux|à la|à l') .*$/, ""))}</a></${h}>
+    <${h} class="etiq-nom"><a href="${url("/products/" + p.handle)}" data-selection="${esc(JSON.stringify({ liste, handle: p.handle }))}">${esc(p.titre.split(",")[0].replace(/ (au|aux|à la|à l') .*$/, ""))}</a></${h}>
     <span class="etiq-saveur">${esc(saveurCourte(p))}</span>
     <span class="etiq-prix">${prixTexte}</span>
     <span class="etiq-poids">${insecable(poidsCourts(p))}</span>

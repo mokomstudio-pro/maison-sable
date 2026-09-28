@@ -1,5 +1,5 @@
 // Gabarit commun : <head>, bandeau fictif, en-tête, pied de page, tiroirs (menu, panier, recherche).
-import { url, absolue, NOINDEX, MOKOM_URL } from "../config.mjs";
+import { url, absolue, NOINDEX, MOKOM_URL, BASE } from "../config.mjs";
 import { esc, t } from "./html.mjs";
 import { readFileSync } from "node:fs";
 // Feuille de style intégrée dans chaque page (9 Ko compressés) : une requête bloquante de moins sur mobile.
@@ -81,7 +81,7 @@ ${precharger.join("\n")}
 <script type="module" src="${url("/assets/boutique.js")}"></script>
 ${ld}
 </head>
-<body class="${classe}" data-base="${url("")}">
+<body class="${classe}" data-base="${BASE}">
 <a class="evitement" href="#contenu">Aller au contenu</a>
 <p class="bandeau-fiction">Boutique fictive, étude de cas Mokom Studio&#8239;: aucune commande n'est expédiée. <a href="${url("/pages/etude-de-cas")}" data-evenement="mokom_case_study_click" data-emplacement="bandeau">Découvrir le projet</a></p>
 <header class="entete" data-entete>

@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- EXEMPLE DE DÉMONSTRATION : Maison Sable est une marque fictive. Ce flux n'est ni soumis à Google ni publié sur le site. -->
+<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
+<channel>
+  <title>Maison Sable — flux produits (exemple)</title>
+  <link>https://mokomstudio-pro.github.io/maison-sable/</link>
+  <description>Biscuits artisanaux de bord de mer, faits à Hossegor (boutique fictive, étude de cas Mokom Studio)</description>
+  <item>
+    <g:id>MS-DUNE-150</g:id>
+    <g:item_group_id>sable-dune</g:item_group_id>
+    <g:title>Maison Sable Sablé Dune au beurre et fleur de sel 150 g</g:title>
+    <g:description>Le Sablé Dune est la recette signature de Maison Sable : un sablé pur beurre et fondant, fait avec 30 % de beurre demi-sel et relevé de fleur de sel. Il est façonné à la main dans l'atelier d'Hossegor, en petites séries. Il se vend en sachet de 150 g ou de 300 g.</g:description>
+    <g:link>https://mokomstudio-pro.github.io/maison-sable/products/sable-dune?variant=MS-DUNE-150</g:link>
+    <g:image_link>https://mokomstudio-pro.github.io/maison-sable/images/photos/sable-dune-1-800.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>6.90 EUR</g:price>
+    <g:brand>Maison Sable</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>MS-DUNE-150</g:mpn>
+    <g:condition>new</g:condition>
+    <g:google_product_category>Food, Beverages &amp; Tobacco &gt; Food Items &gt; Bakery &gt; Cookies</g:google_product_category>
+    <g:product_type>Biscuits &gt; Sablé</g:product_type>
+    <g:unit_pricing_measure>150 g</g:unit_pricing_measure>
+    <g:unit_pricing_base_measure>1 kg</g:unit_pricing_base_measure>
+    <g:shipping_weight>190 g</g:shipping_weight>
+    <g:shipping><g:country>FR</g:country><g:service>Livraison à domicile</g:service><g:price>5.90 EUR</g:price></g:shipping>
+  </item>
+  <item>
+    <g:id>MS-DUNE-300</g:id>
+    <g:item_group_id>sable-dune</g:item_group_id>
+    <g:title>Maison Sable Sablé Dune au beurre et fleur de sel 300 g</g:title>
+    <g:description>Le Sablé Dune est la recette signature de Maison Sable : un sablé pur beurre et fondant, fait avec 30 % de beurre demi-sel et relevé de fleur de sel. Il est façonné à la main dans l'atelier d'Hossegor, en petites séries. Il se vend en sachet de 150 g ou de 300 g.</g:description>
+    <g:link>https://mokomstudio-pro.github.io/maison-sable/products/sable-dune?variant=MS-DUNE-300</g:link>
+    <g:image_link>https://mokomstudio-pro.github.io/maison-sable/images/photos/sable-dune-1-800.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>12.50 EUR</g:price>
+    <g:brand>Maison Sable</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>MS-DUNE-300</g:mpn>
+    <g:condition>new</g:condition>
+    <g:google_product_category>Food, Beverages &amp; Tobacco &gt; Food Items &gt; Bakery &gt; Cookies</g:google_product_category>
+    <g:product_type>Biscuits &gt; Sablé</g:product_type>
+    <g:unit_pricing_measure>300 g</g:unit_pricing_measure>
+    <g:unit_pricing_base_measure>1 kg</g:unit_pricing_base_measure>
+    <g:shipping_weight>360 g</g:shipping_weight>
+    <g:shipping><g:country>FR</g:country><g:service>Livraison à domicile</g:service><g:price>5.90 EUR</g:price></g:shipping>
+  </item>
+  <item>
+    <g:id>MS-MAREE-150</g:id>
+    <g:item_group_id>palet-maree</g:item_group_id>
+    <g:title>Maison Sable Palet Marée au caramel beurre salé 150 g</g:title>
+    <g:description>Le Palet Marée est un palet épais au beurre demi-sel, garni de 12 % de caramel au beurre salé préparé à l'atelier d'Hossegor. Croustillant sur les bords et fondant à cœur, c'est la recette la plus gourmande de Maison Sable. Il se vend en sachet de 150 g (environ 8 palets) ou de 300 g.</g:description>
+    <g:link>https://mokomstudio-pro.github.io/maison-sable/products/palet-maree?variant=MS-MAREE-150</g:link>
+    <g:image_link>https://mokomstudio-pro.github.io/maison-sable/images/photos/palet-maree-1-800.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>7.50 EUR</g:price>
+    <g:brand>Maison Sable</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>MS-MAREE-150</g:mpn>
+    <g:condition>new</g:condition>
+    <g:google_product_category>Food, Beverages &amp; Tobacco &gt; Food Items &gt; Bakery &gt; Cookies</g:google_product_category>
+    <g:product_type>Biscuits &gt; Palet</g:product_type>
+    <g:unit_pricing_measure>150 g</g:unit_pricing_measure>
+    <g:unit_pricing_base_measure>1 kg</g:unit_pricing_base_measure>
+    <g:shipping_weight>190 g</g:shipping_weight>
+    <g:shipping><g:country>FR</g:country><g:service>Livraison à domicile</g:service><g:price>5.90 EUR</g:price></g:shipping>
+  </item>
+  <item>
+    <g:id>MS-MAREE-300</g:id>
+    <g:item_group_id>palet-maree</g:item_group_id>
+    <g:title>Maison Sable Palet Marée au caramel beurre salé 300 g</g:title>
+    <g:description>Le Palet Marée est un palet épais au beurre demi-sel, garni de 12 % de caramel au beurre salé préparé à l'atelier d'Hossegor. Croustillant sur les bords et fondant à cœur, c'est la recette la plus gourmande de Maison Sable. Il se vend en sachet de 150 g (environ 8 palets) ou de 300 g.</g:description>
+    <g:link>https://mokomstudio-pro.github.io/maison-sable/products/palet-maree?variant=MS-MAREE-300</g:link>
+    <g:image_link>https://mokomstudio-pro.github.io/maison-sable/images/photos/palet-maree-1-800.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>13.50 EUR</g:price>
+    <g:brand>Maison Sable</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>MS-MAREE-300</g:mpn>
+    <g:condition>new</g:condition>
+    <g:google_product_category>Food, Beverages &amp; Tobacco &gt; Food Items &gt; Bakery &gt; Cookies</g:google_product_category>
+    <g:product_type>Biscuits &gt; Palet</g:product_type>
+    <g:unit_pricing_measure>300 g</g:unit_pricing_measure>
+    <g:unit_pricing_base_measure>1 kg</g:unit_pricing_base_measure>
+    <g:shipping_weight>360 g</g:shipping_weight>
+    <g:shipping><g:country>FR</g:country><g:service>Livraison à domicile</g:service><g:price>5.90 EUR</g:price></g:shipping>
+  </item>
+  <item>
+    <g:id>MS-PIGNADA-150</g:id>
+    <g:item_group_id>sable-pignada</g:item_group_id>
+    <g:title>Maison Sable Sablé Pignada aux pignons de pin et miel 150 g</g:title>
+    <g:description>Le Sablé Pignada rend hommage à la pignada, la forêt de pins des Landes. Ce sablé pur beurre contient 10 % de pignons de pin et 5 % de miel, qui lui donnent un goût doux et légèrement résineux. Il est fait à la main à Hossegor et se vend en sachet de 150 g ou de 300 g.</g:description>
+    <g:link>https://mokomstudio-pro.github.io/maison-sable/products/sable-pignada?variant=MS-PIGNADA-150</g:link>
+    <g:image_link>https://mokomstudio-pro.github.io/maison-sable/images/photos/sable-pignada-1-800.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>8.50 EUR</g:price>
+    <g:brand>Maison Sable</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>MS-PIGNADA-150</g:mpn>
+    <g:condition>new</g:condition>
+    <g:google_product_category>Food, Beverages &amp; Tobacco &gt; Food Items &gt; Bakery &gt; Cookies</g:google_product_category>
+    <g:product_type>Biscuits &gt; Sablé</g:product_type>
+    <g:unit_pricing_measure>150 g</g:unit_pricing_measure>
+    <g:unit_pricing_base_measure>1 kg</g:unit_pricing_base_measure>
+    <g:shipping_weight>190 g</g:shipping_weight>
+    <g:shipping><g:country>FR</g:country><g:service>Livraison à domicile</g:service><g:price>5.90 EUR</g:price></g:shipping>
+  </item>
+  <item>
+    <g:id>MS-PIGNADA-300</g:id>
+    <g:item_group_id>sable-pignada</g:item_group_id>
+    <g:title>Maison Sable Sablé Pignada aux pignons de pin et miel 300 g</g:title>
+    <g:description>Le Sablé Pignada rend hommage à la pignada, la forêt de pins des Landes. Ce sablé pur beurre contient 10 % de pignons de pin et 5 % de miel, qui lui donnent un goût doux et légèrement résineux. Il est fait à la main à Hossegor et se vend en sachet de 150 g ou de 300 g.</g:description>
+    <g:link>https://mokomstudio-pro.github.io/maison-sable/products/sable-pignada?variant=MS-PIGNADA-300</g:link>
+    <g:image_link>https://mokomstudio-pro.github.io/maison-sable/images/photos/sable-pignada-1-800.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>15.50 EUR</g:price>
+    <g:brand>Maison Sable</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>MS-PIGNADA-300</g:mpn>
+    <g:condition>new</g:condition>
+    <g:google_product_category>Food, Beverages &amp; Tobacco &gt; Food Items &gt; Bakery &gt; Cookies</g:google_product_category>
+    <g:product_type>Biscuits &gt; Sablé</g:product_type>
+    <g:unit_pricing_measure>300 g</g:unit_pricing_measure>
+    <g:unit_pricing_base_measure>1 kg</g:unit_pricing_base_measure>
+    <g:shipping_weight>360 g</g:shipping_weight>
+    <g:shipping><g:country>FR</g:country><g:service>Livraison à domicile</g:service><g:price>5.90 EUR</g:price></g:shipping>
+  </item>
+  <item>
+    <g:id>MS-LAGUNE-120</g:id>
+    <g:item_group_id>croquant-lagune</g:item_group_id>
+    <g:title>Maison Sable Croquant Lagune aux amandes et zestes d'orange 120 g</g:title>
+    <g:description>Le Croquant Lagune est un biscuit sec et croquant, riche de 25 % d'amandes et parfumé aux zestes d'orange. Plus craquant que les sablés de Maison Sable, il se conserve 90 jours. Il se vend en sachet de 120 g (environ 10 croquants), un format pratique à glisser dans un colis.</g:description>
+    <g:link>https://mokomstudio-pro.github.io/maison-sable/products/croquant-lagune?variant=MS-LAGUNE-120</g:link>
+    <g:image_link>https://mokomstudio-pro.github.io/maison-sable/images/photos/croquant-lagune-1-800.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>8.90 EUR</g:price>
+    <g:brand>Maison Sable</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>MS-LAGUNE-120</g:mpn>
+    <g:condition>new</g:condition>
+    <g:google_product_category>Food, Beverages &amp; Tobacco &gt; Food Items &gt; Bakery &gt; Cookies</g:google_product_category>
+    <g:product_type>Biscuits &gt; Croquant</g:product_type>
+    <g:unit_pricing_measure>120 g</g:unit_pricing_measure>
+    <g:unit_pricing_base_measure>1 kg</g:unit_pricing_base_measure>
+    <g:shipping_weight>160 g</g:shipping_weight>
+    <g:shipping><g:country>FR</g:country><g:service>Livraison à domicile</g:service><g:price>5.90 EUR</g:price></g:shipping>
+  </item>
+  <item>
+    <g:id>MS-ECUME-150</g:id>
+    <g:item_group_id>sable-ecume</g:item_group_id>
+    <g:title>Maison Sable Sablé Écume au citron et thym 150 g</g:title>
+    <g:description>Le Sablé Écume est un sablé pur beurre au zeste de citron (2 %) et au thym (0,3 %). Frais et légèrement herbacé, c'est la recette la plus fraîche en bouche de Maison Sable, pensée pour le goûter à la plage. Il est fabriqué à Hossegor et se vend en sachet de 150 g ou de 300 g.</g:description>
+    <g:link>https://mokomstudio-pro.github.io/maison-sable/products/sable-ecume?variant=MS-ECUME-150</g:link>
+    <g:image_link>https://mokomstudio-pro.github.io/maison-sable/images/photos/sable-ecume-1-800.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>7.20 EUR</g:price>
+    <g:brand>Maison Sable</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>MS-ECUME-150</g:mpn>
+    <g:condition>new</g:condition>
+    <g:google_product_category>Food, Beverages &amp; Tobacco &gt; Food Items &gt; Bakery &gt; Cookies</g:google_product_category>
+    <g:product_type>Biscuits &gt; Sablé</g:product_type>
+    <g:unit_pricing_measure>150 g</g:unit_pricing_measure>
+    <g:unit_pricing_base_measure>1 kg</g:unit_pricing_base_measure>
+    <g:shipping_weight>190 g</g:shipping_weight>
+    <g:shipping><g:country>FR</g:country><g:service>Livraison à domicile</g:service><g:price>5.90 EUR</g:price></g:shipping>
+  </item>
+  <item>
+    <g:id>MS-ECUME-300</g:id>
+    <g:item_group_id>sable-ecume</g:item_group_id>
+    <g:title>Maison Sable Sablé Écume au citron et thym 300 g</g:title>
+    <g:description>Le Sablé Écume est un sablé pur beurre au zeste de citron (2 %) et au thym (0,3 %). Frais et légèrement herbacé, c'est la recette la plus fraîche en bouche de Maison Sable, pensée pour le goûter à la plage. Il est fabriqué à Hossegor et se vend en sachet de 150 g ou de 300 g.</g:description>
+    <g:link>https://mokomstudio-pro.github.io/maison-sable/products/sable-ecume?variant=MS-ECUME-300</g:link>
+    <g:image_link>https://mokomstudio-pro.github.io/maison-sable/images/photos/sable-ecume-1-800.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>12.90 EUR</g:price>
+    <g:brand>Maison Sable</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>MS-ECUME-300</g:mpn>
+    <g:condition>new</g:condition>
+    <g:google_product_category>Food, Beverages &amp; Tobacco &gt; Food Items &gt; Bakery &gt; Cookies</g:google_product_category>
+    <g:product_type>Biscuits &gt; Sablé</g:product_type>
+    <g:unit_pricing_measure>300 g</g:unit_pricing_measure>
+    <g:unit_pricing_base_measure>1 kg</g:unit_pricing_base_measure>
+    <g:shipping_weight>360 g</g:shipping_weight>
+    <g:shipping><g:country>FR</g:country><g:service>Livraison à domicile</g:service><g:price>5.90 EUR</g:price></g:shipping>
+  </item>
+  <item>
+    <g:id>MS-VAGUE-150</g:id>
+    <g:item_group_id>biscuit-vague</g:item_group_id>
+    <g:title>Maison Sable Biscuit Vague au chocolat noir et fleur de sel 150 g</g:title>
+    <g:description>Le Biscuit Vague est un sablé pur beurre au chocolat noir (20 %) et à la fleur de sel. La fleur de sel relève l'amertume du chocolat, sans masquer le goût du beurre. Maison Sable le fabrique à Hossegor et le vend en sachet de 150 g ou de 300 g.</g:description>
+    <g:link>https://mokomstudio-pro.github.io/maison-sable/products/biscuit-vague?variant=MS-VAGUE-150</g:link>
+    <g:image_link>https://mokomstudio-pro.github.io/maison-sable/images/photos/biscuit-vague-1-800.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>7.90 EUR</g:price>
+    <g:brand>Maison Sable</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>MS-VAGUE-150</g:mpn>
+    <g:condition>new</g:condition>
+    <g:google_product_category>Food, Beverages &amp; Tobacco &gt; Food Items &gt; Bakery &gt; Cookies</g:google_product_category>
+    <g:product_type>Biscuits &gt; Sablé</g:product_type>
+    <g:unit_pricing_measure>150 g</g:unit_pricing_measure>
+    <g:unit_pricing_base_measure>1 kg</g:unit_pricing_base_measure>
+    <g:shipping_weight>190 g</g:shipping_weight>
+    <g:shipping><g:country>FR</g:country><g:service>Livraison à domicile</g:service><g:price>5.90 EUR</g:price></g:shipping>
+  </item>
+  <item>
+    <g:id>MS-VAGUE-300</g:id>
+    <g:item_group_id>biscuit-vague</g:item_group_id>
+    <g:title>Maison Sable Biscuit Vague au chocolat noir et fleur de sel 300 g</g:title>
+    <g:description>Le Biscuit Vague est un sablé pur beurre au chocolat noir (20 %) et à la fleur de sel. La fleur de sel relève l'amertume du chocolat, sans masquer le goût du beurre. Maison Sable le fabrique à Hossegor et le vend en sachet de 150 g ou de 300 g.</g:description>
+    <g:link>https://mokomstudio-pro.github.io/maison-sable/products/biscuit-vague?variant=MS-VAGUE-300</g:link>
+    <g:image_link>https://mokomstudio-pro.github.io/maison-sable/images/photos/biscuit-vague-1-800.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>14.50 EUR</g:price>
+    <g:brand>Maison Sable</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>MS-VAGUE-300</g:mpn>
+    <g:condition>new</g:condition>
+    <g:google_product_category>Food, Beverages &amp; Tobacco &gt; Food Items &gt; Bakery &gt; Cookies</g:google_product_category>
+    <g:product_type>Biscuits &gt; Sablé</g:product_type>
+    <g:unit_pricing_measure>300 g</g:unit_pricing_measure>
+    <g:unit_pricing_base_measure>1 kg</g:unit_pricing_base_measure>
+    <g:shipping_weight>360 g</g:shipping_weight>
+    <g:shipping><g:country>FR</g:country><g:service>Livraison à domicile</g:service><g:price>5.90 EUR</g:price></g:shipping>
+  </item>
+  <item>
+    <g:id>MS-LAGON-150</g:id>
+    <g:item_group_id>sable-lagon</g:item_group_id>
+    <g:title>Maison Sable Sablé Lagon à la noix de coco et vanille 150 g</g:title>
+    <g:description>Le Sablé Lagon est un sablé pur beurre à la noix de coco râpée (12 %) et à l'extrait de vanille. Doux et parfumé, il rappelle les goûters d'été. Maison Sable le vend en sachet de 150 g, soit environ 12 biscuits.</g:description>
+    <g:link>https://mokomstudio-pro.github.io/maison-sable/products/sable-lagon?variant=MS-LAGON-150</g:link>
+    <g:image_link>https://mokomstudio-pro.github.io/maison-sable/images/photos/sable-lagon-1-800.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>7.50 EUR</g:price>
+    <g:brand>Maison Sable</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>MS-LAGON-150</g:mpn>
+    <g:condition>new</g:condition>
+    <g:google_product_category>Food, Beverages &amp; Tobacco &gt; Food Items &gt; Bakery &gt; Cookies</g:google_product_category>
+    <g:product_type>Biscuits &gt; Sablé</g:product_type>
+    <g:unit_pricing_measure>150 g</g:unit_pricing_measure>
+    <g:unit_pricing_base_measure>1 kg</g:unit_pricing_base_measure>
+    <g:shipping_weight>190 g</g:shipping_weight>
+    <g:shipping><g:country>FR</g:country><g:service>Livraison à domicile</g:service><g:price>5.90 EUR</g:price></g:shipping>
+  </item>
+  <item>
+    <g:id>MS-BGP-250</g:id>
+    <g:item_group_id>boite-grande-plage</g:item_group_id>
+    <g:title>Maison Sable Boîte Grande Plage 250 g</g:title>
+    <g:description>La Boîte Grande Plage réunit quatre recettes de Maison Sable : le Sablé Dune, le Palet Marée, le Sablé Écume et le Biscuit Vague. Elle existe en 250 g (environ 20 biscuits) et en 500 g (environ 40 biscuits), dans une boîte en fer imprimée et réutilisable. Un cadeau simple, avec un message si vous le souhaitez.</g:description>
+    <g:link>https://mokomstudio-pro.github.io/maison-sable/products/boite-grande-plage?variant=MS-BGP-250</g:link>
+    <g:image_link>https://mokomstudio-pro.github.io/maison-sable/images/photos/boite-grande-plage-1-800.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>15.90 EUR</g:price>
+    <g:brand>Maison Sable</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>MS-BGP-250</g:mpn>
+    <g:condition>new</g:condition>
+    <g:google_product_category>Food, Beverages &amp; Tobacco &gt; Food Items &gt; Bakery &gt; Cookies</g:google_product_category>
+    <g:product_type>Coffrets &amp; cadeaux &gt; Boîte assortie</g:product_type>
+    <g:unit_pricing_measure>250 g</g:unit_pricing_measure>
+    <g:unit_pricing_base_measure>1 kg</g:unit_pricing_base_measure>
+    <g:shipping_weight>420 g</g:shipping_weight>
+    <g:shipping><g:country>FR</g:country><g:service>Livraison à domicile</g:service><g:price>5.90 EUR</g:price></g:shipping>
+  </item>
+  <item>
+    <g:id>MS-BGP-500</g:id>
+    <g:item_group_id>boite-grande-plage</g:item_group_id>
+    <g:title>Maison Sable Boîte Grande Plage 500 g</g:title>
+    <g:description>La Boîte Grande Plage réunit quatre recettes de Maison Sable : le Sablé Dune, le Palet Marée, le Sablé Écume et le Biscuit Vague. Elle existe en 250 g (environ 20 biscuits) et en 500 g (environ 40 biscuits), dans une boîte en fer imprimée et réutilisable. Un cadeau simple, avec un message si vous le souhaitez.</g:description>
+    <g:link>https://mokomstudio-pro.github.io/maison-sable/products/boite-grande-plage?variant=MS-BGP-500</g:link>
+    <g:image_link>https://mokomstudio-pro.github.io/maison-sable/images/photos/boite-grande-plage-1-800.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>26.90 EUR</g:price>
+    <g:brand>Maison Sable</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>MS-BGP-500</g:mpn>
+    <g:condition>new</g:condition>
+    <g:google_product_category>Food, Beverages &amp; Tobacco &gt; Food Items &gt; Bakery &gt; Cookies</g:google_product_category>
+    <g:product_type>Coffrets &amp; cadeaux &gt; Boîte assortie</g:product_type>
+    <g:unit_pricing_measure>500 g</g:unit_pricing_measure>
+    <g:unit_pricing_base_measure>1 kg</g:unit_pricing_base_measure>
+    <g:shipping_weight>760 g</g:shipping_weight>
+    <g:shipping><g:country>FR</g:country><g:service>Livraison à domicile</g:service><g:price>5.90 EUR</g:price></g:shipping>
+  </item>
+  <item>
+    <g:id>MS-COF-ETE</g:id>
+    <g:item_group_id>coffret-ete-indien</g:item_group_id>
+    <g:title>Maison Sable Coffret Été Indien</g:title>
+    <g:description>Le Coffret Été Indien rassemble la Boîte Grande Plage (250 g), un sachet de Sablés Pignada (150 g) et un sachet de Croquants Lagune (120 g). Il coûte 31,90 €, soit 1,40 € de moins que les trois produits achetés séparément. Il est prêt à offrir, avec un message cadeau si vous le souhaitez.</g:description>
+    <g:link>https://mokomstudio-pro.github.io/maison-sable/products/coffret-ete-indien?variant=MS-COF-ETE</g:link>
+    <g:image_link>https://mokomstudio-pro.github.io/maison-sable/images/photos/coffret-ete-indien-1-800.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>31.90 EUR</g:price>
+    <g:brand>Maison Sable</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>MS-COF-ETE</g:mpn>
+    <g:condition>new</g:condition>
+    <g:google_product_category>Food, Beverages &amp; Tobacco &gt; Food Items &gt; Bakery &gt; Cookies</g:google_product_category>
+    <g:product_type>Coffrets &amp; cadeaux &gt; Coffret</g:product_type>
+    <g:unit_pricing_measure>520 g</g:unit_pricing_measure>
+    <g:unit_pricing_base_measure>1 kg</g:unit_pricing_base_measure>
+    <g:shipping_weight>900 g</g:shipping_weight>
+    <g:shipping><g:country>FR</g:country><g:service>Livraison à domicile</g:service><g:price>5.90 EUR</g:price></g:shipping>
+  </item>
+  <item>
+    <g:id>MS-COF-DEC</g:id>
+    <g:item_group_id>coffret-decouverte</g:item_group_id>
+    <g:title>Maison Sable Coffret Découverte</g:title>
+    <g:description>Le Coffret Découverte contient six mini-sachets de 50 g, un par recette : Sablé Dune, Palet Marée, Sablé Pignada, Croquant Lagune, Sablé Écume et Biscuit Vague. C'est la façon la plus simple de goûter la gamme de Maison Sable ou de la faire découvrir. Il coûte 24,90 € et arrive prêt à offrir.</g:description>
+    <g:link>https://mokomstudio-pro.github.io/maison-sable/products/coffret-decouverte?variant=MS-COF-DEC</g:link>
+    <g:image_link>https://mokomstudio-pro.github.io/maison-sable/images/photos/coffret-decouverte-1-800.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:price>24.90 EUR</g:price>
+    <g:brand>Maison Sable</g:brand>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:mpn>MS-COF-DEC</g:mpn>
+    <g:condition>new</g:condition>
+    <g:google_product_category>Food, Beverages &amp; Tobacco &gt; Food Items &gt; Bakery &gt; Cookies</g:google_product_category>
+    <g:product_type>Coffrets &amp; cadeaux &gt; Coffret</g:product_type>
+    <g:unit_pricing_measure>300 g</g:unit_pricing_measure>
+    <g:unit_pricing_base_measure>1 kg</g:unit_pricing_base_measure>
+    <g:shipping_weight>520 g</g:shipping_weight>
+    <g:shipping><g:country>FR</g:country><g:service>Livraison à domicile</g:service><g:price>5.90 EUR</g:price></g:shipping>
+  </item>
+</channel>
+</rss>

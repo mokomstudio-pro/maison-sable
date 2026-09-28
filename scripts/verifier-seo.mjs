@@ -57,6 +57,8 @@ for (const f of fichiers) {
     if (!/\swidth="\d+"/.test(t) || !/\sheight="\d+"/.test(t)) err(c, `image sans dimensions : ${t.slice(0, 80)}`);
   }
   for (const a of h.matchAll(/\shref="([^"]+)"/g)) { const href = a[1]; if (href.startsWith(BASE) && !existe(href)) err(c, `lien cassé ${href}`); }
+  // Données des boutons d'ajout et des fiches (lues par boutique.js) : doivent être du JSON lisible
+  for (const d of h.matchAll(/\sdata-(ajout|selection|variantes-json)=(["'])([\s\S]*?)\2/g)) { try { JSON.parse(decode(d[3])); } catch { err(c, `données data-${d[1]} illisibles (apostrophe dans un nom ?)`); } }
   // JSON-LD
   const blocs = [...h.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
   const types = [];

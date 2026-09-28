@@ -123,3 +123,29 @@ Sans objet : le site est en `noindex` (décision de Morgane). Si Mokom Studio ve
 - [x] Revue CRO de chaque gabarit (avant développement) ; aucun point bloquant. 4 points « À corriger » reportés aux étapes checkout et conformité.
 - [x] Plan de mesure écrit : événements, déclencheurs, paramètres, conversions, consentement (pour une vraie boutique), principe « démontrer sans collecter » pour la maquette.
 - [ ] Après le développement : chaque événement vérifié dans la console, aucun envoi réseau vers un outil de mesure, revue CRO refaite sur les pages construites.
+
+## 4. Test du plan de marquage (étape analytics, 2026-09-28)
+
+Parcours réel dans Chrome (collection → fiche → panier → commande → confirmation → contact), lecture de `window.dataLayer` à chaque page :
+
+| Événement | Déclencheur testé | Paramètres vérifiés | |
+|---|---|---|---|
+| `view_item_list` | grille de la collection visible | `item_list_id` = biscuits | ✅ |
+| `select_item` | clic sur le nom d'un produit | produit + liste | ✅ |
+| `select_promotion` | clic sur le bloc « Sablé, galette ou palet ? » | `promotion_id` = bloc-texture | ✅ |
+| `view_item` | ouverture de la fiche Croquant Lagune | SKU, prix 8,90 | ✅ |
+| `add_to_cart` | « Ajouter » sur une carte, choix rapide 300 g, « Ajouter au panier » | SKU, quantité, valeur | ✅ (après correction, voir ci-dessous) |
+| `view_cart` | ouverture du tiroir | articles, valeur | ✅ |
+| `remove_from_cart` | « Retirer » dans le tiroir | SKU, valeur | ✅ |
+| `begin_checkout` | « Commander » | 2 articles, 22,40 € | ✅ |
+| `add_shipping_info` | choix du mode de livraison | `shipping_tier` | ✅ |
+| `add_payment_info` | « Valider la commande fictive » | `payment_type` = simulation | ✅ |
+| `purchase` | confirmation | `transaction_id` unique (MS-AAAAMMJJ-hhmmss), valeur 22,40 € hors port, port 5,90 €, 2 articles | ✅ |
+| `mokom_case_study_click` | « Découvrir la démarche » | `link_location` = confirmation | ✅ |
+| `sign_up` | lettre d'information | `method` = newsletter | ✅ |
+| `generate_lead` | formulaire de contact | `form`, `subject` | ✅ |
+| `search` | recherche « caramel » | `search_term` | ✅ |
+
+- **Aucun envoi réseau** : toutes les requêtes du parcours restent sur l'adresse du site (pages, photos, polices, script, catalogue). Aucun appel à Google Analytics, Google Tag Manager ni à un pixel publicitaire. Donc pas de bandeau cookies, conformément à la décision.
+- **Défaut trouvé et corrigé pendant le test** : l'apostrophe du nom « Croquant Lagune aux amandes et zestes d'orange » coupait les données du bouton, et l'ajout au panier échouait sans message (carte et fiche). Les 253 données de boutons du site sont désormais écrites entre guillemets doubles et vérifiées automatiquement par `npm run check:seo`.
+- **Google Merchant Center** : non ouvert (soumettre les produits d'une marque fictive serait trompeur). Un **flux d'exemple** est généré par `node scripts/flux-merchant.mjs` → `docs/catalogue/flux-merchant-exemple.xml` (16 articles, carte cadeau exclue) : titres « Marque + produit + variante », `identifier_exists` = no + référence, catégorie Google « Cookies », prix au kilo, livraison. Il n'est **pas publié** sur le site. Prix et disponibilité identiques à la page et au JSON-LD par construction (mêmes sources).

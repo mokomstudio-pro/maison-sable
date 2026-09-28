@@ -81,7 +81,7 @@ async function suggestion(p) {
   const choix = candidats.find((x) => lies.has(x.handle) && x.variantes[0].prix >= reste) || candidats.find((x) => x.variantes[0].prix >= reste) || candidats[0];
   if (!choix) return;
   const v = choix.variantes[0];
-  zones.forEach((z) => (z.innerHTML = `<div class="suggestion-panier"><img src="${choix.image}" alt="" width="48" height="60"><span>Pour atteindre la livraison offerte&#8239;: <strong>${esc(v.nom)} ${esc(v.variante)}</strong>, ${euros(v.prix)}</span><button class="bouton bouton-petit bouton-secondaire" type="button" data-ajout='${esc(JSON.stringify(v))}' data-liste="panier-suggestion">Ajouter<span class="visuellement-cache"> ${esc(v.nom)}</span></button></div>`));
+  zones.forEach((z) => (z.innerHTML = `<div class="suggestion-panier"><img src="${choix.image}" alt="" width="48" height="60"><span>Pour atteindre la livraison offerte&#8239;: <strong>${esc(v.nom)} ${esc(v.variante)}</strong>, ${euros(v.prix)}</span><button class="bouton bouton-petit bouton-secondaire" type="button" data-ajout="${esc(JSON.stringify(v))}" data-liste="panier-suggestion">Ajouter<span class="visuellement-cache"> ${esc(v.nom)}</span></button></div>`));
 }
 
 function rendrePanier(p, ou) {

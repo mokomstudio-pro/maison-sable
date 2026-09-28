@@ -74,7 +74,7 @@ export default function fiche(handle) {
       </section>`;
 
   const corps = `
-<div class="fiche" data-fiche data-variantes-json='${esc(JSON.stringify(dataVariantes))}' data-handle="${handle}">
+<div class="fiche" data-fiche data-variantes-json="${esc(JSON.stringify(dataVariantes))}" data-handle="${handle}">
   <div class="fiche-galerie" aria-label="Illustrations du produit" role="region">
     <div class="galerie-piste" data-galerie tabindex="0">
       ${estCarte

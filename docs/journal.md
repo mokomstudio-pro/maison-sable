@@ -256,3 +256,10 @@
 - Corrigé : nom accessible du logo (« Maison Sable Hossegor, accueil »), niveaux de titres des cartes produit, focus piégé dans le panneau de filtres mobile, icônes ✓ et ⚠ dessinées. Nettoyage du CSS des anciennes versions.
 - Tests au clavier réussis : lien d'évitement, ordre de tabulation, contour de focus, tiroir du panier (Échap, retour du focus), choix rapide, filtres, résumé d'erreurs de la commande. Zones cliquables de 44 px.
 - Limite : pas de test avec un vrai lecteur d'écran (recommandé). Rapport : `docs/audits/accessibilite.md`.
+
+## 2026-09-28 — Mesure d'audience (analytics)
+
+- Plan de marquage testé sur un vrai parcours : les 15 événements se déclenchent avec les bons paramètres (achat 22,40 € + 5,90 € de port, identifiant unique). Aucune requête vers un outil de mesure. Détail dans `docs/09-cro-mesure.md` §4.
+- **Bug corrigé** : l'ajout au panier du Croquant Lagune échouait (apostrophe dans le nom qui coupait les données du bouton). Contrôle automatique ajouté.
+- Adresses construites par le script sans double barre (`/maison-sable//`).
+- Merchant Center non ouvert (marque fictive) ; flux d'exemple généré (`docs/catalogue/flux-merchant-exemple.xml`, non publié).
