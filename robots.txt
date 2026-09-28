@@ -1,0 +1,5 @@
+# Sans effet sur GitHub Pages (site de projet) : le robots.txt est lu à la racine du domaine.
+# Le site est en noindex page par page (décision validée).
+User-agent: *
+Allow: /
+Sitemap: https://mokomstudio-pro.github.io/maison-sable/sitemap.xml
