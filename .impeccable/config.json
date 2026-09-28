@@ -20,6 +20,15 @@
         ],
         "createdAt": "2026-09-28T10:34:56.231Z",
         "reason": "Claude: label printed on the tin lid and cells inside the open box are the chosen direction's grammar (docs/07-direction-artistique.md), not card nesting"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/planche-direction.html"
+        ],
+        "createdAt": "2026-09-28T11:54:28.225Z",
+        "reason": "Morgane asked on 2026-09-28 for softer, warmer pastel tones; the sand-rose ground (#E9E0D4) is the dune sand of the Hossegor lid scene, not a reflex off-white"
       }
     ]
   }
