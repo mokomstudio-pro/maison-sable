@@ -1,204 +1,188 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-28T13:49:06.219Z",
+  "generatedAt": "2026-09-28T14:34:35.651Z",
   "title": "Design System: Maison Sable",
   "extensions": {
     "colorMeta": {
-      "sable": {
+      "fond": {
         "role": "neutral",
-        "displayName": "Sable rosé",
-        "canonical": "#E9E0D4",
-        "oklch": "oklch(91.1% 0.019 75.3)",
+        "displayName": "Biscuit",
+        "canonical": "#F3E4CC",
+        "oklch": "oklch(92.5% 0.036 79.7)",
         "tonalRamp": [
-          "#100A04",
-          "#29231A",
-          "#463E35",
-          "#645C52",
-          "#877F74",
-          "#ACA398",
-          "#D2C9BD",
-          "#F6EDE1"
+          "#130900",
+          "#2D220F",
+          "#4A3E2A",
+          "#685C47",
+          "#8C7E68",
+          "#B1A38C",
+          "#D7C8B1",
+          "#FCECD4"
         ]
       },
-      "papier": {
+      "carte": {
         "role": "neutral",
-        "displayName": "Papier cristal",
-        "canonical": "#F7F2EA",
-        "oklch": "oklch(96.3% 0.012 79.8)",
+        "displayName": "Crème",
+        "canonical": "#FBF4E8",
+        "oklch": "oklch(96.9% 0.018 81.3)",
         "tonalRamp": [
-          "#0E0B06",
-          "#27231E",
-          "#433F39",
-          "#615D56",
-          "#848078",
-          "#A9A49C",
-          "#CFCAC2",
-          "#F3EEE6"
+          "#0F0A04",
+          "#28231A",
+          "#443F35",
+          "#635D53",
+          "#867F75",
+          "#AAA499",
+          "#D0CABE",
+          "#F5EEE2"
         ]
       },
       "encre": {
         "role": "neutral",
-        "displayName": "Encre prune",
-        "canonical": "#2E2A3F",
-        "oklch": "oklch(29.9% 0.038 292.7)",
+        "displayName": "Chocolat",
+        "canonical": "#3A2218",
+        "oklch": "oklch(28.0% 0.041 43.3)",
         "tonalRamp": [
-          "#0C0819",
-          "#252035",
-          "#403C52",
-          "#5E5A72",
-          "#807C95",
-          "#A5A1BB",
-          "#CBC6E2",
-          "#EFEAFF"
+          "#190501",
+          "#351D13",
+          "#53392E",
+          "#72564B",
+          "#96796D",
+          "#BC9D90",
+          "#E3C3B5",
+          "#FEEAE1"
         ]
       },
       "encre-douce": {
         "role": "neutral",
-        "displayName": "Encre douce",
-        "canonical": "#4E4A5E",
-        "oklch": "oklch(42.1% 0.033 294.1)",
-        "tonalRamp": [
-          "#0C0818",
-          "#252133",
-          "#403C50",
-          "#5E5A6F",
-          "#817D93",
-          "#A5A1B8",
-          "#CBC7DF",
-          "#EFEBFF"
-        ]
-      },
-      "corail": {
-        "role": "primary",
-        "displayName": "Corail doux",
-        "canonical": "#F0A184",
-        "oklch": "oklch(78.0% 0.103 40.9)",
-        "tonalRamp": [
-          "#280000",
-          "#480800",
-          "#6A290E",
-          "#8C482E",
-          "#B26B50",
-          "#DA8F73",
-          "#FFB598",
-          "#FFD9BB"
-        ]
-      },
-      "corail-bord": {
-        "role": "primary",
-        "displayName": "Bord émaillé",
-        "canonical": "#C97B62",
-        "oklch": "oklch(66.0% 0.104 38.5)",
-        "tonalRamp": [
-          "#280000",
-          "#490700",
-          "#6A2812",
-          "#8C4731",
-          "#B36A53",
-          "#DB8E76",
-          "#FFB49B",
-          "#FFD8BD"
-        ]
-      },
-      "lagune": {
-        "role": "tertiary",
-        "displayName": "Lagune pastel",
-        "canonical": "#A9D4D0",
-        "oklch": "oklch(83.8% 0.045 189.3)",
-        "tonalRamp": [
-          "#00110F",
-          "#002B29",
-          "#204745",
-          "#3E6663",
-          "#618986",
-          "#84AEAA",
-          "#AAD5D1",
-          "#CDF9F5"
-        ]
-      },
-      "lagune-pro": {
-        "role": "secondary",
-        "displayName": "Lagune profond",
-        "canonical": "#2F676A",
-        "oklch": "oklch(47.8% 0.059 200.1)",
-        "tonalRamp": [
-          "#001115",
-          "#002C2F",
-          "#0A494C",
-          "#30686B",
-          "#548B8E",
-          "#78B0B3",
-          "#9DD7DA",
-          "#C1FBFE"
-        ]
-      },
-      "beurre": {
-        "role": "tertiary",
-        "displayName": "Beurre",
-        "canonical": "#F6D98E",
-        "oklch": "oklch(89.3% 0.099 89.2)",
+        "displayName": "Chocolat au lait",
+        "canonical": "#6B4A3A",
+        "oklch": "oklch(44.1% 0.052 46.8)",
         "tonalRamp": [
           "#1B0400",
-          "#371E00",
-          "#553B00",
-          "#745A00",
-          "#987D31",
-          "#BDA258",
-          "#E4C87D",
-          "#FFECA0"
+          "#381B0C",
+          "#563728",
+          "#765544",
+          "#9B7766",
+          "#C19B89",
+          "#E8C1AE",
+          "#FEEAE0"
         ]
       },
-      "rose": {
-        "role": "tertiary",
-        "displayName": "Rose crevette",
-        "canonical": "#F3C9BD",
-        "oklch": "oklch(86.9% 0.051 36.5)",
+      "action": {
+        "role": "primary",
+        "displayName": "Caramel",
+        "canonical": "#A5531D",
+        "oklch": "oklch(53.4% 0.126 49.6)",
         "tonalRamp": [
-          "#1C0300",
-          "#391A12",
-          "#57362D",
-          "#775449",
-          "#9C766B",
-          "#C29A8F",
-          "#E9C0B4",
-          "#FFE3D7"
+          "#1A0400",
+          "#3E1700",
+          "#672C01",
+          "#934303",
+          "#BB6734",
+          "#E38B59",
+          "#FEB892",
+          "#FFEADE"
         ]
       },
-      "sauge": {
-        "role": "tertiary",
-        "displayName": "Sauge",
-        "canonical": "#A9C7AE",
-        "oklch": "oklch(80.0% 0.048 150.0)",
+      "action-bord": {
+        "role": "primary",
+        "displayName": "Caramel brûlé",
+        "canonical": "#6E3510",
+        "oklch": "oklch(39.8% 0.094 49.4)",
         "tonalRamp": [
-          "#001002",
-          "#112A17",
-          "#2D4732",
-          "#4A654F",
-          "#6C8971",
-          "#90AD95",
-          "#B5D4BA",
-          "#D9F8DE"
+          "#1A0400",
+          "#3E1700",
+          "#662D06",
+          "#874C29",
+          "#AD6F4C",
+          "#D5936F",
+          "#FDB994",
+          "#FFEADE"
         ]
       },
-      "pin": {
+      "sur-action": {
+        "role": "primary",
+        "displayName": "Blanc sur caramel",
+        "canonical": "#FFFFFF",
+        "oklch": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#242424",
+          "#404040",
+          "#5D5D5D",
+          "#808080",
+          "#A4A4A4",
+          "#CACACA",
+          "#EEEEEE"
+        ]
+      },
+      "lien": {
+        "role": "tertiary",
+        "displayName": "Brun lien",
+        "canonical": "#8A4A1C",
+        "oklch": "oklch(47.9% 0.104 52.6)",
+        "tonalRamp": [
+          "#190500",
+          "#3D1800",
+          "#652E00",
+          "#8A4A1C",
+          "#B16D41",
+          "#D89265",
+          "#FEB98E",
+          "#FFEADD"
+        ]
+      },
+      "miel": {
         "role": "secondary",
-        "displayName": "Pin profond",
-        "canonical": "#3D6652",
-        "oklch": "oklch(47.4% 0.057 162.0)",
+        "displayName": "Miel",
+        "canonical": "#E8B15A",
+        "oklch": "oklch(79.4% 0.122 76.9)",
         "tonalRamp": [
-          "#001204",
-          "#002C1B",
-          "#204936",
-          "#3F6854",
-          "#618B76",
-          "#85B09A",
-          "#AAD7BF",
-          "#CEFBE3"
+          "#140800",
+          "#332000",
+          "#573900",
+          "#7D5500",
+          "#A9750D",
+          "#CF9A41",
+          "#F7C069",
+          "#FFEBD0"
         ]
       },
-      "papier-choisi": {
+      "miel-clair": {
+        "role": "secondary",
+        "displayName": "Miel clair",
+        "canonical": "#F6DDB0",
+        "oklch": "oklch(90.7% 0.065 82.2)",
+        "tonalRamp": [
+          "#130900",
+          "#312100",
+          "#513C11",
+          "#705A31",
+          "#947D53",
+          "#B9A176",
+          "#E0C79B",
+          "#FFECCA"
+        ]
+      },
+      "cannelle": {
+        "role": "secondary",
+        "displayName": "Cannelle",
+        "canonical": "#7A3E1D",
+        "oklch": "oklch(43.4% 0.095 47.3)",
+        "tonalRamp": [
+          "#1B0300",
+          "#3F1600",
+          "#672C08",
+          "#884B2B",
+          "#AF6E4D",
+          "#D69270",
+          "#FFB895",
+          "#FFEADF"
+        ]
+      },
+      "carte-choisie": {
         "role": "neutral",
-        "displayName": "Papier choisi",
+        "displayName": "Crème choisie",
         "canonical": "#FFFDF8",
         "oklch": "oklch(99.4% 0.007 88.6)",
         "tonalRamp": [
@@ -214,18 +198,18 @@
       },
       "erreur": {
         "role": "neutral",
-        "displayName": "Erreur",
+        "displayName": "Rouge brique (erreur)",
         "canonical": "#8E3321",
         "oklch": "oklch(44.9% 0.128 33.1)",
         "tonalRamp": [
-          "#280000",
-          "#490500",
-          "#6B271A",
-          "#8D4637",
-          "#B46959",
-          "#DC8D7C",
-          "#FFB3A0",
-          "#FFD6C3"
+          "#200000",
+          "#490600",
+          "#741A07",
+          "#983C2A",
+          "#C0604C",
+          "#E9856F",
+          "#FEB6A6",
+          "#FEE9E4"
         ]
       },
       "erreur-fond": {
@@ -241,7 +225,7 @@
           "#907B75",
           "#B59F98",
           "#DCC5BE",
-          "#FFE8E1"
+          "#FEE9E3"
         ]
       },
       "inactif": {
@@ -263,69 +247,52 @@
     },
     "typographyMeta": {
       "display": {
-        "displayName": "Display",
-        "purpose": "H1 des pages, appel de fin de page, titre de l'étiquette du couvercle."
+        "displayName": "Titre principal",
+        "purpose": "H1 de chaque page, titre de fin d'accueil ; sur le couvercle, taille liée au cadre (cqw)."
       },
       "headline": {
-        "displayName": "Headline",
-        "purpose": "H2 de section, titre de fiche produit et de commande."
+        "displayName": "Titre de section",
+        "purpose": "H2 de section, H1 de fiche produit et de tunnel."
       },
       "title": {
-        "displayName": "Title",
-        "purpose": "H3, titres de tiroirs, chiffres de réassurance, prix principal."
-      },
-      "product-name": {
-        "displayName": "Nom produit",
-        "purpose": "Première case de l'étiquette produit."
+        "displayName": "Sous-titre",
+        "purpose": "Sous-sections, titres de tiroir, prix principal, chiffres de réassurance, menu mobile."
       },
       "relief": {
-        "displayName": "Relief",
-        "purpose": "Bandeau du couvercle et nom du logo uniquement."
+        "displayName": "Lettrage embossé",
+        "purpose": "Big Shoulders Inline Display en capitales : logo, bandeau du couvercle, couvercle en métal. Jamais en titre de section."
       },
       "lead": {
         "displayName": "Chapô",
-        "purpose": "Introductions et avis, 62 caractères au plus."
+        "purpose": "Introductions de section et chapôs ; intertitres Figtree 700 à cette taille."
       },
       "body": {
-        "displayName": "Body",
-        "purpose": "Texte courant, 62 à 70 caractères."
+        "displayName": "Texte courant",
+        "purpose": "Texte courant, mesure 36 à 38 em."
+      },
+      "button": {
+        "displayName": "Bouton",
+        "purpose": "Texte des boutons d'action et secondaires."
       },
       "small": {
-        "displayName": "Small",
-        "purpose": "Notes, légendes, mentions."
+        "displayName": "Petit texte",
+        "purpose": "Notes, légendes, fil d'Ariane, dates, avis."
       },
-      "price": {
-        "displayName": "Prix",
-        "purpose": "Prix, poids, quantités, totaux : chiffres tabulaires."
+      "label": {
+        "displayName": "Pastille",
+        "purpose": "Pastilles « Cadeau » et « Fruits à coque » dans les alvéoles."
       }
     },
-    "fonts": [
-      {
-        "family": "Big Shoulders Display",
-        "file": "src/assets/fonts/big-shoulders-display-800.woff2",
-        "weight": "800"
-      },
-      {
-        "family": "Big Shoulders Inline Display",
-        "file": "src/assets/fonts/big-shoulders-inline-display-700.woff2",
-        "weight": "700"
-      },
-      {
-        "family": "Figtree",
-        "file": "src/assets/fonts/figtree-variable.woff2",
-        "weight": "300 900"
-      }
-    ],
     "shadows": [
       {
         "name": "ombre-plaque",
-        "value": "0 2px 0 var(--corail-bord), 0 3px 6px -2px rgb(46 42 63 / .35)",
-        "purpose": "Tranche émaillée des boutons au repos."
+        "value": "0 2px 0 var(--action-bord), 0 3px 6px -2px rgb(46 42 63 / .35)",
+        "purpose": "Lèvre émaillée du bouton caramel. La teinte rgb(46 42 63) est un reste de l'encre prune, à teinter chocolat."
       },
       {
         "name": "ombre-plaque-survol",
-        "value": "0 3px 0 var(--corail-bord), 0 7px 12px -5px rgb(46 42 63 / .35)",
-        "purpose": "Bouton au survol (avec translateY(-1px))."
+        "value": "0 3px 0 var(--action-bord), 0 7px 12px -5px rgb(46 42 63 / .35)",
+        "purpose": "Bouton caramel au survol (monte d'1 px)."
       },
       {
         "name": "ombre-alveole",
@@ -335,219 +302,223 @@
       {
         "name": "fond-plateau",
         "value": "inset 0 10px 18px -12px rgb(46 42 63 / .55)",
-        "purpose": "Ombre du couvercle sur le plateau sauge."
+        "purpose": "Plateau cannelle creusé sous le couvercle."
       },
       {
-        "name": "surplomb-tiroir",
-        "value": "0 0 40px -10px rgb(46 42 63 / .6)",
-        "purpose": "Tiroirs dialog qui recouvrent la page."
-      },
-      {
-        "name": "surplomb-choix",
+        "name": "couche-flottante",
         "value": "0 10px 24px -10px rgb(46 42 63 / .6), inset 0 0 0 2px var(--encre)",
-        "purpose": "Menu de choix rapides au-dessus d'une carte."
+        "purpose": "Choix rapide des formats."
       },
       {
-        "name": "sertissage",
-        "value": "outline: 2px solid var(--encre); outline-offset: -12px",
-        "purpose": "Filet de sertissage du couvercle et du plateau (-10px sur les grandes illustrations)."
+        "name": "tiroir",
+        "value": "0 0 40px -10px rgb(46 42 63 / .6)",
+        "purpose": "Tiroirs menu, panier, recherche (voile rgb(46 42 63 / .45))."
       }
     ],
     "motion": [
       {
         "name": "duree",
         "value": ".2s",
-        "purpose": "Transitions d'état (boutons, survols, alvéoles)."
+        "purpose": "Transitions d'interface (boutons, survols)."
       },
       {
         "name": "ease",
         "value": "cubic-bezier(.16, 1, .3, 1)",
-        "purpose": "Courbe unique, sortie douce, sans rebond."
+        "purpose": "Courbe de la maison : départ vif, arrivée douce, sans rebond."
       },
       {
         "name": "tiroir",
-        "value": ".28s",
-        "purpose": "Glissement des tiroirs dialog (droite, gauche, haut) ; aucun en mouvement réduit."
+        "value": ".28s var(--ease)",
+        "purpose": "Glissement des tiroirs ; supprimé si réduire les animations."
       },
       {
-        "name": "panneau",
-        "value": ".3s",
-        "purpose": "Panneau de filtres mobile et masquage de l'en-tête."
+        "name": "entete",
+        "value": ".3s var(--ease)",
+        "purpose": "En-tête qui se cache en descendant, panneau de filtres mobile."
       },
       {
-        "name": "ouverture-boite",
-        "value": "transform .6s; opacity .45s delay .15s",
-        "purpose": "Moment signature : le plateau sort de sous le couvercle au premier défilement ou après 1,5 s, une fois ; état ouvert sans JS et en mouvement réduit."
+        "name": "jauge",
+        "value": ".4s var(--ease)",
+        "purpose": "Jauge de livraison offerte du panier."
+      },
+      {
+        "name": "couvercle-souleve",
+        "value": "1s cubic-bezier(.65, 0, .35, 1) .45s both",
+        "purpose": "Signature : le couvercle en métal cannelle se soulève une fois à l'arrivée sur l'accueil (léger basculement puis sortie vers le haut, -106 %, -4°). Absent si prefers-reduced-motion."
       }
     ],
     "breakpoints": [
       {
-        "name": "etiquette-etroite",
-        "value": "479px"
+        "name": "etroit",
+        "value": "479px",
+        "purpose": "Étiquette produit sur une colonne, pastilles réduites (max-width)."
       },
       {
-        "name": "champs-duo",
-        "value": "600px"
-      },
-      {
-        "name": "couvercle-large",
-        "value": "760px"
+        "name": "couvercle",
+        "value": "760px",
+        "purpose": "Photo d'accueil en 16:9, étiquette du couvercle à gauche."
       },
       {
         "name": "navigation",
-        "value": "860px"
+        "value": "860px",
+        "purpose": "Navigation complète, colonne de filtres."
       },
       {
         "name": "fiche",
-        "value": "900px"
+        "value": "900px",
+        "purpose": "Fiche produit et atelier en deux colonnes."
       },
       {
-        "name": "commande",
-        "value": "960px"
+        "name": "tunnel",
+        "value": "960px",
+        "purpose": "Récapitulatif de commande collant."
       },
       {
-        "name": "grille-3",
-        "value": "1024px"
+        "name": "grille",
+        "value": "1024px",
+        "purpose": "Grilles produit 3 colonnes, plateau 4 colonnes."
       },
       {
-        "name": "collection-3",
-        "value": "1120px"
+        "name": "collection-large",
+        "value": "1120px",
+        "purpose": "Grille de collection 3 colonnes."
       }
     ]
   },
   "components": [
     {
-      "name": "Bouton principal (plaque émaillée)",
+      "name": "Bouton caramel",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Action principale : corail, texte encre, tranche émaillée ; monte au survol, s'enfonce à l'appui.",
-      "html": "<button class=\"ds-bouton\" type=\"button\">Offrir un coffret</button>",
-      "css": ".ds-bouton{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.6rem 1.35rem .55rem;border:0;border-radius:var(--r-plaque,6px);background:var(--corail,#F0A184);color:var(--encre,#2E2A3F);font-family:'Figtree',system-ui,sans-serif;font-weight:700;font-size:1rem;line-height:1.3;cursor:pointer;box-shadow:0 2px 0 #C97B62,0 3px 6px -2px rgb(46 42 63 / .35);transition:transform .2s cubic-bezier(.16,1,.3,1),box-shadow .2s cubic-bezier(.16,1,.3,1)}.ds-bouton:hover{transform:translateY(-1px);box-shadow:0 3px 0 #C97B62,0 7px 12px -5px rgb(46 42 63 / .35)}.ds-bouton:active{transform:translateY(2px);box-shadow:0 0 0 #C97B62,0 1px 2px -1px rgb(46 42 63 / .3)}.ds-bouton:focus-visible{outline:3px solid #2F676A;outline-offset:3px}"
+      "description": "Plaque émaillée caramel pour toute action principale.",
+      "html": "<button class=\"ds-bouton\">Offrir un coffret</button>",
+      "css": ".ds-bouton { display: inline-flex; align-items: center; min-height: 48px; padding: .6rem 1.35rem .55rem; border: 0; border-radius: 6px; background: var(--action, #A5531D); color: var(--sur-action, #FFFFFF); font: 700 1rem/1.3 \"Figtree\", sans-serif; cursor: pointer; box-shadow: 0 2px 0 var(--action-bord, #6E3510), 0 3px 6px -2px rgb(58 34 24 / .35); transition: transform .2s cubic-bezier(.16,1,.3,1), box-shadow .2s cubic-bezier(.16,1,.3,1); } .ds-bouton:hover { transform: translateY(-1px); box-shadow: 0 3px 0 var(--action-bord, #6E3510), 0 7px 12px -5px rgb(58 34 24 / .35); } .ds-bouton:active { transform: translateY(2px); box-shadow: 0 0 0 var(--action-bord, #6E3510); } .ds-bouton:focus-visible { outline: 3px solid var(--lien, #8A4A1C); outline-offset: 3px; }"
     },
     {
       "name": "Bouton secondaire",
       "kind": "button",
       "refersTo": "button-secondary",
-      "description": "Action d'accompagnement : papier cerclé d'encre, survol beurre.",
-      "html": "<button class=\"ds-bouton-sec\" type=\"button\">Voir la collection</button>",
-      "css": ".ds-bouton-sec{display:inline-flex;align-items:center;min-height:48px;padding:.6rem 1.35rem .55rem;border:0;border-radius:6px;background:#F7F2EA;color:#2E2A3F;font-family:'Figtree',system-ui,sans-serif;font-weight:700;font-size:1rem;line-height:1.3;cursor:pointer;box-shadow:inset 0 0 0 2px #2E2A3F;transition:transform .2s cubic-bezier(.16,1,.3,1),background-color .2s}.ds-bouton-sec:hover{background:#F6D98E;transform:translateY(-1px)}.ds-bouton-sec:active{transform:translateY(2px)}.ds-bouton-sec:focus-visible{outline:3px solid #2F676A;outline-offset:3px}"
+      "description": "Plaque crème cernée de chocolat ; fond miel au survol.",
+      "html": "<button class=\"ds-bouton-sec\">Voir les coffrets</button>",
+      "css": ".ds-bouton-sec { display: inline-flex; align-items: center; min-height: 48px; padding: .6rem 1.35rem .55rem; border: 0; border-radius: 6px; background: var(--carte, #FBF4E8); color: var(--encre, #3A2218); font: 700 1rem/1.3 \"Figtree\", sans-serif; cursor: pointer; box-shadow: inset 0 0 0 2px var(--encre, #3A2218); transition: background-color .2s; } .ds-bouton-sec:hover { background: var(--miel, #E8B15A); } .ds-bouton-sec:focus-visible { outline: 3px solid var(--lien, #8A4A1C); outline-offset: 3px; }"
     },
     {
-      "name": "Alvéole et étiquette produit",
-      "kind": "card",
-      "refersTo": "alveole",
-      "description": "Produit posé dans une alvéole papier creuse, étiquette à grille fixe nom / saveur / prix / poids.",
-      "html": "<article class=\"ds-carte\"><div class=\"ds-alveole\"><span class=\"ds-pastille\">Cadeau</span><svg viewBox=\"0 0 100 100\" aria-hidden=\"true\"><circle cx=\"50\" cy=\"55\" r=\"30\" fill=\"#E7B865\"/><circle cx=\"53\" cy=\"57\" r=\"30\" fill=\"none\" stroke=\"#2E2A3F\" stroke-width=\"2\" opacity=\".85\"/></svg></div><div class=\"ds-etiquette\"><h3 class=\"ds-nom\"><a href=\"#\">Sablé de la Dune</a></h3><span class=\"ds-saveur\">Beurre salé</span><span class=\"ds-prix\">dès 6,90 €</span><span class=\"ds-poids\">120 g · 250 g</span></div></article>",
-      "css": ".ds-carte{max-width:260px;color:#2E2A3F;font-family:'Figtree',system-ui,sans-serif;}.ds-alveole{aspect-ratio:4/5;background:#F7F2EA;border-radius:12px;box-shadow:inset 0 3px 8px -3px rgb(46 42 63 / .28);padding:6%;display:flex;flex-direction:column}.ds-alveole svg{flex:1;min-height:0}.ds-pastille{align-self:flex-start;font-size:.75rem;font-weight:700;padding:.3rem .6rem;border-radius:4px;background:#F6D98E}.ds-etiquette{margin-top:.75rem;display:grid;grid-template-columns:1fr auto;gap:.1rem .75rem;align-items:baseline;border-top:2px solid #2E2A3F;padding-top:.55rem}.ds-nom{grid-column:1/-1;margin:0;font:800 1.5rem/1.02 'Big Shoulders Display',sans-serif}.ds-nom a{color:#2E2A3F;text-decoration:none}.ds-nom a:hover{text-decoration:underline;text-decoration-thickness:2px}.ds-nom a:focus-visible{outline:3px solid #2F676A;outline-offset:3px}.ds-saveur{font-size:.9rem}.ds-prix{font-weight:700;text-align:right;font-variant-numeric:tabular-nums}.ds-poids{font-size:.85rem;color:#4E4A5E;font-variant-numeric:tabular-nums}"
-    },
-    {
-      "name": "Champ de formulaire",
+      "name": "Champ",
       "kind": "input",
       "refersTo": "input",
-      "description": "Champ papier, bordure encre douce, focus lagune profond.",
-      "html": "<label class=\"ds-champ\">Adresse e-mail<input class=\"ds-input\" type=\"email\" placeholder=\"vous@exemple.fr\"></label>",
-      "css": ".ds-champ{display:grid;gap:.35rem;font-family:'Figtree',system-ui,sans-serif;font-weight:600;color:#2E2A3F}.ds-input{min-height:48px;padding:.6rem .8rem;background:#F7F2EA;border:2px solid #4E4A5E;border-radius:6px;font:400 1rem 'Figtree',sans-serif;color:#2E2A3F}.ds-input:focus-visible{outline:3px solid #2F676A;outline-offset:2px;border-color:#2E2A3F}.ds-input[aria-invalid=\"true\"]{border-color:#8E3321}"
+      "description": "Champ crème à bordure chocolat au lait.",
+      "html": "<label class=\"ds-champ\"><span>Adresse e-mail</span><input type=\"email\" placeholder=\"vous@exemple.fr\"></label>",
+      "css": ".ds-champ { display: grid; gap: .35rem; font: 600 1rem \"Figtree\", sans-serif; color: var(--encre, #3A2218); } .ds-champ input { min-height: 48px; padding: .6rem .8rem; background: var(--carte, #FBF4E8); border: 2px solid var(--encre-douce, #6B4A3A); border-radius: 6px; font: 400 1rem \"Figtree\", sans-serif; color: var(--encre, #3A2218); } .ds-champ input:focus-visible { outline: 3px solid var(--lien, #8A4A1C); outline-offset: 2px; border-color: var(--encre, #3A2218); }"
     },
     {
-      "name": "Navigation d'en-tête",
+      "name": "Navigation",
       "kind": "nav",
-      "refersTo": "",
-      "description": "En-tête sable à filet encre, logo en plaque sauge au double filet, liens soulignés corail-bord.",
-      "html": "<header class=\"ds-entete\"><a class=\"ds-logo\" href=\"#\"><span class=\"ds-logo-nom\">Maison Sable</span><span class=\"ds-logo-lieu\">Hossegor</span></a><nav><a class=\"ds-nav\" href=\"#\" aria-current=\"page\">Biscuits</a><a class=\"ds-nav\" href=\"#\">Coffrets</a></nav></header>",
-      "css": ".ds-entete{display:flex;align-items:center;gap:1.5rem;padding:.55rem 1rem;background:#E9E0D4;border-bottom:2px solid #2E2A3F;font-family:'Figtree',system-ui,sans-serif;}.ds-entete nav{margin-left:auto;display:flex;gap:1.5rem}.ds-logo{display:inline-flex;flex-direction:column;align-items:center;background:#A9C7AE;color:#2E2A3F;text-decoration:none;padding:.3rem .9rem .25rem;border-radius:4px;box-shadow:inset 0 0 0 2px #A9C7AE,inset 0 0 0 3px #2E2A3F;line-height:1}.ds-logo:hover{background:#F6D98E;box-shadow:inset 0 0 0 2px #F6D98E,inset 0 0 0 3px #2E2A3F}.ds-logo-nom{font:700 1.45rem/1 'Big Shoulders Inline Display','Big Shoulders Display',sans-serif;letter-spacing:.06em;text-transform:uppercase}.ds-logo-lieu{font:700 .75rem/1.3 'Figtree',sans-serif;letter-spacing:.18em;text-transform:uppercase}.ds-nav{color:#2E2A3F;text-decoration:none;font-weight:600;padding:.5rem 0;border-bottom:2px solid transparent}.ds-nav:hover,.ds-nav[aria-current=\"page\"]{border-bottom-color:#C97B62}.ds-nav:focus-visible,.ds-logo:focus-visible{outline:3px solid #2F676A;outline-offset:3px}"
+      "refersTo": "logo",
+      "description": "En-tête biscuit : logo en plaque cannelle, liens chocolat soulignés de caramel brûlé.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-logo\" href=\"#\"><span class=\"ds-logo-nom\">Maison Sable</span><span class=\"ds-logo-lieu\">Hossegor</span></a><ul><li><a href=\"#\" aria-current=\"page\">Biscuits</a></li><li><a href=\"#\">Coffrets</a></li><li><a href=\"#\">L’atelier</a></li></ul></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: 1rem; padding: .55rem 1rem; background: var(--fond, #F3E4CC); border-bottom: 2px solid var(--encre, #3A2218); } .ds-nav ul { list-style: none; margin: 0 0 0 auto; padding: 0; display: flex; gap: 1.5rem; } .ds-nav ul a { color: var(--encre, #3A2218); text-decoration: none; font: 600 1rem \"Figtree\", sans-serif; padding: .5rem 0; border-bottom: 2px solid transparent; } .ds-nav ul a:hover, .ds-nav ul a[aria-current=\"page\"] { border-bottom-color: var(--action-bord, #6E3510); } .ds-logo { display: inline-flex; flex-direction: column; align-items: center; background: var(--cannelle, #7A3E1D); color: var(--carte, #FBF4E8); text-decoration: none; padding: .3rem .9rem .25rem; border-radius: 4px; box-shadow: inset 0 0 0 2px var(--cannelle, #7A3E1D), inset 0 0 0 3px var(--carte, #FBF4E8); line-height: 1; } .ds-logo:hover { background: var(--miel, #E8B15A); color: var(--encre, #3A2218); box-shadow: inset 0 0 0 2px var(--miel, #E8B15A), inset 0 0 0 3px var(--encre, #3A2218); } .ds-logo-nom { font: 700 1.45rem/1 \"Big Shoulders Inline Display\", \"Big Shoulders Display\", sans-serif; letter-spacing: .06em; text-transform: uppercase; } .ds-logo-lieu { font: 700 .75rem/1.3 \"Figtree\", sans-serif; letter-spacing: .18em; text-transform: uppercase; } .ds-nav a:focus-visible { outline: 3px solid var(--lien, #8A4A1C); outline-offset: 3px; }"
     },
     {
-      "name": "Puce de filtre actif",
+      "name": "Filtre actif",
       "kind": "chip",
       "refersTo": "chip-filtre",
-      "description": "Filtre appliqué, retiré d'un clic : pilule papier cerclée d'encre, survol beurre.",
-      "html": "<button class=\"ds-filtre\" type=\"button\">Coffrets <svg viewBox=\"0 0 24 24\" width=\"14\" height=\"14\" aria-hidden=\"true\"><path d=\"m6 6 12 12M18 6 6 18\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\"/></svg></button>",
-      "css": ".ds-filtre{display:inline-flex;align-items:center;gap:.4rem;min-height:36px;padding:.2rem .7rem;background:#F7F2EA;color:#2E2A3F;border:0;border-radius:18px;box-shadow:inset 0 0 0 2px #2E2A3F;font-family:'Figtree',system-ui,sans-serif;font-size:.9rem;font-weight:600;cursor:pointer;transition:background-color .2s}.ds-filtre:hover{background:#F6D98E}.ds-filtre:focus-visible{outline:3px solid #2F676A;outline-offset:3px}"
+      "description": "Pilule crème cernée de chocolat ; retire le filtre au clic.",
+      "html": "<button class=\"ds-filtre\">Coffrets<svg viewBox=\"0 0 24 24\" width=\"14\" height=\"14\" aria-hidden=\"true\"><path d=\"m6 6 12 12M18 6 6 18\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\"/></svg></button>",
+      "css": ".ds-filtre { display: inline-flex; align-items: center; gap: .4rem; min-height: 36px; padding: .2rem .7rem; background: var(--carte, #FBF4E8); color: var(--encre, #3A2218); border: 0; border-radius: 18px; box-shadow: inset 0 0 0 2px var(--encre, #3A2218); font: 600 .9rem/1.3 \"Figtree\", sans-serif; cursor: pointer; } .ds-filtre:hover { background: var(--miel, #E8B15A); } .ds-filtre:focus-visible { outline: 3px solid var(--lien, #8A4A1C); outline-offset: 3px; }"
     },
     {
-      "name": "Bandeau en relief",
+      "name": "Carte produit (alvéole + étiquette)",
+      "kind": "card",
+      "refersTo": "alveole",
+      "description": "Photo plein cadre dans un creux crème (ici remplacée par un aplat miel clair), étiquette à cases fixes, bouton Ajouter.",
+      "html": "<article class=\"ds-carte\"><div class=\"ds-alveole\"><span class=\"ds-pastille\">Cadeau</span></div><div class=\"ds-etiq\"><h3>Coffret Découverte</h3><span>Coffret assorti</span><span class=\"ds-prix\">24,90 €</span><span class=\"ds-poids\">6 × 100 g</span></div><button class=\"ds-ajout\">Ajouter</button></article>",
+      "css": ".ds-carte { display: flex; flex-direction: column; max-width: 260px; font-family: \"Figtree\", sans-serif; color: var(--encre, #3A2218); } .ds-alveole { aspect-ratio: 4 / 5; border-radius: 12px; background: var(--miel-clair, #F6DDB0); box-shadow: inset 0 3px 8px -3px rgb(58 34 24 / .28); padding: .55rem; } .ds-pastille { display: inline-block; background: var(--miel, #E8B15A); font: 700 .75rem/1.1 \"Figtree\", sans-serif; padding: .3rem .6rem; border-radius: 4px; } .ds-etiq { display: grid; grid-template-columns: 1fr auto; gap: .1rem .75rem; align-items: baseline; margin-top: .75rem; border-top: 2px solid var(--encre, #3A2218); padding-top: .55rem; } .ds-etiq h3 { grid-column: 1 / -1; margin: 0; font: 800 1.5rem/1.02 \"Big Shoulders Display\", sans-serif; } .ds-prix { font-weight: 700; text-align: right; font-variant-numeric: tabular-nums; } .ds-poids { font-size: .85rem; color: var(--encre-douce, #6B4A3A); font-variant-numeric: tabular-nums; } .ds-ajout { align-self: flex-start; margin-top: .75rem; min-height: 44px; padding: .45rem 1rem .4rem; border: 0; border-radius: 6px; background: var(--action, #A5531D); color: #fff; font: 700 .95rem/1.3 \"Figtree\", sans-serif; box-shadow: 0 2px 0 var(--action-bord, #6E3510); cursor: pointer; transition: transform .2s; } .ds-ajout:hover { transform: translateY(-1px); } .ds-ajout:focus-visible { outline: 3px solid var(--lien, #8A4A1C); outline-offset: 3px; }"
+    },
+    {
+      "name": "Couvercle (signature)",
       "kind": "custom",
       "refersTo": "bandeau-relief",
-      "description": "Bandeau sauge du couvercle en capitales Inline ; relief par la fonte, sans ombre.",
-      "html": "<p class=\"ds-relief\">Maison Sable · Hossegor</p>",
-      "css": ".ds-relief{display:inline-block;margin:0;background:#A9C7AE;color:#2E2A3F;padding:.45rem 1.4rem .35rem;border-radius:3px;font:700 1.4rem/1 'Big Shoulders Inline Display','Big Shoulders Display',sans-serif;letter-spacing:.08em;text-transform:uppercase}"
+      "description": "Cadre de boîte en fer autour de la photo d'accueil, bandeau miel embossé, étiquette crème du H1 ; le couvercle en métal cannelle se soulève une fois à l'arrivée.",
+      "html": "<div class=\"ds-couvercle\"><div class=\"ds-metal\" aria-hidden=\"true\"><span>Maison Sable<br>Hossegor</span></div><p class=\"ds-bandeau\" aria-hidden=\"true\">Maison Sable · Hossegor</p><div class=\"ds-etiquette\"><h1>Biscuits pur beurre d’Hossegor</h1><a class=\"ds-cta\" href=\"#\">Offrir un coffret</a></div></div>",
+      "css": ".ds-couvercle { position: relative; aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden; background: #8A5A34; outline: 2px solid var(--encre, #3A2218); outline-offset: -12px; container-type: inline-size; } .ds-metal { position: absolute; inset: 0; z-index: 3; background: var(--cannelle, #7A3E1D); display: grid; place-items: start center; padding-top: clamp(4.5rem, 12cqw, 9rem); transform-origin: 50% 0; animation: ds-souleve 1s cubic-bezier(.65, 0, .35, 1) .45s both; pointer-events: none; } .ds-metal::before { content: \"\"; position: absolute; inset: 14px; border: 2px solid var(--carte, #FBF4E8); border-radius: 10px; opacity: .55; } .ds-metal span { font: 700 clamp(1.6rem, 5cqw, 3rem)/1.05 \"Big Shoulders Inline Display\", sans-serif; letter-spacing: .1em; text-transform: uppercase; color: var(--carte, #FBF4E8); text-align: center; } @keyframes ds-souleve { 0% { transform: none; } 35% { transform: translateY(-4%) rotate(-1.5deg); } 100% { transform: translateY(-106%) rotate(-4deg); visibility: hidden; } } @media (prefers-reduced-motion: reduce) { .ds-metal { display: none; } } .ds-bandeau { position: absolute; top: 30px; left: 50%; transform: translateX(-50%); z-index: 2; margin: 0; background: var(--miel, #E8B15A); color: var(--encre, #3A2218); padding: .6rem 1.4rem .5rem; border-radius: 3px; font: 700 clamp(1rem, 2.3cqw, 1.7rem)/1.3 \"Big Shoulders Inline Display\", sans-serif; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; } .ds-etiquette { position: absolute; z-index: 5; left: 5%; bottom: 10%; width: min(48cqw, 560px); background: var(--carte, #FBF4E8); padding: 1.6rem 1.8rem 1.5rem; border-radius: 4px; border: 1px solid rgb(58 34 24 / .2); } .ds-etiquette::before { content: \"\"; position: absolute; inset: 6px; border: 1px solid rgb(58 34 24 / .25); border-radius: 2px; pointer-events: none; } .ds-etiquette h1 { margin: 0 0 .6rem; font: 800 clamp(1.9rem, 5.4cqw, 4.6rem)/.98 \"Big Shoulders Display\", sans-serif; color: var(--encre, #3A2218); } .ds-cta { position: relative; display: inline-flex; min-height: 48px; align-items: center; padding: .6rem 1.35rem .55rem; border-radius: 6px; background: var(--action, #A5531D); color: #fff; font: 700 1rem/1.3 \"Figtree\", sans-serif; text-decoration: none; box-shadow: 0 2px 0 var(--action-bord, #6E3510); } .ds-cta:focus-visible { outline: 3px solid var(--lien, #8A4A1C); outline-offset: 3px; }"
     },
     {
-      "name": "Bande de réassurance imprimée",
+      "name": "Filet de sertissage",
       "kind": "custom",
       "refersTo": "",
-      "description": "Ligne imprimée sur une bande beurre entre deux filets pointillés encre.",
-      "html": "<p class=\"ds-bande\">Expédié sous 1 à 2 jours ouvrés<span aria-hidden=\"true\"> · </span>Retrait gratuit à l'atelier d'Hossegor</p>",
-      "css": ".ds-bande{margin:0;padding:.9rem 1.2rem;background:#F6D98E;border-block:2px dashed #2E2A3F;color:#2E2A3F;font-family:'Figtree',system-ui,sans-serif;font-weight:600;text-align:center;line-height:1.6}"
+      "description": "Double filet chocolat qui sépare les étages de page, à la place des frises dessinées.",
+      "html": "<div class=\"ds-filet\" aria-hidden=\"true\"></div>",
+      "css": ".ds-filet { position: relative; height: 16px; border-block: 2px solid var(--encre, #3A2218); margin-block: 1.5rem; } .ds-filet::after { content: \"\"; position: absolute; inset: 4px 0; border-block: 1px solid var(--encre, #3A2218); opacity: .45; }"
     }
   ],
   "narrative": {
-    "northStar": "La boîte en fer lithographiée",
-    "overview": "Le site est une boîte à biscuits en fer imprimée d'Hossegor, années 1930, tirée en encres pastel. L'accueil est le couvercle : une scène lithographiée (dune, ganivelles, lac marin, pins, soleil bas) dans un cadre serti, un bandeau en relief en haut, une étiquette papier qui porte le titre. Au premier défilement, le plateau sauge sort de sous le couvercle et montre les coffrets rangés dans leurs alvéoles. Tout le reste du site est l'intérieur de la boîte, et le pied de page pin profond en est le dessous, avec une inscription gravée.\n\nLa douceur vient des aplats, jamais d'un texte pâle : les grandes surfaces sont sable rosé, papier cristal, beurre, lagune et sauge ; le texte reste en encre prune foncée. Le corail doux est réservé aux actions. Les produits sont illustrés en encres plates avec un contour légèrement décalé, comme un défaut de repérage d'imprimerie ; il n'y a aucune photo. Les informations produit tiennent dans une étiquette à grille fixe, lisible comme une fiche.\n\nRefusés par la direction validée avec Morgane : la boutique gourmande standard (grande photo, deux boutons égaux, grille de cartes ombrées arrondies), le trio crème + serif + terracotta, les dégradés, halos et verres dépolis.",
+    "northStar": "La boîte en fer, ouverte sur les biscuits",
+    "overview": "Maison Sable est une boîte à biscuits en fer d'Hossegor que l'on ouvre. Depuis la révision du 28 septembre 2026, la boîte n'est plus une lithographie en aplats pastel : ce sont de vraies photos de biscuits, chaudes et dorées, posées dans une boîte dont on garde toutes les pièces de métal. Le cadre du couvercle entoure la photo d'accueil, un bandeau miel en lettres à filet intérieur porte le nom, un plateau cannelle tient les coffrets, et deux filets de sertissage (les bords roulés d'une boîte en fer) séparent les étages de la page. Le fond biscuit, la carte crème et l'encre chocolat viennent de la palette « Caramel et beurre » choisie par Morgane ; le fond crème est un choix assumé.\n\nLa page se lit de haut en bas, comme une boîte : le couvercle (accueil), le plateau (les coffrets), le fond (les recettes, l'atelier, les avis), puis le dessous de la boîte (le pied de page chocolat, avec sa mention gravée). La densité est celle d'une boutique : des étiquettes produit à cases fixes, des prix et des poids alignés, des photos qui remplissent leurs alvéoles. Le seul moment spectaculaire est l'arrivée sur l'accueil : un couvercle en métal cannelle se soulève et découvre la photo.\n\nSeuls deux visuels restent dessinés : la carte cadeau et la coupe comparée sablé / galette / palet. Tout le reste est photographié, crédité et signalé « Photo d'illustration » (Unsplash, les biscuits montrés ne sont pas ceux de la marque fictive).",
     "keyCharacteristics": [
-      "Aplats d'encres pastel, sans dégradé ; texte toujours encre prune sur fond clair.",
-      "Un seul axe vertical : couvercle, plateau, intérieur, dessous de la boîte.",
-      "Filets de sertissage (contour encre rentré) sur les objets-boîte : couvercle, plateau, grandes illustrations.",
-      "Produits posés dans des alvéoles creuses de papier cristal, avec une étiquette à grille fixe.",
-      "Boutons en plaques émaillées corail avec un bord inférieur plus foncé.",
-      "Un seul moment de mouvement signature : l'ouverture de la boîte à l'accueil."
+      "Vraies photos gourmandes, chaudes, cadrées serré, dans des alvéoles crème ou un cadre de boîte en fer.",
+      "Fond biscuit, cartes crème, texte chocolat ; le caramel ne sert qu'à agir.",
+      "Plateau cannelle à texte crème pour les coffrets ; pied de page chocolat.",
+      "Titres Big Shoulders Display 800, lettrage embossé Big Shoulders Inline Display, texte Figtree.",
+      "Filets de sertissage doubles à la place des frises dessinées.",
+      "Un couvercle en métal qui se soulève une fois à l'arrivée ; ailleurs, des mouvements courts et sans rebond."
     ],
     "rules": [
       {
-        "name": "The Encre Prune Rule",
-        "body": "Sur tout fond clair, le texte est en encre prune (ou encre douce pour le secondaire, lagune profond pour les liens, pin pour l'économie). Jamais de texte pastel sur fond clair. Seul le pied de page pin inverse : texte papier, beurre pour les titres de colonnes et le survol des liens (4,7:1).",
+        "name": "La règle du caramel réservé",
+        "body": "Le caramel ne colore que ce qui agit : boutons d'action et pastille du panier. Jamais un fond de section, un titre ou une décoration.",
         "section": "colors"
       },
       {
-        "name": "The Corail d'Action Rule",
-        "body": "Le corail doux ne sert qu'aux actions, toujours avec du texte encre et le bord émaillé corail-bord dessous. Jamais de texte blanc sur corail (2,1:1).",
+        "name": "La règle du texte chocolat",
+        "body": "Sur les fonds clairs, le texte est chocolat ou chocolat au lait, jamais miel ni caramel. Le miel ne devient couleur de texte que sur le chocolat du pied de page.",
         "section": "colors"
       },
       {
-        "name": "The Pas de Dégradé Rule",
-        "body": "Couleurs en aplats uniquement, dans le CSS comme dans les illustrations.",
+        "name": "La règle du métal cannelle",
+        "body": "La cannelle est le métal de la boîte : elle porte le texte crème, les coffrets et le logo, et ne sert pas de couleur de texte.",
         "section": "colors"
       },
       {
-        "name": "The Chiffres Tabulaires Rule",
-        "body": "Prix, poids, quantités, totaux et tableaux utilisent les chiffres tabulaires, pour que les colonnes s'alignent comme sur une étiquette imprimée.",
+        "name": "La règle des chiffres alignés",
+        "body": "Prix, poids, quantités, totaux et tableaux sont en chiffres tabulaires, pour que les étiquettes se lisent comme une grille.",
         "section": "typography"
       },
       {
-        "name": "The Relief Rare Rule",
-        "body": "La fonte Inline n'apparaît que sur le bandeau du couvercle et le logo. Le relief vient du dessin de la lettre, jamais d'une ombre.",
+        "name": "La règle du relief rare",
+        "body": "Le lettrage Inline en capitales est l'embossage de la marque : logo, bandeau du couvercle, couvercle en métal. Il ne sert jamais de titre de section ni de sur-titre.",
         "section": "typography"
       },
       {
-        "name": "The Pas de Faux Relief Rule",
-        "body": "Pas d'ombre pour simuler un embossage : le bandeau et le couvercle n'en ont pas, la fonte Inline suffit.",
-        "section": "elevation"
+        "name": "La règle de la mesure en em",
+        "body": "La longueur des lignes se règle en em (36 à 38 em pour le texte courant), pas en ch : les chiffres larges de Figtree faussent le ch.",
+        "section": "typography"
       },
       {
-        "name": "The Filet de Sertissage Rule",
-        "body": "Les objets-boîte portent un contour encre de 2px rentré de 10 à 12px (outline-offset négatif), doublé sur le couvercle d'un filet intérieur plus fin à 35 % d'opacité. C'est le bord serti du fer, pas une bordure de carte.",
+        "name": "La règle du creux",
+        "body": "Les contenus reposent dans des creux ; seuls les boutons d'action et les couches temporaires sortent de la surface.",
         "section": "elevation"
       }
     ],
     "dos": [
-      "Do écrire tout texte sur fond clair en encre prune (#2E2A3F) ; encre douce pour le secondaire, lagune profond pour les liens.",
-      "Do réserver le corail doux (#F0A184) aux actions, avec texte encre et tranche émaillée #C97B62.",
-      "Do passer les liens et mentions en encre sur le plateau sauge, où lagune profond et pin ne contrastent pas assez.",
-      "Do poser chaque produit dans une alvéole papier creuse avec son étiquette à grille fixe : nom, saveur, prix, poids.",
-      "Do utiliser les chiffres tabulaires pour tout prix, poids, quantité et total.",
-      "Do garder les transitions d'interface entre 150 et 250ms (200ms par défaut), en transform et opacity, courbe cubic-bezier(.16, 1, .3, 1), sans rebond.",
-      "Do montrer un produit épuisé comme une alvéole vide en pointillés, « Revient bientôt ».",
-      "Do dessiner les images en aplats avec contour décalé et décrire l'illustration dans le texte alternatif."
+      "Do montrer les biscuits en vraies photos chaudes, créditées, et signalées « Photo d'illustration · auteur, Unsplash » partout où elles sont vues en grand.",
+      "Do garder le dessin pour deux visuels seulement : la carte cadeau et la coupe sablé / galette / palet.",
+      "Do réserver le caramel aux actions, avec du texte blanc et la lèvre caramel brûlé.",
+      "Do poser le texte crème sur la cannelle et le chocolat, le texte chocolat sur tout le reste.",
+      "Do séparer les grands étages de page par un filet de sertissage double, pas par une frise dessinée.",
+      "Do utiliser les mêmes cases d'étiquette (nom, saveur, prix, poids) sur les cartes, la fiche et le panier, en chiffres tabulaires.",
+      "Do régler la mesure des textes en em (36 à 38 em).",
+      "Do garder les mouvements d'interface entre 0,2 et 0,3 s, sans rebond ; le couvercle en métal (1 s, une fois) est la seule exception.",
+      "Do laisser un produit épuisé en alvéole vide « Revient bientôt »."
     ],
     "donts": [
-      "Don't utiliser de dégradé, de halo ou de verre dépoli.",
-      "Don't mettre de texte blanc sur le corail, ni de texte pastel sur fond clair.",
-      "Don't ajouter de sur-titre en capitales au-dessus d'un titre.",
-      "Don't mettre de flèche dans les boutons.",
-      "Don't simuler un relief par des ombres : le relief vient de la fonte Inline.",
-      "Don't utiliser de photo : produits, lieux et atelier sont illustrés.",
-      "Don't ajouter un second moment animé ni faire apparaître les blocs en fondu au défilement ; l'ouverture de la boîte est le seul.",
-      "Don't transformer les alvéoles en cartes ombrées qui flottent : l'ombre est creuse, vers l'intérieur."
+      "Don't revenir aux aplats illustrés pastel ni aux frises dessinées (vagues, pignes, ganivelles) : cette version est remplacée.",
+      "Don't utiliser le caramel en fond de section, en titre ou en décoration.",
+      "Don't écrire en miel ou en caramel sur un fond clair.",
+      "Don't mettre de sur-titre en capitales au-dessus des titres ; les capitales Inline appartiennent au logo, au bandeau et au couvercle.",
+      "Don't mettre de flèche dans les boutons ni deux boutons identiques côte à côte.",
+      "Don't ajouter de dégradé, de halo ou de verre dépoli, ni d'ombre simulée sur le cadre ou le bandeau.",
+      "Don't rejouer le couvercle au défilement ni le laisser masquer le H1 et le bouton.",
+      "Don't présenter une photo d'illustration comme un produit réel de Maison Sable."
     ]
   }
 }

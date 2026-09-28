@@ -15,6 +15,7 @@ export default function accueil() {
       <source media="(min-width: 760px)" srcset="${url("/images/photos/accueil-large-960.webp")} 960w, ${url("/images/photos/accueil-large-1600.webp")} 1600w" sizes="(min-width: 1320px) 1240px, 94vw" width="1600" height="900">
       <img class="couvercle-scene" src="${url("/images/photos/accueil-haut-800.webp")}" srcset="${url("/images/photos/accueil-haut-480.webp")} 480w, ${url("/images/photos/accueil-haut-800.webp")} 800w" sizes="94vw" width="800" height="1000" alt="${photos.scenes.accueil.alt}" fetchpriority="high">
     </picture>
+    <p class="legende-photo">Photo d'illustration · ${photos.scenes.accueil.auteur}, Unsplash</p>
     <div class="couvercle-metal" aria-hidden="true"><span>Maison Sable<br>Hossegor</span></div>
     <p class="bandeau-relief" aria-hidden="true">Maison Sable · Hossegor</p>
     <div class="etiquette-couvercle">
@@ -53,7 +54,7 @@ ${frise("ganivelles")}
 </section>
 
 <section class="histoire" aria-labelledby="titre-atelier">
-  <img src="${url("/images/photos/atelier-1200.webp")}" srcset="${url("/images/photos/atelier-800.webp")} 800w, ${url("/images/photos/atelier-1200.webp")} 1200w" sizes="(min-width: 900px) 55vw, 100vw" alt="${photos.scenes.atelier.alt}" width="1200" height="800" loading="lazy" decoding="async">
+  <figure><img src="${url("/images/photos/atelier-1200.webp")}" srcset="${url("/images/photos/atelier-800.webp")} 800w, ${url("/images/photos/atelier-1200.webp")} 1200w" sizes="(min-width: 900px) 55vw, 100vw" alt="${photos.scenes.atelier.alt}" width="1200" height="800" loading="lazy" decoding="async"><p class="legende-photo">Photo d'illustration · ${photos.scenes.atelier.auteur}, Unsplash</p></figure>
   <div class="histoire-texte">
     <h2 id="titre-atelier">${tx("Un atelier entre le lac et l'océan")}</h2>
     <p>${tx("Maison Sable est née en 2019 à Hossegor, entre le lac marin et l'océan. Jeanne, pâtissière de formation, y façonne les biscuits à la main avec deux autres personnes, en petites séries. Chaque recette porte le nom d'un paysage de la côte.")}</p>
