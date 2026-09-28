@@ -4,7 +4,7 @@
   "plateforme": "html-statique (maquette Shopify, GitHub Pages)",
   "cree_le": "2026-09-27",
   "etape_courante": "audit",
-  "dernier_audit_complet": null,
+  "dernier_audit_complet": "2026-09-28T16:50:48.340Z",
   "dernier_audit_partiel": null,
   "chaines": {
     "vitrine": [
@@ -200,6 +200,7 @@
     "performance": "fait 2026-09-28",
     "seo-technique": "fait 2026-09-28",
     "accessibilite": "fait 2026-09-28",
-    "analytics": "fait 2026-09-28"
+    "analytics": "fait 2026-09-28",
+    "audit": "fait 2026-09-28 — PAS PRÊT (4 bloquants), voir docs/audits/2026-09-28-audit-final.md"
   }
 }

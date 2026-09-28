@@ -263,3 +263,11 @@
 - **Bug corrigé** : l'ajout au panier du Croquant Lagune échouait (apostrophe dans le nom qui coupait les données du bouton). Contrôle automatique ajouté.
 - Adresses construites par le script sans double barre (`/maison-sable//`).
 - Merchant Center non ouvert (marque fictive) ; flux d'exemple généré (`docs/catalogue/flux-merchant-exemple.xml`, non publié).
+
+## 2026-09-28 — Audit final (`/mokom:audit`)
+
+- Audit complet par des auditeurs indépendants : claude-seo-ai (audit + GEO sur la fiche Sablé Dune et l'article), impeccable (critique + audit), auditeurs Mokom SEO/GEO, UX/UI, conversion, e-commerce, puis performance seul.
+- **Verdict : PAS PRÊT** — 4 bloquants : menu de choix du format illisible sur le plateau de l'accueil ; contour de focus invisible sur les fonds sombres ; marqueur `[FICTIF]` visible sur la fiche carte cadeau ; mentions légales de Mokom Studio incomplètes (informations attendues de Morgane).
+- 16 points importants, dont : adresses sans « / » final (redirections 301 sur GitHub Pages), focus perdu à la fermeture des tiroirs, tunnel de commande (résumé d'erreurs, adresse exigée à tort, menu présent, décalage 0,52 panier vide), étiquette « Amandes & pignons » fausse sur le Pignada, recherche au pluriel, photos qui ne montrent pas des sablés.
+- Bien : aucun traceur, poids et réactivité dans le budget, Lighthouse accessibilité et bonnes pratiques 100, SEO technique propre, fiches produits complètes.
+- Rapport : `docs/audits/2026-09-28-audit-final.md` (+ `docs/audits/partiels/`). Publication GitHub toujours en attente.
