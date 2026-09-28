@@ -16,7 +16,7 @@ const textes = {
       <p>${tx("Une galette est fine et croustillante, un palet est épais et friable. Voyez la différence en coupe.")}</p>
       <a class="lien-fort" href="${url("/blogs/journal/sable-galette-palet-difference")}" data-promotion="bloc-texture">Lire l'article</a>
     </aside>`,
-    aide: `<section class="section aide" aria-labelledby="aide-1">
+    aide: `<section class="section guide-choix" aria-labelledby="aide-1">
       <h2 id="aide-1">${tx("Sablé, palet ou croquant : quelle texture choisir ?")}</h2>
       <p>${tx("Pour un biscuit fondant, choisissez un sablé : Dune, Pignada, Écume, Vague ou Lagon. Pour un cœur moelleux, le Palet Marée est le plus épais. Pour tremper dans un café, le Croquant Lagune est sec et craquant.")}</p>
       <h2>Fraîcheur et conservation</h2>
@@ -32,7 +32,7 @@ const textes = {
       <p>${tx("Écrivez votre message sur la fiche du coffret, puis indiquez l'adresse de la personne au moment de commander. Aucun prix n'apparaît dans le colis.")}</p>
       <a class="lien-fort" href="${url("/pages/faq#cadeaux")}" data-promotion="bloc-distance">Comment ça marche</a>
     </aside>`,
-    aide: `<section class="section aide" aria-labelledby="aide-choisir">
+    aide: `<section class="section guide-choix" aria-labelledby="aide-choisir">
       <h2 id="aide-choisir">${tx("Comment choisir son coffret ?")}</h2>
       <div class="tableau-cadre" role="region" aria-labelledby="aide-choisir" tabindex="0">
       <table class="tableau">

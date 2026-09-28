@@ -27,6 +27,16 @@ Ce projet suit la méthode Mokom (plugin `mokom`). L'état d'avancement est dans
 - **Mesure** : aucun outil de mesure chargé (ni GA4, ni GTM, ni pixel), donc pas de bandeau cookies. Les événements GA4 sont seulement ajoutés à `window.dataLayer`, sans aucun envoi (voir `docs/09-cro-mesure.md`).
 - Le plugin `claude-seo-ai` reste **actif** : aucun geste Shopify/WordPress n'est bloqué sur un site statique.
 
+## Construire et prévisualiser
+- `npm run build` : génère `dist/` depuis les sources (`docs/catalogue/*`, `docs/seo/metas.csv`, `docs/08-contenus/fiches-produits.md`, `src/`). Ne jamais modifier `dist/` à la main.
+- `npm run serve` : aperçu sur http://localhost:4321/maison-sable/ (compression comme GitHub Pages).
+- `npm run check` : contrôles du catalogue et des metas.
+- Publication : `.github/workflows/pages.yml` (déclenchement manuel, seulement après `/mokom:audit`).
+
+## Budget de performance (mobile)
+- Accueil ≤ 1,5 Mo transférés · JavaScript propre ≤ 150 Ko · 3 fichiers de police WOFF2 (69 Ko) · aucun script tiers.
+- LCP ≤ 2,5 s · INP ≤ 200 ms · CLS ≤ 0,1.
+
 ## Règles non négociables
 - Jamais de fait inventé sur le monde réel : `[À COMPLÉTER]` à la place. Contenus de marque inventés : toujours marqués `[FICTIF]`.
 - Un seul `h1` par page ; `title` et meta description uniques ; URLs courtes en minuscules avec tirets.

@@ -1,6 +1,7 @@
 // Composants de la boutique : alvéole + étiquette produit, boutons d'ajout, données pour le panier.
 import { url } from "../config.mjs";
 import { esc, prix, typo } from "./html.mjs";
+const insecable = (s) => typo(esc(s)).replace(/ (€|g)\b/g, "\u00A0$1");
 import { economie } from "./data.mjs";
 
 export const imageProduit = (h, n = 1) => url(`/images/produits/${h}-${n}.svg`);
@@ -36,7 +37,7 @@ export function boutonAjout(p, liste) {
 export function carteProduit(p, { liste, niveauTitre = 3, chargement = "lazy" } = {}) {
   const pastilles = [
     p.cadeau || p.type === "Carte cadeau" ? '<span class="pastille pastille-cadeau">Cadeau</span>' : "",
-    p.allergenes.includes("Fruits à coque") ? '<span class="pastille pastille-info">Contient des fruits à coque</span>' : "",
+    p.allergenes.includes("Fruits à coque") ? '<span class="pastille pastille-info">Fruits à coque</span>' : "",
   ].join("");
   const eco = p.variantes.map((v) => economie(p, v)).find(Boolean);
   const ecoTexte = p.handle === "coffret-ete-indien" && eco ? `<span class="etiq-eco">${typo(prix(eco.montant) + " de moins qu'à l'unité")}</span>` : "";
@@ -45,7 +46,7 @@ export function carteProduit(p, { liste, niveauTitre = 3, chargement = "lazy" } 
   if (p.epuise)
     return `<article class="carte carte-epuisee" data-produit="${p.handle}" data-saveur="${esc(p.saveur)}" data-format="${esc(p.format)}" data-prix="${p.prixMin}">
   <div class="alveole alveole-vide"><span>Revient bientôt</span></div>
-  <div class="etiquette-produit"><${h} class="etiq-nom"><a href="${url("/products/" + p.handle)}">${esc(p.titre.split(",")[0])}</a></${h}><span class="etiq-saveur">${esc(saveurCourte(p))}</span><span class="etiq-prix">${prixTexte}</span><span class="etiq-poids">${esc(poidsCourts(p))}</span></div>
+  <div class="etiquette-produit"><${h} class="etiq-nom"><a href="${url("/products/" + p.handle)}">${esc(p.titre.split(",")[0])}</a></${h}><span class="etiq-saveur">${esc(saveurCourte(p))}</span><span class="etiq-prix">${prixTexte}</span><span class="etiq-poids">${insecable(poidsCourts(p))}</span></div>
   ${boutonAjout(p, liste)}
 </article>`;
   return `<article class="carte" data-produit="${p.handle}" data-saveur="${esc(p.saveur)}" data-format="${esc(p.format)}" data-prix="${p.prixMin}">
@@ -58,7 +59,7 @@ export function carteProduit(p, { liste, niveauTitre = 3, chargement = "lazy" } 
     <${h} class="etiq-nom"><a href="${url("/products/" + p.handle)}" data-selection='${esc(JSON.stringify({ liste, handle: p.handle }))}'>${esc(p.titre.split(",")[0].replace(/ (au|aux|à la|à l') .*$/, ""))}</a></${h}>
     <span class="etiq-saveur">${esc(saveurCourte(p))}</span>
     <span class="etiq-prix">${prixTexte}</span>
-    <span class="etiq-poids">${esc(poidsCourts(p))}</span>
+    <span class="etiq-poids">${insecable(poidsCourts(p))}</span>
     ${ecoTexte}
   </div>
   ${boutonAjout(p, liste)}

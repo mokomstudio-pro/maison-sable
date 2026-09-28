@@ -183,15 +183,15 @@ export function sceneCouvercle(format = "large") {
   const [w, h] = format === "large" ? [1600, 900] : [900, 1300];
   const L = format === "large";
   const s = (v) => v; // repère direct
-  const horizon = L ? 470 : 560;
+  const horizon = L ? 470 : 360;
   let out = `<defs><pattern id="trame" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="1.4" fill="${C.encre}" opacity=".07"/></pattern></defs>`;
   out += `<rect width="${w}" height="${h}" fill="${C.beurre}"/>`;
   // soleil rayé
-  const sx = L ? 1150 : 610, sy = L ? 330 : 380, sr = L ? 165 : 180;
+  const sx = L ? 1150 : 610, sy = L ? 330 : 230, sr = L ? 165 : 140;
   out += `<circle cx="${sx}" cy="${sy}" r="${sr}" fill="${C.corail}"/>`;
   [0.35, 0.55, 0.75].forEach((k, i) => { out += `<rect x="${sx - sr - 10}" y="${sy + sr * k - 8 + i * 4}" width="${2 * sr + 20}" height="${10 + i * 7}" fill="${C.beurre}"/>`; });
   // oiseaux
-  out += `<g fill="none" stroke="${C.encre}" stroke-width="5" stroke-linecap="round" opacity=".7"><path d="M${L ? 520 : 160} ${L ? 210 : 250}q18 -16 36 0q18 -16 36 0"/><path d="M${L ? 610 : 250} ${L ? 170 : 200}q13 -12 26 0q13 -12 26 0"/></g>`;
+  out += `<g fill="none" stroke="${C.encre}" stroke-width="5" stroke-linecap="round" opacity=".7"><path d="M${L ? 520 : 160} ${L ? 210 : 150}q18 -16 36 0q18 -16 36 0"/><path d="M${L ? 610 : 250} ${L ? 170 : 110}q13 -12 26 0q13 -12 26 0"/></g>`;
   // horizon rose, océan et vagues
   out += `<rect y="${horizon - 36}" width="${w}" height="40" fill="${C.rose}"/><rect y="${horizon}" width="${w}" height="${L ? 150 : 170}" fill="${C.lagune}"/>`;
   for (let r = 0; r < 3; r++) {
@@ -200,7 +200,7 @@ export function sceneCouvercle(format = "large") {
     out += `<path d="${d}" fill="none" stroke="${C.laguneP}" stroke-width="4" opacity="${0.55 - r * 0.12}"/>`;
   }
   // dunes (métal nu = sable) et ombre
-  const dy = horizon + (L ? 130 : 150);
+  const dy = horizon + (L ? 130 : 120);
   out += `<path d="M0 ${dy}C${w * 0.18} ${dy - 90} ${w * 0.38} ${dy - 70} ${w * 0.55} ${dy - 10}S${w * 0.85} ${dy - 60} ${w} ${dy - 20}V${h}H0Z" fill="${C.sable}"/>`;
   for (let r = 0; r < 5; r++) {
     const yy = dy + 40 + r * (L ? 34 : 60);
@@ -223,7 +223,7 @@ export function sceneCouvercle(format = "large") {
   out += `<path d="M0 ${ly}C${w * 0.15} ${ly - 60} ${w * 0.32} ${ly - 30} ${w * 0.42} ${ly + 30}S${w * 0.4} ${h} ${w * 0.4} ${h}H0Z" fill="${C.lagune}"/>`;
   out += `<path d="M30 ${ly + 40}q80 -30 180 -6M60 ${ly + 90}q90 -24 200 -2" fill="none" stroke="${C.papier}" stroke-width="5" stroke-linecap="round" opacity=".8"/>`;
   // pins parasols (sauge + pin profond)
-  const pins = L ? [[1330, 430, 1.1], [1470, 470, 0.9], [1215, 520, 0.7]] : [[760, 520, 1], [650, 610, 0.75]];
+  const pins = L ? [[1330, 430, 1.1], [1470, 470, 0.9], [1215, 520, 0.7]] : [[740, 300, 0.95], [600, 370, 0.7]];
   for (const [px, py, k] of pins) {
     out += `<path d="M${px} ${py}c-6 90 4 180 -10 ${260 * k}h${22 * k}c-10 -80 -8 -170 4 -${260 * k}Z" fill="${C.pin}"/>`;
     out += couronne(px, py, k);
@@ -270,6 +270,8 @@ export function imagePartage() {
   out += `<text x="110" y="520" font-family="Arial, sans-serif" font-size="24" fill="${C.laguneP}">Hossegor · boutique fictive, étude de cas Mokom Studio</text>`;
   return svg(1200, 630, out);
 }
+
+export const pinDebord = () => svg(520, 300, `<rect x="250" y="120" width="16" height="180" fill="${C.pin}"/>` + couronne(260, 110, 1.9));
 
 export const frises = {
   vagues: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="28"><path d="M0 18 Q12 4 24 18 T48 18" fill="none" stroke="${C.laguneP}" stroke-width="3"/></svg>`,

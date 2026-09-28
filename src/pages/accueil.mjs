@@ -10,6 +10,7 @@ export default function accueil() {
   const recettes = merch.accueil.plateau_recettes.map(produit);
   const corps = `
 <section class="boite-accueil" aria-labelledby="titre-accueil">
+  <img class="pin-debord" src="${url("/images/pin-debord.svg")}" alt="" width="520" height="300" aria-hidden="true">
   <div class="couvercle" data-couvercle>
     <picture>
       <source media="(min-width: 760px)" srcset="${url("/images/couvercle-large.svg")}" width="1600" height="900">
@@ -18,7 +19,8 @@ export default function accueil() {
     <p class="bandeau-relief" aria-hidden="true">Maison Sable · Hossegor</p>
     <div class="etiquette-couvercle">
       <h1 id="titre-accueil">${tx(m.h1)}</h1>
-      <p>${tx("Maison Sable est une biscuiterie artisanale de bord de mer installée à Hossegor, dans les Landes, qui fabrique en petites séries des sablés, des palets et des coffrets de biscuits pur beurre.")}</p>
+      <p class="definition-longue">${tx("Maison Sable est une biscuiterie artisanale de bord de mer installée à Hossegor, dans les Landes, qui fabrique en petites séries des sablés, des palets et des coffrets de biscuits pur beurre.")}</p>
+      <p class="definition-courte">${tx("Sablés, palets et coffrets pur beurre, faits en petites séries.")}</p>
       <div class="actions">
         <a class="bouton" href="${url("/collections/coffrets-cadeaux")}">Offrir un coffret</a>
         <a class="lien-fort" href="${url("/collections/biscuits")}">Découvrir nos biscuits</a>
@@ -36,12 +38,7 @@ export default function accueil() {
 </section>
 
 <section class="reassurance" aria-label="Livraison et fraîcheur">
-  <ul>
-    <li><strong>${tx("Expédié sous 1 à 2 jours ouvrés")}</strong><span>${tx("date de livraison affichée avant de commander")}</span></li>
-    <li><strong>${tx("Livraison dès 4,50 €")}</strong><span>${tx("offerte dès 45 € d'achat")}</span></li>
-    <li><strong>Retrait gratuit</strong><span>${tx("à l'atelier d'Hossegor, du mardi au samedi")}</span></li>
-    <li><strong>${tx("45 à 90 jours")}</strong><span>de conservation selon la recette</span></li>
-  </ul>
+  <p class="bande-imprimee">${tx("Expédié sous 1 à 2 jours ouvrés")}<span aria-hidden="true"> · </span>${tx("Livraison dès 4,50 €, offerte dès 45 €")}<span aria-hidden="true"> · </span>${tx("Retrait gratuit à l'atelier d'Hossegor")}<span aria-hidden="true"> · </span>${tx("De 45 à 90 jours de conservation")}</p>
 </section>
 
 ${frise("ganivelles")}

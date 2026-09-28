@@ -147,9 +147,7 @@ a.logo:hover { background: var(--beurre); box-shadow: inset 0 0 0 2px var(--beur
 .plateau-int { padding: calc(var(--e-6) + 26px) clamp(1rem, 4vw, 3rem) var(--e-6); }
 .plateau h2 { max-width: 20ch; }
 .plateau .intro { max-width: 60ch; }
-.couvercle.ouvert { animation: soulever .6s var(--ease) both; }
-@keyframes soulever { 0% { transform: none; } 45% { transform: translateY(-14px) rotateX(9deg); box-shadow: 0 40px 40px -24px rgb(46 42 63 / .55); } 100% { transform: translateY(-6px) rotateX(3deg); } }
-@media (prefers-reduced-motion: reduce) { .couvercle.ouvert { animation: none; } }
+
 
 .reassurance ul { list-style: none; margin: var(--e-6) 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: var(--e-4); }
 .reassurance li { border-top: 3px solid var(--encre); padding-top: var(--e-2); }
@@ -377,7 +375,7 @@ dialog.tiroir::backdrop { background: rgb(46 42 63 / .45); }
 .jauge { padding: var(--e-3) var(--e-4) 0; }
 .jauge p { margin: 0 0 .4rem; font-weight: 600; font-size: .95rem; }
 .jauge-barre { height: 10px; background: var(--papier); border-radius: 5px; box-shadow: inset 0 0 0 1px rgb(46 42 63 / .3); overflow: hidden; }
-.jauge-barre span { display: block; height: 100%; background: var(--lagune-pro); border-radius: 5px; transition: width .4s var(--ease); }
+.jauge-barre span { display: block; width: 100%; height: 100%; background: var(--lagune-pro); border-radius: 5px; transform-origin: left center; transition: transform .4s var(--ease); }
 .suggestion-panier { margin: var(--e-2) var(--e-4) 0; padding: var(--e-2) var(--e-3); background: var(--beurre); border-radius: var(--r-plaque); display: grid; grid-template-columns: 48px 1fr auto; gap: var(--e-2); align-items: center; font-size: .92rem; }
 .suggestion-panier img { width: 48px; height: 60px; object-fit: contain; }
 .panier-pied { padding: var(--e-3) var(--e-4) var(--e-4); border-top: 2px solid var(--encre); background: var(--papier); }
@@ -459,3 +457,51 @@ dialog.tiroir::backdrop { background: rgb(46 42 63 / .45); }
 .plateau .etiq-poids { color: var(--encre); }
 .pied-gravure { color: var(--papier); }
 .pied-gravure a { color: var(--beurre); }
+/* Détecteur de design : corrections mécaniques */
+.logo-lieu { font-size: .75rem; }
+.bandeau-relief { padding: .45rem 1.4rem .35rem; }
+.bouton, .choix-rapide, .filtre-actif { line-height: 1.3; }
+.guide-choix p, .guide-choix .note, .fiche-section p, .fiche-section li, .reassurance-ligne, .collection ~ .section p { max-width: 68ch; }
+.page-tete .intro { max-width: 62ch; }
+.pied-gravure { text-transform: none; letter-spacing: .04em; font-size: 1.05rem; max-width: var(--largeur); margin-inline: auto; }
+.bloc-grille p, .fiche-presentation .chapo { max-width: 62ch; }
+
+fieldset { min-width: 0; }
+
+/* ---------- Revue finale : corrections ---------- */
+/* 2. Place pour la frise sous la grille */
+.collection { padding-block-end: var(--e-6); }
+/* 3. Étiquette sur petit écran : prix sur sa propre ligne, pastilles au-dessus de l'illustration */
+@media (max-width: 479px) {
+  .etiquette-produit { grid-template-columns: 1fr; }
+  .etiq-prix { text-align: left; }
+}
+.alveole { display: flex; flex-direction: column; }
+.alveole > img:first-of-type { flex: 1; min-height: 0; }
+.pastilles { position: static; padding: .55rem .55rem 0; }
+/* 4. Couvercle mobile : définition courte, étiquette basse */
+.definition-courte { display: none; }
+@media (max-width: 759px) {
+  .definition-longue { display: none; }
+  .definition-courte { display: block; }
+  .etiquette-couvercle { bottom: 5%; padding: 1rem 1rem .95rem; }
+}
+/* 5. Le plateau sort de sous le couvercle au premier défilement (transform uniquement) */
+.couvercle, .plateau { transition: transform .6s var(--ease); }
+@media (prefers-reduced-motion: no-preference) {
+  .js .boite-accueil:not(.ouverte) .plateau { transform: translateY(-38%); }
+  .js .boite-accueil:not(.ouverte) .couvercle { transform: translateY(10px); }
+  .js .boite-accueil.ouverte .couvercle { transform: translateY(-6px) rotateX(2deg); }
+}
+/* 6. Réassurance : une ligne imprimée le long d'une bande */
+.reassurance { padding-block: var(--e-5); }
+.bande-imprimee { margin: 0; padding: .9rem 1.2rem; background: var(--beurre); border-block: 2px dashed var(--encre); font-weight: 600; text-align: center; text-wrap: balance; line-height: 1.6; }
+/* 7. Le pin déborde du cadre à droite (ordinateur) */
+.boite-accueil { position: relative; }
+.pin-debord { display: none; }
+@media (min-width: 760px) {
+  .pin-debord { display: block; position: absolute; z-index: 3; width: clamp(180px, 22vw, 300px); right: calc(var(--gouttiere) - clamp(40px, 5vw, 80px)); top: 14%; pointer-events: none; }
+}
+/* 8. Pas de relief simulé : la fonte Inline suffit */
+.bandeau-relief { box-shadow: none; }
+.couvercle { box-shadow: none; }

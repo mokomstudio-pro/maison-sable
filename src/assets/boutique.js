@@ -98,7 +98,7 @@ function rendrePanier(p, ou) {
       <div class="quantite"><button class="bouton-icone" type="button" data-panier-qte="${i}" data-delta="-1" aria-label="Diminuer la quantité de ${esc(l.nom)}">−</button><span aria-live="polite" class="num">${l.qte}</span><button class="bouton-icone" type="button" data-panier-qte="${i}" data-delta="1" aria-label="Augmenter la quantité de ${esc(l.nom)}">+</button></div>
       <button class="lien-retirer" type="button" data-panier-retirer="${i}">Retirer<span class="visuellement-cache"> ${esc(l.nom)}</span></button>
     </div></li>`).join("");
-  return `<div class="jauge">${reste > 0 ? `<p>Plus que ${euros(reste)} pour la livraison offerte</p>` : `<p>La livraison est offerte</p>`}<div class="jauge-barre" aria-hidden="true"><span style="width:${Math.min(100, (st / seuil) * 100)}%"></span></div></div>
+  return `<div class="jauge">${reste > 0 ? `<p>Plus que ${euros(reste)} pour la livraison offerte</p>` : `<p>La livraison est offerte</p>`}<div class="jauge-barre" aria-hidden="true"><span style="transform:scaleX(${Math.min(1, st / seuil).toFixed(3)})"></span></div></div>
   <div data-suggestion></div>
   <ul class="panier-liste">${lignes}</ul>
   <div class="panier-pied">
@@ -161,11 +161,11 @@ $$("dialog.tiroir").forEach((d) => {
 
 // ---------- Accueil : le couvercle se soulève au premier défilement ----------
 {
-  const c = $("[data-couvercle]");
-  if (c && !reduit) {
-    const ouvrir = () => { c.classList.add("ouvert"); removeEventListener("scroll", ouvrir); };
-    addEventListener("scroll", ouvrir, { passive: true, once: true });
-  }
+  const boite = $(".boite-accueil");
+  if (boite && !reduit) {
+    const ouvrir = () => { boite.classList.add("ouverte"); removeEventListener("scroll", ouvrir); };
+    if (scrollY > 40) ouvrir(); else addEventListener("scroll", ouvrir, { passive: true, once: true });
+  } else boite?.classList.add("ouverte");
 }
 
 // ---------- Saison de Noël ----------
