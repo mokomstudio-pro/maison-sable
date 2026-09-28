@@ -1,6 +1,13 @@
 // Gabarit commun : <head>, bandeau fictif, en-tête, pied de page, tiroirs (menu, panier, recherche).
 import { url, absolue, NOINDEX, MOKOM_URL } from "../config.mjs";
 import { esc, t } from "./html.mjs";
+import { readFileSync } from "node:fs";
+// Feuille de style intégrée dans chaque page (9 Ko compressés) : une requête bloquante de moins sur mobile.
+// Les chemins relatifs (polices) sont réécrits pour la racine du site.
+const CSS = readFileSync(new URL("../assets/maison-sable.css", import.meta.url), "utf8")
+  .replaceAll('url("fonts/', `url("${url("/assets/fonts/")}`)
+  .replace(/\/\*[\s\S]*?\*\//g, "")
+  .replace(/\n\s*/g, "\n");
 
 export const lien = (href) => (/^(https?:|mailto:|#)/.test(href) ? href : url(href));
 export const tx = (s) => t(s, { lien });
@@ -69,7 +76,7 @@ ${robots}
 <link rel="icon" href="${url("/images/favicon.svg")}" type="image/svg+xml">
 <link rel="preload" href="${url("/assets/fonts/big-shoulders-display-800.woff2")}" as="font" type="font/woff2" crossorigin>
 ${precharger.join("\n")}
-<link rel="stylesheet" href="${url("/assets/maison-sable.css")}">
+<style>${CSS}</style>
 <script>document.documentElement.classList.add("js")</script>
 <script type="module" src="${url("/assets/boutique.js")}"></script>
 ${ld}

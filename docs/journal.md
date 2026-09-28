@@ -231,3 +231,10 @@
 - Survol des vignettes : l'image principale ne disparaît plus sur les produits qui n'ont qu'une photo (coffrets, boîte, carte cadeau, Pignada, Écume, Lagune, Lagon).
 - Étoiles ajoutées sur les 3 avis fictifs (5, 5 et 4) : étoiles miel à contour caramel, dessinées pour le site, lues « Note fictive : N sur 5 ». Toujours rien dans les données structurées.
 - Pied de page : « Renoncer au contrat ici » devient « Annuler ma commande ». La page elle-même garde le bouton « Renoncer au contrat ici » (libellé explicite attendu par la réglementation sur la rétractation en ligne).
+
+## 2026-09-28 — Étude de cas et performance
+
+- Étude de cas : texte réécrit par Morgane (titre « Maison Sable, par Mokom Studio », introduction à la première personne) reporté sur le site ; point manquant ajouté après « exemple artisanal » ; ligne « Direction artistique » du tableau mise à jour (version gourmande).
+- Performance mesurée sur 5 gabarits (mobile, 4G lente, processeur ÷ 4) : LCP 1,27 à 2,24 s, CLS 0 à 0,01, aucune interaction au-dessus de 16 ms. Rapport : `docs/audits/performance.md`.
+- Corrections : styles intégrés dans les pages (LCP accueil 2,80 → 2,24 s), photo d'accueil 640 px pour mobile, récapitulatif de commande replié sur mobile et place réservée aux dates (CLS commande 0,14 → 0).
+- Signalé : photo d'accueil ordinateur à 152 Ko (budget 150 Ko), sans effet sur le mobile.

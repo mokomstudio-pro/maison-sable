@@ -13,7 +13,7 @@ export default function accueil() {
   <div class="couvercle" data-couvercle>
     <picture>
       <source media="(min-width: 760px)" srcset="${url("/images/photos/accueil-large-960.webp")} 960w, ${url("/images/photos/accueil-large-1600.webp")} 1600w" sizes="(min-width: 1320px) 1240px, 94vw" width="1600" height="900">
-      <img class="couvercle-scene" src="${url("/images/photos/accueil-haut-800.webp")}" srcset="${url("/images/photos/accueil-haut-480.webp")} 480w, ${url("/images/photos/accueil-haut-800.webp")} 800w" sizes="94vw" width="800" height="1000" alt="${photos.scenes.accueil.alt}" fetchpriority="high">
+      <img class="couvercle-scene" src="${url("/images/photos/accueil-haut-800.webp")}" srcset="${url("/images/photos/accueil-haut-480.webp")} 480w, ${url("/images/photos/accueil-haut-640.webp")} 640w, ${url("/images/photos/accueil-haut-800.webp")} 800w" sizes="94vw" width="800" height="1000" alt="${photos.scenes.accueil.alt}" fetchpriority="high">
     </picture>
     <p class="legende-photo">Photo d'illustration · ${photos.scenes.accueil.auteur}, Unsplash</p>
     <div class="couvercle-metal" aria-hidden="true"><span>Maison Sable<br>Hossegor</span></div>
@@ -80,7 +80,7 @@ ${frise("ganivelles")}
 
   return page({
     chemin: "/", titre: m.title, description: m.meta_description, h1Logo: true, corps, classe: "page-accueil",
-    precharger: [`<link rel="preload" as="image" imagesrcset="${url("/images/photos/accueil-haut-480.webp")} 480w, ${url("/images/photos/accueil-haut-800.webp")} 800w" imagesizes="94vw" media="(max-width: 759px)">`, `<link rel="preload" as="image" imagesrcset="${url("/images/photos/accueil-large-960.webp")} 960w, ${url("/images/photos/accueil-large-1600.webp")} 1600w" imagesizes="(min-width: 1320px) 1240px, 94vw" media="(min-width: 760px)">`],
+    precharger: [`<link rel="preload" as="image" imagesrcset="${url("/images/photos/accueil-haut-480.webp")} 480w, ${url("/images/photos/accueil-haut-640.webp")} 640w, ${url("/images/photos/accueil-haut-800.webp")} 800w" imagesizes="94vw" media="(max-width: 759px)">`, `<link rel="preload" as="image" imagesrcset="${url("/images/photos/accueil-large-960.webp")} 960w, ${url("/images/photos/accueil-large-1600.webp")} 1600w" imagesizes="(min-width: 1320px) 1240px, 94vw" media="(min-width: 760px)">`],
     jsonLd: [
       { "@type": "Organization", "@id": absolue("/#organisation"), name: "Maison Sable", url: absolue("/"), logo: absolue("/images/favicon.svg"),
         description: "Maison Sable est une biscuiterie artisanale de bord de mer installée à Hossegor, dans les Landes, qui fabrique en petites séries des sablés, des palets et des coffrets de biscuits pur beurre. Marque fictive : étude de cas Mokom Studio.",

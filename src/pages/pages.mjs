@@ -292,7 +292,7 @@ export function commande() {
       <p class="note">Aucun paiement ne sera demandé.</p>
     </section>
   </form>
-  <aside class="recapitulatif" data-recap aria-label="Votre commande"><details open data-recap-details><summary data-recap-resume>Votre commande</summary><div data-recap-corps></div></details>
+  <aside class="recapitulatif" data-recap aria-label="Votre commande"><details data-recap-details><summary data-recap-resume>Votre commande</summary><div data-recap-corps></div></details>
     <p class="note"><a href="${url("/policies/shipping-policy")}">Livraison</a> · <a href="${url("/policies/refund-policy")}">Retours</a></p></aside>
   <section class="confirmation-commande" data-confirmation hidden tabindex="-1" aria-labelledby="conf-titre"></section>
 </div>`;

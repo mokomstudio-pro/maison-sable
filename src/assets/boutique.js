@@ -422,6 +422,7 @@ $$("form[data-formulaire='retractation']").forEach((f) => {
       conf.hidden = false; zone.classList.add("confirmee"); form.reset(); try { localStorage.removeItem(CLE); sessionStorage.removeItem("ms-commande"); } catch {}
       majPanier(); scrollTo(0, 0); conf.focus();
     });
+    if (matchMedia("(min-width: 960px)").matches) $("[data-recap-details]", zone).open = true;
     majRecap();
   });
 }

@@ -3,7 +3,7 @@
   "type": "ecommerce",
   "plateforme": "html-statique (maquette Shopify, GitHub Pages)",
   "cree_le": "2026-09-27",
-  "etape_courante": "performance",
+  "etape_courante": "seo-technique",
   "dernier_audit_complet": null,
   "dernier_audit_partiel": null,
   "chaines": {
@@ -196,6 +196,7 @@
     "cro": "fait 2026-09-28",
     "checkout": "fait 2026-09-28",
     "conformite": "fait 2026-09-28",
-    "developpement": "fait 2026-09-28"
+    "developpement": "fait 2026-09-28",
+    "performance": "fait 2026-09-28"
   }
 }

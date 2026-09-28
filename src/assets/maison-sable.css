@@ -581,3 +581,7 @@ a.logo:hover { background: var(--miel); color: var(--encre); box-shadow: inset 0
 .etoile-pleine { fill: var(--miel); stroke: var(--action-bord); }
 .etoile-vide { fill: var(--carte); stroke: var(--miel); }
 .etoiles circle { fill: var(--action-bord); opacity: .35; }
+
+/* Commande : pas de décalage quand les dates et le récapitulatif arrivent */
+.mode small { min-height: 1.45em; }
+.recapitulatif summary { min-height: 48px; }
