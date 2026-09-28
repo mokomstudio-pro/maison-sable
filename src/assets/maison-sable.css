@@ -174,7 +174,7 @@ a.logo:hover { background: var(--miel); box-shadow: inset 0 0 0 2px var(--miel),
 .alveole { position: relative; display: block; background: var(--carte); aspect-ratio: 4 / 5; border-radius: var(--r-alveole); box-shadow: var(--ombre-alveole); overflow: hidden; }
 .alveole img { width: 100%; height: 100%; object-fit: contain; padding: 6%; transition: opacity var(--duree) var(--ease), transform .4s var(--ease); }
 .alveole-survol { position: absolute; inset: 0; opacity: 0; }
-@media (hover: hover) { .carte:hover .alveole-survol { opacity: 1; } .carte:hover .alveole > img:first-of-type:not(.alveole-survol) { opacity: 0; } }
+@media (hover: hover) { .carte:hover .alveole-survol { opacity: 1; } .carte:hover .alveole:has(.alveole-survol) > img:first-of-type:not(.alveole-survol) { opacity: 0; } }
 .alveole-vide { display: grid; place-items: center; background: transparent; border: 2px dashed rgb(58 34 24 / .4); box-shadow: none; }
 .alveole-vide span { font: 800 1.2rem var(--f-titre); background: var(--carte); padding: .3rem .8rem; border-radius: 4px; }
 .pastilles { position: absolute; top: .6rem; left: .6rem; right: .6rem; display: flex; flex-wrap: wrap; gap: .35rem; z-index: 1; }
@@ -572,3 +572,12 @@ a.logo:hover { background: var(--miel); color: var(--encre); box-shadow: inset 0
 .legende-photo { position: absolute; right: 1.2rem; bottom: 1.1rem; z-index: 4; background: rgb(251 244 232 / .9); color: var(--encre); font-size: .72rem; padding: .15rem .45rem; border-radius: 3px; }
 .histoire { position: relative; }
 .histoire figure { margin: 0; position: relative; }
+
+/* Retours de Morgane (2026-09-28) */
+.logo { padding: .5rem 1rem .4rem; gap: .15rem; }
+/* Étoiles des avis : biscuits étoilés miel, contour caramel */
+.etoiles { display: flex; gap: .2rem; margin: 0 0 var(--e-2); }
+.etoiles svg { width: 22px; height: 22px; }
+.etoile-pleine { fill: var(--miel); stroke: var(--action-bord); }
+.etoile-vide { fill: var(--carte); stroke: var(--miel); }
+.etoiles circle { fill: var(--action-bord); opacity: .35; }

@@ -224,3 +224,10 @@
 - Aplats et frises dessinés remplacés par des photos et des filets de sertissage ; seuls restent dessinés la carte cadeau et le schéma sablé / galette / palet. Image de partage refaite avec la photo d'accueil.
 - Détecteur de design : plus de remarque, hors images de survol (voulues). Mesure du texte passée en `em`, car les chiffres de Figtree sont larges et faussaient la largeur en `ch`.
 - Poids : photo d'accueil 84 Ko sur mobile (152 Ko pour la version ordinateur 1600 px, à la limite du budget de l'image principale).
+
+## 2026-09-28 — Retouches de design demandées par Morgane
+
+- Logo : marge interne ajoutée (le texte « MAISON SABLE » ne touche plus le bord).
+- Survol des vignettes : l'image principale ne disparaît plus sur les produits qui n'ont qu'une photo (coffrets, boîte, carte cadeau, Pignada, Écume, Lagune, Lagon).
+- Étoiles ajoutées sur les 3 avis fictifs (5, 5 et 4) : étoiles miel à contour caramel, dessinées pour le site, lues « Note fictive : N sur 5 ». Toujours rien dans les données structurées.
+- Pied de page : « Renoncer au contrat ici » devient « Annuler ma commande ». La page elle-même garde le bouton « Renoncer au contrat ici » (libellé explicite attendu par la réglementation sur la rétractation en ligne).

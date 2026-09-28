@@ -116,7 +116,7 @@ function piedDePage() {
     ${col("Boutique", [["/collections/biscuits", "Biscuits"], ["/collections/coffrets-cadeaux", "Coffrets & cadeaux"], ["/products/carte-cadeau", "Carte cadeau"]])}
     ${col("Maison Sable", [["/pages/atelier-hossegor", "L'atelier à Hossegor"], ["/blogs/journal", "Journal"], ["/pages/contact", "Contact"]])}
     ${col("Aide", [["/pages/faq", "Questions fréquentes"], ["/policies/shipping-policy", "Livraison"], ["/policies/refund-policy", "Retours et rétractation"]])}
-    ${col("Informations légales", [["/policies/legal-notice", "Mentions légales"], ["/policies/terms-of-service", "CGV"], ["/policies/privacy-policy", "Confidentialité"], ["/pages/retractation", "Renoncer au contrat ici"]])}
+    ${col("Informations légales", [["/policies/legal-notice", "Mentions légales"], ["/policies/terms-of-service", "CGV"], ["/policies/privacy-policy", "Confidentialité"], ["/pages/retractation", "Annuler ma commande"]])}
   </div>
   <p class="pied-gravure">Biscuits faits à Hossegor · Projet fictif, étude de cas <a href="${url("/pages/etude-de-cas")}" data-evenement="mokom_case_study_click" data-emplacement="pied">Mokom Studio</a></p>
 </footer>`;
