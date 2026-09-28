@@ -81,13 +81,10 @@ Pas de fenêtre qui s'ouvre avant l'ajout au panier : l'information est sur le b
 ### Lots (coffrets)
 Un coffret est un produit composé : ses composants sont liés à leurs fiches. Règle Mokom : si l'on affiche une économie, elle doit être **réelle**.
 - **Coffret Découverte** (6 mini-sachets de 50 g, format exclusif) : pas de comparaison possible avec les sachets vendus seuls, donc **pas d'économie affichée**. On le présente comme un cadeau prêt à offrir.
-- ⚠️ **Coffret Été Indien : il coûte plus cher que ses composants.** Boîte Grande Plage 250 g (15,90 €) + Sablé Pignada 150 g (8,50 €) + Croquant Lagune 120 g (8,90 €) = **33,30 €**, contre **34,00 €** pour le coffret, soit 0,70 € de plus pour l'écrin.
-  - **Option A (recommandée)** : passer le coffret à **31,90 €** et afficher « 1,40 € de moins que les trois produits achetés séparément », un argument simple pour la cible cadeau.
-  - **Option B** : garder 34 € sans parler d'économie, en justifiant par l'écrin et le message cadeau. C'est honnête, mais un prospect attentif remarquera l'écart.
-  - **À trancher par Morgane.** En attendant, aucune économie n'est affichée.
+- **Coffret Été Indien : 31,90 €** (option A, choisie par Morgane le 2026-09-28). Ses composants achetés séparément coûtent 33,30 € : Boîte Grande Plage 250 g (15,90 €) + Sablé Pignada 150 g (8,50 €) + Croquant Lagune 120 g (8,90 €). La fiche et la carte affichent donc « 1,40 € de moins que les trois produits achetés séparément ».
 
 ## Porte de sortie
 - [x] Ordre de tri défini par collection, justifié, sans fausse donnée de vente. Produits épuisés gérés (alvéole vide, exclus des suggestions).
 - [x] Emplacements de recommandation définis avec leur logique (`merchandising.json`, contrôlé).
 - [x] Complément dans le panier cohérent avec le seuil de livraison (45 €, provisoire) et l'écart de 15 € de l'UX.
-- [ ] Prix du Coffret Été Indien (option A ou B) → **décision de Morgane**.
+- [x] Prix du Coffret Été Indien : option A, 31,90 € (Morgane, 2026-09-28).

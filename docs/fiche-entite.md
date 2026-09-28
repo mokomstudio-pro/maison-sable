@@ -33,7 +33,7 @@
 | Champ | Valeur | Source |
 |---|---|---|
 | Gamme | 11 produits, 19 variantes | `docs/catalogue/produits.csv`, `variantes.csv` `[FICTIF]` |
-| Fourchette de prix | de 6,90 € (sachet 150 g) à 34 € (coffret) ; carte cadeau de 20 à 60 € | catalogue `[FICTIF]` |
+| Fourchette de prix | de 6,90 € (sachet 150 g) à 31,90 € (coffret) ; carte cadeau de 20 à 60 € | catalogue `[FICTIF]` |
 | Fabrication | à la main, en petites séries, dans l'atelier d'Hossegor | invention Mokom `[FICTIF]` |
 | Ingrédients phares | beurre demi-sel, fleur de sel, caramel maison, pignons de pin, miel. **Origines précises `[À DÉCIDER à l'étape fiche produit]`**, sans appellation officielle (AOP, IGP, Label Rouge) inventée | — |
 | Allergènes | par recette, voir le catalogue. Toutes les recettes : « peut contenir des traces de fruits à coque » | catalogue |

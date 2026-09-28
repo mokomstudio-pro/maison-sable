@@ -25,7 +25,7 @@ Format : séparateur `;`, valeurs multiples séparées par `|`, prix au format `
 | Biscuit Vague au chocolat noir et fleur de sel | Sachet | 150 g (7,90 €) · 300 g (14,50 €) | biscuits |
 | Sablé Lagon à la noix de coco et vanille | Sachet | 150 g (7,50 €) | biscuits |
 | Boîte Grande Plage, assortiment de 4 recettes | Boîte | 250 g (15,90 €) · 500 g (26,90 €) | coffrets-cadeaux |
-| Coffret Été Indien, boîte assortie et deux sachets | Coffret | unique (34,00 €) | coffrets-cadeaux |
+| Coffret Été Indien, boîte assortie et deux sachets | Coffret | unique (31,90 €) | coffrets-cadeaux |
 | Coffret Découverte, 6 mini-sachets | Coffret | unique (24,90 €) | coffrets-cadeaux |
 | Carte cadeau Maison Sable | Carte cadeau | 20 € · 40 € · 60 € | coffrets-cadeaux |
 

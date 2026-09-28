@@ -8,7 +8,7 @@
 | # | Question | Page | Fait(s) utilisé(s) |
 |---|---|---|---|
 | 1 | Quel coffret de biscuits artisanaux offrir ? | Coffrets & cadeaux | 3 coffrets et la boîte, contenus, prix |
-| 2 | Combien coûte un coffret de biscuits Maison Sable ? | Coffrets & cadeaux | 15,90 à 34 € |
+| 2 | Combien coûte un coffret de biscuits Maison Sable ? | Coffrets & cadeaux | 15,90 à 31,90 € ; Été Indien : 1,40 € de moins que ses composants |
 | 3 | Peut-on ajouter un message cadeau et faire livrer directement ? | Coffrets & cadeaux | message cadeau, livraison France métropolitaine |
 | 4 | Jusqu'à quand commander pour Noël ? | Coffrets & cadeaux (bloc saisonnier) | date limite `[À DÉCIDER à l'étape checkout]` |
 | 5 | Qu'est-ce que Maison Sable ? | Accueil | définition de la fiche d'entité |

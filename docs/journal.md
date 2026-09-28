@@ -124,3 +124,8 @@
 
 **Questions ouvertes**
 - Le Coffret Été Indien (34 €) coûte 0,70 € de plus que ses composants (33,30 €). Option A : 31,90 € avec « 1,40 € de moins » ; option B : 34 € sans parler d'économie → **décision de Morgane**.
+
+## 2026-09-28 — Prix du Coffret Été Indien
+
+- **Option A choisie par Morgane** : le Coffret Été Indien passe de 34 € à **31,90 €**, soit 1,40 € de moins que ses composants achetés séparément (33,30 €). L'économie est affichée sur la fiche et sur la carte.
+- Mis à jour : variantes.csv, metas.csv, fiche d'entité, modele-donnees.md, merchandising.md, 02/03/04. Vérifications du catalogue et des metas OK.

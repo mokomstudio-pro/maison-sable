@@ -65,7 +65,7 @@
 - URL : `/collections/coffrets-cadeaux` · Intention : transaction · Requête principale : coffret biscuits artisanaux
 - Action n°1 : ajouter un coffret au panier
 - Plan :
-  - Introduction de 40 à 60 mots **au-dessus de la grille** : ce qu'on trouve, prix de 15,90 à 34 €, message cadeau, livraison
+  - Introduction de 40 à 60 mots **au-dessus de la grille** : ce qu'on trouve, prix de 15,90 à 31,90 €, message cadeau, livraison
   - Grille des 6 produits, filtres Format et Prix
   - H2 « Comment choisir son coffret ? » : petit tableau comparatif (contenu, poids, prix, pour qui)
   - H2 « Offrir à distance : message cadeau et livraison » : délais, message, envoi direct au destinataire
