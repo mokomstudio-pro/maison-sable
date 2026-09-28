@@ -279,3 +279,8 @@
 - Décisions : saveur « Amandes & pignons » renommée « Fruits secs » (le Pignada ne contient pas d'amandes) ; éditeur unique dans les données structurées = Mokom Studio ; la carte cadeau compte dans le seuil de livraison offerte (règle actuelle conservée) ; pages publiées avec « / » final.
 - Contre-audit indépendant : UX/UI « prêt », performance « prêt ». **Verdict : PRÊT AVEC RÉSERVES.**
 - Reste : nouvelles photos de sablés à choisir avec Morgane ; taille d'image intermédiaire pour Lighthouse ; test lecteur d'écran.
+
+## 2026-09-28 — Mise en ligne
+
+- Dépôt public créé : https://github.com/mokomstudio-pro/maison-sable (feu vert de Morgane après l'audit final, verdict « prêt avec réserves »).
+- GitHub Pages activé en mode « GitHub Actions » ; publication par `.github/workflows/pages.yml` (déclenchement manuel). Adresse : https://mokomstudio-pro.github.io/maison-sable/ (site en `noindex`).
