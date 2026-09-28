@@ -1,0 +1,10 @@
+{
+  "_note": "Valeurs nutritionnelles pour 100 g, [FICTIF] : valeurs d'exemple cohérentes avec les recettes du catalogue (ordre de grandeur de sablés pur beurre), affichées sur le site avec la mention « valeurs d'exemple, marque fictive ». Contrôle : énergie ≈ 9 × lipides + 4 × glucides + 4 × protéines (scripts/verifier-catalogue.mjs).",
+  "sable-dune":      { "kcal": 500, "lipides": 27, "satures": 17, "glucides": 58, "sucres": 22, "proteines": 6,   "sel": 1.1 },
+  "palet-maree":     { "kcal": 490, "lipides": 24, "satures": 15, "glucides": 63, "sucres": 30, "proteines": 5.5, "sel": 0.9 },
+  "sable-pignada":   { "kcal": 500, "lipides": 27, "satures": 14, "glucides": 57, "sucres": 23, "proteines": 7,   "sel": 0.3 },
+  "croquant-lagune": { "kcal": 460, "lipides": 19, "satures": 3.5,"glucides": 62, "sucres": 38, "proteines": 10,  "sel": 0.1 },
+  "sable-ecume":     { "kcal": 485, "lipides": 24, "satures": 15, "glucides": 61, "sucres": 24, "proteines": 6,   "sel": 0.3 },
+  "biscuit-vague":   { "kcal": 500, "lipides": 26, "satures": 16, "glucides": 59, "sucres": 28, "proteines": 6.5, "sel": 0.6 },
+  "sable-lagon":     { "kcal": 510, "lipides": 28, "satures": 20, "glucides": 58, "sucres": 23, "proteines": 5.5, "sel": 0.3 }
+}

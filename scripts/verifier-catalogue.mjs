@@ -87,6 +87,16 @@ const listes = [...Object.values(merch.accueil), ...Object.values(merch.fiche_au
 for (const h of [...listes.flat(), ...Object.keys(merch.fiche_aussi_dans)]) if (!handles.has(h)) erreur(`merchandising : produit inconnu « ${h} »`);
 for (const h of merch.panier_complements) if (produits.find((p) => p.handle === h)?.format !== "Sachet") erreur(`merchandising : « ${h} » n'est pas un sachet (compléments panier = petits prix)`);
 
+// Valeurs nutritionnelles d'exemple (docs/catalogue/nutrition.json)
+const nutri = JSON.parse(readFileSync("docs/catalogue/nutrition.json", "utf8"));
+for (const p of produits.filter((p) => ["Sablé", "Palet", "Croquant"].includes(p.type))) {
+  const n = nutri[p.handle];
+  if (!n) { erreur(`${p.handle} : valeurs nutritionnelles manquantes`); continue; }
+  const calcul = 9 * n.lipides + 4 * n.glucides + 4 * n.proteines;
+  if (Math.abs(calcul - n.kcal) > 15) erreur(`${p.handle} : énergie ${n.kcal} kcal incohérente avec les nutriments (${calcul} kcal)`);
+  if (n.satures > n.lipides || n.sucres > n.glucides) erreur(`${p.handle} : sous-total supérieur au total (saturés / sucres)`);
+}
+
 if (erreurs.length) {
   console.log(`✗ ${erreurs.length} problème(s) :\n- ` + erreurs.join("\n- "));
   process.exit(1);

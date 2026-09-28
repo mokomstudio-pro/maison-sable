@@ -49,7 +49,7 @@ Oui, sur les coffrets, la Boîte Grande Plage et la carte cadeau. Cochez « Ajou
 Pour une livraison avant Noël, commandez au plus tard le **mardi 15 décembre à midi** en point relais et le **jeudi 17 décembre à midi** en livraison à domicile (retrait à l'atelier jusqu'au mardi 22 décembre à midi). Après ces dates, la carte cadeau reste possible : elle part par e-mail le jour de votre choix.
 
 ### Comment fonctionne la carte cadeau ?
-La carte cadeau Maison Sable, de 20, 40 ou 60 €, est envoyée par e-mail à la date de votre choix, avec votre message. La personne saisit le code reçu au moment de payer. Durée de validité : `[À DÉCIDER à l'étape conformité]`.
+La carte cadeau Maison Sable, de 20, 40 ou 60 €, est envoyée par e-mail à la date de votre choix, avec votre message. La personne saisit le code reçu au moment de payer. Elle est valable un an et s'utilise en une ou plusieurs fois.
 
 ## H2 : À propos de cette boutique {#boutique}
 
@@ -62,4 +62,4 @@ Non. Maison Sable est une marque fictive, imaginée par Mokom Studio pour montre
 - **Liens** : Nous contacter → `/pages/contact` · Nos coffrets à offrir → `/collections/coffrets-cadeaux` · Nos biscuits → `/collections/biscuits`
 
 ## À compléter
-- Validité de la carte cadeau → étape conformité.
+- Aucun.

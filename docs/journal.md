@@ -183,3 +183,15 @@
 - Noël 2026 : commander avant le 15 décembre midi (relais), le 17 décembre midi (domicile), le 22 décembre midi (retrait) ; atelier ouvert le 24 décembre de 10 h à 13 h. Dates calculées sur les jours ouvrés.
 - Panier : pas de champ code promo (aucun code n'existe), pas de paiements express simulés. Commande : une page en 3 sections, sans champ de carte bancaire, carte cadeau d'essai `SABLE-DEMO-20`.
 - Source unique : `docs/catalogue/livraison.json`. Propagé dans la fiche d'entité, la FAQ, les collections, l'accueil, le gabarit de fiche, l'UX, le GEO et la revue CRO (deux points 🟠 levés).
+
+## 2026-09-28 — Conformité
+
+**Décisions**
+- Règles de livraison de l'étape checkout conservées (Morgane n'a pas demandé de changement).
+- Mentions légales : éditeur **réel** (Mokom Studio) et hébergeur réel (GitHub Pages). CGV : modèle « sans valeur contractuelle ». Confidentialité : aucune donnée, aucun cookie, panier gardé dans le navigateur, polices hébergées sur le site (pas de requête vers Google Fonts à la mise en ligne).
+- Rétractation : 14 jours, sauf produits ouverts (hygiène, L221-28). Bouton « Renoncer au contrat ici » en pied de page, page `/pages/retractation` sans connexion, confirmation et accusé de réception simulés.
+- Carte cadeau valable 1 an `[FICTIF]`. Déclaration nutritionnelle affichée (valeurs d'exemple contrôlées, `catalogue/nutrition.json`). Date « À consommer de préférence avant ». Prix au kilo affiché. GPSR non applicable aux denrées alimentaires. Pas de médiateur inventé.
+- Plus aucun point « à décider » dans les documents. Origine des ingrédients : aucune affichée, par choix.
+
+**À fournir par Morgane**
+- Identité de Mokom Studio pour les mentions légales (forme juridique, nom, adresse, SIREN, TVA, e-mail, directrice de la publication).

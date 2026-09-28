@@ -260,7 +260,7 @@ La carte cadeau Maison Sable, de 20, 40 ou 60 €, est envoyée par e-mail à la
 La personne reçoit un e-mail avec un code et votre message. Elle saisit ce code au moment de payer sa commande. Dans cette boutique fictive, aucun e-mail n'est réellement envoyé.
 
 **Questions**
-- *Combien de temps la carte cadeau est-elle valable ?* `[À DÉCIDER à l'étape conformité]`
+- *Combien de temps la carte cadeau est-elle valable ?* Un an à compter de son envoi. Elle s'utilise en une ou plusieurs fois sur toute la boutique `[FICTIF]`.
 - *Peut-on l'utiliser en plusieurs fois ?* Oui. Le montant non dépensé reste disponible sur la carte pour une prochaine commande `[FICTIF]`.
 
 **Images (alt)**
@@ -278,6 +278,5 @@ La personne reçoit un e-mail avec un code et votre message. Elle saisit ce code
 - [ ] **Typographie française** : espaces insécables appliquées automatiquement au rendu (règle du gabarit), à contrôler au développement.
 
 ## Éléments à compléter
-- Durée de validité de la carte cadeau → étape conformité.
-- Déclaration nutritionnelle (valeurs d'exemple ou mention d'exemption) → étape conformité.
+- ~~Validité de la carte cadeau, déclaration nutritionnelle~~ → fixées à l'étape conformité (1 an ; valeurs d'exemple dans `catalogue/nutrition.json`).
 - ~~Vouvoiement ou tutoiement~~ → vouvoiement validé par Morgane (2026-09-28).

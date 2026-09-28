@@ -58,7 +58,7 @@
 | Critère | Statut | Constat |
 |---|---|---|
 | Suite logique | ✅ | Chaque page se termine par un lien vers une collection (souvenir, cadeau, recette). |
-| Anxiété | 🟠 | FAQ : validité de la carte cadeau encore `[À DÉCIDER]` → étape conformité. |
+| Anxiété | ✅ | Validité de la carte cadeau fixée (1 an, étape conformité). |
 | Confiance | ✅ | Question « Maison Sable existe-t-elle vraiment ? » : la transparence devient un signal de sérieux pour le prospect. |
 
 ### Contact

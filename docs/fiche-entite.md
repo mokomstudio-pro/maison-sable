@@ -35,11 +35,11 @@
 | Gamme | 11 produits, 19 variantes | `docs/catalogue/produits.csv`, `variantes.csv` `[FICTIF]` |
 | Fourchette de prix | de 6,90 € (sachet 150 g) à 31,90 € (coffret) ; carte cadeau de 20 à 60 € | catalogue `[FICTIF]` |
 | Fabrication | à la main, en petites séries, dans l'atelier d'Hossegor | invention Mokom `[FICTIF]` |
-| Ingrédients phares | beurre demi-sel, fleur de sel, caramel maison, pignons de pin, miel. **Origines précises `[À DÉCIDER à l'étape fiche produit]`**, sans appellation officielle (AOP, IGP, Label Rouge) inventée | — |
+| Ingrédients phares | beurre demi-sel, fleur de sel, caramel maison, pignons de pin, miel. **aucune origine précise affichée** (choix de l'étape fiche produit : ne rien inventer qui ressemble à une appellation officielle, AOP, IGP ou Label Rouge) | — |
 | Allergènes | par recette, voir le catalogue. Toutes les recettes : « peut contenir des traces de fruits à coque » | catalogue |
 | Labels, certifications, prix | **aucun** (on n'invente ni label ni récompense) | — |
 | Boîte Grande Plage | boîte en fer imprimée, réutilisable | invention Mokom `[FICTIF]` |
-| Carte cadeau (durée de validité) | `[À DÉCIDER à l'étape conformité]` | — |
+| Carte cadeau (durée de validité) | 1 an à compter de l'envoi, utilisable en plusieurs fois, annulable sous 14 jours si non utilisée | invention Mokom `[FICTIF]` |
 | Carte cadeau | 20, 40 ou 60 €, envoyée par e-mail, valable sur toute la boutique | catalogue + invention Mokom `[FICTIF]` |
 | Délai de réponse aux messages | 48 heures ouvrées | invention Mokom `[FICTIF]` |
 | Avis clients | avis d'exemple possibles sur le site, **signalés comme fictifs**, jamais dans les données structurées | règle Mokom |
@@ -57,7 +57,7 @@
 | Emballage | sachets calés dans une boîte en carton, papier froissé recyclé ; boîte et coffrets suremballés ; aucun prix dans un colis cadeau | `[FICTIF]` |
 | Engagement casse | photo envoyée sous 48 h → biscuits renvoyés | `[FICTIF]` |
 | Noël 2026 | commander avant le 15 décembre midi (relais), le 17 décembre midi (domicile), le 22 décembre midi (retrait) ; atelier ouvert le 24 décembre de 10 h à 13 h | `[FICTIF]` |
-| Retours / rétractation | **à trancher à l'étape conformité** (denrées alimentaires : l'exception au droit de rétractation dépend de leur caractère périssable) | — |
+| Retours / rétractation | 14 jours après réception, sauf produits ouverts (hygiène, art. L221-28 C. conso.) ; bouton « Renoncer au contrat ici » sans connexion | `docs/11-conformite.md` `[FICTIF]` |
 
 ## Profils externes
 

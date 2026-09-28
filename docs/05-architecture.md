@@ -37,6 +37,7 @@ Accueil  /
 ├── À propos de ce projet             /pages/etude-de-cas        (projet fictif, lien vers Mokom Studio)
 ├── Pages légales                     /policies/legal-notice · terms-of-service · privacy-policy
 │                                     · shipping-policy · refund-policy
+├── Rétractation en ligne            /pages/retractation        (noindex)
 └── Utilitaires (non indexés)         /cart · /search · /checkout (simulé) · /collections/all · 404
 ```
 

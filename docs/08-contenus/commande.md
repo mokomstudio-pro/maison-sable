@@ -38,6 +38,7 @@
 - Champ : Code de carte cadeau (facultatif) · bouton « Appliquer » · aide : « Pour essayer : SABLE-DEMO-20. »
   - Succès : « Carte cadeau appliquée : − 20,00 €. »
   - Erreur : « Ce code n'existe pas. Vérifiez-le ou essayez SABLE-DEMO-20. »
+- Au-dessus du bouton : En validant, vous acceptez les [conditions générales de vente (exemple)](/policies/terms-of-service). Vraie boutique : le bouton s'intitulerait « Commande avec obligation de paiement ».
 - **Bouton principal** : Valider la commande fictive
 - Sous le bouton : Aucun paiement ne sera demandé.
 

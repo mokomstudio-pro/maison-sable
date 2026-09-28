@@ -28,7 +28,7 @@
 | 10 | **Présentation** | paragraphe « réponse d'abord » de 40 à 60 mots + 3 puces « En bref » | `fiches-produits.md` |
 | 11 | **Ingrédients et allergènes** (H2) | « **Contient** : … » en gras · liste d'ingrédients avec les allergènes en gras · « Peut contenir des traces de : … » · tableau : poids net, nombre de biscuits (environ), conservation, prix au kilo. **Ouvert, jamais replié** | `produits.csv`, `variantes.csv` |
 | 11 bis | *Coffrets et boîte* : **Ce que contient le coffret** (H2) | liste des recettes avec liens vers leurs fiches ; allergènes cumulés | `produits.csv` (ingrédients / composition) |
-| 12 | Déclaration nutritionnelle | tableau pour 100 g | `[À DÉCIDER à l'étape conformité]` : valeurs d'exemple `[FICTIF]` ou mention d'exemption |
+| 12 | Déclaration nutritionnelle + exploitant | tableau pour 100 g (énergie kJ/kcal, lipides, dont saturés, glucides, dont sucres, protéines, sel) avec la mention « Valeurs d'exemple, marque fictive » ; ligne « Fabriqué par Maison Sable, Hossegor (adresse fictive) » ; date « À consommer de préférence avant » | `catalogue/nutrition.json` ; coffrets : valeurs de chaque recette |
 | 13 | **Conseils de dégustation et de conservation** (H2) | 2 à 3 phrases uniques | `fiches-produits.md` |
 | 14 | **Livraison et retrait** (H2) | bloc commun : préparation 1 à 2 jours ouvrés ; domicile 5,90 € (2 à 3 j), point relais 4,50 € (3 à 4 j), offerts dès 45 € ; emballage calé, biscuits cassés renvoyés sur photo ; retrait gratuit à l'atelier du mardi au samedi ; lien FAQ | `fiche-entite.md` |
 | 15 | **Questions fréquentes** (H2) | 2 à 3 questions propres au produit, réponse directe en tête, **réponses visibles** | `fiches-produits.md` |

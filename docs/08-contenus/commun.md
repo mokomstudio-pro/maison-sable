@@ -15,7 +15,7 @@ Boutique fictive, étude de cas Mokom Studio : aucune commande n'est expédiée.
 - **Boutique** : Biscuits · Coffrets & cadeaux · Carte cadeau
 - **Maison Sable** : L'atelier à Hossegor · Journal · Contact
 - **Aide** : Questions fréquentes · Livraison · Retours et rétractation
-- **Informations légales** : Mentions légales · CGV · Confidentialité
+- **Informations légales** : Mentions légales · CGV · Confidentialité · Renoncer au contrat ici
 - **Lettre d'information** : titre « Des nouvelles de l'atelier » · texte « Les nouvelles recettes et les dates de Noël, une fois par saison. » · libellé « Votre e-mail » · bouton « M'inscrire » · confirmation « Simulation : aucune adresse n'est enregistrée. »
 - **Inscription gravée (bas de page)** : Biscuits faits à Hossegor · Projet fictif, étude de cas [Mokom Studio](/pages/etude-de-cas)
 
