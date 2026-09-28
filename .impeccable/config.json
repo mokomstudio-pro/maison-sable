@@ -38,6 +38,24 @@
         ],
         "createdAt": "2026-09-28T13:06:48.926Z",
         "reason": "Claude: .alveole-survol is the product cross-section shown on hover (desktop), intentional second image per merchandising.md"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/planche-palettes-photos.html"
+        ],
+        "createdAt": "2026-09-28T14:29:24.278Z",
+        "reason": "Morgane chose palette A Caramel et beurre (biscuit ground #F3E4CC) on this board on 2026-09-28"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "src/assets/maison-sable.css"
+        ],
+        "createdAt": "2026-09-28T14:29:24.676Z",
+        "reason": "Morgane chose palette A Caramel et beurre (biscuit ground #F3E4CC) on 2026-09-28"
       }
     ]
   }
