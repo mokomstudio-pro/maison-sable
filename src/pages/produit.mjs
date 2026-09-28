@@ -43,8 +43,8 @@ export default function fiche(handle) {
     : "";
   const cadeauChamps = p.cadeau || estCarte
     ? `<div class="message-cadeau">
-        ${estCarte ? `<label for="cc-email">E-mail de la personne</label><input id="cc-email" name="destinataire" type="email" autocomplete="off">
-        <label for="cc-date">Date d'envoi</label><input id="cc-date" name="date_envoi" type="date">` : ""}
+        ${estCarte ? `<label for="cc-email">E-mail de la personne</label><input id="cc-email" name="destinataire" type="email" autocomplete="off" required data-erreur="Indiquez l'e-mail de la personne qui recevra la carte, par exemple prenom@exemple.fr.">
+        <label for="cc-date">Date d'envoi</label><input id="cc-date" name="date_envoi" type="date" required data-date-min data-erreur="Choisissez une date d'envoi à partir d'aujourd'hui.">` : ""}
         <label class="case"><input type="checkbox" data-message-bascule aria-controls="message-${handle}" aria-expanded="false"><span>Ajouter un message cadeau</span></label>
         <div id="message-${handle}" data-message-zone hidden>
           <label for="msg-${handle}">Votre message</label>
@@ -62,7 +62,10 @@ export default function fiche(handle) {
         <ul class="liste-contenu">${CONTENU[handle].map((h) => `<li><a href="${url("/products/" + h)}">${esc(produit(h).titre)}</a></li>`).join("")}</ul>
         <p class="allergenes"><strong>${typo("Contient :")}</strong> ${p.allergenes.map((a) => `<strong>${esc(a.toLowerCase())}</strong>`).join(", ")}.${p.traces.length ? ` ${typo("Peut contenir des traces de : " + p.traces.map((a) => a.toLowerCase()).join(", ") + ".")}` : ""}</p>
         ${tableCaracteristiques(p)}
-        <p class="note">${tx("Valeurs nutritionnelles, ingrédients détaillés : voir la fiche de chaque recette.")} Fabriqué par Maison Sable, Hossegor (adresse fictive).</p>
+        <h3>Ingrédients et valeurs nutritionnelles, recette par recette</h3>
+        ${CONTENU[handle].map((h) => { const r = produit(h); return `<details class="recette-detail"><summary>${esc(r.titre.split(",")[0])}</summary>
+          <p><span class="etiquette-mini">Ingrédients</span> ${ingredientsEnGras(r)}.</p>${r.nutrition ? tableNutrition(r) : ""}</details>`; }).join("")}
+        <p class="note">Fabriqué par Maison Sable, Hossegor (adresse fictive). ${typo("À consommer de préférence avant la date indiquée sur chaque sachet.")}</p>
       </section>`
     : `<section class="fiche-section" aria-labelledby="t-ingredients">
         <h2 id="t-ingredients">Ingrédients et allergènes</h2>
@@ -79,7 +82,7 @@ export default function fiche(handle) {
     <div class="galerie-piste" data-galerie tabindex="0">
       ${estCarte
         ? `<figure class="galerie-vue galerie-vue-dessin"><img src="${imageProduit(handle)}" alt="${esc(x.alts[0] || p.titre)}" width="800" height="1000" fetchpriority="high"></figure>`
-        : p.photos.map((ph, i) => `<figure class="galerie-vue"><img src="${imageProduit(handle, i + 1)}" srcset="${srcsetProduit(handle, i + 1)}" sizes="(min-width: 900px) 55vw, 100vw" alt="${esc(ph.alt)}" width="800" height="1000" ${i === 0 ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async"><figcaption>Photo d'illustration · ${esc(ph.auteur)}, Unsplash</figcaption></figure>`).join("")}
+        : p.photos.map((ph, i) => `<figure class="galerie-vue"><img src="${imageProduit(handle, i + 1)}" srcset="${srcsetProduit(handle, i + 1)}" sizes="(min-width: 900px) 55vw, 100vw" alt="${esc(ph.alt)}" width="800" height="1000" ${i === 0 ? 'fetchpriority="high"' : 'loading="lazy" decoding="async"'}><figcaption>Photo d'illustration · ${esc(ph.auteur)}, Unsplash</figcaption></figure>`).join("")}
     </div>
     ${p.photos.length < 2 ? "" : `<div class="galerie-commandes js-seul"><button class="bouton-icone" type="button" data-galerie-prec aria-label="Illustration précédente"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15 5 8 12l7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button><span data-galerie-pos>1 / ${p.photos.length}</span><button class="bouton-icone" type="button" data-galerie-suiv aria-label="Illustration suivante"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></button></div>`}
   </div>
@@ -87,8 +90,9 @@ export default function fiche(handle) {
     ${filAriane(ariane)}
     <h1>${tx(p.meta.h1)}</h1>
     <p class="fiche-prix"><span class="prix-principal" data-prix>${prix(v0.prix)}</span>${v0.poids_net_g ? ` <span class="prix-kilo" data-prix-kilo>${prixKilo(v0.prix, v0.poids_net_g)}</span>` : ""}</p>
+    ${p.allergenes.length ? `<p class="allergenes-court">${typo("Allergènes : " + p.allergenes.map((x) => x.toLowerCase()).join(", "))}. <a href="#${estLot ? "t-contenu" : "t-ingredients"}">Détail</a></p>` : ""}
     ${estLot && economie(p, v0) ? `<p class="fiche-eco">${typo(ligneEco(p, v0))}</p>` : ""}
-    <form class="achat" data-achat>
+    <form class="achat" data-achat novalidate>
       ${choix}
       ${cadeauChamps}
       <div class="achat-ligne">
@@ -129,7 +133,7 @@ ${lies.length ? `<section class="section suggestions" aria-labelledby="t-lies"><
 </div>`;
 
   const offre = (v) => ({
-    "@type": "Offer", price: v.prix.toFixed(2), priceCurrency: "EUR", url: absolue(`/products/${handle}?variant=${v.sku}`),
+    "@type": "Offer", sku: v.sku, price: v.prix.toFixed(2), priceCurrency: "EUR", url: absolue(`/products/${handle}?variant=${v.sku}`), seller: { "@id": absolue("/#organisation") },
     availability: v.stock === 0 ? "https://schema.org/OutOfStock" : "https://schema.org/InStock", itemCondition: "https://schema.org/NewCondition",
     ...(estCarte ? {} : { shippingDetails: livraison.modes.filter((m) => m.id !== "retrait_atelier").map((m) => ({
       "@type": "OfferShippingDetails", shippingRate: { "@type": "MonetaryAmount", value: m.prix.toFixed(2), currency: "EUR" },
@@ -137,11 +141,11 @@ ${lies.length ? `<section class="section suggestions" aria-labelledby="t-lies"><
       deliveryTime: { "@type": "ShippingDeliveryTime", handlingTime: { "@type": "QuantitativeValue", minValue: 1, maxValue: 2, unitCode: "DAY" }, transitTime: { "@type": "QuantitativeValue", minValue: m.transit_jours_ouvres.min, maxValue: m.transit_jours_ouvres.max, unitCode: "DAY" } },
     })) }),
   });
-  const base = { name: p.titre, description: x.presentation.replace(/\*\*/g, ""), image: absolue(estCarte ? `/images/produits/${handle}-1.svg` : `/images/photos/${handle}-1-800.webp`), brand: { "@type": "Brand", name: "Maison Sable" }, category: COLLECTION[coll] };
+  const base = { "@id": absolue(`/products/${handle}`) + "#produit", url: absolue(`/products/${handle}`), name: p.titre, description: x.presentation.replace(/\*\*/g, ""), image: absolue(estCarte ? `/images/produits/${handle}-1.svg` : `/images/photos/${handle}-1-800.webp`), brand: { "@type": "Brand", name: "Maison Sable" }, manufacturer: { "@id": absolue("/#organisation") }, category: COLLECTION[coll] };
   const ld = p.variantes.length > 1 && !estCarte
     ? { "@type": "ProductGroup", productGroupID: handle, ...base, variesBy: "https://schema.org/weight",
-        hasVariant: p.variantes.map((v) => ({ "@type": "Product", name: `${p.titre} ${v.option_valeur}`, sku: v.sku, inProductGroupWithID: handle, weight: { "@type": "QuantitativeValue", value: v.poids_net_g, unitCode: "GRM" }, offers: offre(v) })) }
-    : { "@type": "Product", ...base, sku: v0.sku, ...(v0.poids_net_g ? { weight: { "@type": "QuantitativeValue", value: v0.poids_net_g, unitCode: "GRM" } } : {}), offers: p.variantes.length > 1 ? p.variantes.map(offre) : offre(v0) };
+        hasVariant: p.variantes.map((v) => ({ "@type": "Product", name: `${p.titre} ${v.option_valeur}`, image: base.image, brand: base.brand, sku: v.sku, inProductGroupWithID: handle, weight: { "@type": "QuantitativeValue", value: v.poids_net_g, unitCode: "GRM" }, offers: offre(v) })) }
+    : { "@type": "Product", ...base, ...(p.variantes.length === 1 ? { sku: v0.sku } : {}), ...(v0.poids_net_g ? { weight: { "@type": "QuantitativeValue", value: v0.poids_net_g, unitCode: "GRM" } } : {}), offers: p.variantes.length > 1 ? p.variantes.map(offre) : offre(v0) };
 
   return page({
     chemin: `/products/${handle}`, titre: p.meta.title, description: p.meta.meta_description, corps, classe: "page-produit", ogType: "product",

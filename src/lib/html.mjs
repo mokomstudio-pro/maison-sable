@@ -19,7 +19,8 @@ export const typo = (s = "") =>
 
 // Texte : échappé puis typographié. Accepte **gras** et [lien](url) issus des documents de contenu.
 export const t = (s = "", { liens = true, lien = (h) => h } = {}) => {
-  let out = typo(esc(s));
+  // Les marqueurs de travail des sources (`[FICTIF]`) ne sont jamais publiés : la fiction est signalée par le bandeau.
+  let out = typo(esc(String(s).replace(/\s*`?\[FICTIF\]`?/g, "")));
   out = out.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
   if (liens) out = out.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (_, txt, href) => `<a href="${lien(href)}">${txt}</a>`);
   return out;

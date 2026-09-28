@@ -4,7 +4,7 @@
 // JSON-LD (syntaxe, types attendus, pas d'avis), plan du site (pages indexables par conception uniquement).
 import { readFileSync, readdirSync, statSync, existsSync } from "node:fs";
 import { join, relative } from "node:path";
-import { BASE, SITE_URL, NOINDEX } from "../src/config.mjs";
+import { BASE, SITE_URL, NOINDEX, absolue } from "../src/config.mjs";
 
 const dist = "dist";
 const erreurs = [], notes = [];
@@ -23,12 +23,13 @@ const existe = (href) => {
   const r = p.slice(BASE.length) || "/";
   return existsSync(join(dist, r)) && statSync(join(dist, r)).isFile() || existsSync(join(dist, r, "index.html"));
 };
-const TYPES_ATTENDUS = (c) => c === "/" ? ["Organization", "WebSite"] : c.startsWith("/products/") ? ["BreadcrumbList", /Product|ProductGroup/] : c.startsWith("/collections/") && c !== "/collections/all" ? ["BreadcrumbList", "ItemList"] : c.startsWith("/blogs/journal/") ? ["Article", "BreadcrumbList"] : [];
+const TYPES_ATTENDUS = (c) => c === "/" ? ["Organization", "WebSite"] : c.startsWith("/products/") ? ["BreadcrumbList", /Product|ProductGroup/] : c.startsWith("/collections/") && c !== "/collections/all" ? ["BreadcrumbList", "ItemList"] : c.startsWith("/blogs/journal/") ? [/Article|BlogPosting/, "BreadcrumbList"] : [];
 
 const vus = { title: new Map(), desc: new Map() };
 for (const f of fichiers) {
   const c = chemin(f), h = readFileSync(f, "utf8");
   if (!/<html lang="fr">/.test(h)) err(c, "lang=fr absent");
+  if (/\[FICTIF\]|\[À COMPLÉTER/.test(h)) err(c, "marqueur de travail visible ([FICTIF] ou [À COMPLÉTER])");
   const h1 = h.match(/<h1[\s>][\s\S]*?<\/h1>/g) || [];
   if (h1.length !== 1 && !c.startsWith("/checkout")) err(c, `${h1.length} h1`);
   // niveaux de titres sans saut (hors tiroirs du gabarit)
@@ -46,8 +47,9 @@ for (const f of fichiers) {
   }
   for (const [k, v] of [["title", title], ["desc", desc]]) { if (vus[k].has(v)) err(c, `${k} identique à ${vus[k].get(v)}`); vus[k].set(v, c); }
   const canon = h.match(/<link rel="canonical" href="([^"]+)"/)?.[1];
-  const attendu = SITE_URL + BASE + (c === "/" ? "/" : c);
-  if (canon !== attendu) err(c, `canonical ${canon} ≠ ${attendu}`);
+  const attendu = absolue(c); // forme finale avec « / » (GitHub Pages)
+  if (c === "/404.html") { if (canon) err(c, "canonical sur la page d'erreur"); }
+  else if (canon !== attendu) err(c, `canonical ${canon} ≠ ${attendu}`);
   const noindex = /<meta name="robots" content="noindex">/.test(h);
   if (NOINDEX && !noindex) err(c, "noindex absent (décision B)");
   for (const p of ["og:title", "og:description", "og:url", "og:image"]) if (!h.includes(`property="${p}"`)) err(c, `${p} absent`);
@@ -56,7 +58,7 @@ for (const f of fichiers) {
     if (!/\salt="/.test(t)) err(c, `image sans alt : ${t.slice(0, 80)}`);
     if (!/\swidth="\d+"/.test(t) || !/\sheight="\d+"/.test(t)) err(c, `image sans dimensions : ${t.slice(0, 80)}`);
   }
-  for (const a of h.matchAll(/\shref="([^"]+)"/g)) { const href = a[1]; if (href.startsWith(BASE) && !existe(href)) err(c, `lien cassé ${href}`); }
+  for (const a of h.matchAll(/\shref="([^"]+)"/g)) { const href = a[1]; if (href.startsWith(BASE) && !existe(href)) err(c, `lien cassé ${href}`); const p = href.split(/[?#]/)[0]; if (href.startsWith(BASE) && !/\/$|\.[a-z0-9]+$/i.test(p)) err(c, `lien sans « / » final (redirection sur GitHub Pages) : ${href}`); }
   // Données des boutons d'ajout et des fiches (lues par boutique.js) : doivent être du JSON lisible
   for (const d of h.matchAll(/\sdata-(ajout|selection|variantes-json)=(["'])([\s\S]*?)\2/g)) { try { JSON.parse(decode(d[3])); } catch { err(c, `données data-${d[1]} illisibles (apostrophe dans un nom ?)`); } }
   // JSON-LD
@@ -85,11 +87,12 @@ const sitemap = readFileSync(join(dist, "sitemap.xml"), "utf8");
 const locs = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
 const nonIndexables = ["/cart", "/checkout", "/search", "/collections/all", "/pages/retractation", "/404.html"];
 for (const l of locs) {
-  const c = l.replace(SITE_URL + BASE, "") || "/";
+  const c = l.replace(SITE_URL + BASE, "").replace(/(.)\/$/, "$1") || "/";
+  if (l !== absolue(c)) err("sitemap", `adresse sans « / » final : ${l}`);
   if (nonIndexables.includes(c)) err("sitemap", `page utilitaire listée : ${c}`);
   if (!existe(BASE + (c === "/" ? "/" : c))) err("sitemap", `adresse sans page : ${c}`);
 }
-for (const u of Object.keys(metas)) if (!locs.includes(SITE_URL + BASE + (u === "/" ? "/" : u))) err("sitemap", `page indexable absente : ${u}`);
+for (const u of Object.keys(metas)) if (!locs.includes(absolue(u))) err("sitemap", `page indexable absente : ${u}`);
 if (!readFileSync(join(dist, "robots.txt"), "utf8").includes("Sitemap:")) err("robots.txt", "ligne Sitemap absente");
 if (SITE_URL.includes("compte-github")) notes.push("SITE_URL est encore l'adresse provisoire : à remplacer par le compte GitHub de Mokom Studio avant la mise en ligne.");
 

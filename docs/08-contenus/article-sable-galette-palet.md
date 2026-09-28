@@ -27,7 +27,7 @@ La galette et le palet sont deux formes de la même pâte sablée bretonne. La g
 ## H2 : Qu'est-ce qui rend une pâte « sablée » ?
 Une pâte sablée contient beaucoup de beurre (au moins 20 % pour le sablé breton), du sucre et des jaunes d'œufs. Le beurre enrobe la farine et limite la formation d'une pâte élastique : le biscuit cuit s'effrite en bouche, comme du sable.
 
-## H2 : Et chez Maison Sable ?
+## H2 : Comment Maison Sable interprète-t-elle le sablé ?
 Maison Sable n'est pas bretonne mais landaise : ses recettes empruntent la technique du sablé au beurre et lui donnent le goût de la côte d'Hossegor.
 - Le **Sablé Dune** est un sablé fondant au beurre demi-sel (30 %) et à la fleur de sel.
 - Le **Palet Marée** suit la forme du palet, épais et friable, avec un cœur de caramel au beurre salé (12 %).

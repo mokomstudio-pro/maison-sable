@@ -49,7 +49,7 @@ export const jsonLdAriane = (etapes) => ({
 
 export const frise = (type = "vagues") => `<div class="frise frise-${type}" aria-hidden="true"></div>`;
 
-export function page({ chemin, titre, description, h1Logo = false, corps, indexable = true, jsonLd = [], classe = "", ogType = "website", precharger = [] }) {
+export function page({ chemin, titre, description, h1Logo = false, corps, indexable = true, jsonLd = [], classe = "", ogType = "website", precharger = [], canonique = true, tunnel = false }) {
   const robots = NOINDEX || !indexable ? '<meta name="robots" content="noindex">' : "";
   const ld = jsonLd.length ? `<script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@graph": jsonLd }).replace(/</g, "\\u003c")}</script>` : "";
   const nav = menu.map(([href, nom]) => `<li><a href="${url(href)}"${chemin.startsWith(href) ? ' aria-current="page"' : ""}>${esc(nom)}</a></li>`).join("");
@@ -61,7 +61,7 @@ export function page({ chemin, titre, description, h1Logo = false, corps, indexa
 <title>${esc(titre)}</title>
 <meta name="description" content="${esc(description)}">
 ${robots}
-<link rel="canonical" href="${absolue(chemin)}">
+${canonique ? `<link rel="canonical" href="${absolue(chemin)}">` : ""}
 <meta property="og:type" content="${ogType}">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="Maison Sable">
@@ -83,26 +83,31 @@ ${ld}
 </head>
 <body class="${classe}" data-base="${BASE}">
 <a class="evitement" href="#contenu">Aller au contenu</a>
-<p class="bandeau-fiction">Boutique fictive, étude de cas Mokom Studio&#8239;: aucune commande n'est expédiée. <a href="${url("/pages/etude-de-cas")}" data-evenement="mokom_case_study_click" data-emplacement="bandeau">Découvrir le projet</a></p>
-<header class="entete" data-entete>
+${tunnel ? "" : `<p class="bandeau-fiction">Boutique fictive, étude de cas Mokom Studio&#8239;: aucune commande n'est expédiée. <a href="${url("/pages/etude-de-cas")}" data-evenement="mokom_case_study_click" data-emplacement="bandeau">Découvrir le projet</a></p>`}
+${tunnel ? `<header class="entete entete-tunnel"><div class="entete-int">${logo()}</div></header>` : `<header class="entete" data-entete>
   <div class="entete-int">
     <button class="bouton-icone menu-ouvrir js-seul" type="button" aria-haspopup="dialog" aria-controls="menu-mobile" data-ouvre="menu-mobile">${icone.menu}<span class="visuellement-cache">Menu</span></button>
     ${h1Logo ? logo("span") : logo()}
     <nav class="nav-principale" aria-label="Menu principal"><ul>${nav}</ul></nav>
     <div class="entete-actions">
       <a class="bouton-icone" href="${url("/search")}" data-ouvre="recherche" aria-haspopup="dialog">${icone.loupe}<span class="visuellement-cache">Rechercher</span></a>
-      <a class="bouton-icone bouton-panier" href="${url("/cart")}" data-ouvre="panier" aria-haspopup="dialog">${icone.panier}<span class="visuellement-cache">Panier, </span><span class="pastille-panier" data-compte-panier>0</span><span class="visuellement-cache"> article(s)</span></a>
+      <a class="bouton-icone bouton-panier" href="${url("/cart")}" data-ouvre="panier" aria-haspopup="dialog">${icone.panier}<span class="visuellement-cache" data-compte-texte>Panier</span><span class="pastille-panier" data-compte-panier aria-hidden="true"></span></a>
     </div>
   </div>
-</header>
+</header>`}
 <main id="contenu" tabindex="-1">
 ${corps}
 </main>
-${piedDePage()}
-${tiroirs()}
+${tunnel ? piedTunnel() : piedDePage()}
+${tunnel ? "" : tiroirs()}
 <div class="annonce visuellement-cache" aria-live="polite" data-annonce></div>
 </body>
 </html>`;
+}
+
+function piedTunnel() {
+  const liens = [["/policies/shipping-policy", "Livraison"], ["/policies/refund-policy", "Retours"], ["/policies/terms-of-service", "CGV"], ["/policies/privacy-policy", "Confidentialité"], ["/policies/legal-notice", "Mentions légales"]];
+  return `<footer class="pied pied-tunnel"><nav aria-label="Informations légales"><ul>${liens.map(([h, n]) => `<li><a href="${url(h)}">${esc(n)}</a></li>`).join("")}</ul></nav></footer>`;
 }
 
 function piedDePage() {

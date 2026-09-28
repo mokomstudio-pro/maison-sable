@@ -46,7 +46,7 @@ Non. Toutes les recettes de Maison Sable contiennent de la farine de blé, du be
 Oui, sur les coffrets, la Boîte Grande Plage et la carte cadeau. Cochez « Ajouter un message cadeau » sur la fiche du produit et écrivez jusqu'à 200 caractères. Le message voyage avec le colis, ou avec l'e-mail pour la carte cadeau.
 
 ### Jusqu'à quand commander pour Noël ?
-Pour une livraison avant Noël, commandez au plus tard le **mardi 15 décembre à midi** en point relais et le **jeudi 17 décembre à midi** en livraison à domicile (retrait à l'atelier jusqu'au mardi 22 décembre à midi). Après ces dates, la carte cadeau reste possible : elle part par e-mail le jour de votre choix.
+Pour une livraison avant Noël, commandez au plus tard le **mardi 15 décembre 2026 à midi** en point relais et le **jeudi 17 décembre 2026 à midi** en livraison à domicile (retrait à l'atelier jusqu'au mardi 22 décembre à midi). Après ces dates, la carte cadeau reste possible : elle part par e-mail le jour de votre choix.
 
 ### Comment fonctionne la carte cadeau ?
 La carte cadeau Maison Sable, de 20, 40 ou 60 €, est envoyée par e-mail à la date de votre choix, avec votre message. La personne saisit le code reçu au moment de payer. Elle est valable un an et s'utilise en une ou plusieurs fois.

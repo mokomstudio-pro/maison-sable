@@ -4,6 +4,8 @@ import { esc, prix, typo } from "./html.mjs";
 const insecable = (s) => typo(esc(s)).replace(/ (€|g)\b/g, "\u00A0$1");
 import { economie } from "./data.mjs";
 
+// Article pour le nom lu par les lecteurs d'écran (« choisir la taille »)
+const ARTICLE = { Poids: "le poids", Taille: "la taille", Montant: "le montant", Format: "le format" };
 // Photo d'illustration (docs/catalogue/photos.json) ; la carte cadeau garde son visuel dessiné
 export const imageProduit = (h, n = 1, w = 800) => (h === "carte-cadeau" ? url(`/images/produits/carte-cadeau-1.svg`) : url(`/images/photos/${h}-${n}-${w}.webp`));
 export const srcsetProduit = (h, n = 1) => (h === "carte-cadeau" ? "" : `${imageProduit(h, n, 480)} 480w, ${imageProduit(h, n, 800)} 800w`);
@@ -14,7 +16,7 @@ const poidsCourts = (p) => (p.type === "Carte cadeau" ? p.variantes.map((v) => v
 // Données d'une variante pour le panier (lues par boutique.js)
 export const donneesVariante = (p, v) => ({
   sku: v.sku, handle: p.handle, nom: p.titre.split(/,| au | aux | à la | à l'/)[0].trim(), titre: p.titre,
-  variante: v.option_valeur === "Unique" ? "" : v.option_valeur, prix: v.prix, image: imageProduit(p.handle),
+  variante: v.option_valeur === "Unique" ? "" : v.option_valeur, prix: v.prix, image: imageProduit(p.handle, 1, 480),
   cadeau: p.cadeau || p.type === "Carte cadeau", categorie: p.collection_principale, format: p.format,
 });
 
@@ -27,11 +29,11 @@ export function boutonAjout(p, liste) {
   const choix = p.variantes
     .map((v) => {
       const d = donneesVariante(p, v);
-      return `<button class="choix-rapide" type="button" data-ajout="${esc(JSON.stringify(d))}" data-liste="${liste}">${esc(v.option_valeur)} · ${prix(v.prix)}</button>`;
+      return `<button class="choix-rapide" type="button" data-ajout="${esc(JSON.stringify(d))}" data-liste="${liste}">${v.option_nom === "Montant" ? esc(v.option_valeur) : `${esc(v.option_valeur)} · ${prix(v.prix)}`}</button>`;
     })
     .join("");
   return `<div class="ajout-rapide js-seul" data-ajout-rapide>
-    <button class="bouton bouton-petit" type="button" aria-expanded="false" data-ouvre-choix>Ajouter<span class="visuellement-cache"> ${esc(p.titre)}, choisir le ${p.variantes[0].option_nom.toLowerCase()}</span></button>
+    <button class="bouton bouton-petit" type="button" aria-expanded="false" data-ouvre-choix>Ajouter<span class="visuellement-cache"> ${esc(p.titre)}, choisir ${ARTICLE[p.variantes[0].option_nom] || "l'option"}</span></button>
     <div class="choix-rapides" role="group" aria-label="${esc(p.variantes[0].option_nom)}" hidden>${choix}</div>
   </div>`;
 }
@@ -43,7 +45,7 @@ export function carteProduit(p, { liste, niveauTitre = 3, chargement = "lazy" } 
   ].join("");
   const eco = p.variantes.map((v) => economie(p, v)).find(Boolean);
   const ecoTexte = p.handle === "coffret-ete-indien" && eco ? `<span class="etiq-eco">${typo(prix(eco.montant) + " de moins qu'à l'unité")}</span>` : "";
-  const prixTexte = (p.variantes.length > 1 && p.type !== "Carte cadeau" ? "dès " : p.type === "Carte cadeau" ? "de " : "") + prix(p.prixMin);
+  const prixTexte = p.type === "Carte cadeau" ? `de ${Math.min(...p.variantes.map((v) => v.prix))} à ${Math.max(...p.variantes.map((v) => v.prix))} €` : (p.variantes.length > 1 ? "dès " : "") + prix(p.prixMin);
   const h = `h${niveauTitre}`;
   if (p.epuise)
     return `<article class="carte carte-epuisee" data-produit="${p.handle}" data-saveur="${esc(p.saveur)}" data-format="${esc(p.format)}" data-prix="${p.prixMin}">
@@ -55,7 +57,7 @@ export function carteProduit(p, { liste, niveauTitre = 3, chargement = "lazy" } 
   <a class="alveole" href="${url("/products/" + p.handle)}" tabindex="-1" aria-hidden="true" data-selection="${esc(JSON.stringify({ liste, handle: p.handle }))}">
     ${pastilles ? `<span class="pastilles">${pastilles}</span>` : ""}
     <img src="${imageProduit(p.handle)}"${srcsetProduit(p.handle) ? ` srcset="${srcsetProduit(p.handle)}" sizes="(min-width: 1024px) 380px, 46vw"` : ""} alt="" width="800" height="1000" loading="${chargement}" decoding="async">
-    ${p.photos.length > 1 ? `<img class="alveole-survol" src="${imageProduit(p.handle, 2)}" srcset="${srcsetProduit(p.handle, 2)}" sizes="(min-width: 1024px) 380px, 46vw" alt="" width="800" height="1000" loading="lazy" decoding="async">` : ""}
+    ${p.photos.length > 1 ? `<picture class="alveole-survol"><source media="(hover: none)" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><img src="${imageProduit(p.handle, 2)}" srcset="${srcsetProduit(p.handle, 2)}" sizes="(min-width: 1024px) 380px, 46vw" alt="" width="800" height="1000" loading="lazy" decoding="async"></picture>` : ""}
   </a>
   <div class="etiquette-produit">
     <${h} class="etiq-nom"><a href="${url("/products/" + p.handle)}" data-selection="${esc(JSON.stringify({ liste, handle: p.handle }))}">${esc(p.titre.split(",")[0].replace(/ (au|aux|à la|à l') .*$/, ""))}</a></${h}>

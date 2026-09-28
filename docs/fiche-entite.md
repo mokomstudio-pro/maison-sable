@@ -67,3 +67,15 @@
 | Réseaux sociaux | aucun |
 | Wikidata | non (entité non notable, fictive) |
 | Éditeur réel du site | Mokom Studio : https://www.mokomstudio.fr (donnée par Morgane, 2026-09-27) |
+
+## Éditeur réel du site (faits réels, non fictifs)
+| Donnée | Valeur | Source · date |
+|---|---|---|
+| Nom commercial | Mokom Studio | Morgane · 2026-09-28 |
+| Forme | entreprise individuelle (micro-entreprise), Morgane Dulaut | Morgane · 2026-09-28 |
+| Adresse | 5 route des Savonniers, 40180 Hinx, France | Morgane · 2026-09-28 |
+| SIRET | 980 061 931 00021 | Morgane · 2026-09-28 |
+| E-mail | morgane.dulaut@gmail.com | Morgane · 2026-09-28 |
+| Directrice de la publication | Morgane Dulaut | Morgane · 2026-09-28 |
+| TVA intracommunautaire | `[À COMPLÉTER si assujettie]` | — |
+| Site | https://www.mokomstudio.fr | Morgane · 2026-09-27 |

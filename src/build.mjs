@@ -49,7 +49,7 @@ const pages = [
 for (const [chemin, rendu] of pages) pageHtml(chemin, rendu());
 
 // Ressources
-cpSync(join(racine, "src/assets"), join(dist, "assets"), { recursive: true });
+cpSync(join(racine, "src/assets"), join(dist, "assets"), { recursive: true, filter: (f) => !f.endsWith("maison-sable.css") }); // CSS intégré dans chaque page
 // Photos d'illustration (scripts/photos.mjs) ; seule la carte cadeau garde un visuel dessiné
 cpSync(join(racine, "src/images/photos"), join(dist, "images/photos"), { recursive: true });
 ecrire("images/produits/carte-cadeau-1.svg", illustrationProduit("carte-cadeau", 1));
@@ -63,7 +63,7 @@ if (existsSync(og)) cpSync(og, join(dist, "images/partage.png"));
 const catalogue = {
   produits: produits.map((p) => ({
     handle: p.handle, titre: p.titre, format: p.format, saveur: p.saveur, epuise: p.epuise, lies: p.produits_lies,
-    image: imageProduit(p.handle), url: `/products/${p.handle}`, prixMin: p.prixMin,
+    image: imageProduit(p.handle, 1, 480), url: `/products/${p.handle}`, prixMin: p.prixMin,
     mots: [p.titre, p.saveur, p.type, p.format, p.ingredients, ...p.occasions].join(" ").toLowerCase(),
     variantes: p.variantes.map((v) => donneesVariante(p, v)),
   })),

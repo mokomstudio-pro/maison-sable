@@ -64,4 +64,4 @@
 
 ## Bloc Noël (repris dans la collection Coffrets & cadeaux, la FAQ, les fiches coffrets et le panier, du 1ᵉʳ octobre au 24 décembre)
 - Titre : Commander pour Noël
-- Texte : Pour recevoir vos biscuits avant Noël, commandez au plus tard le **mardi 15 décembre à midi** en point relais et le **jeudi 17 décembre à midi** en livraison à domicile. Retrait à l'atelier jusqu'au mardi 22 décembre à midi (ouverture exceptionnelle le 24 décembre de 10 h à 13 h). Après ces dates, la carte cadeau part par e-mail le jour de votre choix.
+- Texte : Pour recevoir vos biscuits avant Noël, commandez au plus tard le **mardi 15 décembre 2026 à midi** en point relais et le **jeudi 17 décembre 2026 à midi** en livraison à domicile. Retrait à l'atelier jusqu'au mardi 22 décembre à midi (ouverture exceptionnelle le 24 décembre de 10 h à 13 h). Après ces dates, la carte cadeau part par e-mail le jour de votre choix.

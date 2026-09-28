@@ -49,7 +49,7 @@ Les noms rappellent la côte landaise (dune, marée, lagune, écume, pignada = l
 |---|---|---|---|---|---|
 | `type` | Sablé · Palet · Croquant · Boîte assortie · Coffret · Carte cadeau | — | oui | non | non (sert au titre) |
 | `format` | Sachet · Boîte · Coffret · Carte cadeau | — | oui | **oui** | oui |
-| `saveur` | Beurre & fleur de sel · Caramel · Chocolat · Agrumes & herbes · Amandes & pignons · Coco & vanille · Assortiment | — | oui (alimentaire) | **oui** | oui |
+| `saveur` | Beurre & fleur de sel · Caramel · Chocolat · Agrumes & herbes · Fruits secs · Coco & vanille · Assortiment | — | oui (alimentaire) | **oui** | oui |
 | `texture` | Fondant · Croquant · Épais · Mixte | — | oui (alimentaire) | non (à revoir en UX) | oui |
 | `occasions` | Goûter · Cadeau · Souvenir · Pique-nique (plusieurs possibles) | — | oui | **oui** | non (sert aux collections thématiques) |
 | `ingredients` | texte libre, par ordre de poids décroissant, pourcentages des ingrédients mis en avant | — | oui (alimentaire) | non | oui |

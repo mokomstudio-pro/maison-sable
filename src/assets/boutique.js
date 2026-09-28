@@ -4,7 +4,8 @@
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 const BASE = document.body.dataset.base || "";
-const lien = (c) => BASE + c;
+// Même règle que src/config.mjs : adresse de page avec « / » final (GitHub Pages)
+const lien = (c) => { const [ch, suite = ""] = c.split(/(?=[?#])/); return BASE + (/\/$|\.[a-z0-9]+$/i.test(ch) ? ch : ch + "/") + suite; };
 const NBSP = " ";
 const euros = (n) => n.toLocaleString("fr-FR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + NBSP + "€";
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
@@ -25,8 +26,19 @@ const annonce = (texte) => { const z = $("[data-annonce]"); if (!z) return; z.te
 let catalogueP;
 const catalogue = () => (catalogueP ??= fetch(lien("/assets/catalogue.json")).then((r) => r.json()));
 
-// ---------- Dates de livraison (jours ouvrés du lundi au vendredi) ----------
-const ouvre = (d) => d.getDay() !== 0 && d.getDay() !== 6;
+// ---------- Dates de livraison (jours ouvrés : du lundi au vendredi, hors jours fériés en France) ----------
+const feriesCache = {};
+function feries(a) {
+  if (feriesCache[a]) return feriesCache[a];
+  // Dimanche de Pâques (calcul grégorien de Meeus), d'où lundi de Pâques, Ascension (+39 j), lundi de Pentecôte (+50 j)
+  const b = a % 19, c = Math.floor(a / 100), e = a % 100, f = Math.floor((8 * c + 13) / 25), g = (19 * b + c - Math.floor(c / 4) - f + 15) % 30;
+  const h = (32 + 2 * (c % 4) + 2 * Math.floor(e / 4) - g - (e % 4)) % 7, m = Math.floor((b + 11 * g + 22 * h) / 451);
+  const paques = new Date(a, Math.floor((g + h - 7 * m + 114) / 31) - 1, ((g + h - 7 * m + 114) % 31) + 1);
+  const dec = (n) => { const x = new Date(paques); x.setDate(x.getDate() + n); return x; };
+  const jours = [new Date(a, 0, 1), dec(1), new Date(a, 4, 1), new Date(a, 4, 8), dec(39), dec(50), new Date(a, 6, 14), new Date(a, 7, 15), new Date(a, 10, 1), new Date(a, 10, 11), new Date(a, 11, 25)];
+  return (feriesCache[a] = new Set(jours.map((x) => x.toDateString())));
+}
+const ouvre = (d) => d.getDay() !== 0 && d.getDay() !== 6 && !feries(d.getFullYear()).has(d.toDateString());
 function plusOuvres(d, n) { const x = new Date(d); let k = 0; while (k < n) { x.setDate(x.getDate() + 1); if (ouvre(x)) k++; } return x; }
 function depart(maintenant = new Date()) { const d = new Date(maintenant); if (!ouvre(d) || d.getHours() >= 12) { do d.setDate(d.getDate() + 1); while (!ouvre(d)); } return d; }
 const jour = (d) => { const s = d.toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long" }); return s.replace(/ 1 /, " 1er "); };
@@ -62,6 +74,7 @@ function majPanier() {
   const p = lirePanier();
   const n = nbArticles(p);
   $$("[data-compte-panier]").forEach((e) => { e.textContent = n || ""; e.toggleAttribute("data-vide", !n); });
+  $$("[data-compte-texte]").forEach((e) => { e.textContent = n ? `Panier, ${n} article${n > 1 ? "s" : ""}` : "Panier vide"; });
   const corps = $("[data-panier-corps]");
   if (corps) corps.innerHTML = rendrePanier(p, "tiroir");
   const pageP = $("[data-panier-page]");
@@ -89,20 +102,22 @@ function rendrePanier(p, ou) {
   const st = sousTotal(p);
   const seuil = 45;
   const reste = Math.max(0, seuil - st);
-  const liv = st >= seuil ? "Offerte" : "dès 4,50" + NBSP + "€";
+  // Carte cadeau seule : envoyée par e-mail, rien à livrer (ni jauge, ni frais)
+  const carteSeule = p.every((l) => l.handle === "carte-cadeau");
+  const liv = carteSeule ? "aucune (envoi par e-mail)" : st >= seuil ? "Offerte" : "dès 4,50" + NBSP + "€ (retrait gratuit à l'atelier)";
   const lignes = p.map((l, i) => `<li class="panier-ligne">
     <img src="${l.image}" alt="" width="64" height="80">
-    <div><a class="panier-ligne-nom" href="${lien("/products/" + l.handle)}">${esc(l.nom)}</a>${l.variante ? `<div class="panier-ligne-var">${esc(l.variante)}</div>` : ""}${l.message ? `<div class="panier-ligne-msg">Message cadeau&#8239;: « ${esc(l.message)} »</div>` : ""}</div>
+    <div><a class="panier-ligne-nom" href="${lien("/products/" + l.handle)}">${esc(l.nom)}</a>${l.variante ? `<div class="panier-ligne-var">${esc(l.variante)}</div>` : ""}${l.destinataire ? `<div class="panier-ligne-msg">Pour ${esc(l.destinataire)}${l.date_envoi ? `, envoi le ${new Date(l.date_envoi + "T12:00").toLocaleDateString("fr-FR", { day: "numeric", month: "long" })}` : ""}</div>` : ""}${l.message ? `<div class="panier-ligne-msg">Message cadeau&#8239;: « ${esc(l.message)} »</div>` : ""}</div>
     <div class="panier-ligne-prix">${euros(l.prix * l.qte)}</div>
     <div class="panier-ligne-actions">
       <div class="quantite"><button class="bouton-icone" type="button" data-panier-qte="${i}" data-delta="-1" aria-label="Diminuer la quantité de ${esc(l.nom)}">−</button><span aria-live="polite" class="num">${l.qte}</span><button class="bouton-icone" type="button" data-panier-qte="${i}" data-delta="1" aria-label="Augmenter la quantité de ${esc(l.nom)}">+</button></div>
       <button class="lien-retirer" type="button" data-panier-retirer="${i}">Retirer<span class="visuellement-cache"> ${esc(l.nom)}</span></button>
     </div></li>`).join("");
-  return `<div class="jauge">${reste > 0 ? `<p>Plus que ${euros(reste)} pour la livraison offerte</p>` : `<p>La livraison est offerte</p>`}<div class="jauge-barre" aria-hidden="true"><span style="transform:scaleX(${Math.min(1, st / seuil).toFixed(3)})"></span></div></div>
+  return `${carteSeule ? "" : `<div class="jauge">${reste > 0 ? `<p>Plus que ${euros(reste)} pour la livraison offerte</p>` : `<p>La livraison est offerte</p>`}<div class="jauge-barre" aria-hidden="true"><span style="transform:scaleX(${Math.min(1, st / seuil).toFixed(3)})"></span></div></div>`}
   <div data-suggestion></div>
   <ul class="panier-liste">${lignes}</ul>
   <div class="panier-pied">
-    <dl class="totaux"><dt>Sous-total</dt><dd>${euros(st)}</dd><dt>Livraison</dt><dd>${liv}</dd><dt class="total">Total estimé</dt><dd class="total">${euros(st)}${st >= seuil ? "" : " + livraison"}</dd></dl>
+    <dl class="totaux"><dt>Sous-total</dt><dd>${euros(st)}</dd><dt>Livraison</dt><dd>${liv}</dd><dt class="total">Total estimé</dt><dd class="total">${euros(st)}${st >= seuil || carteSeule ? "" : " + livraison"}</dd></dl>
     <a class="bouton bouton-large" href="${lien("/checkout")}" data-commencer>Commander</a>
     ${ou === "tiroir" ? `<p class="suite"><a href="${lien("/cart")}">Voir le panier</a></p>` : ""}
     <p class="note">Commande fictive&#8239;: aucun paiement ne sera demandé.</p>
@@ -150,8 +165,8 @@ function ouvrirDialogue(id) {
 $$("[data-ouvre]").forEach((b) => b.addEventListener("click", (e) => { if (!document.getElementById(b.dataset.ouvre)) return; e.preventDefault(); ouvrirDialogue(b.dataset.ouvre); }));
 $$("dialog.tiroir").forEach((d) => {
   d.addEventListener("click", (e) => { if (e.target === d || e.target.closest("[data-ferme]")) d.close(); });
-  d.addEventListener("close", () => document.activeElement?.blur?.());
 });
+// À la fermeture, le navigateur rend le focus à l'élément qui a ouvert le tiroir (WCAG 2.4.3) : ne pas l'effacer.
 
 // ---------- En-tête : se cache en descendant, revient en remontant ----------
 {
@@ -209,8 +224,12 @@ $$("dialog.tiroir").forEach((d) => {
       bascule.addEventListener("change", () => { zone.hidden = !bascule.checked; bascule.setAttribute("aria-expanded", String(bascule.checked)); if (bascule.checked) ta.focus(); });
       ta.addEventListener("input", () => { const r = 200 - ta.value.length; cpt.textContent = `${r} caractère${r > 1 ? "s" : ""} restant${r > 1 ? "s" : ""}`; });
     }
+    const aujourdhui = new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+    $$("[data-date-min]", form).forEach((d) => (d.min = aujourdhui));
     const soumettre = (e) => {
       e?.preventDefault();
+      const aVerifier = $$(".message-cadeau [required]", form);
+      if (aVerifier.length && !valider(form, aVerifier)) return;
       const fd = new FormData(form);
       ajouter(v, { qte: +champ.value || 1, message: bascule?.checked ? (fd.get("message") || "").trim() : "", destinataire: fd.get("destinataire") || "", date_envoi: fd.get("date_envoi") || "" });
     };
@@ -265,8 +284,8 @@ $$("dialog.tiroir").forEach((d) => {
       if (r) { const nom = r.dataset.retirerFiltre; if (nom === "min" || nom === "max") form.elements[nom].value = ""; else $$(`input[name="${nom}"]`, form).find((i) => i.value === r.dataset.val).checked = false; appliquer(); ouvrirBtn?.focus(); }
       if (e.target.closest("[data-effacer]")) { e.preventDefault(); form.reset(); appliquer(); }
     });
-    const fermer = () => { panneau.classList.remove("ouvert"); ouvrirBtn.setAttribute("aria-expanded", "false"); ouvrirBtn.focus(); };
-    ouvrirBtn?.addEventListener("click", () => { panneau.classList.add("ouvert"); ouvrirBtn.setAttribute("aria-expanded", "true"); $("input", panneau)?.focus(); });
+    const fermer = () => { panneau.classList.remove("ouvert"); ["role", "aria-modal", "aria-labelledby"].forEach((a) => panneau.removeAttribute(a)); ouvrirBtn.setAttribute("aria-expanded", "false"); ouvrirBtn.focus(); };
+    ouvrirBtn?.addEventListener("click", () => { panneau.classList.add("ouvert"); panneau.setAttribute("role", "dialog"); panneau.setAttribute("aria-modal", "true"); panneau.setAttribute("aria-labelledby", $("h2", panneau).id); ouvrirBtn.setAttribute("aria-expanded", "true"); $("input", panneau)?.focus(); });
     $("[data-ferme-filtres]", form)?.addEventListener("click", fermer);
     $("[data-voir]", form)?.addEventListener("click", fermer);
     panneau.addEventListener("keydown", (e) => {
@@ -297,7 +316,13 @@ async function chercher(q) {
   const nq = normaliser(q.trim());
   if (nq.length < 2) return [];
   const termes = [nq, ...Object.entries(cat.synonymes).filter(([k]) => normaliser(k).includes(nq) || nq.includes(normaliser(k))).flatMap(([, v]) => v.map(normaliser))];
-  return cat.produits.filter((p) => termes.some((t) => normaliser(p.mots).includes(t)));
+  // Pluriels : « sablés », « coffrets », « biscuits » cherchent la forme au singulier ; tous les mots doivent être présents
+  const singulier = (m) => (m.length > 3 ? m.replace(/[sx]$/, "") : m);
+  const mots = (s) => s.split(/[^a-z0-9]+/).filter(Boolean).map(singulier);
+  const trouve = (texte, t) => { const dispo = mots(texte).join(" "); return mots(t).every((m) => dispo.includes(m)); };
+  return cat.produits
+    .filter((p) => termes.some((t) => trouve(normaliser(p.mots), t)))
+    .sort((a, b) => trouve(normaliser(b.titre), nq) - trouve(normaliser(a.titre), nq)); // les produits dont le nom contient la recherche d'abord
 }
 const suggestionHtml = (p) => `<a class="suggestion" href="${lien(p.url)}"><img src="${p.image}" alt="" width="56" height="70"><span>${esc(p.titre.split(",")[0])}<small>${p.variantes.length > 1 ? "dès " : ""}${euros(p.prixMin)}</small></span></a>`;
 {
@@ -318,14 +343,25 @@ const suggestionHtml = (p) => `<a class="suggestion" href="${lien(p.url)}"><img 
 }
 
 // ---------- Validation des formulaires (erreurs à côté du champ + résumé) ----------
-function valider(form, champs) {
+function champValide(c) {
+  let ok = c.checkValidity();
+  if (ok && c.name?.endsWith("_cp") && c.value && !/^(?!9[78])\d{5}$/.test(c.value.trim())) ok = false;
+  if (ok && c.type === "tel" && c.required && !/^0[67](\s?\d{2}){4}$/.test(c.value.trim())) ok = false;
+  if (ok && c.type === "date" && c.min && c.value && c.value < c.min) ok = false;
+  return ok;
+}
+// Un champ signalé en erreur est revérifié dès qu'on le quitte : le message disparaît une fois corrigé
+document.addEventListener("focusout", (e) => {
+  const c = e.target; if (!c.matches?.("[aria-invalid='true']") || !champValide(c)) return;
+  c.removeAttribute("aria-invalid"); const m = document.getElementById(c.id + "-erreur"); if (m) m.hidden = true;
+  const f = c.form, r = f && $("[data-resume-erreurs]", f); if (r && !$("[aria-invalid='true']", f)) r.hidden = true;
+});
+function valider(form, champs, autres = []) {
   let erreurs = [];
   champs.forEach((c) => {
     const id = c.id + "-erreur";
     let msg = document.getElementById(id);
-    let ok = c.checkValidity();
-    if (ok && c.name?.endsWith("_cp") && c.value && !/^(?!9[78])\d{5}$/.test(c.value.trim())) ok = false;
-    if (ok && c.type === "tel" && c.required && !/^0[67](\s?\d{2}){4}$/.test(c.value.trim())) ok = false;
+    let ok = champValide(c);
     if (!ok) {
       if (!msg) { msg = document.createElement("p"); msg.className = "erreur-champ"; msg.id = id; c.insertAdjacentElement("afterend", msg); }
       msg.textContent = c.dataset.erreur || "Ce champ est à compléter.";
@@ -334,6 +370,7 @@ function valider(form, champs) {
       erreurs.push([c, msg.textContent]);
     } else if (msg) { msg.hidden = true; c.removeAttribute("aria-invalid"); }
   });
+  erreurs.push(...autres); // erreurs de groupe (ex. mode de livraison)
   const resume = $("[data-resume-erreurs]", form);
   if (resume) {
     resume.hidden = !erreurs.length;
@@ -356,7 +393,9 @@ $$("form[data-formulaire='contact']").forEach((f) => f.addEventListener("submit"
 }));
 $$("form[data-formulaire='retractation']").forEach((f) => {
   const etape = (n) => { $$("[data-etape]", f).forEach((x) => (x.hidden = x.dataset.etape !== String(n))); $(`[data-etape="${n}"] h2`, f)?.focus(); };
-  f.addEventListener("submit", (e) => { e.preventDefault(); if (!valider(f, $$("[data-etape='1'] [required]", f))) return; $("[data-recap]", f).textContent = `Commande ${f.commande.value} · ${f.portee.value === "toute" ? "toute la commande" : "une partie de la commande"}`; etape(2); });
+  // « Une partie de la commande » : on demande quels produits
+  f.addEventListener("change", (e) => { if (e.target.name !== "portee") return; const partie = e.target.value === "partie", z = $("[data-produits-zone]", f); z.hidden = !partie; f.produits.required = partie; });
+  f.addEventListener("submit", (e) => { e.preventDefault(); if (!valider(f, $$("[data-etape='1'] [required]", f).filter((c) => !c.closest("[hidden]")))) return; $("[data-recap]", f).textContent = `${f.nom.value} · commande ${f.commande.value} · ${f.portee.value === "toute" ? "toute la commande" : "produits : " + f.produits.value.trim()}`; etape(2); });
   $("[data-retour]", f).addEventListener("click", () => etape(1));
   $("[data-confirmer]", f).addEventListener("click", () => { const d = new Date(); $("[data-horodatage]", f).textContent = `Enregistrée le ${d.toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" })} à ${d.toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit" })}. Dans une vraie boutique, un accusé de réception vous serait envoyé immédiatement par e-mail, avec les instructions de retour.`; etape(3); });
 });
@@ -364,11 +403,12 @@ $$("form[data-formulaire='retractation']").forEach((f) => {
 // ---------- Commande simulée ----------
 {
   const zone = $("[data-commande]");
-  if (zone) catalogue().then((cat) => {
+  // Panier vide : message affiché tout de suite, sans attendre le catalogue (évite un saut de mise en page)
+  if (zone && !lirePanier().length) zone.innerHTML = `<div class="commande-tete"><h1>Votre panier est vide</h1><p class="actions"><a class="bouton" href="${lien("/collections/coffrets-cadeaux")}">Nos coffrets à offrir</a><a class="lien-fort" href="${lien("/collections/biscuits")}">Nos biscuits</a></p></div>`;
+  else if (zone) catalogue().then((cat) => {
     const liv = cat.livraison;
     const form = $("form", zone), recap = $("[data-recap-corps]", zone);
     const p = lirePanier();
-    if (!p.length) { zone.innerHTML = `<div class="commande-tete"><h1>Votre panier est vide</h1><p class="actions"><a class="bouton" href="${lien("/collections/coffrets-cadeaux")}">Nos coffrets à offrir</a><a class="lien-fort" href="${lien("/collections/biscuits")}">Nos biscuits</a></p></div>`; return; }
     const carteSeule = p.every((l) => l.handle === "carte-cadeau");
     let remise = 0;
     const st = sousTotal(p);
@@ -376,7 +416,7 @@ $$("form[data-formulaire='retractation']").forEach((f) => {
     const fraisMode = (id) => { const m = liv.modes.find((x) => x.id === id); if (!m || carteSeule) return 0; return m.offert_des_seuil && st >= liv.seuil_livraison_offerte ? 0 : m.prix; };
     const total = () => Math.max(0, st + fraisMode(mode()) - remise);
     const majRecap = () => {
-      recap.innerHTML = p.map((l) => `<div class="recap-ligne"><span>${l.qte} × ${esc(l.nom)}${l.variante ? " " + esc(l.variante) : ""}${l.message ? `<br><small>Message cadeau</small>` : ""}</span><span>${euros(l.prix * l.qte)}</span></div>`).join("") +
+      recap.innerHTML = p.map((l) => `<div class="recap-ligne"><span>${l.qte} × ${esc(l.nom)}${l.variante ? " " + esc(l.variante) : ""}${l.message ? `<br><small>Message cadeau : « ${esc(l.message.length > 60 ? l.message.slice(0, 57) + "…" : l.message)} »</small>` : ""}</span><span>${euros(l.prix * l.qte)}</span></div>`).join("") +
         `<dl class="totaux"><dt>Sous-total</dt><dd>${euros(st)}</dd><dt>Livraison</dt><dd>${carteSeule ? "aucune" : mode() ? (fraisMode(mode()) ? euros(fraisMode(mode())) : "Offerte") : "à choisir"}</dd>${remise ? `<dt>Carte cadeau</dt><dd>− ${euros(remise)}</dd>` : ""}<dt class="total">Total</dt><dd class="total">${euros(total())}</dd></dl>` +
         (st < liv.seuil_livraison_offerte && !carteSeule ? `<p class="note">Plus que ${euros(liv.seuil_livraison_offerte - st)} pour la livraison offerte. <a href="${lien("/cart")}">Compléter ma commande</a></p>` : "");
       $("[data-recap-resume]", zone).textContent = `Votre commande (${nbArticles(p)} article${nbArticles(p) > 1 ? "s" : ""}) · ${euros(total())}`;
@@ -387,11 +427,12 @@ $$("form[data-formulaire='retractation']").forEach((f) => {
       const dz = $(`[data-date-mode="${m.id}"]`, zone); const w = fenetre(liv, m.id);
       if (dz) dz.textContent = m.id === "retrait_atelier" ? `Prêt le ${jour(w.pret)}, ${m.horaires}` : `${m.id === "domicile" ? "Livré" : "Disponible"} entre le ${jour(w.min)} et le ${jour(w.max)}`;
     });
+    const majAdresse = () => { const inutile = carteSeule || mode() === "retrait_atelier"; $("[data-zone-adresse]", zone).hidden = inutile; $("[data-sans-adresse]", zone).hidden = !inutile; };
     if (carteSeule) { $("[data-modes]", zone).hidden = true; $("[data-carte-seule]", zone).hidden = false; $$("[name=livraison]", form).forEach((r) => (r.required = false)); }
     form.addEventListener("change", (e) => {
       if (e.target.name === "livraison") {
         const relais = e.target.value === "point_relais"; $("[data-relais]", zone).hidden = !relais; form.tel.required = relais;
-        $("#modes-erreur").hidden = true;
+        $("#modes-erreur").hidden = true; majAdresse();
         evenement("add_shipping_info", { ecommerce: { currency: "EUR", value: +st.toFixed(2), shipping_tier: e.target.value, items: p.map((l) => item(l, l.qte)) } });
         majRecap();
       }
@@ -401,6 +442,8 @@ $$("form[data-formulaire='retractation']").forEach((f) => {
       const ex = { email: "exemple@exemple.fr", k_prenom: "Camille", k_nom: "Exemple", k_adresse: "1 rue de l'Exemple", k_cp: "40150", k_ville: "Hossegor" };
       Object.entries(ex).forEach(([k, val]) => (form.elements[k].value = val));
       if (!mode() && !carteSeule) { form.livraison[0].checked = true; form.dispatchEvent(new Event("change")); form.livraison[0].dispatchEvent(new Event("change", { bubbles: true })); }
+      $$("[aria-invalid='true']", form).forEach((c) => { if (champValide(c)) { c.removeAttribute("aria-invalid"); const m = document.getElementById(c.id + "-erreur"); if (m) m.hidden = true; } });
+      if (!$("[aria-invalid='true']", form)) $("[data-resume-erreurs]", form).hidden = true;
       annonce("Formulaire rempli avec des données d'exemple");
     });
     $("[data-appliquer-code]", zone).addEventListener("click", () => {
@@ -412,10 +455,10 @@ $$("form[data-formulaire='retractation']").forEach((f) => {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       const champs = $$("[required]", form).filter((c) => c.type !== "radio" && !c.closest("[hidden]"));
-      const ok = valider(form, champs);
-      if (!carteSeule && !mode()) { $("#modes-erreur").hidden = false; if (ok) $("[data-modes] input").focus(); return; }
-      if (!ok) return;
-      evenement("add_payment_info", { ecommerce: { currency: "EUR", value: +total().toFixed(2), payment_type: "simulation", items: p.map((l) => item(l, l.qte)) } });
+      const sansMode = !carteSeule && !mode();
+      $("#modes-erreur").hidden = !sansMode;
+      if (!valider(form, champs, sansMode ? [[$("#k-livraison"), "Choisissez un mode de livraison."]] : [])) return;
+      evenement("add_payment_info", { ecommerce: { currency: "EUR", value: +st.toFixed(2), payment_type: "simulation", items: p.map((l) => item(l, l.qte)) } });
       let id = sessionStorage.getItem("ms-commande");
       const d = new Date();
       if (!id) {
@@ -433,7 +476,7 @@ $$("form[data-formulaire='retractation']").forEach((f) => {
       majPanier(); scrollTo(0, 0); conf.focus();
     });
     if (matchMedia("(min-width: 960px)").matches) $("[data-recap-details]", zone).open = true;
-    majRecap();
+    majAdresse(); majRecap();
   });
 }
 

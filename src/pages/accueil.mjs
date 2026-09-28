@@ -1,5 +1,5 @@
 // Accueil (docs/08-contenus/accueil.md, zoning 06-ux.md, contrat de direction : le couvercle)
-import { url, absolue } from "../config.mjs";
+import { url, absolue, MOKOM_LD } from "../config.mjs";
 import { metas, merch, produit, photos } from "../lib/data.mjs";
 import { page, frise, tx } from "../lib/layout.mjs";
 import { grille } from "../lib/composants.mjs";
@@ -80,12 +80,13 @@ ${frise("ganivelles")}
 
   return page({
     chemin: "/", titre: m.title, description: m.meta_description, h1Logo: true, corps, classe: "page-accueil",
-    precharger: [`<link rel="preload" as="image" imagesrcset="${url("/images/photos/accueil-haut-480.webp")} 480w, ${url("/images/photos/accueil-haut-640.webp")} 640w, ${url("/images/photos/accueil-haut-800.webp")} 800w" imagesizes="94vw" media="(max-width: 759px)">`, `<link rel="preload" as="image" imagesrcset="${url("/images/photos/accueil-large-960.webp")} 960w, ${url("/images/photos/accueil-large-1600.webp")} 1600w" imagesizes="(min-width: 1320px) 1240px, 94vw" media="(min-width: 760px)">`],
+    precharger: [`<link rel="preload" as="image" fetchpriority="high" imagesrcset="${url("/images/photos/accueil-haut-480.webp")} 480w, ${url("/images/photos/accueil-haut-640.webp")} 640w, ${url("/images/photos/accueil-haut-800.webp")} 800w" imagesizes="94vw" media="(max-width: 759px)">`, `<link rel="preload" as="image" fetchpriority="high" imagesrcset="${url("/images/photos/accueil-large-960.webp")} 960w, ${url("/images/photos/accueil-large-1600.webp")} 1600w" imagesizes="(min-width: 1320px) 1240px, 94vw" media="(min-width: 760px)">`],
     jsonLd: [
       { "@type": "Organization", "@id": absolue("/#organisation"), name: "Maison Sable", url: absolue("/"), logo: absolue("/images/favicon.svg"),
         description: "Maison Sable est une biscuiterie artisanale de bord de mer installée à Hossegor, dans les Landes, qui fabrique en petites séries des sablés, des palets et des coffrets de biscuits pur beurre. Marque fictive : étude de cas Mokom Studio.",
-        areaServed: "FR" },
-      { "@type": "WebSite", "@id": absolue("/#site"), name: "Maison Sable", url: absolue("/"), inLanguage: "fr-FR", publisher: { "@id": absolue("/#organisation") } },
+        areaServed: "FR",
+        hasMerchantReturnPolicy: { "@type": "MerchantReturnPolicy", applicableCountry: "FR", returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow", merchantReturnDays: 14, refundType: "https://schema.org/FullRefund", itemCondition: "https://schema.org/NewCondition", merchantReturnLink: absolue("/policies/refund-policy") } },
+      { "@type": "WebSite", "@id": absolue("/#site"), name: "Maison Sable", url: absolue("/"), inLanguage: "fr-FR", publisher: MOKOM_LD },
     ],
   });
 }

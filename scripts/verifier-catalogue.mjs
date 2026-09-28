@@ -6,7 +6,7 @@ import { readFileSync } from "node:fs";
 const DICO = {
   type: ["Sablé", "Palet", "Croquant", "Boîte assortie", "Coffret", "Carte cadeau"],
   format: ["Sachet", "Boîte", "Coffret", "Carte cadeau"],
-  saveur: ["Beurre & fleur de sel", "Caramel", "Chocolat", "Agrumes & herbes", "Amandes & pignons", "Coco & vanille", "Assortiment"],
+  saveur: ["Beurre & fleur de sel", "Caramel", "Chocolat", "Agrumes & herbes", "Fruits secs", "Coco & vanille", "Assortiment"],
   texture: ["Fondant", "Croquant", "Épais", "Mixte"],
   occasions: ["Goûter", "Cadeau", "Souvenir", "Pique-nique"],
   // Les 14 allergènes majeurs (règlement UE 1169/2011, annexe II)

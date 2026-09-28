@@ -1,5 +1,5 @@
 // Pages éditoriales, légales et utilitaires (textes : docs/08-contenus/)
-import { url, absolue, MOKOM_URL } from "../config.mjs";
+import { url, absolue, MOKOM_URL, MOKOM_LD } from "../config.mjs";
 import { metas, produit, merch, photos } from "../lib/data.mjs";
 import { page, filAriane, jsonLdAriane, frise, tx, lienMokom } from "../lib/layout.mjs";
 import { grille, carteProduit } from "../lib/composants.mjs";
@@ -64,7 +64,7 @@ export function faq() {
       ["Les biscuits sont-ils sans gluten ou végétaliens ?", "Non. Toutes les recettes de Maison Sable contiennent de la farine de blé, du beurre et des œufs."]]],
     ["cadeaux", "Cadeaux et carte cadeau", [
       ["Peut-on ajouter un message cadeau ?", "Oui, sur les coffrets, la Boîte Grande Plage et la carte cadeau. Cochez « Ajouter un message cadeau » sur la fiche du produit et écrivez jusqu'à 200 caractères. Le message voyage avec le colis, ou avec l'e-mail pour la carte cadeau."],
-      ["Jusqu'à quand commander pour Noël ?", "Pour une livraison avant Noël, commandez au plus tard le **mardi 15 décembre à midi** en point relais et le **jeudi 17 décembre à midi** en livraison à domicile (retrait à l'atelier jusqu'au mardi 22 décembre à midi). Après ces dates, la carte cadeau reste possible : elle part par e-mail le jour de votre choix."],
+      ["Jusqu'à quand commander pour Noël ?", "Pour une livraison avant Noël, commandez au plus tard le **mardi 15 décembre 2026 à midi** en point relais et le **jeudi 17 décembre 2026 à midi** en livraison à domicile (retrait à l'atelier jusqu'au mardi 22 décembre à midi). Après ces dates, la carte cadeau reste possible : elle part par e-mail le jour de votre choix."],
       ["Comment fonctionne la carte cadeau ?", "La carte cadeau Maison Sable, de 20, 40 ou 60 €, est envoyée par e-mail à la date de votre choix, avec votre message. La personne saisit le code reçu au moment de payer. Elle est valable un an et s'utilise en une ou plusieurs fois."]]],
     ["boutique", "À propos de cette boutique", [
       ["Maison Sable existe-t-elle vraiment ?", "Non. Maison Sable est une marque fictive, imaginée par Mokom Studio pour montrer la conception d'une boutique en ligne. Aucune commande n'est expédiée, aucun paiement n'est demandé et aucune donnée n'est envoyée. Hossegor, en revanche, existe bien. [Découvrir la démarche](/pages/etude-de-cas)"]]],
@@ -126,7 +126,7 @@ export function etudeDeCas() {
   <h2>Parlons de votre boutique</h2>
   <p>${tx("Vous préparez une boutique en ligne ou un site vitrine ? Mokom Studio applique la même méthode à votre projet.")}</p>
   <p class="actions">${lienMokom("Parlons de votre boutique", "etude-de-cas", "bouton")}<a class="lien-fort" href="${url("/")}">Voir la boutique Maison Sable</a></p>
-</div>`, { jsonLd: [{ "@type": "Organization", name: "Mokom Studio", url: MOKOM_URL }] });
+</div>`, { jsonLd: [MOKOM_LD] });
 }
 
 // ---------- Journal et article ----------
@@ -144,7 +144,7 @@ export function article() {
   const ariane = [["Accueil", "/"], ["Journal", "/blogs/journal"], ["Sablé, galette ou palet ?"]];
   const corps = `${tete(ariane, mm.h1)}
 <article class="texte article">
-  <p class="signature">${tx("L'atelier Maison Sable (fictif) · Publié le")} <time datetime="2026-09-28">28 septembre 2026</time> · ${tx("Mis à jour le")} <time datetime="2026-09-28">28 septembre 2026</time></p>
+  <p class="signature">${tx("[L'atelier Maison Sable](/pages/atelier-hossegor) (fictif) · Publié le")} <time datetime="2026-09-28">28 septembre 2026</time> · ${tx("Mis à jour le")} <time datetime="2026-09-28">28 septembre 2026</time></p>
   <p class="chapo">${tx("La galette et le palet sont deux formes de la même pâte sablée bretonne. La galette est fine, environ 5 mm, et croustillante. Le palet est épais, 1 à 1,5 cm, et très friable. Le mot « sablé » désigne la famille entière : un biscuit au beurre à la texture qui s'effrite.")}</p>
   <h2>Les différences en un tableau</h2>
   <div class="tableau-cadre" role="region" aria-label="Galette et palet comparés" tabindex="0"><table class="tableau"><thead><tr><th scope="col"></th><th scope="col">Galette</th><th scope="col">Palet</th></tr></thead><tbody>
@@ -157,7 +157,7 @@ export function article() {
   <p>${tx("À la fin du XIXᵉ siècle, Isidore Penven, boulanger à Pont-Aven, dans le Finistère, fabrique des galettes fines et croustillantes. La tradition raconte qu'une erreur de pesée aurait donné une pâte plus fine que la recette habituelle. La galette de Pont-Aven est depuis l'une des plus connues de Bretagne.")}</p>
   <h2>${tx("Qu'est-ce qui rend une pâte « sablée » ?")}</h2>
   <p>${tx("Une pâte sablée contient beaucoup de beurre (au moins 20 % pour le sablé breton), du sucre et des jaunes d'œufs. Le beurre enrobe la farine et limite la formation d'une pâte élastique : le biscuit cuit s'effrite en bouche, comme du sable.")}</p>
-  <h2>Et chez Maison Sable&#8239;?</h2>
+  <h2>Comment Maison Sable interprète-t-elle le sablé&#8239;?</h2>
   <p>${tx("Maison Sable n'est pas bretonne mais landaise : ses recettes empruntent la technique du sablé au beurre et lui donnent le goût de la côte d'Hossegor.")}</p>
   <ul><li>${tx("Le **Sablé Dune** est un sablé fondant au beurre demi-sel (30 %) et à la fleur de sel.")}</li><li>${tx("Le **Palet Marée** suit la forme du palet, épais et friable, avec un cœur de caramel au beurre salé (12 %).")}</li></ul>
 </article>
@@ -166,7 +166,7 @@ export function article() {
   <li><a href="https://www.produits-laitiers.com/tout-sur-le-sable-breton/">Produits laitiers (CNIEL), « Tout sur le sablé breton »</a></li>
   <li><a href="https://www.ledessertdabord.fr/histoire-de-sable-breton/">Le Dessert d'Abord, « Histoire de pâtisserie : le sablé breton »</a></li></ul></div>`;
   return page({ chemin, titre: mm.title, description: mm.meta_description, corps, classe: "page-texte", ogType: "article",
-    jsonLd: [{ "@type": "Article", headline: mm.h1, datePublished: "2026-09-28", dateModified: "2026-09-28", inLanguage: "fr-FR", author: { "@type": "Organization", name: "Maison Sable (fictif)" }, publisher: { "@type": "Organization", name: "Mokom Studio", url: MOKOM_URL }, image: absolue("/images/coupe-sable-galette-palet.svg"), mainEntityOfPage: absolue(chemin) },
+    jsonLd: [{ "@type": "BlogPosting", "@id": absolue(chemin) + "#article", headline: mm.h1, datePublished: "2026-09-28", dateModified: "2026-09-28", inLanguage: "fr-FR", author: { "@id": absolue("/#organisation") }, publisher: MOKOM_LD, image: absolue("/images/coupe-sable-galette-palet.svg"), mainEntityOfPage: absolue(chemin) },
       jsonLdAriane([["Accueil", "/"], ["Journal", "/blogs/journal"], [mm.h1, chemin]])] });
 }
 
@@ -174,11 +174,11 @@ export function article() {
 const legal = (chemin, h1, titre, description, corps) => simple(chemin, h1, `<div class="texte legal">${corps}</div>`, { titre: `${h1} | Maison Sable`, description });
 export const mentions = () => legal("/policies/legal-notice", "Mentions légales", "", "Mentions légales du site Maison Sable, boutique fictive publiée par Mokom Studio.", `
   <p class="encadre">${tx("Maison Sable est une marque fictive, créée par Mokom Studio pour une étude de cas. Aucun produit n'est vendu, aucune commande n'est expédiée, aucun paiement n'est encaissé.")}</p>
-  <h2>Éditeur du site</h2><p>${tx("Mokom Studio · [À COMPLÉTER : forme juridique, nom de l'exploitante, adresse, SIREN, TVA, e-mail] · Site :")} ${lienMokom("www.mokomstudio.fr", "mentions")}<br>${tx("Directrice de la publication : [À COMPLÉTER]")}</p>
+  <h2>Éditeur du site</h2><p>${tx("Mokom Studio, nom commercial de Morgane Dulaut, entrepreneure individuelle (micro-entreprise)")}<br>${tx("5 route des Savonniers, 40180 Hinx, France")}<br>${tx("SIRET : 980 061 931 00021")}<br>${tx("E-mail : [morgane.dulaut@gmail.com](mailto:morgane.dulaut@gmail.com) · Site :")} ${lienMokom("www.mokomstudio.fr", "mentions")}<br>${tx("Directrice de la publication : Morgane Dulaut")}</p>
   <h2>Hébergeur</h2><p>${tx("GitHub, Inc. (service GitHub Pages), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis · github.com")}</p>
   <h2>Propriété intellectuelle</h2><p>${tx("Les textes, illustrations, le logo « Maison Sable » et la mise en page sont des créations de Mokom Studio. Toute reproduction sans autorisation est interdite. Hossegor et les lieux cités existent ; la marque, ses produits, ses personnages et ses avis sont inventés.")}</p>
   <h2>Données personnelles et cookies</h2><p>${tx("Voir la [politique de confidentialité](/policies/privacy-policy) : le site ne collecte aucune donnée et ne dépose aucun cookie.")}</p>
-  <h2>Accessibilité</h2><p>${tx("Le site vise la conformité aux WCAG 2.2, niveau AA. État de conformité : publié après l'audit final.")}</p>
+  <h2>Accessibilité</h2><p>${tx("Mokom Studio vise la conformité aux WCAG 2.2, niveau AA. État : partiellement conforme. Audit du 28 septembre 2026 (Lighthouse mobile, tests au clavier, contrastes mesurés) ; aucun test avec un lecteur d'écran réel (NVDA, VoiceOver) n'a encore été fait. Pour signaler une difficulté : [morgane.dulaut@gmail.com](mailto:morgane.dulaut@gmail.com).")}</p>
   <h2>Crédits photos</h2><p>${tx("Photos d'illustration issues d'Unsplash (licence Unsplash). Les biscuits photographiés ne sont pas ceux de Maison Sable, marque fictive.")}</p>
   <ul class="credits">${[...Object.entries(photos.produits).flatMap(([h, l]) => l.map((ph) => [produit(h).titre.split(",")[0], ph])), ...Object.values(photos.scenes).map((ph) => ["Accueil et atelier", ph])].map(([ou, ph]) => `<li>${esc(ou)} : <a href="${ph.page}">${esc(ph.auteur)}</a></li>`).join("")}</ul>`);
 
@@ -228,9 +228,11 @@ export function retractation() {
   <form class="formulaire" data-formulaire="retractation" novalidate>
     <div class="resume-erreurs" data-resume-erreurs tabindex="-1" hidden></div>
     <div data-etape="1">
+      <div class="champ"><label for="r-nom">Nom et prénom</label><input id="r-nom" name="nom" autocomplete="name" required data-erreur="Indiquez votre nom et votre prénom."></div>
       <div class="champ"><label for="r-commande">Numéro de commande</label><p class="aide" id="r-commande-aide">${tx("Il figure dans l'e-mail de confirmation, par exemple MS-20261001-1432.")}</p><input id="r-commande" name="commande" required aria-describedby="r-commande-aide" data-erreur="Indiquez le numéro de commande."></div>
       <div class="champ"><label for="r-email">E-mail utilisé pour la commande</label><input id="r-email" name="email" type="email" autocomplete="email" required data-erreur="Indiquez une adresse e-mail valide, par exemple nom@exemple.fr."></div>
       <fieldset class="champ"><legend>Produits concernés</legend><label class="case"><input type="radio" name="portee" value="toute" checked><span>Toute la commande</span></label><label class="case"><input type="radio" name="portee" value="partie"><span>Une partie de la commande</span></label></fieldset>
+      <div class="champ" data-produits-zone hidden><label for="r-produits">Produits à retourner</label><p class="aide" id="r-produits-aide">Par exemple : 1 Sablé Dune 300 g.</p><textarea id="r-produits" name="produits" rows="3" aria-describedby="r-produits-aide" data-erreur="Indiquez les produits que vous retournez."></textarea></div>
       <button class="bouton" type="submit">Renoncer au contrat ici</button>
     </div>
     <div data-etape="2" hidden><h2 tabindex="-1">Confirmer la rétractation</h2><p data-recap></p><p class="actions"><button class="bouton" type="button" data-confirmer>Confirmer ma rétractation</button><button class="lien-fort bouton-lien" type="button" data-retour>Revenir en arrière</button></p></div>
@@ -247,7 +249,7 @@ export function panier() {
 
 export function commande() {
   const modes = `
-    <label class="mode"><input type="radio" name="livraison" value="domicile" required><span><b>Livraison à domicile</b> <span data-prix-mode="domicile">5,90&nbsp;€</span><small data-date-mode="domicile"></small></span></label>
+    <label class="mode"><input type="radio" name="livraison" value="domicile" id="k-livraison" required><span><b>Livraison à domicile</b> <span data-prix-mode="domicile">5,90&nbsp;€</span><small data-date-mode="domicile"></small></span></label>
     <label class="mode"><input type="radio" name="livraison" value="point_relais"><span><b>Point relais</b> <span data-prix-mode="point_relais">4,50&nbsp;€</span><small data-date-mode="point_relais"></small></span></label>
     <div class="relais" data-relais hidden>
       <fieldset><legend>Choisissez un point relais (exemples fictifs)</legend>
@@ -257,9 +259,11 @@ export function commande() {
       <div class="champ"><label for="k-tel">Téléphone portable</label><p class="aide" id="k-tel-aide">Le point relais vous prévient par SMS quand votre colis est arrivé.</p><input id="k-tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" aria-describedby="k-tel-aide" data-erreur="Indiquez un numéro de portable à 10 chiffres, par exemple 06 12 34 56 78."></div>
     </div>
     <label class="mode"><input type="radio" name="livraison" value="retrait_atelier"><span><b>Retrait à l'atelier d'Hossegor</b> <span>Gratuit</span><small data-date-mode="retrait_atelier"></small></span></label>`;
-  const adresse = (p, oblig = true) => `
+  const adresse = (p, oblig = true) => identite(p, oblig) + postale(p, oblig);
+  const identite = (p, oblig = true) => `
     <div class="champ-duo"><div class="champ"><label for="${p}-prenom">Prénom</label><input id="${p}-prenom" name="${p}_prenom" autocomplete="${p === "k" ? "given-name" : "off"}" ${oblig ? "required" : ""} data-erreur="Indiquez votre prénom."></div>
-    <div class="champ"><label for="${p}-nom">Nom</label><input id="${p}-nom" name="${p}_nom" autocomplete="${p === "k" ? "family-name" : "off"}" ${oblig ? "required" : ""} data-erreur="Indiquez votre nom."></div></div>
+    <div class="champ"><label for="${p}-nom">Nom</label><input id="${p}-nom" name="${p}_nom" autocomplete="${p === "k" ? "family-name" : "off"}" ${oblig ? "required" : ""} data-erreur="Indiquez votre nom."></div></div>`;
+  const postale = (p, oblig = true) => `
     <div class="champ"><label for="${p}-adresse">Adresse</label><input id="${p}-adresse" name="${p}_adresse" autocomplete="${p === "k" ? "address-line1" : "off"}" ${oblig ? "required" : ""} data-erreur="Indiquez le numéro et le nom de la rue."></div>
     <div class="champ"><label for="${p}-complement">Complément d'adresse (facultatif)</label><input id="${p}-complement" name="${p}_complement" autocomplete="${p === "k" ? "address-line2" : "off"}"></div>
     <div class="champ-duo"><div class="champ"><label for="${p}-cp">Code postal</label><input id="${p}-cp" name="${p}_cp" inputmode="numeric" autocomplete="${p === "k" ? "postal-code" : "off"}" maxlength="5" ${oblig ? "required" : ""} data-erreur="Le code postal doit contenir 5 chiffres, par exemple 40150."></div>
@@ -272,10 +276,12 @@ export function commande() {
     <div class="resume-erreurs" data-resume-erreurs tabindex="-1" hidden></div>
     <section aria-labelledby="k1"><h2 id="k1">1. Vos coordonnées</h2>
       <div class="champ"><label for="k-email">E-mail</label><p class="aide" id="k-email-aide">Pour vous envoyer la confirmation (simulée).</p><input id="k-email" name="email" type="email" autocomplete="email" required aria-describedby="k-email-aide" data-erreur="Indiquez une adresse e-mail valide, par exemple nom@exemple.fr."></div>
-      ${adresse("k")}
+      ${identite("k")}
+      <div data-zone-adresse>${postale("k")}
       <p class="champ-fixe">Pays&#8239;: France métropolitaine</p>
       <label class="case"><input type="checkbox" name="autre_adresse" data-autre-adresse aria-controls="autre-adresse" aria-expanded="false"><span>Livrer à une autre adresse (idéal pour un cadeau)</span></label>
-      <div id="autre-adresse" data-zone-autre hidden><h3>Adresse de la personne qui reçoit le colis</h3>${adresse("d", false)}<p class="note">Aucun prix n'apparaît dans un colis envoyé à une autre adresse.</p></div>
+      <div id="autre-adresse" data-zone-autre hidden><h3>Adresse de la personne qui reçoit le colis</h3>${adresse("d", false)}<p class="note">Aucun prix n'apparaît dans un colis envoyé à une autre adresse.</p></div></div>
+      <p class="note" data-sans-adresse hidden>${tx("Aucune adresse postale n'est nécessaire pour cette commande.")}</p>
     </section>
     <section aria-labelledby="k2"><h2 id="k2">2. Livraison</h2>
       <fieldset class="modes" data-modes><legend class="visuellement-cache">Mode de livraison</legend>${modes}</fieldset>
@@ -296,7 +302,7 @@ export function commande() {
     <p class="note"><a href="${url("/policies/shipping-policy")}">Livraison</a> · <a href="${url("/policies/refund-policy")}">Retours</a></p></aside>
   <section class="confirmation-commande" data-confirmation hidden tabindex="-1" aria-labelledby="conf-titre"></section>
 </div>`;
-  return page({ chemin: "/checkout", titre: "Finaliser la commande | Maison Sable", description: "Commande simulée de la boutique fictive Maison Sable.", indexable: false, classe: "page-commande", corps });
+  return page({ chemin: "/checkout", titre: "Finaliser la commande | Maison Sable", description: "Commande simulée de la boutique fictive Maison Sable.", indexable: false, classe: "page-commande", corps, tunnel: true });
 }
 
 export function recherche() {
@@ -307,7 +313,8 @@ export function recherche() {
 }
 
 export function erreur404() {
-  return page({ chemin: "/404.html", titre: "Page introuvable | Maison Sable", description: "Cette page n'existe pas.", indexable: false,
+  return page({ chemin: "/404.html", titre: "Page introuvable | Maison Sable", description: "Cette page n'existe pas.", indexable: false, canonique: false, // page d'erreur : pas d'adresse de référence
+
     corps: `<div class="page-tete page-404"><h1>${tx("Cette page s'est envolée avec la marée")}</h1><p class="intro">${tx("L'adresse n'existe pas ou plus. Cherchez un biscuit, ou repartez d'une collection.")}</p>
     <form class="recherche-form" action="${url("/search")}" role="search"><label for="e-champ">Rechercher un biscuit ou un coffret</label><div class="champ-ligne"><input id="e-champ" name="q" type="search"><button class="bouton" type="submit">Rechercher</button></div></form>
     <p class="actions"><a class="lien-fort" href="${url("/")}">Accueil</a><a class="lien-fort" href="${url("/collections/coffrets-cadeaux")}">Nos coffrets à offrir</a><a class="lien-fort" href="${url("/collections/biscuits")}">Nos biscuits</a></p></div>

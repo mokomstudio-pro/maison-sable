@@ -75,7 +75,7 @@ export default function collection(handle) {
       <label class="tri"><span>Trier</span><select name="tri" data-tri><option value="">Notre sélection</option><option value="prix-asc">Prix croissant</option><option value="prix-desc">Prix décroissant</option></select></label>
     </div>
     <div class="filtres-panneau" id="panneau-filtres-${handle}" data-panneau-filtres>
-      <div class="filtres-panneau-tete"><h2>Filtrer</h2><button class="bouton-icone" type="button" data-ferme-filtres><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span class="visuellement-cache">Fermer les filtres</span></button></div>
+      <div class="filtres-panneau-tete"><h2 id="titre-filtres-${handle}">Filtrer</h2><button class="bouton-icone" type="button" data-ferme-filtres><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span class="visuellement-cache">Fermer les filtres</span></button></div>
       <fieldset><legend>${x.filtre.legende}</legend>
         ${valeurs.map((v, i) => `<label class="case"><input type="checkbox" name="${x.filtre.nom}" value="${esc(v)}" id="f-${handle}-${i}"><span>${esc(v)}</span></label>`).join("")}
       </fieldset>

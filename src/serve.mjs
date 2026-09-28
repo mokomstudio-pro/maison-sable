@@ -15,7 +15,10 @@ createServer(async (req, res) => {
   if (!chemin.startsWith(BASE)) { res.writeHead(302, { Location: BASE + "/" }); return res.end(); }
   let f = join(dist, chemin.slice(BASE.length));
   try {
-    if ((await stat(f)).isDirectory()) f = join(f, "index.html");
+    if ((await stat(f)).isDirectory()) {
+      if (!chemin.endsWith("/")) { res.writeHead(301, { Location: chemin + "/" + new URL(req.url, "http://x").search }); return res.end(); }
+      f = join(f, "index.html");
+    }
     // Comme GitHub Pages : compression gzip des fichiers texte
     let corps = await readFile(f); const entetes = { "Content-Type": types[extname(f)] || "application/octet-stream", "Cache-Control": "no-cache" };
     if (/gzip/.test(req.headers["accept-encoding"] || "") && /\.(html|css|js|json|svg|xml|txt)$/.test(f)) { corps = gzipSync(corps); entetes["Content-Encoding"] = "gzip"; }
