@@ -68,7 +68,7 @@ ${canonique ? `<link rel="canonical" href="${absolue(chemin)}">` : ""}
 <meta property="og:title" content="${esc(titre)}">
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:url" content="${absolue(chemin)}">
-<meta property="og:image" content="${absolue("/images/partage.png")}">
+<meta property="og:image" content="${absolue("/images/partage.jpg")}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
@@ -107,7 +107,7 @@ ${tunnel ? "" : tiroirs()}
 
 function piedTunnel() {
   const liens = [["/policies/shipping-policy", "Livraison"], ["/policies/refund-policy", "Retours"], ["/policies/terms-of-service", "CGV"], ["/policies/privacy-policy", "Confidentialité"], ["/policies/legal-notice", "Mentions légales"]];
-  return `<footer class="pied pied-tunnel"><nav aria-label="Informations légales"><ul>${liens.map(([h, n]) => `<li><a href="${url(h)}">${esc(n)}</a></li>`).join("")}</ul></nav></footer>`;
+  return `<footer class="pied pied-tunnel"><p class="pied-gravure">Projet fictif, étude de cas Mokom Studio&#8239;: aucune commande n'est expédiée.</p><nav aria-label="Informations légales"><ul>${liens.map(([h, n]) => `<li><a href="${url(h)}">${esc(n)}</a></li>`).join("")}</ul></nav></footer>`;
 }
 
 function piedDePage() {

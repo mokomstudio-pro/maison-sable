@@ -47,7 +47,7 @@ Chaque étape a produit un livrable et une décision. Les principales :
 | Textes | chaque fait vient du catalogue ou de la fiche d'identité de la marque |
 
 ## H2 : Les résultats mesurés
-`[À COMPLÉTER après l'audit final : scores Lighthouse mobile, Core Web Vitals, accessibilité]`
+Mesures de laboratoire du 28 septembre 2026 (téléphone simulé, 4G lente, processeur ×4) : photo principale affichée en 2,35 s (accueil), 2,28 s (fiche), 1,94 s (collection) ; décalage ≤ 0,04 ; ajout au panier 184 ms ; accueil 391 Ko, JavaScript 13 Ko, aucun script externe ; Lighthouse mobile performance 91–100, accessibilité 100, bonnes pratiques 100 (6 pages). Source : docs/audits/2026-09-28-audit-final.md.
 
 ## H2 : Parlons de votre boutique
 Vous préparez une boutique en ligne ou un site vitrine ? Mokom Studio applique la même méthode à votre projet.
@@ -55,5 +55,5 @@ Vous préparez une boutique en ligne ou un site vitrine ? Mokom Studio applique 
 - **Lien** : Voir la boutique Maison Sable → `/`
 
 ## À compléter
-- Résultats mesurés → après l'audit final.
+- Résultats mesurés → audit final du 2026-09-28.
 - Description exacte de Mokom Studio (« studio de conception de sites web ») à valider par Morgane.

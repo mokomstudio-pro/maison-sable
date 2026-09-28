@@ -61,3 +61,27 @@ Auditeurs indépendants : claude-seo-ai (4 spécialistes + 2 analyses GEO), impe
 
 ## Après la mise en ligne
 Relancer `/claude-seo-ai:audit` sur l'adresse GitHub (redirections, image de partage, en-têtes, robots) ; ne pas déclarer le plan du site dans la Search Console tant que le `noindex` reste ; vérifier le type servi pour les WebP.
+
+---
+
+## Contre-audit après corrections — 2026-09-28
+
+**Nouveau verdict : PRÊT AVEC RÉSERVES** — les 4 bloquants sont levés, vérifiés par des auditeurs indépendants (UX/UI et performance relancés ; contrôles SEO automatiques).
+
+| Bloquant | État | Preuve |
+|---|---|---|
+| B1 Choix rapide illisible | **corrigé** | texte encre sur crème 13,5:1 ; menu dans l'écran en 390 et 1440 px (contre-audit UX) |
+| B2 Focus invisible sur fonds foncés | **corrigé** | contour miel 4,29:1 sur cannelle, 7,64:1 sur encre |
+| B3 `[FICTIF]` visible | **corrigé** | marqueurs retirés à la génération + contrôle automatique dans `verifier-seo.mjs` (31 pages) |
+| B4 Mentions légales | **corrigé** | éditeur : Mokom Studio, Morgane Dulaut (micro-entreprise), adresse, SIRET, e-mail, directrice de publication ; déclaration d'accessibilité « partiellement conforme » |
+
+Points importants corrigés : I1 « / » final (liens, canoniques, plan du site ; l'aperçu local redirige comme GitHub Pages), I2 focus rendu, I3 résumé d'erreurs complet et mis à jour, I4 adresse inutile masquée, I5 tunnel allégé, I6 CLS commande vide 0,52 → 0,00, I7 saveur « Fruits secs », I8 carte cadeau vérifiée, I9 recherche au pluriel (+ tri par nom), I10 rétractation (nom, produits), I11 coffrets (ingrédients et nutrition par recette), I12 animations réduites, I13 filtres annoncés comme fenêtre, I14 photo d'accueil prioritaire (LCP 2,55 → 2,35 s), I15 vignettes 480 px et images de survol non chargées sur mobile. Aussi : données structurées reliées (`@id`, fabricant, vendeur, image par format, politique de retour, éditeur unique Mokom Studio), 404 sans canonique, jours fériés, image de partage 841 → 100 Ko, dates de Noël avec l'année, résultats mesurés publiés dans l'étude de cas.
+
+**Mesures après corrections** (traces, 390 px, 4G lente, CPU ×4) : accueil 2,35 s · collection 1,94 s · fiche 2,28 s · panier 1,45 s · commande 1,52 s ; CLS ≤ 0,04 ; ajout au panier 184 ms ; Lighthouse perf 91–100, a11y 100, bonnes pratiques 100.
+
+### Réserves (non bloquantes)
+- **I16 Photos** : plusieurs photos montrent des cookies plutôt que des sablés — nouvelles photos à choisir avec Morgane.
+- Lighthouse (téléphone plus lent simulé) : photo principale à 3,0 s (accueil) et 2,86 s (fiche) → ajouter une taille d'image intermédiaire (560–640 px) ; vignettes 160/240 px.
+- Démarrage du script : lecture de défilement retirée (corrigé après la mesure, non remesuré).
+- N° de TVA intracommunautaire de Mokom Studio : à ajouter seulement si assujettie.
+- Test avec un vrai lecteur d'écran ; dette de cascade CSS ; `item_id` des listes (identifiant produit, choix documenté) ; livraison codée en dur à 3 endroits.

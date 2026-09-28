@@ -271,3 +271,11 @@
 - 16 points importants, dont : adresses sans « / » final (redirections 301 sur GitHub Pages), focus perdu à la fermeture des tiroirs, tunnel de commande (résumé d'erreurs, adresse exigée à tort, menu présent, décalage 0,52 panier vide), étiquette « Amandes & pignons » fausse sur le Pignada, recherche au pluriel, photos qui ne montrent pas des sablés.
 - Bien : aucun traceur, poids et réactivité dans le budget, Lighthouse accessibilité et bonnes pratiques 100, SEO technique propre, fiches produits complètes.
 - Rapport : `docs/audits/2026-09-28-audit-final.md` (+ `docs/audits/partiels/`). Publication GitHub toujours en attente.
+
+## 2026-09-28 — Corrections de l'audit final
+
+- Mentions légales complétées avec les informations fournies par Morgane (Mokom Studio, micro-entreprise, Hinx) ; consignées dans `docs/fiche-entite.md` (section éditeur réel). N° de TVA : non fourni, à ajouter seulement si Mokom Studio y est assujettie.
+- Les 4 bloquants et 15 des 16 points importants corrigés (voir la liste dans `docs/audits/2026-09-28-audit-final.md`, section « Contre-audit »).
+- Décisions : saveur « Amandes & pignons » renommée « Fruits secs » (le Pignada ne contient pas d'amandes) ; éditeur unique dans les données structurées = Mokom Studio ; la carte cadeau compte dans le seuil de livraison offerte (règle actuelle conservée) ; pages publiées avec « / » final.
+- Contre-audit indépendant : UX/UI « prêt », performance « prêt ». **Verdict : PRÊT AVEC RÉSERVES.**
+- Reste : nouvelles photos de sablés à choisir avec Morgane ; taille d'image intermédiaire pour Lighthouse ; test lecteur d'écran.

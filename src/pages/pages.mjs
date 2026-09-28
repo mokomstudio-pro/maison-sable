@@ -122,7 +122,10 @@ export function etudeDeCas() {
   <div class="tableau-cadre" role="region" aria-label="Décisions par étape" tabindex="0"><table class="tableau"><thead><tr><th scope="col">Étape</th><th scope="col">Décision clé</th></tr></thead>
   <tbody>${etapes.map(([a, b]) => `<tr><th scope="row">${esc(a)}</th><td>${tx(b)}</td></tr>`).join("")}</tbody></table></div>
   <h2>Les résultats mesurés</h2>
-  <p data-resultats>${tx("Les mesures de performance et d'accessibilité seront publiées ici après l'audit final.")}</p>
+  <p data-resultats>${tx("Mesures de laboratoire du 28 septembre 2026, avant la mise en ligne : téléphone simulé, connexion 4G lente, processeur ralenti quatre fois.")}</p>
+  <div class="tableau-cadre" role="region" aria-label="Résultats mesurés" tabindex="0"><table class="tableau"><thead><tr><th scope="col">Mesure</th><th scope="col">Résultat</th></tr></thead>
+  <tbody>${[["Affichage de la photo principale","2,35 s sur l'accueil, 2,28 s sur une fiche produit, 1,94 s sur une collection (objectif : 2,5 s au plus)"],["Stabilité de la mise en page","décalage de 0,04 au plus (objectif : 0,1)"],["Réaction à l'ajout au panier","184 ms (objectif : 200 ms)"],["Poids","391 Ko à l'arrivée sur l'accueil, 13 Ko de JavaScript, aucun script externe ni cookie"],["Lighthouse (mobile)","performance de 91 à 100, accessibilité 100, bonnes pratiques 100 sur 6 pages"]].map(([a, b]) => `<tr><th scope="row">${esc(a)}</th><td>${tx(b)}</td></tr>`).join("")}</tbody></table></div>
+  <p>${tx("Accessibilité testée au clavier et par mesure des contrastes ; un test avec un lecteur d'écran réel reste à faire. Site volontairement non indexé : aucune donnée de visiteurs réels.")}</p>
   <h2>Parlons de votre boutique</h2>
   <p>${tx("Vous préparez une boutique en ligne ou un site vitrine ? Mokom Studio applique la même méthode à votre projet.")}</p>
   <p class="actions">${lienMokom("Parlons de votre boutique", "etude-de-cas", "bouton")}<a class="lien-fort" href="${url("/")}">Voir la boutique Maison Sable</a></p>

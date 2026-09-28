@@ -170,7 +170,8 @@ $$("dialog.tiroir").forEach((d) => {
 
 // ---------- En-tête : se cache en descendant, revient en remontant ----------
 {
-  const t = $("[data-entete]"); let y0 = scrollY, attente = false;
+  // Position lue au premier défilement seulement (pas de calcul de mise en page au démarrage)
+  const t = $("[data-entete]"); let y0 = 0, attente = false;
   addEventListener("scroll", () => { if (attente) return; attente = true; requestAnimationFrame(() => { const y = scrollY; t?.classList.toggle("masque", y > y0 && y > 160); y0 = y; attente = false; }); }, { passive: true });
 }
 
@@ -354,7 +355,11 @@ function champValide(c) {
 document.addEventListener("focusout", (e) => {
   const c = e.target; if (!c.matches?.("[aria-invalid='true']") || !champValide(c)) return;
   c.removeAttribute("aria-invalid"); const m = document.getElementById(c.id + "-erreur"); if (m) m.hidden = true;
-  const f = c.form, r = f && $("[data-resume-erreurs]", f); if (r && !$("[aria-invalid='true']", f)) r.hidden = true;
+  // Le résumé suit : l'erreur corrigée en disparaît, le compte est mis à jour
+  const f = c.form, r = f && $("[data-resume-erreurs]", f); if (!r || r.hidden) return;
+  r.querySelector(`a[href="#${c.id}"]`)?.closest("li")?.remove();
+  const n = r.querySelectorAll("li").length;
+  if (!n) r.hidden = true; else r.querySelector("strong").textContent = `${n} champ${n > 1 ? "s sont" : " est"} à corriger :`;
 });
 function valider(form, champs, autres = []) {
   let erreurs = [];

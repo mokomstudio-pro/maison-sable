@@ -56,8 +56,8 @@ ecrire("images/produits/carte-cadeau-1.svg", illustrationProduit("carte-cadeau",
 ecrire("images/coupe-sable-galette-palet.svg", illustrationCoupeTrois());
 ecrire("images/partage.svg", imagePartage());
 ecrire("images/favicon.svg", `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="${C.lagune}"/><circle cx="40" cy="26" r="12" fill="${C.corail}"/><path d="M0 44c16-8 34-8 64-2v22H0Z" fill="${C.sable}"/><path d="M16 50h32" stroke="${C.encre}" stroke-width="4" stroke-linecap="round"/></svg>`);
-const og = join(racine, "src/images/partage.png");
-if (existsSync(og)) cpSync(og, join(dist, "images/partage.png"));
+const og = join(racine, "src/images/partage.jpg");
+if (existsSync(og)) cpSync(og, join(dist, "images/partage.jpg"));
 
 // Données pour boutique.js : produits (panier, recherche), compléments, livraison
 const catalogue = {
