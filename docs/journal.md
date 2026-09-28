@@ -164,3 +164,13 @@
 - **Titres : Big Shoulders Display** (choix B de Morgane). Relief : Big Shoulders Inline Display. Texte : Figtree.
 - Mis à jour : `07-direction-artistique.md` (couleurs, typographie), contrat de direction (`.impeccable/surfaces/index-html.md`).
 - Détecteur de design : marges intérieures corrigées. Deux exceptions limitées à la planche (espacement des lettres en relief, étiquette posée sur le couvercle). Les scènes en formes géométriques simples devront devenir de vraies illustrations au développement.
+
+## 2026-09-28 — Conversion et mesure
+
+**Décisions**
+- Morgane garde le fond sable rosé.
+- Revue CRO de chaque gabarit, avant développement : aucun point bloquant. Points à corriger : emballage et délai d'acheminement (objection n°1 d'un cadeau), date limite de Noël → étape checkout ; validité de la carte cadeau → étape conformité.
+- Téléphone de fiction affiché mais pas cliquable (un lien d'appel aboutirait à un numéro qui ne sonne nulle part).
+- Mesure : « démontrer sans collecter ». 15 événements au format GA4 recommandé, ajoutés à `window.dataLayer` sans aucun envoi, et aucun outil chargé, donc pas de bandeau cookies. La conversion réelle du portfolio est `mokom_case_study_click`.
+- Documenté pour une vraie boutique : Consent Mode v2 en mode basique, application Google & YouTube ou GTM (jamais les deux), Search Console, Bing, Merchant Center.
+- Pas de tests A/B (aucun trafic).

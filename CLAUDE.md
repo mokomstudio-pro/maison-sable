@@ -24,6 +24,7 @@ Ce projet suit la méthode Mokom (plugin `mokom`). L'état d'avancement est dans
 - **Pas de vrai Shopify** : pages statiques qui reproduisent les gabarits Shopify (accueil, collection, fiche produit, panier, tunnel simulé). Garder des structures de données et de pages transposables en thème Liquid. Les étapes « checkout » et « analytics » de la chaîne sont réalisées en version maquette (aucun paiement, aucun traceur réel, pas de Merchant Center).
 - GitHub Pages sert le site depuis un sous-dossier : utiliser des chemins relatifs ou tenir compte du préfixe `/maison-sable/`.
 - **Indexation (validé par Morgane le 2026-09-27)** : la version publiée sur GitHub Pages est entièrement en `noindex` (une fausse biscuiterie ne doit pas apparaître dans Google). Tout le SEO est quand même réalisé dans le code. Pour lever le `noindex`, modifier cette ligne et la décision B de `docs/05-architecture.md`.
+- **Mesure** : aucun outil de mesure chargé (ni GA4, ni GTM, ni pixel), donc pas de bandeau cookies. Les événements GA4 sont seulement ajoutés à `window.dataLayer`, sans aucun envoi (voir `docs/09-cro-mesure.md`).
 - Le plugin `claude-seo-ai` reste **actif** : aucun geste Shopify/WordPress n'est bloqué sur un site statique.
 
 ## Règles non négociables
