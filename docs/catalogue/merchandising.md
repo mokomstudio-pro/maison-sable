@@ -74,7 +74,7 @@ Sur les boutons de poids, la différence est **concrète et exacte** (calculée 
 Pas de fenêtre qui s'ouvre avant l'ajout au panier : l'information est sur le bouton, c'est tout.
 
 ### Complément dans le panier (vers la livraison offerte)
-- Seuil de livraison offerte : **45 €** (provisoire, confirmé à l'étape checkout). La jauge et le montant restant sont toujours affichés.
+- Seuil de livraison offerte : **45 €** (confirmé à l'étape checkout). La jauge et le montant restant sont toujours affichés.
 - Si le montant restant est de **15 € ou moins** : proposer **un** sachet, choisi dans l'ordre de `panier_complements`, en excluant ce qui est déjà dans le panier. On prend de préférence un produit lié à un article du panier, et dont le prix couvre le montant restant (sinon le plus proche).
 - Jamais de case pré-cochée, jamais d'ajout automatique, jamais de compte à rebours.
 
@@ -86,5 +86,5 @@ Un coffret est un produit composé : ses composants sont liés à leurs fiches. 
 ## Porte de sortie
 - [x] Ordre de tri défini par collection, justifié, sans fausse donnée de vente. Produits épuisés gérés (alvéole vide, exclus des suggestions).
 - [x] Emplacements de recommandation définis avec leur logique (`merchandising.json`, contrôlé).
-- [x] Complément dans le panier cohérent avec le seuil de livraison (45 €, provisoire) et l'écart de 15 € de l'UX.
+- [x] Complément dans le panier cohérent avec le seuil de livraison (45 €, confirmé) et l'écart de 15 € de l'UX.
 - [x] Prix du Coffret Été Indien : option A, 31,90 € (Morgane, 2026-09-28).

@@ -25,7 +25,7 @@ Boutique fictive, étude de cas Mokom Studio : aucune commande n'est expédiée.
 - Jauge : « Plus que 12,40 € pour la livraison offerte » · atteinte : « La livraison est offerte »
 - Suggestion : « Pour atteindre la livraison offerte : » + une carte
 - Ligne : Quantité · Diminuer · Augmenter · Retirer · Message cadeau : « Modifier le message »
-- Totaux : Sous-total · Livraison (5,90 € / Offerte) · Total
+- Totaux : Sous-total · Livraison (dès 4,50 € / Offerte) · « Livré entre le [date] et le [date] » · Total
 - Bouton : Commander · Lien : Voir le panier
 - Réassurance : Commande fictive : aucun paiement ne sera demandé.
 - Panier vide : « Votre panier est vide. » + [Nos coffrets à offrir](/collections/coffrets-cadeaux) · [Nos biscuits](/collections/biscuits)

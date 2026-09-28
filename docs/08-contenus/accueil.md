@@ -19,7 +19,7 @@
 
 ## 3. Réassurance
 - Expédié sous 24 à 48 h ouvrées
-- Livraison 5,90 €, offerte dès 45 € d'achat
+- Livraison dès 4,50 €, offerte dès 45 € d'achat
 - Retrait gratuit à l'atelier d'Hossegor
 - De 45 à 90 jours de conservation selon la recette
 

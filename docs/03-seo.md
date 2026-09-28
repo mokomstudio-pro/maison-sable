@@ -69,7 +69,7 @@
   - Grille des 6 produits, filtres Format et Prix
   - H2 « Comment choisir son coffret ? » : petit tableau comparatif (contenu, poids, prix, pour qui)
   - H2 « Offrir à distance : message cadeau et livraison » : délais, message, envoi direct au destinataire
-  - H2 « Commander pour Noël » : **bloc saisonnier**, visible d'octobre à décembre, avec la date limite de commande `[À DÉCIDER à l'étape checkout]`
+  - H2 « Commander pour Noël » : **bloc saisonnier**, visible d'octobre à décembre, avec les dates limites de commande (`catalogue/livraison.json`)
 - Contenus obligatoires : fourchette de prix, délai, seuil de livraison offerte, message cadeau
 - Liens entrants : en-tête, accueil, fiches (fil d'Ariane), L'atelier, FAQ · Sortants : 6 fiches, Biscuits
 - Données structurées : `BreadcrumbList` + `ItemList`

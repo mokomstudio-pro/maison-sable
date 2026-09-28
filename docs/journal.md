@@ -174,3 +174,12 @@
 - Mesure : « démontrer sans collecter ». 15 événements au format GA4 recommandé, ajoutés à `window.dataLayer` sans aucun envoi, et aucun outil chargé, donc pas de bandeau cookies. La conversion réelle du portfolio est `mokom_case_study_click`.
 - Documenté pour une vraie boutique : Consent Mode v2 en mode basique, application Google & YouTube ou GTM (jamais les deux), Search Console, Bing, Merchant Center.
 - Pas de tests A/B (aucun trafic).
+
+## 2026-09-28 — Panier et commande simulée
+
+**Décisions (`[FICTIF]`, à valider par Morgane)**
+- Livraison : domicile 5,90 € (2 à 3 jours ouvrés), point relais 4,50 € (3 à 4 jours ouvrés, téléphone demandé avec sa raison), retrait gratuit à l'atelier. Livraison offerte dès **45 €** (confirmé). Préparation 1 à 2 jours ouvrés, heure limite midi. Date de livraison estimée affichée en clair. Aucun nom de transporteur réel.
+- Emballage : sachets calés en carton, biscuits cassés renvoyés sur photo envoyée sous 48 h, aucun prix dans un colis cadeau.
+- Noël 2026 : commander avant le 15 décembre midi (relais), le 17 décembre midi (domicile), le 22 décembre midi (retrait) ; atelier ouvert le 24 décembre de 10 h à 13 h. Dates calculées sur les jours ouvrés.
+- Panier : pas de champ code promo (aucun code n'existe), pas de paiements express simulés. Commande : une page en 3 sections, sans champ de carte bancaire, carte cadeau d'essai `SABLE-DEMO-20`.
+- Source unique : `docs/catalogue/livraison.json`. Propagé dans la fiche d'entité, la FAQ, les collections, l'accueil, le gabarit de fiche, l'UX, le GEO et la revue CRO (deux points 🟠 levés).

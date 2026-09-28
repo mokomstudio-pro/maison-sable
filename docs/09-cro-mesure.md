@@ -14,7 +14,7 @@
 | Preuves | 🟠 client réel | Avis fictifs signalés comme tels. C'est honnête pour la maquette ; un vrai client aurait besoin d'avis vérifiés (plateforme tierce). Réassurance chiffrée présente (bloc 3). |
 | Action | ✅ | Un bouton principal par écran (« Offrir un coffret »), lien secondaire vers les biscuits, ajout rapide sur les cartes. |
 | Frictions | ✅ | Pas de fenêtre à l'arrivée, pas de carrousel. Couvercle animé une seule fois, contenu visible sans JavaScript. |
-| Anxiété | ✅ | Prix « dès … », livraison 5,90 € / offerte dès 45 €, retrait gratuit : tout est visible avant le panier. |
+| Anxiété | ✅ | Prix « dès … », livraison dès 4,50 € / offerte dès 45 €, retrait gratuit : tout est visible avant le panier. |
 | Après la conversion | — | Sans objet (voir panier et commande). |
 
 ### Collections (Biscuits, Coffrets & cadeaux)
@@ -25,7 +25,7 @@
 | Preuves | ✅ | Tableau « Comment choisir son coffret ? » (contenu, poids, prix, pour qui) ; économie réelle de 1,40 € sur l'Été Indien. |
 | Action | ✅ | « Ajouter » sur chaque carte, choix du poids sur place pour les produits à 2 formats. |
 | Frictions | ✅ | Filtres limités (2 par collection), « Voir N produits » sur mobile, aucune page vide. |
-| Anxiété | 🟠 | **Date limite de Noël** encore `[À DÉCIDER]` → étape checkout. |
+| Anxiété | ✅ | Dates limites de Noël fixées (étape checkout). |
 
 ### Fiche produit
 | Critère | Statut | Constat |
@@ -34,7 +34,7 @@
 | Preuves | ✅ | Pourcentages d'ingrédients, nombre de biscuits, durée de conservation, allergènes : faits précis et vérifiables. |
 | Action | ✅ | « Ajouter au panier » + barre d'achat fixe sur mobile ; montée en gamme écrite sur le bouton (« 1,30 € de moins que 2 sachets »). |
 | Frictions | ✅ | Choix du poids par boutons (pas de liste déroulante), message cadeau facultatif. |
-| Anxiété | 🟠 | **Emballage / risque de casse** et **délai d'acheminement** non encore décidés → étape checkout. C'est l'objection n°1 d'un cadeau envoyé à distance. |
+| Anxiété | ✅ | Emballage calé, engagement « biscuits cassés renvoyés sur photo », date de livraison estimée affichée (étape checkout). |
 | Allergies | ✅ | Allergènes en gras, toujours ouverts ; questions dédiées (pignons, coco, soja, amandes). |
 
 ### Panier (tiroir et page)
@@ -49,7 +49,7 @@
 ### Commande simulée
 | Critère | Statut | Constat |
 |---|---|---|
-| Clarté | 🟠 | Textes à rédiger → étape checkout. |
+| Clarté | ✅ | Textes rédigés (`08-contenus/commande.md`). |
 | Frictions | ✅ | Sans compte, champs minimum, `autocomplete`, « Remplir avec un exemple », téléphone demandé seulement pour le point relais. |
 | Anxiété | ✅ | Récapitulatif toujours visible, aucun frais après l'étape livraison, date de livraison estimée. |
 | Après la conversion | ✅ | Page de confirmation « Et maintenant ? » avec lien vers l'étude de cas (conversion réelle du portfolio). E-mail de confirmation : sans objet (rien n'est envoyé). |
@@ -58,7 +58,7 @@
 | Critère | Statut | Constat |
 |---|---|---|
 | Suite logique | ✅ | Chaque page se termine par un lien vers une collection (souvenir, cadeau, recette). |
-| Anxiété | 🟠 | FAQ : 3 réponses `[À DÉCIDER]` (délai d'acheminement, emballage, validité de la carte cadeau). |
+| Anxiété | 🟠 | FAQ : validité de la carte cadeau encore `[À DÉCIDER]` → étape conformité. |
 | Confiance | ✅ | Question « Maison Sable existe-t-elle vraiment ? » : la transparence devient un signal de sérieux pour le prospect. |
 
 ### Contact

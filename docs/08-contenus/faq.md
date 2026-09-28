@@ -18,10 +18,10 @@ Refermez le sachet après chaque ouverture et gardez-le au sec, à l'abri de la 
 ## H2 : Livraison et retrait {#livraison}
 
 ### Quels sont les délais et les frais de livraison ?
-Maison Sable prépare chaque commande sous 24 à 48 h ouvrées et livre en France métropolitaine. La livraison coûte 5,90 € et devient offerte dès 45 € d'achat. Le délai d'acheminement dépend du mode choisi : `[À DÉCIDER à l'étape checkout]`.
+Maison Sable prépare chaque commande sous 24 à 48 h ouvrées et livre en France métropolitaine. La livraison à domicile coûte 5,90 € (2 à 3 jours ouvrés d'acheminement) et le point relais 4,50 € (3 à 4 jours ouvrés) ; les deux sont offerts dès 45 € d'achat. La date de livraison estimée s'affiche avant de commander.
 
 ### Les biscuits arrivent-ils cassés ?
-`[À DÉCIDER à l'étape checkout : emballage et calage des colis]`
+Rarement, et Maison Sable s'engage si c'est le cas. Les sachets voyagent calés dans une boîte en carton avec du papier froissé recyclé ; la Boîte Grande Plage et les coffrets sont suremballés. Si des biscuits arrivent cassés, envoyez une photo sous 48 heures : Maison Sable les renvoie.
 
 ### Peut-on retirer sa commande à l'atelier ?
 Oui, le retrait à l'atelier d'Hossegor est gratuit. Choisissez « Retrait à l'atelier » en commandant, puis passez du mardi au samedi, de 10 h à 13 h et de 15 h à 19 h. [L'atelier et ses horaires](/pages/atelier-hossegor)
@@ -46,7 +46,7 @@ Non. Toutes les recettes de Maison Sable contiennent de la farine de blé, du be
 Oui, sur les coffrets, la Boîte Grande Plage et la carte cadeau. Cochez « Ajouter un message cadeau » sur la fiche du produit et écrivez jusqu'à 200 caractères. Le message voyage avec le colis, ou avec l'e-mail pour la carte cadeau.
 
 ### Jusqu'à quand commander pour Noël ?
-Pour une livraison avant Noël, commandez au plus tard le `[À DÉCIDER à l'étape checkout]`. Après cette date, la carte cadeau reste possible : elle part par e-mail le jour de votre choix.
+Pour une livraison avant Noël, commandez au plus tard le **mardi 15 décembre à midi** en point relais et le **jeudi 17 décembre à midi** en livraison à domicile (retrait à l'atelier jusqu'au mardi 22 décembre à midi). Après ces dates, la carte cadeau reste possible : elle part par e-mail le jour de votre choix.
 
 ### Comment fonctionne la carte cadeau ?
 La carte cadeau Maison Sable, de 20, 40 ou 60 €, est envoyée par e-mail à la date de votre choix, avec votre message. La personne saisit le code reçu au moment de payer. Durée de validité : `[À DÉCIDER à l'étape conformité]`.
@@ -62,5 +62,4 @@ Non. Maison Sable est une marque fictive, imaginée par Mokom Studio pour montre
 - **Liens** : Nous contacter → `/pages/contact` · Nos coffrets à offrir → `/collections/coffrets-cadeaux` · Nos biscuits → `/collections/biscuits`
 
 ## À compléter
-- Délai d'acheminement, emballage et calage, date limite de Noël → étape checkout.
 - Validité de la carte cadeau → étape conformité.

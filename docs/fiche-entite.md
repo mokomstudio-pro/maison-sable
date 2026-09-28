@@ -44,14 +44,19 @@
 | Délai de réponse aux messages | 48 heures ouvrées | invention Mokom `[FICTIF]` |
 | Avis clients | avis d'exemple possibles sur le site, **signalés comme fictifs**, jamais dans les données structurées | règle Mokom |
 
-## Livraison et retrait (provisoire, fixé à l'étape checkout)
+## Livraison et retrait (fixés à l'étape checkout, détail : `catalogue/livraison.json`)
 
-| Champ | Valeur provisoire | Source |
+| Champ | Valeur | Source |
 |---|---|---|
-| Zone | France métropolitaine | brief `[FICTIF]` |
-| Préparation | 24 à 48 h ouvrées | invention Mokom `[FICTIF]` |
-| Tarif | 5,90 € ; **offerte dès 45 €** (seuil cohérent avec le marché observé) | `docs/02-recherche.md` `[FICTIF]` |
-| Retrait à l'atelier | gratuit, aux horaires de retrait | `[FICTIF]` |
+| Zone | France métropolitaine (outre-mer non livré) | `[FICTIF]` |
+| Préparation | 1 à 2 jours ouvrés ; commande après midi traitée le jour ouvré suivant | `[FICTIF]` |
+| Livraison à domicile | 5,90 €, acheminement 2 à 3 jours ouvrés | `[FICTIF]` |
+| Point relais | 4,50 €, acheminement 3 à 4 jours ouvrés | `[FICTIF]` |
+| Livraison offerte | dès **45 €** d'achat (domicile et relais) | seuil cohérent avec le marché (`02-recherche.md`) `[FICTIF]` |
+| Retrait à l'atelier | gratuit, prêt le jour ouvré suivant, aux horaires de retrait | `[FICTIF]` |
+| Emballage | sachets calés dans une boîte en carton, papier froissé recyclé ; boîte et coffrets suremballés ; aucun prix dans un colis cadeau | `[FICTIF]` |
+| Engagement casse | photo envoyée sous 48 h → biscuits renvoyés | `[FICTIF]` |
+| Noël 2026 | commander avant le 15 décembre midi (relais), le 17 décembre midi (domicile), le 22 décembre midi (retrait) ; atelier ouvert le 24 décembre de 10 h à 13 h | `[FICTIF]` |
 | Retours / rétractation | **à trancher à l'étape conformité** (denrées alimentaires : l'exception au droit de rétractation dépend de leur caractère périssable) | — |
 
 ## Profils externes

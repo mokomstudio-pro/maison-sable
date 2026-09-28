@@ -10,15 +10,15 @@
 | 1 | Quel coffret de biscuits artisanaux offrir ? | Coffrets & cadeaux | 3 coffrets et la boîte, contenus, prix |
 | 2 | Combien coûte un coffret de biscuits Maison Sable ? | Coffrets & cadeaux | 15,90 à 31,90 € ; Été Indien : 1,40 € de moins que ses composants |
 | 3 | Peut-on ajouter un message cadeau et faire livrer directement ? | Coffrets & cadeaux | message cadeau, livraison France métropolitaine |
-| 4 | Jusqu'à quand commander pour Noël ? | Coffrets & cadeaux (bloc saisonnier) | date limite `[À DÉCIDER à l'étape checkout]` |
+| 4 | Jusqu'à quand commander pour Noël ? | Coffrets & cadeaux (bloc saisonnier) | 15 décembre (relais), 17 décembre (domicile), 22 décembre (retrait), à midi |
 | 5 | Qu'est-ce que Maison Sable ? | Accueil | définition de la fiche d'entité |
 | 6 | Où acheter des biscuits artisanaux à Hossegor ? | L'atelier à Hossegor | atelier, retrait, horaires `[FICTIF]` |
 | 7 | Que rapporter d'Hossegor comme souvenir gourmand ? | L'atelier à Hossegor | coffrets, recettes inspirées du lieu |
 | 8 | Qui fabrique les biscuits Maison Sable ? | L'atelier à Hossegor | Jeanne, équipe de 3, petites séries `[FICTIF]` |
 | 9 | Combien de temps se conservent les sablés ? | FAQ | durées du catalogue (45 à 90 jours), conseils |
 | 10 | Comment garder des sablés croustillants ? | FAQ | au sec, sachet refermé |
-| 11 | Les biscuits arrivent-ils cassés ? Comment sont-ils emballés ? | FAQ | emballage `[À DÉCIDER à l'étape checkout]` |
-| 12 | Quels sont les délais et frais de livraison ? | FAQ | 24 à 48 h de préparation, 5,90 €, offerte dès 45 € (provisoire) |
+| 11 | Les biscuits arrivent-ils cassés ? Comment sont-ils emballés ? | FAQ | sachets calés en carton, biscuits renvoyés sur photo sous 48 h |
+| 12 | Quels sont les délais et frais de livraison ? | FAQ | préparation 1 à 2 j ouvrés, domicile 5,90 € (2 à 3 j), relais 4,50 € (3 à 4 j), offerte dès 45 € |
 | 13 | Peut-on retirer sa commande à l'atelier ? | FAQ | gratuit, horaires |
 | 14 | Les biscuits contiennent-ils des fruits à coque ? | FAQ | traces sur toutes les recettes, amandes dans Lagune |
 | 15 | Quels allergènes contiennent les biscuits ? | FAQ | 14 allergènes, par recette |

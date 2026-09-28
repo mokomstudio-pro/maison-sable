@@ -56,14 +56,14 @@ Les coffrets de biscuits artisanaux de Maison Sable arrivent prêts à offrir : 
 Les coffrets Découverte et Été Indien contiennent des amandes (Croquant Lagune).
 
 **H2 : Offrir à distance : message cadeau et livraison**
-Maison Sable prépare chaque commande sous 24 à 48 h ouvrées. Le message cadeau (200 caractères) s'ajoute sur la fiche du coffret, de la boîte ou de la carte cadeau. Au moment de commander, cochez « Livrer à une autre adresse » : le colis part directement chez la personne. Livraison 5,90 €, offerte dès 45 €.
+Maison Sable prépare chaque commande sous 24 à 48 h ouvrées. Le message cadeau (200 caractères) s'ajoute sur la fiche du coffret, de la boîte ou de la carte cadeau. Au moment de commander, cochez « Livrer à une autre adresse » : le colis part directement chez la personne. Livraison dès 4,50 €, offerte dès 45 €. Dans un colis envoyé à une autre adresse, aucun prix n'apparaît.
 
 **H2 : Commander pour Noël** *(visible d'octobre à décembre)*
-Pour une livraison avant Noël, commandez au plus tard le `[À DÉCIDER à l'étape checkout]`. Après cette date, la carte cadeau reste possible : elle part par e-mail le jour de votre choix.
+Pour une livraison avant Noël, commandez au plus tard le **mardi 15 décembre à midi** en point relais et le **jeudi 17 décembre à midi** en livraison à domicile (retrait à l'atelier jusqu'au mardi 22 décembre à midi). Après ces dates, la carte cadeau reste possible : elle part par e-mail le jour de votre choix.
 
 **Suite logique** : [Toutes nos recettes en sachet](/collections/biscuits)
 
 **Filtres (libellés)** : Format · Prix · (mêmes libellés d'interface que Biscuits)
 
 ## À compléter
-- Date limite de commande pour Noël → étape checkout.
+- ~~Date limite de Noël~~ → fixée à l'étape checkout.
