@@ -26,10 +26,10 @@
 ## Étude de cas — `/pages/etude-de-cas`
 **Proposition de valeur** : montrer à un futur client de Mokom Studio une boutique conçue avec méthode, de la recherche jusqu'à la performance.
 
-**H1** : Maison Sable, une étude de cas Mokom Studio
+**H1** : Maison Sable, par Mokom Studio
 
 **Réponse d'abord** :
-Maison Sable est une biscuiterie fictive imaginée par Mokom Studio, studio de conception de sites web, pour montrer comment se construit une boutique en ligne : cadrage, recherche, référencement, parcours, direction artistique, textes et performance. La marque, ses produits et ses avis sont inventés ; la méthode et les choix sont réels.
+Maison Sable est une biscuiterie fictive que j'ai imaginée pour vous montrer mon univers à travers un exemple artisanal. Cela vous permet de vous projeter et de voir comment je construis une boutique en ligne : cadrage, recherche, référencement, parcours, direction artistique, textes et performance. La marque, les produits et les avis sont inventés.
 
 ## H2 : Une marque fictive, une démarche réelle
 Chaque étape a produit un livrable et une décision. Les principales :
@@ -42,7 +42,7 @@ Chaque étape a produit un livrable et une décision. Les principales :
 | Architecture | 2 collections seulement, tout produit à 2 clics de l'accueil |
 | Référencement | une intention par page, titles et descriptions contrôlés automatiquement, site non indexé (marque fictive) |
 | Parcours | ajout au panier en 1 à 2 gestes, aucun champ de paiement dans la commande simulée |
-| Direction artistique | une boîte à biscuits en fer lithographiée des années 1930, produits illustrés |
+| Direction artistique | l’idée d’une boîte à biscuits en fer, en version gourmande : vraies photos, palette caramel et beurre |
 | Mise en avant | aucune fausse donnée de vente, économies réelles calculées |
 | Textes | chaque fait vient du catalogue ou de la fiche d'identité de la marque |
 

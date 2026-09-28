@@ -111,13 +111,13 @@ export function etudeDeCas() {
     ["Architecture", "2 collections seulement, tout produit à 2 clics de l'accueil"],
     ["Référencement", "une intention par page, titles et descriptions contrôlés automatiquement, site non indexé (marque fictive)"],
     ["Parcours", "ajout au panier en 1 à 2 gestes, aucun champ de paiement dans la commande simulée"],
-    ["Direction artistique", "une boîte à biscuits en fer lithographiée des années 1930, en pastels, produits illustrés"],
+    ["Direction artistique", "l’idée d’une boîte à biscuits en fer, en version gourmande : vraies photos, palette caramel et beurre"],
     ["Mise en avant", "aucune fausse donnée de vente, économies réelles calculées"],
     ["Textes", "chaque fait vient du catalogue ou de la fiche d'identité de la marque"],
     ["Commande et conformité", "livraison chiffrée, rétractation en ligne, déclaration nutritionnelle, aucun cookie"],
   ];
-  return simple("/pages/etude-de-cas", "Maison Sable, une étude de cas Mokom Studio", `<div class="texte">
-  <p class="chapo">${tx("Maison Sable est une biscuiterie fictive imaginée par Mokom Studio, studio de conception de sites web, pour montrer comment se construit une boutique en ligne : cadrage, recherche, référencement, parcours, direction artistique, textes et performance. La marque, ses produits et ses avis sont inventés ; la méthode et les choix sont réels.")}</p>
+  return simple("/pages/etude-de-cas", "Maison Sable, par Mokom Studio", `<div class="texte">
+  <p class="chapo">${tx("Maison Sable est une biscuiterie fictive que j'ai imaginée pour vous montrer mon univers à travers un exemple artisanal. Cela vous permet de vous projeter et de voir comment je construis une boutique en ligne : cadrage, recherche, référencement, parcours, direction artistique, textes et performance. La marque, les produits et les avis sont inventés.")}</p>
   <h2>Une marque fictive, une démarche réelle</h2>
   <div class="tableau-cadre" role="region" aria-label="Décisions par étape" tabindex="0"><table class="tableau"><thead><tr><th scope="col">Étape</th><th scope="col">Décision clé</th></tr></thead>
   <tbody>${etapes.map(([a, b]) => `<tr><th scope="row">${esc(a)}</th><td>${tx(b)}</td></tr>`).join("")}</tbody></table></div>
