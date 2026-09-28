@@ -111,3 +111,16 @@
 **Questions ouvertes**
 - Fontes exactes (épreuve au développement).
 - Production des illustrations (couvercle + 11 produits).
+
+## 2026-09-28 — Merchandising
+
+**Décisions**
+- Ordres des collections, plateaux de l'accueil et suggestions dans `docs/catalogue/merchandising.json`, contrôlés par `verifier-catalogue.mjs`.
+- Aucune fausse donnée de vente : pas de badge « Best-seller » ni « Nouveau ». Seules pastilles : « Cadeau » et « Contient des fruits à coque ».
+- Grand format : économie réelle affichée sur le bouton de poids (de 1,30 € à 4,90 €), prix au kilo calculé.
+- Panier : une seule suggestion (un sachet), seulement s'il manque 15 € ou moins pour la livraison offerte (45 €, provisoire).
+- Produit épuisé : alvéole vide « Revient bientôt », exclu des suggestions.
+- Correction dans `06-ux.md` : le plateau de l'accueil présente 2 coffrets, la boîte et la carte cadeau.
+
+**Questions ouvertes**
+- Le Coffret Été Indien (34 €) coûte 0,70 € de plus que ses composants (33,30 €). Option A : 31,90 € avec « 1,40 € de moins » ; option B : 34 € sans parler d'économie → **décision de Morgane**.

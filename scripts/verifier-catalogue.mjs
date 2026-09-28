@@ -69,8 +69,26 @@ for (const p of produits) {
   if (opts.size > 1) erreur(`${p.handle} : plusieurs noms d'option (${[...opts].join(", ")})`);
 }
 
+// Mise en avant (docs/catalogue/merchandising.json)
+const merch = JSON.parse(readFileSync("docs/catalogue/merchandising.json", "utf8"));
+const attendu = {
+  biscuits: produits.filter((p) => p.collection_principale === "biscuits").map((p) => p.handle),
+  "coffrets-cadeaux": produits.filter((p) => p.occasions.split("|").includes("Cadeau")).map((p) => p.handle),
+};
+for (const [c, { ordre }] of Object.entries(merch.collections)) {
+  if (!attendu[c]) { erreur(`merchandising : collection inconnue « ${c} »`); continue; }
+  const manquants = attendu[c].filter((h) => !ordre.includes(h));
+  const intrus = ordre.filter((h) => !attendu[c].includes(h));
+  if (manquants.length) erreur(`merchandising ${c} : absents de l'ordre : ${manquants.join(", ")}`);
+  if (intrus.length) erreur(`merchandising ${c} : n'appartiennent pas à la collection : ${intrus.join(", ")}`);
+  if (new Set(ordre).size !== ordre.length) erreur(`merchandising ${c} : produit en double dans l'ordre`);
+}
+const listes = [...Object.values(merch.accueil), ...Object.values(merch.fiche_aussi_dans), merch.panier_complements, merch.recuperation];
+for (const h of [...listes.flat(), ...Object.keys(merch.fiche_aussi_dans)]) if (!handles.has(h)) erreur(`merchandising : produit inconnu « ${h} »`);
+for (const h of merch.panier_complements) if (produits.find((p) => p.handle === h)?.format !== "Sachet") erreur(`merchandising : « ${h} » n'est pas un sachet (compléments panier = petits prix)`);
+
 if (erreurs.length) {
   console.log(`✗ ${erreurs.length} problème(s) :\n- ` + erreurs.join("\n- "));
   process.exit(1);
 }
-console.log(`✓ Catalogue valide : ${produits.length} produits, ${variantes.length} variantes.`);
+console.log(`✓ Catalogue valide : ${produits.length} produits, ${variantes.length} variantes, mise en avant cohérente.`);

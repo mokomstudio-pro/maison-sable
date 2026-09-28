@@ -1,0 +1,30 @@
+{
+  "_note": "Source de la mise en avant (docs/catalogue/merchandising.md). Contrôlé par scripts/verifier-catalogue.mjs. Handles = docs/catalogue/produits.csv.",
+  "collections": {
+    "biscuits": {
+      "ordre": ["sable-dune", "palet-maree", "biscuit-vague", "sable-pignada", "sable-ecume", "croquant-lagune", "sable-lagon"],
+      "bloc_editorial": { "apres_position": 3, "sujet": "Sablé, galette ou palet ?", "lien": "/blogs/journal/sable-galette-palet-difference" }
+    },
+    "coffrets-cadeaux": {
+      "ordre": ["coffret-ete-indien", "coffret-decouverte", "boite-grande-plage", "carte-cadeau", "sable-pignada", "croquant-lagune"],
+      "bloc_editorial": { "apres_position": 3, "sujet": "Offrir à distance : message cadeau et livraison directe", "lien": "/pages/faq#cadeaux" }
+    }
+  },
+  "accueil": {
+    "plateau_coffrets": ["coffret-ete-indien", "coffret-decouverte", "boite-grande-plage", "carte-cadeau"],
+    "plateau_recettes": ["sable-dune", "palet-maree", "biscuit-vague", "sable-pignada"]
+  },
+  "fiche_aussi_dans": {
+    "sable-dune": ["boite-grande-plage", "coffret-decouverte"],
+    "palet-maree": ["boite-grande-plage", "coffret-decouverte"],
+    "sable-pignada": ["coffret-ete-indien", "coffret-decouverte"],
+    "croquant-lagune": ["coffret-ete-indien", "coffret-decouverte"],
+    "sable-ecume": ["boite-grande-plage", "coffret-decouverte"],
+    "biscuit-vague": ["boite-grande-plage", "coffret-decouverte"],
+    "sable-lagon": []
+  },
+  "panier_complements": ["sable-dune", "palet-maree", "sable-ecume", "sable-lagon", "biscuit-vague", "sable-pignada", "croquant-lagune"],
+  "recuperation": ["coffret-ete-indien", "coffret-decouverte", "sable-dune", "palet-maree"],
+  "seuil_livraison_offerte": 45.00,
+  "ecart_max_suggestion_panier": 15.00
+}
