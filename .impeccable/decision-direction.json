@@ -1,0 +1,130 @@
+{
+  "title": "Maison Sable : choisir l'univers visuel",
+  "question": "Le tirage a désigné « La boîte en fer lithographiée ». Tu la gardes, tu prends une autre piste, ou tu relances ?",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "La boîte en fer lithographiée",
+      "kicker": "LE TIRAGE",
+      "lineage": "boîtes à biscuits en fer imprimées des stations balnéaires, années 1930",
+      "thesis": "Le site est une boîte à biscuits d'Hossegor : on soulève le couvercle, les biscuits sont rangés dedans.",
+      "palette": ["#DAD6CC", "#4E97A3", "#E9745B", "#F1C453", "#2E5B4E", "#1D2740"],
+      "materials": ["fer-blanc imprimé en aplats (lithographie)", "papier cristal des alvéoles", "lettres en relief sur le bandeau du couvercle"],
+      "viewport": "Le couvercle : une scène d'Hossegor (dune, ganivelles, lac marin, pins) en 4 encres plates, le nom embossé sur le bandeau, « Offrir un coffret » en bouton émaillé corail.",
+      "risk": "Peut tourner au kitsch nostalgique si les aplats sont mous. Il faut dessiner 1 scène + 11 illustrations produit (pas de photos).",
+      "raised": [
+        { "from": "challenger-splitflap", "raise": "Chaque étiquette produit suit la même grille fixe : nom, saveur, poids, prix, en chiffres alignés." },
+        { "from": "challenger-zine", "raise": "On explique en dessinant : une coupe imprimée compare sablé, galette et palet." },
+        { "from": "challenger-vhs", "raise": "L'état se lit dans l'objet : un produit épuisé laisse une alvéole vide avec son étiquette." },
+        { "from": "challenger-versailles", "raise": "Toute la page d'accueil suit un seul axe, du couvercle jusqu'au fond de la boîte." }
+      ]
+    },
+    {
+      "id": "model-pick",
+      "label": "L'affiche de la station",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "affiches balnéaires des chemins de fer, 1930-1960 (ta référence)",
+      "thesis": "Chaque page est une affiche de station : un grand aplat de soleil, une lettre immense, un seul message.",
+      "palette": ["#F0A93B", "#3E7FB8", "#C8452F", "#1B2B3A", "#9FC7C0"],
+      "materials": ["lithographie en aplats", "grain d'impression", "grandes capitales dessinées"],
+      "viewport": "Une affiche plein écran : ciel, dune et océan en aplats, « Maison Sable, Hossegor » en capitales géantes, le bouton en bas comme la mention de la compagnie.",
+      "risk": "Le style affiche rétro est très répandu ; il porte une image forte mais moins bien une grille de 11 produits."
+    },
+    {
+      "id": "challenger-sneaker",
+      "label": "Le mur de boîtes",
+      "verdict": "competitive",
+      "lineage": "archives de boîtes empilées, étiquettes de tranche",
+      "thesis": "La boutique est un mur de sachets et de boîtes empilés ; on lit les tranches, on tire une boîte pour l'ouvrir.",
+      "palette": ["#F4F1EA", "#1D1D1B", "#E9745B", "#4E97A3", "#F1C453"],
+      "materials": ["carton imprimé", "papier de soie", "étiquette de tranche"],
+      "viewport": "Un mur de boîtes aux couleurs des saveurs ; chaque tranche porte le nom en capitales serrées et les poids en chiffres alignés.",
+      "case": "Très clair pour choisir un produit ; moins évocateur de la mer et d'Hossegor.",
+      "risk": "Peut sembler froid et catalogue ; l'univers du bord de mer se perd.",
+      "hero": "https://impeccable.style/worlds/cards/textiles-weave-drape-fashion-sneaker-box-stacks-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/textiles-weave-drape-fashion-sneaker-box-stacks.webp"
+    },
+    {
+      "id": "challenger-splitflap",
+      "label": "Le tableau des départs",
+      "verdict": "declined",
+      "lineage": "tableau à palettes d'une gare",
+      "thesis": "Les produits défilent comme des départs sur un tableau à palettes.",
+      "palette": ["#111111", "#F5F5F0", "#F2A93B"],
+      "materials": ["palettes noires", "lettres blanches"],
+      "viewport": "Un tableau noir où chaque ligne est une recette.",
+      "case": "Ni gourmand ni balnéaire.",
+      "risk": "Froid, hors sujet.",
+      "kept": "La grille fixe : chaque étiquette a les mêmes cases, chiffres alignés.",
+      "hero": "https://impeccable.style/worlds/cards/signals-instruments-split-flap-concourse-hero.webp"
+    },
+    {
+      "id": "challenger-zine",
+      "label": "Le carnet dessiné",
+      "verdict": "declined",
+      "lineage": "fanzine explicatif au feutre",
+      "thesis": "Le site comme un carnet de recettes griffonné.",
+      "palette": ["#F3EBDC", "#1B1B1B", "#F4D35E", "#EE6C8A"],
+      "materials": ["papier", "feutre", "surligneur"],
+      "viewport": "Un titre au feutre, des flèches dessinées vers les biscuits.",
+      "case": "Trop proche du « fait maison » terroir que tu veux éviter.",
+      "risk": "Enfantin, peu premium.",
+      "kept": "Expliquer en dessinant (la coupe sablé / galette / palet).",
+      "hero": "https://impeccable.style/worlds/cards/hand-drawn-zine-explainer-hero.webp"
+    },
+    {
+      "id": "challenger-vhs",
+      "label": "Le vidéoclub",
+      "verdict": "declined",
+      "lineage": "mur de cassettes d'un vidéoclub",
+      "thesis": "Les recettes rangées comme des cassettes sur une étagère.",
+      "palette": ["#0E0E10", "#D7263D", "#3A86FF", "#FFD23F"],
+      "materials": ["boîtiers plastique", "étiquettes manuscrites"],
+      "viewport": "Une étagère de boîtiers, un mot manuscrit sous chacun.",
+      "case": "Aucun lien avec la mer ni la gourmandise.",
+      "risk": "Hors sujet.",
+      "kept": "L'état se voit dans l'objet (emplacement vide = épuisé).",
+      "hero": "https://impeccable.style/worlds/cards/vernacular-ephemera-vhs-rental-wall-hero.webp"
+    },
+    {
+      "id": "challenger-versailles",
+      "label": "Les jardins à la française",
+      "verdict": "declined",
+      "lineage": "jardins de Versailles",
+      "thesis": "La boutique comme une promenade dans des jardins symétriques.",
+      "palette": ["#3F5B3A", "#D9CBA3", "#B8963E", "#F2F2EE"],
+      "materials": ["buis taillé", "gravier", "bronze doré"],
+      "viewport": "Une perspective axiale vers les collections.",
+      "case": "Luxe et distance : l'inverse du ton chaleureux voulu.",
+      "risk": "Luxe froid.",
+      "kept": "Un seul axe qui guide la lecture de la page d'accueil.",
+      "hero": "https://impeccable.style/worlds/cards/architecture-inhabitable-space-versailles-bosquet-vistas-hero.webp"
+    },
+    {
+      "id": "challenger-leather",
+      "label": "L'atelier en cuir",
+      "verdict": "declined",
+      "lineage": "interfaces imitant cuir, lin et bois",
+      "thesis": "Chaque élément est un objet de cuir cousu sur une étagère en bois.",
+      "palette": ["#8B5A2B", "#D8CFC0", "#5C3A1E", "#F4EEE2"],
+      "materials": ["cuir piqué", "lin", "noyer"],
+      "viewport": "Un en-tête en cuir surpiqué au-dessus d'étagères en bois.",
+      "case": "Exactement le « terroir » à éviter.",
+      "risk": "Terroir, daté.",
+      "kept": "La franchise des matières : le couvercle s'ouvre vraiment.",
+      "hero": "https://impeccable.style/worlds/cards/digital-design-canon-skeuomorph-leather-studio-hero.webp"
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "buildPath": { "value": "code", "toggle": false },
+  "canon": true,
+  "canonCard": {
+    "label": "La boutique gourmande classique",
+    "thesis": "Ce que font la plupart des biscuiteries en ligne, exécuté parfaitement.",
+    "palette": ["#FFFFFF", "#1F2328", "#B5651D", "#F3EDE4"],
+    "materials": ["grille de produits nette", "photographie produit"],
+    "viewport": "Une grande photo de biscuits, le titre, deux boutons, puis la grille des produits.",
+    "risk": "Impossible à distinguer des concurrents, et il faudrait de vraies photos que nous n'avons pas."
+  },
+  "steer": true
+}

@@ -96,4 +96,18 @@
 
 - **Décision B validée** : le site publié sur GitHub Pages est entièrement en `noindex`. Le travail SEO reste fait dans le code (voir CLAUDE.md et `05-architecture.md`).
 - **Site de Mokom Studio** : https://www.mokomstudio.fr (page Étude de cas, éditeur réel dans la fiche d'entité).
-- Questions ouvertes restantes : gamme et prix (validation implicite, rien de signalé), origine des ingrédients, emballage, date limite de Noël, prix au kilo.
+- Gamme et prix du catalogue **validés par Morgane** le 2026-09-27.
+- Questions ouvertes restantes : origine des ingrédients, emballage, date limite de Noël, prix au kilo.
+
+## 2026-09-28 — Direction artistique
+
+**Décisions**
+- Réponses de Morgane : retenir « une marque qui a une vraie personnalité » ; éviter le terroir et le luxe froid ; référence : affiches balnéaires anciennes.
+- Piste choisie sur la page de décision : **« La boîte en fer lithographiée »** (tirage de l'outil de conception, seed 6d3452dc). Écartées : l'affiche de station, le mur de boîtes, la boutique classique, et 5 pistes hors sujet dont une discipline a été gardée.
+- Palette en encres plates, contrastes vérifiés : fer-blanc, papier cristal, encre, corail (actions, texte encre), lagune `#62A7B1` (ajustée pour le contraste), lagune profond `#285F69` (liens), beurre, pin.
+- Aucune photo : produits illustrés en aplats, logo dessiné. Moment signature : le couvercle qui se soulève sur l'accueil.
+- Construction pilotée par le code (pas de générateur d'images dans cette session) ; contrat de direction dans `.impeccable/surfaces/index-html.md`. `DESIGN.md` sera écrit à la fin du développement.
+
+**Questions ouvertes**
+- Fontes exactes (épreuve au développement).
+- Production des illustrations (couvercle + 11 produits).

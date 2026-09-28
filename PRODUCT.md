@@ -33,6 +33,7 @@ Consultation surtout sur mobile (vacances, réseaux sociaux), pics en été et a
 - Structures fidèles à Shopify pour une transposition future en thème Liquid.
 
 ## Brand Commitments
+- **Idée directrice** : « Une boîte à biscuits en fer imprimée d'Hossegor, années 1930 : on soulève le couvercle, les biscuits sont rangés dedans. » (voir `docs/07-direction-artistique.md`)
 - Palette douce et gourmande ; ton chaleureux, sensoriel, simple.
 - Pas d'allégation santé ni de label inventé présenté comme réel.
 - Mention visible « Projet fictif — étude de cas Mokom Studio ».
