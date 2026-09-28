@@ -29,7 +29,7 @@ const menu = [
 
 export const logo = (balise = "a") =>
   balise === "a"
-    ? `<a class="logo" href="${url("/")}" aria-label="Maison Sable, accueil"><span class="logo-nom">Maison Sable</span><span class="logo-lieu">Hossegor</span></a>`
+    ? `<a class="logo" href="${url("/")}"><span class="logo-nom">Maison Sable</span> <span class="logo-lieu">Hossegor</span><span class="visuellement-cache">, accueil</span></a>`
     : `<span class="logo"><span class="logo-nom">Maison Sable</span><span class="logo-lieu">Hossegor</span></span>`;
 
 export function filAriane(etapes) {

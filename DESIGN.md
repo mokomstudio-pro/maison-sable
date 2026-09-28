@@ -330,4 +330,4 @@ Sous le couvercle, un plateau cannelle aux coins bas de 14 px, creusé et cerné
 - Un seul rouge d'erreur : `#8E3321` (bordure des champs invalides comprise).
 - Mesures de texte converties en em (intro 32 em, chapô et blocs d'aide 34 em, étiquette du couvercle 28 em).
 - Légende « Photo d'illustration » ajoutée sur la photo du couvercle et sur la photo de l'atelier de l'accueil. Les cartes produit n'en portent pas : le bandeau « boutique fictive » et les légendes des fiches suffisent.
-- Reste à traiter (étape accessibilité) : les signes ✓ (variante choisie) et ⚠ (erreur de champ) sont tapés en caractères au lieu d'être dessinés ; restes inactifs de l'ancien mécanisme du plateau (transitions, règles masquées) à nettoyer.
+- Étape accessibilité : les signes ✓ (variante choisie) et ⚠ (erreur de champ) sont désormais des icônes dessinées (masques SVG, couleur du texte) ; restes des anciennes versions supprimés du CSS.

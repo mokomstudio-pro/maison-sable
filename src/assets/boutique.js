@@ -269,7 +269,17 @@ $$("dialog.tiroir").forEach((d) => {
     ouvrirBtn?.addEventListener("click", () => { panneau.classList.add("ouvert"); ouvrirBtn.setAttribute("aria-expanded", "true"); $("input", panneau)?.focus(); });
     $("[data-ferme-filtres]", form)?.addEventListener("click", fermer);
     $("[data-voir]", form)?.addEventListener("click", fermer);
-    panneau.addEventListener("keydown", (e) => { if (e.key === "Escape" && panneau.classList.contains("ouvert")) fermer(); });
+    panneau.addEventListener("keydown", (e) => {
+      if (!panneau.classList.contains("ouvert")) return;
+      if (e.key === "Escape") return fermer();
+      // Panneau plein écran (mobile) : le focus reste dans le panneau tant qu'il est ouvert
+      if (e.key === "Tab") {
+        const f = $$("button, input, select, a[href]", panneau).filter((x) => !x.disabled && x.offsetParent !== null);
+        const [premier, dernier] = [f[0], f[f.length - 1]];
+        if (e.shiftKey && document.activeElement === premier) { e.preventDefault(); dernier.focus(); }
+        else if (!e.shiftKey && document.activeElement === dernier) { e.preventDefault(); premier.focus(); }
+      }
+    });
     // Filtres présents dans l'adresse
     const ps = new URLSearchParams(location.search);
     ps.getAll(`filter.p.m.custom.${nomFiltre}`).forEach((x) => { const i = $$(`input[name="${nomFiltre}"]`, form).find((c) => c.value === x); if (i) i.checked = true; });

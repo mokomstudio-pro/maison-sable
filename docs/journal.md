@@ -249,3 +249,10 @@
 
 - Compte GitHub `mokomstudio-pro` (déjà connecté sur le poste) validé par Morgane. Adresse du site : **https://mokomstudio-pro.github.io/maison-sable/**, enregistrée dans `src/config.mjs` (canonicals, plan du site, image de partage).
 - Dépôt public `maison-sable` (obligatoire pour GitHub Pages gratuit) : **création et publication seulement après `/mokom:audit`**, comme le veut la méthode.
+
+## 2026-09-28 — Accessibilité
+
+- Lighthouse accessibilité (mobile) : **100** sur l'accueil, la collection, la fiche produit, la FAQ et la commande.
+- Corrigé : nom accessible du logo (« Maison Sable Hossegor, accueil »), niveaux de titres des cartes produit, focus piégé dans le panneau de filtres mobile, icônes ✓ et ⚠ dessinées. Nettoyage du CSS des anciennes versions.
+- Tests au clavier réussis : lien d'évitement, ordre de tabulation, contour de focus, tiroir du panier (Échap, retour du focus), choix rapide, filtres, résumé d'erreurs de la commande. Zones cliquables de 44 px.
+- Limite : pas de test avec un vrai lecteur d'écran (recommandé). Rapport : `docs/audits/accessibilite.md`.

@@ -58,7 +58,7 @@ export default function collection(handle) {
   const x = textes[handle];
   const liste = c.ordre.map(produit);
   const valeurs = [...new Set(liste.map((p) => p[x.filtre.nom]))];
-  const cartes = liste.map((p) => carteProduit(p, { liste: handle, niveauTitre: 3 }));
+  const cartes = liste.map((p) => carteProduit(p, { liste: handle, niveauTitre: 2 }));
   cartes.splice(c.bloc.apres_position, 0, x.bloc);
   const ariane = [["Accueil", "/"], [c.titre]];
   const corps = `

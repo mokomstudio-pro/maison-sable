@@ -101,9 +101,6 @@ a.logo:hover { background: var(--miel); box-shadow: inset 0 0 0 2px var(--miel),
 
 /* ---------- Frises (rebords de boîte) ---------- */
 .frise { height: 28px; background-repeat: repeat-x; background-position: center; }
-.frise-vagues { background-image: url("../images/frise-vagues.svg"); background-color: var(--miel); }
-.frise-ganivelles { background-image: url("../images/frise-ganivelles.svg"); }
-.frise-pignes { background-image: url("../images/frise-pignes.svg"); background-color: var(--encre); }
 
 /* ---------- Mise en page ---------- */
 .section, .page-tete, .reassurance, .histoire, .fin-page, .collection, .fiche, .fiche-contenu, .commande { max-width: var(--largeur); margin-inline: auto; padding-inline: var(--gouttiere); }
@@ -270,7 +267,7 @@ select:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px
 .variante label small { display: block; font-size: .85rem; color: var(--encre-douce); font-variant-numeric: tabular-nums; }
 .variante .eco { color: var(--encre); font-weight: 700; }
 .variante input:checked + label { border-color: var(--encre); box-shadow: inset 0 0 0 1px var(--encre); background: #FFFDF8; }
-.variante input:checked + label b::before { content: "✓ "; }
+.variante input:checked + label b::before { content: ""; display: inline-block; width: 1em; height: 1em; margin-right: .3em; vertical-align: -.12em; background: currentColor; -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8.5l3.2 3.2L13 4.8' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8.5l3.2 3.2L13 4.8' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat; }
 .variante input:focus-visible + label { outline: 3px solid var(--lien); outline-offset: 3px; }
 .message-cadeau { display: grid; gap: .4rem; margin-bottom: var(--e-3); }
 .message-cadeau label:not(.case) { font-weight: 600; font-size: .95rem; }
@@ -327,7 +324,7 @@ select:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px
 .champ-ligne input { flex: 1 1 12rem; }
 .aide { font-size: .88rem; color: var(--encre-douce); margin: 0; }
 .erreur-champ { color: #8E3321; font-weight: 600; font-size: .92rem; margin: 0; }
-.erreur-champ::before { content: "⚠ "; }
+.erreur-champ::before { content: ""; display: inline-block; width: 1em; height: 1em; margin-right: .35em; vertical-align: -.14em; background: currentColor; -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 1.8L15 14H1z' fill='black'/%3E%3Cpath d='M8 6v3.6M8 11.6v.4' stroke='white' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E") center / contain no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 1.8L15 14H1z' fill='black'/%3E%3Cpath d='M8 6v3.6M8 11.6v.4' stroke='white' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E") center / contain no-repeat; }
 .resume-erreurs { background: #FBE3DC; border-radius: var(--r-plaque); padding: var(--e-3) var(--e-4); box-shadow: inset 0 0 0 2px #8E3321; }
 .resume-erreurs ul { margin: .4rem 0 0; padding-left: 1.2rem; }
 .confirmation { background: var(--cannelle); padding: .7rem .9rem; border-radius: var(--r-plaque); font-weight: 600; }
@@ -486,18 +483,11 @@ fieldset { min-width: 0; }
   .definition-courte { display: block; }
   .etiquette-couvercle { bottom: 5%; padding: 1rem 1rem .95rem; }
 }
-/* 5. Le plateau sort de sous le couvercle au premier défilement (transform uniquement) */
-.couvercle, .plateau { transition: transform .6s var(--ease); }
 
 /* 6. Réassurance : une ligne imprimée le long d'une bande */
 .reassurance { padding-block: var(--e-5); }
 .bande-imprimee { margin: 0; padding: .9rem 1.2rem; background: var(--miel); border-block: 2px dashed var(--encre); font-weight: 600; text-align: center; text-wrap: balance; line-height: 1.6; }
-/* 7. Le pin déborde du cadre à droite (ordinateur) */
 .boite-accueil { position: relative; }
-.pin-debord { display: none; }
-@media (min-width: 760px) {
-  .pin-debord { display: block; position: absolute; z-index: 3; width: clamp(220px, 24vw, 330px); right: calc(-1 * clamp(36px, 4vw, 72px)); top: 40%; pointer-events: none; }
-}
 /* 8. Pas de relief simulé : la fonte Inline suffit */
 .bandeau-relief { box-shadow: none; }
 .couvercle { box-shadow: none; }
@@ -510,8 +500,6 @@ fieldset { min-width: 0; }
   .pastilles { padding: .4rem .4rem 0; gap: .25rem; }
 }
 
-.couvercle-cadre { position: relative; z-index: 2; }
-.plateau-int { transition: opacity .45s var(--ease) .15s; }
 
 
 /* ================= Direction gourmande « Caramel et beurre » (2026-09-28) ================= */
@@ -558,7 +546,6 @@ a.logo:hover { background: var(--miel); color: var(--encre); box-shadow: inset 0
 @keyframes couvercle-souleve { 0% { transform: none; } 35% { transform: translateY(-4%) rotate(-1.5deg); } 100% { transform: translateY(-106%) rotate(-4deg); visibility: hidden; } }
 @media (prefers-reduced-motion: reduce) { .couvercle-metal { display: none; } }
 .etiquette-couvercle { z-index: 5; }
-.pin-debord, .couvercle-cadre { display: none; }
 .plateau .pastille, .alveole .pastille { color: var(--encre); }
 .bandeau-relief { z-index: 2; }
 .couvercle-metal { place-items: start center; padding-top: clamp(4.5rem, 12cqw, 9rem); }
