@@ -238,3 +238,9 @@
 - Performance mesurée sur 5 gabarits (mobile, 4G lente, processeur ÷ 4) : LCP 1,27 à 2,24 s, CLS 0 à 0,01, aucune interaction au-dessus de 16 ms. Rapport : `docs/audits/performance.md`.
 - Corrections : styles intégrés dans les pages (LCP accueil 2,80 → 2,24 s), photo d'accueil 640 px pour mobile, récapitulatif de commande replié sur mobile et place réservée aux dates (CLS commande 0,14 → 0).
 - Signalé : photo d'accueil ordinateur à 152 Ko (budget 150 Ko), sans effet sur le mobile.
+
+## 2026-09-28 — Référencement technique
+
+- Nouvel outil `scripts/verifier-seo.mjs` (`npm run check:seo`) : contrôle des 31 pages construites (langue, h1, hiérarchie des titres, title et description conformes à metas.csv, canonical, noindex, Open Graph, images, liens internes, JSON-LD, plan du site, robots.txt).
+- 2 défauts trouvés et corrigés : saut de titre h1 → h3 sur la page 404 et sur « Tous les produits ». Résultat : conforme.
+- Rapport : `docs/audits/seo-technique.md`. Reste pour la mise en ligne : le compte GitHub (adresse du site).

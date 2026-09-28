@@ -102,6 +102,6 @@ ${x.aide}`;
 
 export function toutes() {
   const corps = `<div class="page-tete">${filAriane([["Accueil", "/"], ["Tous les produits"]])}<h1>Tous les produits</h1></div>
-  <section class="section"><div class="grille-produits">${produits.map((p) => carteProduit(p, { liste: "toutes" })).join("")}</div></section>`;
+  <section class="section"><div class="grille-produits">${produits.map((p) => carteProduit(p, { liste: "toutes", niveauTitre: 2 })).join("")}</div></section>`;
   return page({ chemin: "/collections/all", titre: "Tous les produits | Maison Sable", description: "Tous les biscuits, boîtes, coffrets et cartes cadeaux de Maison Sable.", corps, indexable: false });
 }

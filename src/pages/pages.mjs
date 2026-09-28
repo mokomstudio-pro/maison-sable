@@ -311,6 +311,6 @@ export function erreur404() {
     corps: `<div class="page-tete page-404"><h1>${tx("Cette page s'est envolée avec la marée")}</h1><p class="intro">${tx("L'adresse n'existe pas ou plus. Cherchez un biscuit, ou repartez d'une collection.")}</p>
     <form class="recherche-form" action="${url("/search")}" role="search"><label for="e-champ">Rechercher un biscuit ou un coffret</label><div class="champ-ligne"><input id="e-champ" name="q" type="search"><button class="bouton" type="submit">Rechercher</button></div></form>
     <p class="actions"><a class="lien-fort" href="${url("/")}">Accueil</a><a class="lien-fort" href="${url("/collections/coffrets-cadeaux")}">Nos coffrets à offrir</a><a class="lien-fort" href="${url("/collections/biscuits")}">Nos biscuits</a></p></div>
-    <section class="section">${grille(merch.recuperation.map(produit), { liste: "404" })}</section>` });
+    <section class="section" aria-labelledby="t-404"><h2 id="t-404">À découvrir</h2>${grille(merch.recuperation.map(produit), { liste: "404" })}</section>` });
 }
 void carteProduit;
