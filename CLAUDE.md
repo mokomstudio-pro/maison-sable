@@ -15,7 +15,7 @@ Ce projet suit la méthode Mokom (plugin `mokom`). L'état d'avancement est dans
 4. Les skills Mokom, puis les skills spécialisées (claude-seo-ai, impeccable, frontend-design, web-quality…)
 
 ## Fiche projet
-- Type : e-commerce (maquette de portfolio) · Plateforme : HTML/CSS statique « façon Shopify » · Hébergement : GitHub Pages · Domaine : `[À COMPLÉTER : compte GitHub]`.github.io
+- Type : e-commerce (maquette de portfolio) · Plateforme : HTML/CSS statique « façon Shopify » · Hébergement : GitHub Pages · Adresse : https://mokomstudio-pro.github.io/maison-sable/ (compte GitHub `mokomstudio-pro`, dépôt public `maison-sable`, publication après `/mokom:audit`)
 - Action n°1 : ajouter au panier → commander (coffrets cadeaux en priorité)
 - Langue : fr-FR
 

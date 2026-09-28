@@ -244,3 +244,8 @@
 - Nouvel outil `scripts/verifier-seo.mjs` (`npm run check:seo`) : contrôle des 31 pages construites (langue, h1, hiérarchie des titres, title et description conformes à metas.csv, canonical, noindex, Open Graph, images, liens internes, JSON-LD, plan du site, robots.txt).
 - 2 défauts trouvés et corrigés : saut de titre h1 → h3 sur la page 404 et sur « Tous les produits ». Résultat : conforme.
 - Rapport : `docs/audits/seo-technique.md`. Reste pour la mise en ligne : le compte GitHub (adresse du site).
+
+## 2026-09-28 — Adresse du site
+
+- Compte GitHub `mokomstudio-pro` (déjà connecté sur le poste) validé par Morgane. Adresse du site : **https://mokomstudio-pro.github.io/maison-sable/**, enregistrée dans `src/config.mjs` (canonicals, plan du site, image de partage).
+- Dépôt public `maison-sable` (obligatoire pour GitHub Pages gratuit) : **création et publication seulement après `/mokom:audit`**, comme le veut la méthode.

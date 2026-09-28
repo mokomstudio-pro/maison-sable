@@ -22,7 +22,7 @@
 | Données structurées | JSON-LD valide : `Organization` + `WebSite` (accueil), `BreadcrumbList` + `ItemList` (collections), `ProductGroup` / `Product` + `Offer` avec prix, devise, disponibilité et frais de livraison (fiches), `Article` + `BreadcrumbList` (article). **Aucune note ni aucun avis** (avis fictifs). | ✅ |
 
 ## À faire à la mise en ligne
-- Remplacer l'adresse provisoire `SITE_URL` (`src/config.mjs`) par `https://<compte>.github.io` ; toutes les adresses de référence, le plan du site et l'image de partage suivront. **À fournir par Morgane : le compte GitHub.**
+- ~~Adresse du site~~ : `SITE_URL` = https://mokomstudio-pro.github.io (validé par Morgane le 2026-09-28).
 - Tester une fiche produit dans l'outil de test des résultats enrichis de Google (possible même en `noindex`, avec l'adresse publique).
 - Search Console et Bing Webmaster Tools : sans objet (site non indexé, par choix).
 
