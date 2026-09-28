@@ -271,7 +271,8 @@ export function imagePartage() {
   return svg(1200, 630, out);
 }
 
-export const pinDebord = () => svg(520, 300, `<rect x="250" y="120" width="16" height="180" fill="${C.pin}"/>` + couronne(260, 110, 1.9));
+// Couronne seule (sans tronc) qui prolonge le grand pin de la scène au-delà du cadre, entièrement dans son repère
+export const pinDebord = () => svg(640, 220, couronne(318, 100, 1.9));
 
 export const frises = {
   vagues: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="28"><path d="M0 18 Q12 4 24 18 T48 18" fill="none" stroke="${C.laguneP}" stroke-width="3"/></svg>`,

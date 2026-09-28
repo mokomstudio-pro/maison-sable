@@ -10,7 +10,8 @@ export default function accueil() {
   const recettes = merch.accueil.plateau_recettes.map(produit);
   const corps = `
 <section class="boite-accueil" aria-labelledby="titre-accueil">
-  <img class="pin-debord" src="${url("/images/pin-debord.svg")}" alt="" width="520" height="300" aria-hidden="true">
+  <div class="couvercle-cadre">
+  <img class="pin-debord" src="${url("/images/pin-debord.svg")}" alt="" width="640" height="220" aria-hidden="true">
   <div class="couvercle" data-couvercle>
     <picture>
       <source media="(min-width: 760px)" srcset="${url("/images/couvercle-large.svg")}" width="1600" height="900">
@@ -26,6 +27,7 @@ export default function accueil() {
         <a class="lien-fort" href="${url("/collections/biscuits")}">Découvrir nos biscuits</a>
       </div>
     </div>
+  </div>
   </div>
   <div class="plateau" aria-labelledby="titre-coffrets">
     <div class="plateau-int">

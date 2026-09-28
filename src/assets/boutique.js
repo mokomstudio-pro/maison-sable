@@ -164,7 +164,7 @@ $$("dialog.tiroir").forEach((d) => {
   const boite = $(".boite-accueil");
   if (boite && !reduit) {
     const ouvrir = () => { boite.classList.add("ouverte"); removeEventListener("scroll", ouvrir); };
-    if (scrollY > 40) ouvrir(); else addEventListener("scroll", ouvrir, { passive: true, once: true });
+    if (scrollY > 40) ouvrir(); else { addEventListener("scroll", ouvrir, { passive: true, once: true }); setTimeout(ouvrir, 1500); }
   } else boite?.classList.add("ouverte");
 }
 

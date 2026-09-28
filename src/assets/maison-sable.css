@@ -489,7 +489,7 @@ fieldset { min-width: 0; }
 /* 5. Le plateau sort de sous le couvercle au premier défilement (transform uniquement) */
 .couvercle, .plateau { transition: transform .6s var(--ease); }
 @media (prefers-reduced-motion: no-preference) {
-  .js .boite-accueil:not(.ouverte) .plateau { transform: translateY(-38%); }
+  .js .boite-accueil:not(.ouverte) .plateau { transform: translateY(calc(-1 * min(38%, 18rem))); }
   .js .boite-accueil:not(.ouverte) .couvercle { transform: translateY(10px); }
   .js .boite-accueil.ouverte .couvercle { transform: translateY(-6px) rotateX(2deg); }
 }
@@ -500,8 +500,22 @@ fieldset { min-width: 0; }
 .boite-accueil { position: relative; }
 .pin-debord { display: none; }
 @media (min-width: 760px) {
-  .pin-debord { display: block; position: absolute; z-index: 3; width: clamp(180px, 22vw, 300px); right: calc(var(--gouttiere) - clamp(40px, 5vw, 80px)); top: 14%; pointer-events: none; }
+  .pin-debord { display: block; position: absolute; z-index: 3; width: clamp(220px, 24vw, 330px); right: calc(-1 * clamp(36px, 4vw, 72px)); top: 40%; pointer-events: none; }
 }
 /* 8. Pas de relief simulé : la fonte Inline suffit */
 .bandeau-relief { box-shadow: none; }
 .couvercle { box-shadow: none; }
+
+/* Revue finale, 2e passage */
+.alveole, .alveole:hover { text-decoration: none; }
+.pastilles { flex-wrap: nowrap; overflow: hidden; }
+@media (max-width: 479px) {
+  .pastille { font-size: .66rem; padding: .2rem .4rem; }
+  .pastilles { padding: .4rem .4rem 0; gap: .25rem; }
+}
+
+.couvercle-cadre { position: relative; z-index: 2; }
+.plateau-int { transition: opacity .45s var(--ease) .15s; }
+@media (prefers-reduced-motion: no-preference) {
+  .js .boite-accueil:not(.ouverte) .plateau-int { opacity: 0; }
+}
