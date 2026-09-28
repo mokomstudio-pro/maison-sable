@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "wide-tracking",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/planche-direction.html"
+        ],
+        "createdAt": "2026-09-28T10:34:55.891Z",
+        "reason": "Claude: tracking 0.08em is on the short uppercase embossed lid band (MAISON SABLE · HOSSEGOR), a label, not body text"
+      },
+      {
+        "rule": "nested-cards",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/planche-direction.html"
+        ],
+        "createdAt": "2026-09-28T10:34:56.231Z",
+        "reason": "Claude: label printed on the tin lid and cells inside the open box are the chosen direction's grammar (docs/07-direction-artistique.md), not card nesting"
+      }
+    ]
+  }
+}
