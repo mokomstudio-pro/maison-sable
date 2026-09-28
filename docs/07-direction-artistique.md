@@ -1,6 +1,7 @@
 # Direction artistique — Maison Sable
 
 > Étape « UI » · 2026-09-28 · Piste choisie par Morgane sur la page de décision : **« La boîte en fer lithographiée »**.
+> Planche de travail : `.impeccable/mocks/planche-direction.html` (version pastel validée).
 > Contrat de direction technique : `.impeccable/surfaces/index-html.md` (relu par l'outil de conception à chaque étape de construction). `DESIGN.md` sera écrit **à la fin du développement**, à partir du site réellement construit.
 
 ## 1. Idée directrice
@@ -16,26 +17,28 @@ Chaque choix visuel doit pouvoir s'y rattacher : couleurs = encres d'imprimerie 
 
 Pistes écartées (visibles sur la page de décision) : l'affiche de station (très répandue, porte mal une grille de produits), le mur de boîtes (clair mais sans la mer), la boutique classique (indistincte, exige des photos), et cinq pistes hors sujet dont on a gardé une discipline chacune (voir §6).
 
-## 3. Couleurs (encres plates, jamais de dégradé)
+## 3. Couleurs : encres pastel (révisées le 2026-09-28 à la demande de Morgane : « plus douces et chaleureuses, tons pastel »)
 
 | Rôle | Nom | Valeur | Usage | Contraste vérifié |
 |---|---|---|---|---|
-| Fond | Fer-blanc | `#DAD6CC` | fond général, « métal » de la boîte | texte encre : 10,2:1 ✅ |
-| Zone de lecture | Papier cristal | `#EFECE5` | alvéoles, fiches, formulaires, tunnel | texte encre : 12,6:1 ✅ |
-| Texte | Encre | `#1D2740` | texte courant, titres | — |
-| Action | Corail | `#E9745B` | **boutons d'action uniquement** (texte encre dessus) | encre sur corail : 5,0:1 ✅ · blanc sur corail : 2,9 ❌ interdit |
-| Champ couleur | Lagune | `#62A7B1` | grands aplats (ciel, lac, bandeaux) | encre dessus : 5,4:1 ✅ · blanc dessus ❌ |
-| Lien | Lagune profond | `#285F69` | liens et focus | sur papier : 6,1:1 ✅ · sur fer-blanc : 4,9:1 ✅ |
-| Accent chaud | Beurre | `#F1C453` | soleil, pastilles « Cadeau », surlignage prix | encre dessus : 9,0:1 ✅ |
-| Accent profond | Pin | `#2E5B4E` | forêt, pied de page, bandeaux sombres | blanc dessus : 7,7:1 ✅ · beurre dessus : 4,7:1 ✅ |
+| Fond | Sable rosé | `#E9E0D4` | fond général, « métal » de la boîte, sable de la dune | texte encre : 10,6:1 ✅ |
+| Zone de lecture | Papier cristal | `#F7F2EA` | alvéoles, fiches, formulaires, tunnel | texte encre : 12,4:1 ✅ |
+| Texte | Encre prune | `#2E2A3F` | texte courant, titres (foncé et chaud, jamais pastel) | — |
+| Action | Corail doux | `#F0A184` | **boutons d'action uniquement**, texte encre, bord émaillé `#C97B62` | encre dessus : 6,7:1 ✅ · corail sur fond : 1,6:1 → le bord émaillé et le texte portent le repérage |
+| Champ couleur | Lagune pastel | `#A9D4D0` | mer, lac, grands aplats | encre dessus : 8,6:1 ✅ |
+| Lien | Lagune profond | `#2F676A` | liens et contour de focus | sur papier : 5,8:1 ✅ · sur fond : 4,9:1 ✅ |
+| Accent chaud | Beurre | `#F6D98E` | ciel, pastilles « Cadeau » | encre dessus : 10,0:1 ✅ |
+| Accent doux | Rose crevette | `#F3C9BD` | horizon, accents chaleureux | encre dessus : 9,2:1 ✅ |
+| Champ vert | Sauge | `#A9C7AE` | pins, bandeaux embossés, fond de boîte | encre dessus : 7,6:1 ✅ |
+| Profond | Pin profond | `#3D6652` | pied de page (texte papier dessus) | papier dessus : 5,9:1 ✅ |
 
-Stratégie : **palette complète à rôles nommés**, où la lagune et le fer-blanc occupent de grandes surfaces (le couvercle, les bandeaux), pas des touches dispersées. Le corail est **réservé aux actions** (ajouter, commander, offrir). Le focus clavier : contour lagune profond de 3 px + décalage.
+Stratégie : **palette complète en pastels**, où la lagune, le beurre et le sable occupent les grandes surfaces. Tout le texte reste en **encre prune foncée** : la douceur vient des aplats, jamais d'un texte pâle. Le corail doux est **réservé aux actions**. Focus clavier : contour lagune profond de 3 px + décalage.
 
-## 4. Typographie (rôles décidés, fontes à éprouver au développement)
-- **Lettres embossées** (bandeau du couvercle, logo, étiquettes de collection) : capitales Art déco à filet intérieur (« inline »), comme gravées dans le métal. Le logo « Maison Sable » sera **dessiné** (lettrage SVG), pas tapé dans une police.
-- **Grands titres** : une fonte d'affichage généreuse et gourmande, avec du caractère (pistes à éprouver : *Shrikhand* pour la rondeur « emballage de friandise », *Big Shoulders Display* pour la verticalité Art déco). Jamais sous 24 px.
-- **Texte courant et interface** : une sans-sérif humaniste très lisible (piste : *Figtree*), 16 px minimum sur mobile, interlignage 1,5, lignes de 65–75 caractères, **chiffres tabulaires** pour prix, poids et tableaux.
-- Polices hébergées sur le site (WOFF2, sous-ensemble latin, `font-display: swap`), **4 fichiers au plus**. Aucune des polices « par réflexe » (Inter, Playfair, Cormorant, Montserrat…).
+## 4. Typographie (choisie par Morgane le 2026-09-28)
+- **Grands titres** : **Big Shoulders Display** (graisse 800), verticale et Art déco. Jamais sous 24 px. Les rondeurs de Shrikhand ont été écartées.
+- **Lettres en relief** (bandeau du couvercle, noms de collections, étiquettes) : **Big Shoulders Inline Display**, capitales à filet intérieur. Le logo « Maison Sable » sera **dessiné** (lettrage SVG) dans le même esprit.
+- **Texte courant et interface** : **Figtree**, 16 px minimum sur mobile, interlignage 1,5, lignes de 65 à 75 caractères, **chiffres tabulaires** pour les prix, les poids et les tableaux.
+- Polices hébergées sur le site (WOFF2, sous-ensemble latin, `font-display: swap`), **4 fichiers au plus** : Big Shoulders Display 800, Big Shoulders Inline Display 700, Figtree 400 et 700.
 - Pas de sur-titres en capitales au-dessus des titres.
 
 ## 5. Matières, formes et composants
@@ -67,12 +70,11 @@ Stratégie : **palette complète à rôles nommés**, où la lagune et le fer-bl
 - [x] Pas d'ouverture centrée « Bienvenue » + 2 boutons identiques (couvercle, étiquette décalée, un bouton principal + un lien).
 - [x] Pas de cartes arrondies ombrées partout (alvéoles papier, étiquettes).
 - [x] Pas de dégradé, de halo, de verre dépoli.
-- [x] Pas de palette crème + terracotta par défaut (fer-blanc + lagune + corail, tirée de l'objet).
+- [x] Pas de palette crème + terracotta par défaut : pastels tirés de la scène d'Hossegor (lagune, beurre, rose, sauge), texte prune. Le passage aux pastels est une demande explicite de Morgane.
 - [x] Pas de sur-titres en capitales, pas de numéros 01/02/03, pas de flèches dans les boutons.
 - [x] Pas de photos de banque d'images (illustrations dessinées).
 - [ ] À revérifier au développement : `impeccable detect`, critique et revue finale.
 
 ## 10. Ce qui reste à produire (étape développement)
 - Logo « Maison Sable » dessiné, illustration du couvercle, **11 illustrations produit**, frises, coupe sablé/galette/palet, image de partage 1200 × 630.
-- Choix final des fontes (épreuve typographique).
 - `DESIGN.md` écrit à la fin à partir du site construit.

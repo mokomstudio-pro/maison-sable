@@ -156,3 +156,11 @@
 **Questions ouvertes**
 - Méthode de fabrication `[FICTIF]` de la page atelier, description de Mokom Studio, mention de la plage des Estagnots → à valider par Morgane.
 - Délai d'acheminement, emballage, date limite de Noël → étape checkout. Validité de la carte cadeau, mentions de l'étiquette → étape conformité. Résultats mesurés → après l'audit.
+
+## 2026-09-28 — Planche de direction : retours de Morgane
+
+- Planche de travail créée et ouverte dans le navigateur : `.impeccable/mocks/planche-direction.html`. Ce n'est pas le site, les illustrations sont des esquisses.
+- **Ambiance validée.** Couleurs passées en **pastels plus doux et chaleureux** à la demande de Morgane : sable rosé, papier, lagune pastel, beurre, rose crevette, sauge, corail doux. Le texte reste en encre prune foncée, et tous les contrastes du texte sont vérifiés (au moins 4,9:1). Le corail doux ressort peu sur le fond (1,6:1) : les boutons ont donc un bord émaillé plus foncé.
+- **Titres : Big Shoulders Display** (choix B de Morgane). Relief : Big Shoulders Inline Display. Texte : Figtree.
+- Mis à jour : `07-direction-artistique.md` (couleurs, typographie), contrat de direction (`.impeccable/surfaces/index-html.md`).
+- Détecteur de design : marges intérieures corrigées. Deux exceptions limitées à la planche (espacement des lettres en relief, étiquette posée sur le couvercle). Les scènes en formes géométriques simples devront devenir de vraies illustrations au développement.
