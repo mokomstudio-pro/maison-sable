@@ -3,7 +3,7 @@
   "type": "ecommerce",
   "plateforme": "html-statique (maquette Shopify, GitHub Pages)",
   "cree_le": "2026-09-27",
-  "etape_courante": "audit",
+  "etape_courante": "suivi",
   "dernier_audit_complet": "2026-09-28T16:50:48.340Z",
   "dernier_audit_partiel": "2026-09-28T18:29:04.922Z",
   "chaines": {
@@ -201,6 +201,7 @@
     "seo-technique": "fait 2026-09-28",
     "accessibilite": "fait 2026-09-28",
     "analytics": "fait 2026-09-28",
-    "audit": "fait 2026-09-28 — PRÊT AVEC RÉSERVES après corrections (contre-audit UX/UI + performance), voir docs/audits/2026-09-28-audit-final.md"
+    "audit": "fait 2026-09-28 — PRÊT AVEC RÉSERVES après corrections (contre-audit UX/UI + performance), voir docs/audits/2026-09-28-audit-final.md",
+    "mise_en_ligne": "fait 2026-09-28 — https://mokomstudio-pro.github.io/maison-sable/"
   }
 }

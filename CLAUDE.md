@@ -31,7 +31,7 @@ Ce projet suit la méthode Mokom (plugin `mokom`). L'état d'avancement est dans
 - `npm run build` : génère `dist/` depuis les sources (`docs/catalogue/*`, `docs/seo/metas.csv`, `docs/08-contenus/fiches-produits.md`, `src/`). Ne jamais modifier `dist/` à la main.
 - `npm run serve` : aperçu sur http://localhost:4321/maison-sable/ (compression comme GitHub Pages).
 - `npm run check` : contrôles du catalogue et des metas.
-- Publication : `.github/workflows/pages.yml` (déclenchement manuel, seulement après `/mokom:audit`).
+- Publication : `npm run publier` (contrôles + construction, puis envoi de `dist/` sur la branche `gh-pages` servie par GitHub Pages), seulement après `/mokom:audit`. Mis en ligne le 2026-09-28. (`.github/workflows/pages.yml` existe, mais GitHub ne l'a pas enregistré à la création du dépôt ; Pages est réglé sur la branche `gh-pages`.)
 
 ## Budget de performance (mobile)
 - Accueil ≤ 1,5 Mo transférés · JavaScript propre ≤ 150 Ko · 3 fichiers de police WOFF2 (69 Ko) · aucun script tiers.

@@ -284,3 +284,6 @@
 
 - Dépôt public créé : https://github.com/mokomstudio-pro/maison-sable (feu vert de Morgane après l'audit final, verdict « prêt avec réserves »).
 - GitHub Pages activé en mode « GitHub Actions » ; publication par `.github/workflows/pages.yml` (déclenchement manuel). Adresse : https://mokomstudio-pro.github.io/maison-sable/ (site en `noindex`).
+- Le fichier de publication automatique n'a pas été enregistré par GitHub (aucun « workflow » visible plus de 10 minutes après deux envois). Publication faite par la branche `gh-pages` (site construit, contrôles passés) ; GitHub Pages réglé sur cette branche. Pour republier : `npm run publier`.
+- Vérifié en ligne : accueil, collection, fiche, 404 (vraie 404), image de partage, script ; redirection 301 des adresses sans « / » confirmée (nos liens utilisent déjà la forme finale) ; `noindex` présent ; ajout au panier fonctionnel.
+- Après mise en ligne : ne pas déclarer le plan du site dans la Search Console (site en `noindex`) ; relancer `/claude-seo-ai:audit` sur l'adresse en ligne si besoin.

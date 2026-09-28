@@ -7,6 +7,7 @@
     "build": "node src/build.mjs",
     "serve": "node src/serve.mjs",
     "check": "node scripts/verifier-catalogue.mjs && node scripts/verifier-metas.mjs",
-    "check:seo": "node src/build.mjs && node scripts/verifier-seo.mjs"
+    "check:seo": "node src/build.mjs && node scripts/verifier-seo.mjs",
+    "publier": "node scripts/publier.mjs"
   }
 }
