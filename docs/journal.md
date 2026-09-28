@@ -129,3 +129,16 @@
 
 - **Option A choisie par Morgane** : le Coffret Été Indien passe de 34 € à **31,90 €**, soit 1,40 € de moins que ses composants achetés séparément (33,30 €). L'économie est affichée sur la fiche et sur la carte.
 - Mis à jour : variantes.csv, metas.csv, fiche d'entité, modele-donnees.md, merchandising.md, 02/03/04. Vérifications du catalogue et des metas OK.
+
+## 2026-09-28 — Fiche produit
+
+**Décisions**
+- Gabarit unique de fiche produit (`docs/08-contenus/gabarit-fiche-produit.md`) rempli par le développement à partir de 4 sources : catalogue, merchandising, metas, textes. Aucun fait recopié à la main.
+- Textes des 11 fiches (`docs/08-contenus/fiches-produits.md`) : présentation de 40 à 60 mots (vérifiée), 3 points « En bref », dégustation et conservation, 2 questions par produit, textes alternatifs des illustrations.
+- Voix : chaleureuse, sensorielle, précise ; liste de formules interdites contrôlée. Vouvoiement appliqué.
+- Allergènes toujours visibles ; questions dédiées sur les pignons et la noix de coco (qui ne sont pas des fruits à coque au sens réglementaire), le soja du chocolat et les amandes des coffrets.
+- Nouveau fait `[FICTIF]` : la Boîte Grande Plage est une boîte en fer imprimée et réutilisable (ajouté à la fiche d'entité).
+
+**Questions ouvertes**
+- Validité de la carte cadeau et déclaration nutritionnelle → étape conformité.
+- Vouvoiement ou tutoiement : à confirmer par Morgane.

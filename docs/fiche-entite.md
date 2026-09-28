@@ -38,6 +38,8 @@
 | Ingrédients phares | beurre demi-sel, fleur de sel, caramel maison, pignons de pin, miel. **Origines précises `[À DÉCIDER à l'étape fiche produit]`**, sans appellation officielle (AOP, IGP, Label Rouge) inventée | — |
 | Allergènes | par recette, voir le catalogue. Toutes les recettes : « peut contenir des traces de fruits à coque » | catalogue |
 | Labels, certifications, prix | **aucun** (on n'invente ni label ni récompense) | — |
+| Boîte Grande Plage | boîte en fer imprimée, réutilisable | invention Mokom `[FICTIF]` |
+| Carte cadeau (durée de validité) | `[À DÉCIDER à l'étape conformité]` | — |
 | Carte cadeau | 20, 40 ou 60 €, envoyée par e-mail, valable sur toute la boutique | catalogue + invention Mokom `[FICTIF]` |
 | Délai de réponse aux messages | 48 heures ouvrées | invention Mokom `[FICTIF]` |
 | Avis clients | avis d'exemple possibles sur le site, **signalés comme fictifs**, jamais dans les données structurées | règle Mokom |
