@@ -195,3 +195,20 @@
 
 **À fournir par Morgane**
 - Identité de Mokom Studio pour les mentions légales (forme juridique, nom, adresse, SIREN, TVA, e-mail, directrice de la publication).
+
+## 2026-09-28 — Développement
+
+**Réalisé**
+- Générateur de site statique sans dépendance (`src/build.mjs`), qui produit 31 pages dans `dist/` à partir du catalogue, des metas, des textes et des règles de livraison (aucun texte recopié à la main). Aperçu : `npm run serve`. Publication prête : `.github/workflows/pages.yml` (manuelle, après l'audit).
+- Illustrations en aplats pastel dessinées en SVG par Claude pour Mokom Studio (couvercle, atelier, 11 produits en vue et en coupe, coupe sablé/galette/palet, pin, frises). Image de partage PNG 1200 × 630 obtenue par capture du SVG. Aucune photo.
+- Polices hébergées sur le site : 3 fichiers WOFF2 (69 Ko). Script `boutique.js` : 33 Ko non compressé (budget : 150 Ko).
+- Parcours testés dans le navigateur : choix du poids (prix, prix au kilo, adresse `?variant=`), panier, jauge de livraison offerte, filtres et tri, recherche, commande simulée (erreurs, point relais avec téléphone, carte cadeau `SABLE-DEMO-20`, dates de livraison, confirmation), rétractation en ligne, événements de mesure dans `dataLayer` (sans envoi).
+- Contrôles des 23 pages principales : un H1 par page, noindex, canonical, textes alternatifs, aucune erreur JavaScript, aucun débordement horizontal à 390 px.
+- Lighthouse (accueil, mobile) : accessibilité 96 → contrastes corrigés ensuite ; bonnes pratiques 100 ; SEO bas **attendu** (noindex volontaire). Performance (mobile simulé, compression activée) : LCP ≈ 1 s, CLS 0 (mesure formelle à l'étape performance).
+- Revue de design indépendante en 2 passages (verdict « à corriger ») : 8 corrections, puis 4 compléments (couvercle mobile, moment signature réel où le plateau sort de sous le couvercle, étiquettes produit sur mobile, bande de réassurance « imprimée », pin qui déborde du cadre, relief simulé supprimé). Derniers points vérifiés par captures. Morgane a choisi de clore sans troisième passage.
+- Exceptions du détecteur de design, justifiées : fond sable rosé (choix de Morgane), seconde illustration au survol.
+
+**Reste pour les étapes suivantes**
+- Mesure formelle de performance (étape performance), SEO technique (étape seo-technique), accessibilité au clavier (étape accessibilité), panier et commande non relus par la revue de design (à couvrir par l'audit).
+- Compte GitHub pour `SITE_URL` et identité de Mokom Studio pour les mentions légales.
+- `DESIGN.md` et `.impeccable/design.json` écrits à partir du site construit. Écarts relevés, à traiter aux étapes suivantes : les signes ⚠ et ✓ sont tapés au lieu d'être dessinés en icônes ; deux rouges d'erreur (#A3402A et #8E3321) ; tiroirs et panneaux de 280 à 400 ms (au-dessus de la plage 150–250 ms) ; logo composé dans la fonte Inline et non dessiné ; 3 fichiers de police au lieu des 4 prévus (volontaire, Figtree variable).
